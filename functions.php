@@ -69,22 +69,28 @@ add_action( 'after_setup_theme', 'tidy_setup' );
  * Register widgetized area and update sidebar with default widgets.
  */
 function tidy_widgets_init() {
+	$before_widget = '<aside id="%1$s" class="widget %2$s">';
+	$after_widget  = '</aside>';
+	$before_title  = '<h1 class="widget-title">';
+	$after_title   = '</h1>';
+
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'tidy' ),
 		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_widget' => $before_widget,
+		'after_widget'  => $after_widget,
+		'before_title'  => $before_title,
+		'after_title'   => $after_title,
 	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer', 'tidy' ),
-		'id'            => 'footer-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+	register_sidebars( 4, array(
+		'name'          => __( 'Footer %d', 'tidy' ),
+		'id'            => 'footer-%d',
+		'before_widget' => $before_widget,
+		'after_widget'  => $after_widget,
+		'before_title'  => $before_title,
+		'after_title'   => $after_title,
 	) );
+
 }
 add_action( 'widgets_init', 'tidy_widgets_init' );
 
