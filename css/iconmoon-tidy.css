@@ -1,0 +1,142 @@
+@font-face {
+	font-family: 'iconmoon-tidy';
+	src:url('../font/iconmoon-tidy.eot');
+	src:url('../font/iconmoon-tidy.eot?#iefix') format('embedded-opentype'),
+		url('../font/iconmoon-tidy.ttf') format('truetype'),
+		url('../font/iconmoon-tidy.woff') format('woff'),
+		url('../font/iconmoon-tidy.svg#iconmoon-tidy') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'iconmoon-tidy';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-copy:before {
+	content: "\e600";
+}
+.icon-folder-open:before {
+	content: "\e601";
+}
+.icon-notebook:before {
+	content: "\e602";
+}
+.icon-calendar:before {
+	content: "\e603";
+}
+.icon-search:before {
+	content: "\e604";
+}
+.icon-power-cord:before {
+	content: "\e605";
+}
+.icon-earth:before {
+	content: "\e606";
+}
+.icon-star:before {
+	content: "\e607";
+}
+.icon-happy:before {
+	content: "\e608";
+}
+.icon-arrow-right:before {
+	content: "\e609";
+}
+.icon-google-plus:before {
+	content: "\e60a";
+}
+.icon-facebook:before {
+	content: "\e60b";
+}
+.icon-instagram:before {
+	content: "\e60c";
+}
+.icon-twitter:before {
+	content: "\e60d";
+}
+.icon-feed:before {
+	content: "\e60e";
+}
+.icon-youtube:before {
+	content: "\e60f";
+}
+.icon-vimeo:before {
+	content: "\e610";
+}
+.icon-lanyrd:before {
+	content: "\e611";
+}
+.icon-flickr:before {
+	content: "\e612";
+}
+.icon-picassa:before {
+	content: "\e613";
+}
+.icon-dribbble:before {
+	content: "\e614";
+}
+.icon-forrst:before {
+	content: "\e615";
+}
+.icon-deviantart:before {
+	content: "\e616";
+}
+.icon-steam:before {
+	content: "\e617";
+}
+.icon-github:before {
+	content: "\e618";
+}
+.icon-wordpress:before {
+	content: "\e619";
+}
+.icon-tumblr:before {
+	content: "\e61a";
+}
+.icon-soundcloud:before {
+	content: "\e61b";
+}
+.icon-skype:before {
+	content: "\e61c";
+}
+.icon-reddit:before {
+	content: "\e61d";
+}
+.icon-linkedin:before {
+	content: "\e61e";
+}
+.icon-lastfm:before {
+	content: "\e61f";
+}
+.icon-delicious:before {
+	content: "\e620";
+}
+.icon-stumbleupon:before {
+	content: "\e621";
+}
+.icon-stackoverflow:before {
+	content: "\e622";
+}
+.icon-pinterest:before {
+	content: "\e623";
+}
+.icon-flattr:before {
+	content: "\e624";
+}
+.icon-yelp:before {
+	content: "\e625";
+}
+.icon-foursquare:before {
+	content: "\e626";
+}

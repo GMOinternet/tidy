@@ -77,6 +77,14 @@ function tidy_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer', 'tidy' ),
+		'id'            => 'footer-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'tidy_widgets_init' );
 
@@ -84,26 +92,41 @@ add_action( 'widgets_init', 'tidy_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tidy_scripts() {
+
+	$tidy_info = wp_get_theme();
+	$tidy_version = $tidy_info->get( 'Version' );
+
 	wp_enqueue_style(
-		'tidy-style',
-		get_stylesheet_directory_uri() . '/style.css',
+		'google-fonts',
+		'http://fonts.googleapis.com/css?family=Open+Sans',
 		array(),
-		'20131219'
+		$tidy_version
 	);
 
-	wp_enqueue_script(
-		'tidy-navigation',
-		get_template_directory_uri() . '/js/navigation.js',
+	wp_enqueue_style(
+		'genericons',
+		get_template_directory_uri() . '/css/genericons.css',
 		array(),
-		'20131219',
-		true
+		'3.0.2'
+	);
+	wp_enqueue_style(
+		'iconmoon-tidy',
+		get_template_directory_uri() . '/css/iconmoon-tidy.css',
+		array(),
+		$tidy_version
+	);
+	wp_enqueue_style(
+		'tidy-style',
+		get_stylesheet_uri(),
+		array( 'google-fonts', 'genericons', 'iconmoon-tidy' ),
+		$tidy_version
 	);
 
 	wp_enqueue_script(
 		'tidy-skip-link-focus-fix',
 		get_template_directory_uri() . '/js/skip-link-focus-fix.js',
 		array(),
-		'20131219',
+		$tidy_version,
 		true
 	);
 
@@ -113,9 +136,10 @@ function tidy_scripts() {
 
 	wp_enqueue_script(
 		'tidy-script',
-		get_stylesheet_directory_uri() . '/js/tidy.min.js',
+		//get_stylesheet_directory_uri() . '/js/tidy.min.js',
+		get_stylesheet_directory_uri() . '/js/tidy.js',
 		array('jquery'),
-		'20131219',
+		$tidy_version,
 		true
 	);
 }
