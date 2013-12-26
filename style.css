@@ -928,13 +928,14 @@ object {
   color: #fff;
 }
 
-.site-footer-widget-area-conteiner {
-  width: 270px;
-  float: left;
-  margin-right: 40px;
+.site-footer-widget-area-box {
+  margin-left: -40px;
 }
-.site-footer-widget-area-conteiner:last-child {
-  margin-right: 0;
+
+.site-footer-widget-area-conteiner {
+  width: 25%;
+  padding-left: 40px;
+  float: left;
 }
 
 .site-info {
@@ -1110,10 +1111,14 @@ object {
 
   /* =Footer
   ----------------------------------------------- */
+  .site-footer-widget-area-box {
+    margin-left: 0;
+  }
+
   .site-footer-widget-area-conteiner {
     width: 100%;
+    padding-left: 0;
     float: none;
-    margin-right: 0;
   }
 
   .site-info {

@@ -15,7 +15,7 @@
 		
 		<?php do_action( 'tidy_before_footer' ); ?>
 
-		<div class="site-footer-widget-area"><div class="inner">
+		<div class="site-footer-widget-area"><div class="inner"><div class="site-footer-widget-area-box">
 
 		<div class="site-footer-widget-area-conteiner">
 		<?php if ( ! dynamic_sidebar( 'footer-1' ) ) : ?>
@@ -54,7 +54,7 @@
 		<?php endif; // end footer-4 widget area ?>
 		</div>
 
-		</div></div>
+		</div></div></div>
 
 		<div class="site-info"><div class="inner">
 			&copy; 2013 GMO Internet Pte Ltd. All Rights Reserved.
