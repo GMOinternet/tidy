@@ -141,10 +141,18 @@ function tidy_scripts() {
 	}
 
 	wp_enqueue_script(
+		'jquery-cookie',
+		get_template_directory_uri() . '/js/jquery.cookie.js',
+		array( 'jquery' ) ,
+		'1.4.0',
+		true
+	);
+
+	wp_enqueue_script(
 		'tidy-script',
 		//get_stylesheet_directory_uri() . '/js/tidy.min.js',
 		get_stylesheet_directory_uri() . '/js/tidy.js',
-		array('jquery'),
+		array( 'jquery' ) ,
 		$tidy_version,
 		true
 	);

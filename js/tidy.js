@@ -1,7 +1,19 @@
 (function($){
+
 	// site-header-widget-area
-	$( '.header-widget-toggle' ).click( function(){
-		$( '#site-header-widget' ).slideToggle();
+	var headerWidgetToggle = $.cookie( 'tidy-header-widget-toggle' );
+	var headerWidgetClass  = '#site-header-widget';
+	var headerWidgetBtn    = '.header-widget-toggle';
+
+	if ( headerWidgetToggle ) {
+		$( headerWidgetClass ).hide();
+	}
+
+	$( headerWidgetBtn ).click( function(){
+		$( headerWidgetClass ).slideUp();
+		$.cookie( 'tidy-header-widget-toggle' , 'hide', {
+			path: "/"
+		});
 		return false;
 	} );
 
