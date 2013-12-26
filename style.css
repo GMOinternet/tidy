@@ -1222,6 +1222,12 @@ object {
     display: none;
   }
 
+  .fixmenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
   /* =Search
   ----------------------------------------------- */
   .search-container {

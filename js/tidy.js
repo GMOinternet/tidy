@@ -24,6 +24,14 @@
 	} );
 	
 	// main-navigation
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$( '.main-navigation' ).addClass("fixmenu");
+		} else {
+			$( '.main-navigation' ).removeClass("fixmenu");
+		}
+	});
+
 	$( '.menu-toggle' ).click( function(){
 		$( '.main-navigation-box' ).slideToggle( 'normal', function(){
 			$( '.menu-toggle .genericon' ).toggleClass( 'genericon-menu' );
