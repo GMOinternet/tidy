@@ -39,19 +39,17 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'tidy' ); ?></p>
 	<?php endif; */?>
 
-	<?php comment_form(); ?>
+	<?php
+		$comments_args = array(
+			// change the title of send button 
+			'label_submit' => __( 'Send', 'tidy' ),
+		);
+		comment_form($comments_args);
+	?>
 
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'tidy' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'tidy' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'tidy' ) ); ?></div>
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
 
 		<ol class="comment-list">
 			<?php
@@ -61,7 +59,7 @@ if ( post_password_required() ) {
 				 * define tidy_comment() and that will be used instead.
 				 * See tidy_comment() in inc/template-tags.php for more.
 				 */
-				wp_list_comments( array( 'callback' => 'tidy_comment' ) );
+				wp_list_comments( array( 'avatar_size' => 60, 'callback' => 'tidy_comment' ) );
 			?>
 		</ol><!-- .comment-list -->
 
