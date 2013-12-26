@@ -28,7 +28,7 @@
 
 		<div class="site-footer-widget-area-conteiner">
 		<?php if ( ! dynamic_sidebar( 'footer-2' ) ) : ?>
-			<aside id="tag_cloud" class="widget">
+			<aside id="tag_cloud" class="widget widget_tag_cloud">
 				<h1 class="widget-title"><?php _e( 'Tags', 'tidy' ); ?></h1>
 				<?php wp_tag_cloud(); ?>
 			</aside>

@@ -894,18 +894,8 @@ object {
 
 /* =Widgets
 ----------------------------------------------- */
-.widget {
-  margin: 0 0 50px;
-}
-
-/* Make sure select elements fit in widgets */
-.widget select {
-  max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-  display: none;
+.site-content .widget-area {
+  font-size: 0.875em;
 }
 
 .widget-title {
@@ -916,6 +906,54 @@ object {
 }
 .site-footer-widget-area .widget-title {
   border-bottom-color: white;
+}
+
+.widget {
+  margin: 0 0 50px;
+  /* Make sure select elements fit in widgets */
+}
+.widget select {
+  max-width: 100%;
+}
+.widget ul, .widget ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.widget li {
+  margin-bottom: 20px;
+}
+.widget li ul, .widget li ol {
+  margin-top: 20px;
+  margin-left: 2em;
+}
+
+/* Tag Cloud widget */
+.widget_tag_cloud a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* Search widget */
+.widget_search .search-field {
+  width: 240px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.widget_search .search-submit {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #0058ae;
+  text-shadow: none;
+  font-size: 18px;
 }
 
 /* =Footer
