@@ -19,38 +19,25 @@
 
 		<div class="site-footer-widget-area-conteiner">
 		<?php if ( ! dynamic_sidebar( 'footer-1' ) ) : ?>
-			<aside id="about-us" class="widget">
-				<h1 class="widget-title"><?php _e( 'About Us', 'tidy' ); ?></h1>
-				<div>text</div>
-			</aside>
+			<?php the_widget( 'Tidy_Widget_About_Us' ); ?>
 		<?php endif; // end footer-1 widget area ?>
 		</div>
 
 		<div class="site-footer-widget-area-conteiner">
 		<?php if ( ! dynamic_sidebar( 'footer-2' ) ) : ?>
-			<aside id="tag_cloud" class="widget widget_tag_cloud">
-				<h1 class="widget-title"><?php _e( 'Tags', 'tidy' ); ?></h1>
-				<?php wp_tag_cloud(); ?>
-			</aside>
+			<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 		<?php endif; // end footer-2 widget area ?>
 		</div>
 
 		<div class="site-footer-widget-area-conteiner">
 		<?php if ( ! dynamic_sidebar( 'footer-3' ) ) : ?>
-			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Recent', 'Post' ); ?></h1>
-				<ul>
-					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
-				</ul>
-			</aside>
+			<?php the_widget( 'Tidy_Widget_Recent_Posts' ); ?>
 		<?php endif; // end footer-3 widget area ?>
 		</div>
 
 		<div class="site-footer-widget-area-conteiner">
 		<?php if ( ! dynamic_sidebar( 'footer-4' ) ) : ?>
-			<aside id="meta" class="widget">
-				<h1 class="widget-title"><?php _e( 'Contact', 'tidy' ); ?></h1>
-			</aside>
+			<?php the_widget( 'Tidy_Widget_Contact' ); ?>
 		<?php endif; // end footer-4 widget area ?>
 		</div>
 

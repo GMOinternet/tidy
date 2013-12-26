@@ -40,7 +40,9 @@ function tidy_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'tidy-thumb-tiny', 80, 80, true);
+	add_image_size( 'tidy-thumb-small', 125, 125, true);
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -82,9 +84,33 @@ function tidy_widgets_init() {
 		'before_title'  => $before_title,
 		'after_title'   => $after_title,
 	) );
-	register_sidebars( 4, array(
-		'name'          => __( 'Footer %d', 'tidy' ),
-		'id'            => 'footer-%d',
+	register_sidebar( array(
+		'name'          => __( 'Footer 1', 'tidy' ),
+		'id'            => 'footer-1',
+		'before_widget' => $before_widget,
+		'after_widget'  => $after_widget,
+		'before_title'  => $before_title,
+		'after_title'   => $after_title,
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 2', 'tidy' ),
+		'id'            => 'footer-2',
+		'before_widget' => $before_widget,
+		'after_widget'  => $after_widget,
+		'before_title'  => $before_title,
+		'after_title'   => $after_title,
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 3', 'tidy' ),
+		'id'            => 'footer-3',
+		'before_widget' => $before_widget,
+		'after_widget'  => $after_widget,
+		'before_title'  => $before_title,
+		'after_title'   => $after_title,
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer 4', 'tidy' ),
+		'id'            => 'footer-4',
 		'before_widget' => $before_widget,
 		'after_widget'  => $after_widget,
 		'before_title'  => $before_title,
@@ -173,6 +199,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Custom widgets for this theme.
+ */
+require get_template_directory() . '/inc/widgets.php';
 
 /**
  * Customizer additions.
