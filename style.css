@@ -508,7 +508,7 @@ a:hover, a:focus, a:active {
 .content-area {
   float: left;
   margin-top: 0;
-  margin-right: -310px;
+  margin-right: -270px;
   margin-bottom: 0;
   margin-left: 0;
   width: 100%;
@@ -954,6 +954,20 @@ object {
   color: #0058ae;
   text-shadow: none;
   font-size: 18px;
+}
+
+/* Calendar widget */
+#wp-calendar caption, #wp-calendar th, #wp-calendar td {
+  text-align: center;
+}
+#wp-calendar caption {
+  margin-bottom: 10px;
+}
+#wp-calendar #prev {
+  text-align: left;
+}
+#wp-calendar #next {
+  text-align: right;
 }
 
 /* =Footer
