@@ -473,14 +473,14 @@ a:hover, a:focus, a:active {
 }
 
 /* Clearing */
-.clear, .sns-icons, .main-navigation,
+.clear, .sns-icons, .main-navigation, .comment-body .comment-meta,
 .entry-content,
 .comment-content,
 .site-content,
 .inner {
   *zoom: 1;
 }
-.clear:after, .sns-icons:after, .main-navigation:after,
+.clear:after, .sns-icons:after, .main-navigation:after, .comment-body .comment-meta:after,
 .entry-content:after,
 .comment-content:after,
 .site-content:after,
@@ -871,7 +871,7 @@ object {
 /* =Navigation
 ----------------------------------------------- */
 .site-main [class*="navigation"] {
-  margin: 0 0 1.5em;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -901,10 +901,71 @@ object {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-top: 30px;
+  border-top: solid 1px #cccccc;
 }
 
-.comment-content a {
+.children {
+  list-style-type: none;
+  margin: 30px 0 0 40px;
+  padding: 0;
+}
+
+li.comment,
+li.pingback {
+  margin-bottom: 30px;
+}
+
+li.depth-1 {
+  border-bottom: solid 1px #cccccc;
+  padding-bottom: 30px;
+}
+
+.comment-body {
+  font-size: 0.875em;
+}
+.comment-body .comment-meta {
+  margin-bottom: 15px;
+}
+.comment-body .comment-author-image {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.comment-body .comment-metadata {
+  display: inline-block;
+  vertical-align: middle;
+}
+.comment-body .comment-author-name {
+  margin-bottom: 10px;
+}
+.comment-body .comment-author-name .fn {
+  font-style: normal;
+}
+.comment-body .comment-date {
+  font-size: 12px;
+}
+.comment-body .comment-content {
+  clear: both;
+  margin-bottom: 10px;
+}
+.comment-body .comment-content a {
   word-wrap: break-word;
+}
+.comment-body .comment-content > *:last-child {
+  margin-bottom: 0;
+}
+.comment-body .reply {
+  text-align: right;
+}
+.comment-body .reply .genericon {
+  font-size: 8px;
+  width: 8px;
+  height: 8px;
+  vertical-align: middle;
+}
+.comment-body .comment-body > *:last-child {
+  margin-bottom: 0;
 }
 
 /* Form */
@@ -918,9 +979,7 @@ object {
 
 .comment-form {
   color: #cccccc;
-  margin-bottom: 30px;
-  padding-bottom: 60px;
-  border-bottom: solid 1px #cccccc;
+  margin-bottom: 60px;
   position: relative;
 }
 .comment-form p {

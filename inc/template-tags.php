@@ -93,15 +93,15 @@ function tidy_comment( $comment, $args, $depth ) {
 				<?php endif; ?>
 
 				<div class="comment-metadata">
-					<p><?php printf( __( '%s <span class="says">says:</span>', 'tidy' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></p>
+					<div class="comment-author-name"><?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?></div>
 
-					<p><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+					<div class="comment-date"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
 							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'tidy' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
 					</a>
 					<?php edit_comment_link( __( 'Edit', 'tidy' ), '<span class="edit-link">', '</span>' ); ?>
-					</p>
+					</div>
 				</div><!-- .comment-metadata -->
 			</footer><!-- .comment-meta -->
 
@@ -115,11 +115,12 @@ function tidy_comment( $comment, $args, $depth ) {
 
 			<?php
 				comment_reply_link( array_merge( $args, array(
-					'add_below' => 'div-comment',
-					'depth'     => $depth,
-					'max_depth' => $args['max_depth'],
-					'before'    => '<div class="reply">',
-					'after'     => '</div>',
+					'add_below'  => 'div-comment',
+					'depth'      => $depth,
+					'max_depth'  => $args['max_depth'],
+					'reply_text' => '<span class="genericon genericon-rightarrow"></span>' . __( 'Reply', 'tidy' ),
+					'before'     => '<div class="reply">',
+					'after'      => '</div>',
 				) ) );
 			?>
 		</article><!-- .comment-body -->

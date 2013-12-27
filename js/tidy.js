@@ -54,9 +54,8 @@
 	});
 	// submit btn
 	$( '.form-submit' ).css('bottom', function(index) {
-		index = $(this).height() + 10;
-		var submitposi = $( '.form-allowed-tags' ).height() + 10;
-		index = index + submitposi + 10*2.5;
+		var submitposi = $( '.form-allowed-tags' ).height() + 5;
+		index = index + submitposi;
 		return index;
 	});
 
