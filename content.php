@@ -9,9 +9,7 @@
 	<div class="entry-conteiner">
 		<header class="entry-header">
 			<?php do_action( 'tidy_before_entry_header' ); ?>
-	
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-	
 			<?php do_action( 'tidy_after_entry_header' ); ?>
 		</header><!-- .entry-header -->
 	
