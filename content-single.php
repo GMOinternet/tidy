@@ -11,17 +11,17 @@
 
 		<div class="entry-meta">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="tidy_post_thumbnail"><?php the_post_thumbnail(); ?></div>
+				<div class="tidy_post_thumbnail tidy-thumb-medium"><?php the_post_thumbnail( 'tidy-thumb-medium' ); ?></div>
 			<?php endif; ?>
 			<div class="tidy_posted_on">
 				<?php tidy_posted_on(); ?>
-				<span class="entry_category"><span class="icon-folder-open"></span><?php the_category( ', ' ); ?></span>
+				<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
 				<?php
 					/* translators: used between list items, there is a space after the comma */
 					$tag_list = get_the_tag_list( '', __( ', ', 'tidy' ) );
 
 					if ( '' != $tag_list ) {
-						echo '<span class="entry_tags"><span class="icon-tags"></span>' . $tag_list . '</span>';
+						echo '<span class="entry_tags"><span class="icon-tag"></span> ' . $tag_list . '</span>';
 					}
 				?>
 				<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link">', '</span>' ); ?>

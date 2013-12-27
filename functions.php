@@ -43,6 +43,7 @@ function tidy_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'tidy-thumb-tiny', 80, 80, true);
 	add_image_size( 'tidy-thumb-small', 125, 125, true);
+	add_image_size( 'tidy-thumb-medium', 580, 580);
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
