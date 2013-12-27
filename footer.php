@@ -11,6 +11,12 @@
 		<?php do_action( 'tidy_after_content' ); ?>
 	</div><!-- #content -->
 
+	<?php
+		if ( is_archive() ) {
+			get_template_part( 'categorylist' );
+		}
+	?>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		
 		<?php do_action( 'tidy_before_footer' ); ?>

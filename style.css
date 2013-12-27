@@ -808,10 +808,6 @@ a:hover, a:focus, a:active {
   clear: both;
   margin: 0 0 30px;
 }
-body.single .hentry {
-  padding-bottom: 30px;
-  border-bottom: solid 1px #e3e6ea;
-}
 
 .byline,
 .updated {
@@ -996,6 +992,15 @@ object {
   clear: both;
   margin: 0;
   overflow: hidden;
+  padding-top: 30px;
+  border-top: solid 1px #e3e6ea;
+  font-size: 0.875em;
+}
+.site-main [class*="navigation"] .genericon {
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
 }
 
 [class*="navigation"] .nav-previous {
@@ -1307,6 +1312,42 @@ li.depth-1 {
   box-flex: 1;
 }
 
+/* =Footer category list
+----------------------------------------------- */
+.footer-category-list {
+  background-color: #e3e6ea;
+  padding: 60px 0;
+}
+.footer-category-list .widget-title {
+  border-bottom-color: #cdd0d4;
+}
+.footer-category-list .footer-category-list-box {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  -ms-column-count: 4;
+  -o-column-count: 4;
+  column-count: 4;
+}
+.footer-category-list .footer-category-list-box li {
+  font-size: 0.75em;
+  margin-bottom: 30px;
+}
+.footer-category-list .footer-category-list-box li :before {
+  font-family: 'iconmoon-tidy';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e601";
+}
+
 /* =Footer
 ----------------------------------------------- */
 .site-footer-widget-area {
@@ -1547,6 +1588,23 @@ li.depth-1 {
   .entry-conteiner footer.entry-meta {
     margin-top: 20px;
     margin-left: 0;
+  }
+
+  .entry-post_thumbnail {
+    margin-bottom: 20px;
+  }
+
+  /* =Footer category list
+  ----------------------------------------------- */
+  .footer-category-list {
+    padding: 60px 0;
+  }
+  .footer-category-list .footer-category-list-box {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
   }
 
   /* =Footer
