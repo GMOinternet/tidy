@@ -12,7 +12,7 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-
+		<div class="archive-title"><span class="icon-pencil"></span><?php _e( 'Blog Archive', 'tidy' ); ?></div>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">

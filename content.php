@@ -23,14 +23,6 @@
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 				<?php tidy_posted_on(); ?>
 				<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
-				<?php
-					/* translators: used between list items, there is a space after the comma */
-					$tag_list = get_the_tag_list( '', __( ', ', 'tidy' ) );
-	
-					if ( '' != $tag_list ) {
-						echo '<span class="entry_tags"><span class="icon-tag"></span> ' . $tag_list . '</span>';
-					}
-				?>
 				<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link">', '</span>' ); ?>
 	
 			<?php endif; // End if 'post' == get_post_type() ?>
