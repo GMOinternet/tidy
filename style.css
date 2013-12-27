@@ -1333,7 +1333,7 @@ li.depth-1 {
 }
 .footer-category-list .footer-category-list-box li {
   font-size: 0.75em;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .footer-category-list .footer-category-list-box li :before {
   font-family: 'iconmoon-tidy';
@@ -1346,6 +1346,9 @@ li.depth-1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\e601";
+  margin-right: 10px;
+  font-size: 16px;
+  vertical-align: text-top;
 }
 
 /* =Footer
