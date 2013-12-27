@@ -12,16 +12,17 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
-							single_cat_title();
+							printf( __( 'Category: %s', 'tidy' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 
 						elseif ( is_tag() ) :
-							single_tag_title();
+							printf( __( 'Tag: %s', 'tidy' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 
 						elseif ( is_author() ) :
 							/* Queue the first post, that way we know
@@ -44,32 +45,9 @@ get_header(); ?>
 						elseif ( is_year() ) :
 							printf( __( 'Year: %s', 'tidy' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'tidy' ) ) . '</span>' );
 
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'tidy' );
-
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'tidy');
-
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'tidy');
-
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'tidy' );
-
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'tidy' );
-
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'tidy' );
-
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'tidy' );
-
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'tidy' );
-
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'tidy' );
+						elseif ( is_tax( 'post_format' ) ) :
+							
+							printf( __( 'Post format: %s', 'tidy' ), '<span>' . single_term_title( '', false ) . '</span>' );
 
 						else :
 							_e( 'Archives', 'tidy' );

@@ -863,6 +863,27 @@ body.single .entry-title, body.page .entry-title {
 }
 
 /* archive */
+.page-header {
+  background-color: #e3e6ea;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 1em;
+}
+.page-title span {
+  color: #0058ae;
+}
+
+.taxonomy-description {
+  font-size: 0.75em;
+}
+.taxonomy-description p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
 .entry-conteiner {
   width: 100%;
   float: right;

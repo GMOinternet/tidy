@@ -42,14 +42,12 @@
 		</footer><!-- .entry-meta -->
 	</div>
 
-	<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="tidy_post_thumbnail tidy-thumb-tiny entry-post_thumbnail"><a href="<?php the_permalink(); ?>" rel="bookmark">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'tidy-thumb-tiny' ); ?>
-			<?php else: ?>
-				<img src="<?php echo get_template_directory_uri(); ?>//images/tidy-thumb-tiny.png" alt="*">
-			<?php endif; ?>
-		</a></div>
-	<?php endif; ?>
+	<div class="tidy_post_thumbnail tidy-thumb-tiny entry-post_thumbnail"><a href="<?php the_permalink(); ?>" rel="bookmark">
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail( 'tidy-thumb-tiny' ); ?>
+		<?php else: ?>
+			<img src="<?php echo get_template_directory_uri(); ?>//images/tidy-thumb-tiny.png" alt="*">
+		<?php endif; ?>
+	</a></div>
 
 </article><!-- #post-## -->
