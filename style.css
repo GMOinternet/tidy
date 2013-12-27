@@ -300,22 +300,20 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  font-size: 12px;
-  font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.8);
-  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #0058ae;
   line-height: 1;
-  padding: 0.6em 1em 0.4em;
-  background: #e6e6e6;
+  padding: 0.3em 0.5em 0.2em;
+  background: white;
   border-color: #cccccc;
   border-style: solid;
-  border-width: 1px;
-  border-color: #cccccc #cccccc #bfbfbf #cccccc;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  border-width: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
   -webkit-appearance: button;
@@ -325,7 +323,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border-color: #cccccc #bfbfbf #adadad #bfbfbf;
+  color: white;
+  background: #0058ae;
 }
 button:focus, button:active,
 input[type="button"]:focus,
@@ -334,7 +333,8 @@ input[type="reset"]:focus,
 input[type="reset"]:active,
 input[type="submit"]:focus,
 input[type="submit"]:active {
-  border-color: #adadad #bfbfbf #bfbfbf #bfbfbf;
+  color: white;
+  background: #0058ae;
 }
 
 input[type="checkbox"],
@@ -921,13 +921,14 @@ object {
   margin-bottom: 30px;
   padding-bottom: 60px;
   border-bottom: solid 1px #cccccc;
+  position: relative;
 }
 .comment-form p {
-  font-size: 12px;
+  font-size: 0.75em;
   margin-bottom: 10px;
 }
 .comment-form code {
-  font-size: 12px;
+  font-size: 1em;
 }
 .comment-form input[type="text"],
 .comment-form input[type="email"],
@@ -942,11 +943,16 @@ object {
 .comment-form input[type="password"],
 .comment-form input[type="search"],
 .comment-form textarea {
+  font-size: 14px;
   position: relative;
   border-color: #cccccc;
   color: #1c1c1c;
   padding: 5px;
-  text-indent: 80px;
+  text-indent: 100px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 .comment-form input[type="text"]:focus,
 .comment-form input[type="email"]:focus,
@@ -955,7 +961,6 @@ object {
 .comment-form input[type="search"]:focus,
 .comment-form textarea:focus {
   text-indent: 0;
-  z-index: 3;
 }
 .comment-form .comment-form-author,
 .comment-form .comment-form-email,
@@ -967,13 +972,14 @@ object {
 .comment-form .comment-form-email label,
 .comment-form .comment-form-url label,
 .comment-form .comment-form-comment label {
+  font-size: 14px;
   display: inline-block;
-  min-width: 60px;
+  min-width: 80px;
   position: absolute;
   top: 6px;
   left: 6px;
   z-index: 1;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 .comment-form .comment-form-author label:before,
 .comment-form .comment-form-email label:before,
@@ -982,12 +988,12 @@ object {
   display: inline-block;
   position: absolute;
   z-index: 1;
-  top: 1px;
+  top: 0;
   left: 0;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1;
   font-family: 'Genericons';
   text-decoration: inherit;
@@ -1006,9 +1012,10 @@ object {
   content: '\f300';
 }
 .comment-form .form-submit {
-  position: relative;
-  float: right;
-  margin-top: -50px;
+  position: absolute;
+  bottom: 0;
+  right: 4%;
+  z-index: 100;
 }
 
 /* =Widgets

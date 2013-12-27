@@ -46,4 +46,19 @@
 		return false;
 	} );
 
+	// comment-form
+	$( 'p[class^="comment-form"] input, p[class^="comment-form"] textarea' ).focus( function(){
+		$(this).prev().fadeToggle();
+	} ).blur(function(){
+		$(this).prev().fadeToggle();
+	});
+	// submit btn
+	$( '.form-submit' ).css('bottom', function(index) {
+		index = $(this).height() + 10;
+		var submitposi = $( '.form-allowed-tags' ).height() + 10;
+		index = index + submitposi + 10*2.5;
+		return index;
+	});
+
+
 })(jQuery);
