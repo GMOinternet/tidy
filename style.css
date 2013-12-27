@@ -309,11 +309,7 @@ input[type="submit"] {
   border-color: #cccccc;
   border-style: solid;
   border-width: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
+  /* 	@include border-radius($button-border-radius); */
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
   -webkit-appearance: button;
@@ -370,15 +366,11 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #0058ae;
-  border-color: #0058ae;
+  color: #1c1c1c;
+  border-color: #e3e6ea;
   border-style: solid;
   border-width: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  /* 	@include border-radius($input-border-radius); */
   background-color: white;
 }
 input[type="text"]:focus,
@@ -395,13 +387,13 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px;
+  padding: 5px;
 }
 
 textarea {
   overflow: auto;
   /* Removes default vertical scrollbar in IE6/7/8/9 */
-  padding-left: 3px;
+  padding-left: 5px;
   vertical-align: top;
   /* Improves readability and alignment in all browsers */
   width: 98%;
@@ -748,6 +740,35 @@ a:hover, a:focus, a:active {
 
 /* =Search
 ----------------------------------------------- */
+.search-form input[type="search"] {
+  border-color: #0058ae;
+  color: #0058ae;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.search-form .search-field {
+  width: 240px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.search-form .search-submit {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #0058ae;
+  text-shadow: none;
+  font-size: 18px;
+}
+
 .search-container {
   position: absolute;
   top: 20px;
@@ -771,12 +792,11 @@ a:hover, a:focus, a:active {
   top: 28px;
   right: 0;
 }
-
-.search-field {
-  width: 262px;
+.search-box .search-field {
+  width: 270px;
+  margin: 0;
 }
-
-.search-submit {
+.search-box .search-submit {
   display: none;
 }
 
@@ -902,7 +922,7 @@ object {
   margin: 0;
   padding: 0;
   padding-top: 30px;
-  border-top: solid 1px #cccccc;
+  border-top: solid 1px #e3e6ea;
 }
 
 .children {
@@ -917,7 +937,7 @@ li.pingback {
 }
 
 li.depth-1 {
-  border-bottom: solid 1px #cccccc;
+  border-bottom: solid 1px #e3e6ea;
   padding-bottom: 30px;
 }
 
@@ -978,7 +998,7 @@ li.depth-1 {
 }
 
 .comment-form {
-  color: #cccccc;
+  color: #cdd0d4;
   margin-bottom: 60px;
   position: relative;
 }
@@ -1004,9 +1024,6 @@ li.depth-1 {
 .comment-form textarea {
   font-size: 14px;
   position: relative;
-  border-color: #cccccc;
-  color: #1c1c1c;
-  padding: 5px;
   text-indent: 100px;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -1120,27 +1137,6 @@ li.depth-1 {
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 20px;
-}
-
-/* Search widget */
-.widget_search .search-field {
-  width: 240px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-right: 5px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.widget_search .search-submit {
-  display: inline-block;
-  vertical-align: middle;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #0058ae;
-  text-shadow: none;
-  font-size: 18px;
 }
 
 /* Calendar widget */
