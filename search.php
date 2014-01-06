@@ -13,11 +13,11 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="archive-header">
 				<?php do_action( 'tidy_before_page_header' ); ?>
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'tidy' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="archive-title"><span class="icon-search"></span> <?php printf( __( 'Search Results for: %s', 'tidy' ), get_search_query() ); ?></h1>
 				<?php do_action( 'tidy_after_page_header' ); ?>
-			</header><!-- .page-header -->
+			</header><!-- .archive-header -->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

@@ -9,11 +9,11 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
+	<header class="archive-header">
 		<?php do_action( 'tidy_before_page_header' ); ?>
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'tidy' ); ?></h1>
+		<h1 class="archive-title"><?php _e( 'Nothing Found', 'tidy' ); ?></h1>
 		<?php do_action( 'tidy_after_page_header' ); ?>
-	</header><!-- .page-header -->
+	</header><!-- .archive-header -->
 
 	<div class="page-content">
 		<?php do_action( 'tidy_before_page_content' ); ?>
