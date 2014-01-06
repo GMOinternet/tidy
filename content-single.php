@@ -24,7 +24,7 @@
 						echo '<span class="entry_tags"><span class="icon-tag"></span> ' . $tag_list . '</span>';
 					}
 				?>
-				<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
 			</div>
 		</div><!-- .entry-meta -->
 		<?php do_action( 'tidy_after_entry_header' ); ?>

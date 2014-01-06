@@ -1,3 +1,11 @@
+/**
+ * Tidy - v0.1.0
+ *
+ * http://www.gmo.jp/
+ *
+ * Copyright 2013, GMO (http://www.gmo.jp/)
+ */
+
 (function($){
 
 	// site-header-widget-area
@@ -59,5 +67,18 @@
 		return index;
 	});
 
+	// archive-content ellipsis
+	$('.archive-content .entry-title a').each( function() {
+		var ath = $(this).height();
+		if (ath > 45) {
+			$(this).after('<span class="ellipsis">...</span>');
+		}
+	});
+	$('.archive-content .entry-summary p').each( function() {
+		var ash = $(this).height();
+		if (ash > 34) {
+			$(this).after('<span class="ellipsis">...</span>');
+		}
+	});
 
 })(jQuery);

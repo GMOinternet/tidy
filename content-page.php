@@ -24,5 +24,5 @@
 		?>
 		<?php do_action( 'tidy_after_entry_content' ); ?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'tidy' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', 'tidy' ), '<footer class="entry-meta"><span class="edit-link"><span class="icon-pencil"></span> ', '</span></footer>' ); ?>
 </article><!-- #post-## -->

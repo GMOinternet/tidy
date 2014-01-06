@@ -74,6 +74,6 @@ add_filter( 'wp_title', 'tidy_wp_title', 10, 2 );
  * @return string Add "read more".
 */
 function tidy_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'tidy' ) . '</a>';
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '"><span class="genericon genericon-rightarrow"></span>' . __( 'Read More', 'tidy' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'tidy_excerpt_more' );
