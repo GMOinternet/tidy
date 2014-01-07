@@ -849,6 +849,7 @@ body.single .entry-title, body.page .entry-title {
   font-size: 14px;
   display: inline-block;
   vertical-align: top;
+  margin-left: 1px;
 }
 .entry-meta .posted-on,
 .entry-meta .byline,
@@ -1030,7 +1031,8 @@ object {
   border-top: solid 1px #e3e6ea;
   font-size: 0.875em;
 }
-.site-main [class*="navigation"] .genericon {
+
+.post-navigation .genericon {
   font-size: 10px;
   width: 10px;
   height: 10px;
@@ -1046,6 +1048,39 @@ object {
   float: right;
   text-align: right;
   width: 50%;
+}
+
+ul.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+li[class*="pagination"] {
+  display: inline-block;
+  margin: 0;
+}
+li[class*="pagination"] > span,
+li[class*="pagination"] > a {
+  padding: 5px 11px;
+  display: block;
+}
+li[class*="pagination"] a:hover, li[class*="pagination"] a:focus, li[class*="pagination"] a:active {
+  background-color: #0058ae;
+  color: white;
+  text-decoration: none;
+}
+li[class*="pagination"] .genericon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  padding: 0;
+}
+
+li.pagination-icon a {
+  padding: 5px;
 }
 
 /* =Comments
@@ -1645,6 +1680,17 @@ li.depth-1 {
   }
   .archive-content .entry-meta {
     clear: both;
+  }
+
+  /* =Navigation
+  ----------------------------------------------- */
+  ul.nav-links {
+    text-align: center;
+  }
+
+  li[class*="pagination"] > span,
+  li[class*="pagination"] > a {
+    padding: 5px;
   }
 
   /* =Footer category list

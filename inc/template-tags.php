@@ -7,13 +7,82 @@
  * @package Tidy
  */
 
+
 if ( ! function_exists( 'tidy_paging_nav' ) ) :
+/**
+ * Display numberic pagination when applicable
+ *
+ * @return void
+ */
+function tidy_paging_nav( $range = 2, $omission = "&#x02026;" ) {
+
+	if( is_singular() )
+		return;
+
+	global $wp_query;
+
+	// Stop execution if there's only 1 page
+	if( $wp_query->max_num_pages < 2 )
+		return;
+
+	$paged     = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	$max       = intval( $wp_query->max_num_pages );
+	$showitems = ($range * 2)+1;
+	$omission  = '<li class="pagination-omission pagination-icon">' . $omission . "</li>\n";
+
+	?>
+
+	<nav class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'tidy' ); ?></h1>
+		<ul class="nav-links">
+	<?php
+
+	// Link to first page
+	if( $paged > 1 && $paged > $range+1 && $showitems < $max )
+		echo '<li class="pagination-first pagination-icon"><a href="' . get_pagenum_link(1) . '"><span class="genericon genericon-skip-back"></span></a></li>' . "\n";
+
+	// Previous Post Link
+	if ( get_previous_posts_link() )
+		printf( '<li class="pagination-previous pagination-icon">%s</li>' . "\n", get_previous_posts_link( '<span class="genericon genericon-leftarrow"></span><span class="screen-reader-text">' . __( 'Previous Page', 'tidy' ) . '</span>' ) );
+
+	// Link to current page, plus 2 pages in either direction if necessary
+	if ( $paged > $range ) echo $omission;
+
+	for ( $i = 1; $i <= $max; $i++ ) {
+		if ( 1 != $max && ( !( $i >= $paged+$range+1 || $i <= $paged-$range-1 ) || $max <= $showitems ) ) {
+			if ( $paged == $i ) {
+				echo '<li class="pagination-current"><span>' . $i ."</span></li>\n";
+			} else {
+				echo '<li class="pagination-inactive"><a href="' . get_pagenum_link( $i ) . '">' . $i . "</a></li>\n";
+			}
+		}
+	}
+
+	if ( ( $max - $paged ) > $range ) echo $omission;
+
+	// Next Post Link
+	if ( get_next_posts_link() )
+		printf( '<li class="pagination-next pagination-icon">%s</li>' . "\n", get_next_posts_link( '<span class="screen-reader-text">' . __( 'Next Page', 'tidy' ) . '</span><span class="genericon genericon-rightarrow"></span>' ) );
+
+	// Link to last page
+	if ( $paged < $max-1 && $paged+$range-1 < $max && $showitems < $max )
+		echo '<li class="pagination-last pagination-icon"><a href="' . get_pagenum_link($max) . '"><span class="genericon genericon-skip-ahead"></span></a></li>' . "\n";
+
+	?>
+		</ul><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php 
+}
+endif; // textdomain_content_query_nav
+
+if ( ! function_exists( '__tidy_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
  * @return void
  */
-function tidy_paging_nav() {
+
+function __tidy_paging_nav() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
@@ -22,7 +91,8 @@ function tidy_paging_nav() {
 	<nav class="navigation paging-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'tidy' ); ?></h1>
 		<div class="nav-links">
-
+<?php 
+/*
 			<?php if ( get_next_posts_link() ) : ?>
 			<div class="nav-previous"><?php next_posts_link( __( '<span class="genericon genericon-leftarrow"></span> Older posts', 'tidy' ) ); ?></div>
 			<?php endif; ?>
@@ -30,6 +100,8 @@ function tidy_paging_nav() {
 			<?php if ( get_previous_posts_link() ) : ?>
 			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="genericon genericon-rightarrow"></span>', 'tidy' ) ); ?></div>
 			<?php endif; ?>
+*/
+ ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -56,8 +128,8 @@ function tidy_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'tidy' ); ?></h1>
 		<div class="nav-links">
 
-			<div class="nav-previous"><?php previous_post_link( '%link', _x( '<span class="genericon genericon-leftarrow"></span> %title', 'Previous post link', 'tidy' ) ); ?></div>
-			<div class="nav-next"><?php next_post_link(     '%link', _x( '%title <span class="genericon genericon-rightarrow"></span>', 'Next post link',     'tidy' ) ); ?></div>
+			<?php previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="genericon genericon-leftarrow"></span> %title',  'Previous post link', 'tidy' ) ); ?>
+			<?php next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="genericon genericon-rightarrow"></span>', 'Next post link',     'tidy' ) ); ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
