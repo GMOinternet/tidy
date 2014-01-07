@@ -93,5 +93,5 @@
 	</header><!-- #masthead -->
 
 	<?php do_action( 'tidy_before_content' ); ?>
-	
+
 	<div id="content" class="site-content">
