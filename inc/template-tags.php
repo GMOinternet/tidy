@@ -34,7 +34,7 @@ function tidy_paging_nav( $range = 2, $omission = "&#x02026;" ) {
 
 	<nav class="navigation paging-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'tidy' ); ?></h1>
-		<ul class="nav-links">
+		<ul class="page-numbers">
 	<?php
 
 	// Link to first page
@@ -75,39 +75,6 @@ function tidy_paging_nav( $range = 2, $omission = "&#x02026;" ) {
 }
 endif; // textdomain_content_query_nav
 
-if ( ! function_exists( '__tidy_paging_nav' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
- *
- * @return void
- */
-
-function __tidy_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
-	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'tidy' ); ?></h1>
-		<div class="nav-links">
-<?php 
-/*
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="genericon genericon-leftarrow"></span> Older posts', 'tidy' ) ); ?></div>
-			<?php endif; ?>
-
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="genericon genericon-rightarrow"></span>', 'tidy' ) ); ?></div>
-			<?php endif; ?>
-*/
- ?>
-
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
 
 if ( ! function_exists( 'tidy_post_nav' ) ) :
 /**
@@ -136,6 +103,39 @@ function tidy_post_nav() {
 	<?php
 }
 endif;
+
+
+if ( ! function_exists( 'tidy_comment_nav' ) ) :
+/**
+ * Display navigation to next/previous comment when applicable.
+ *
+ * @return void
+ */
+function tidy_comment_nav() {
+
+	if( ! is_singular() )
+		return;
+
+	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // are there comments to navigate through
+	?>
+		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'tidy' ); ?></h1>
+			<?php
+				paginate_comments_links(
+					array(
+						'prev_text' => '<span class="genericon genericon-leftarrow"></span><span class="screen-reader-text">' . __( 'Older Comments', 'tidy' ) . '</span>',
+						'next_text' => '<span class="screen-reader-text">' . __( 'Newer Comments', 'tidy' ) . '</span><span class="genericon genericon-rightarrow"></span>',
+						'type' => 'list'
+					)
+				);
+			?>
+		</nav><!-- #comment-nav-below -->
+	<?php
+	} // check for comment navigation
+
+}
+endif;
+
 
 if ( ! function_exists( 'tidy_comment' ) ) :
 /**
@@ -202,6 +202,7 @@ function tidy_comment( $comment, $args, $depth ) {
 }
 endif; // ends check for tidy_comment()
 
+
 if ( ! function_exists( 'tidy_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -232,6 +233,7 @@ function tidy_posted_on() {
 }
 endif;
 
+
 /**
  * Returns true if a blog has more than 1 category.
  */
@@ -256,6 +258,7 @@ function tidy_categorized_blog() {
 		return false;
 	}
 }
+
 
 /**
  * Flush out the transients used in tidy_categorized_blog

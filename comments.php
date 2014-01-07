@@ -32,12 +32,12 @@ if ( post_password_required() ) {
 	</h2>
 	<?php endif; ?>
 
-	<?php /*
+	<?php 
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'tidy' ); ?></p>
-	<?php endif; */?>
+	<?php endif; ?>
 
 	<?php
 		$comments_args = array(
@@ -63,13 +63,7 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'tidy' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'tidy' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'tidy' ) ); ?></div>
-		</nav><!-- #comment-nav-below -->
-		<?php endif; // check for comment navigation ?>
+		<?php tidy_comment_nav(); ?>
 
 	<?php endif; // have_comments() ?>
 
