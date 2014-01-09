@@ -491,6 +491,19 @@ a:hover, a:focus, a:active {
 
 /* =Entry Content
 ----------------------------------------------- */
+.entry-content,
+.page-content {
+  margin-bottom: 30px;
+}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+  clear: none;
+}
 .entry-content > p,
 .page-content > p {
   margin-bottom: 40px;
@@ -515,6 +528,60 @@ a:hover, a:focus, a:active {
   content: '\f106';
   font: normal 30px/20px 'Genericons';
   vertical-align: bottom;
+}
+
+/* =Media
+----------------------------------------------- */
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.wp-caption {
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.site-main .gallery {
+  margin-bottom: 30px;
+}
+
+.site-main .gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%;
+}
+
+.site-main .gallery dd {
+  margin: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%;
 }
 
 body#tinymce.wp-editor {
