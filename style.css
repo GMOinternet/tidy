@@ -211,7 +211,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-  margin: 0 0 30px 40px;
+  margin: 0 0 30px 65px;
 }
 
 address {
@@ -1505,8 +1505,8 @@ li.pagination-icon a {
 
 /* =Entry Content
 ----------------------------------------------- */
-.entry-content p,
-.page-content p {
+.entry-content > p,
+.page-content > p {
   margin-bottom: 40px;
 }
 .entry-content a[target="_blank"]:after,
@@ -1516,6 +1516,19 @@ li.pagination-icon a {
   font: normal 16px/1 'Genericons';
   vertical-align: middle;
   content: '\f442';
+}
+.entry-content blockquote:before,
+.page-content blockquote:before {
+  margin-left: -35px;
+  float: left;
+  color: #e3e6ea;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font: normal 16px/1 'Genericons';
+  vertical-align: middle;
+  content: '\f106';
+  font: normal 30px/20px 'Genericons';
+  vertical-align: bottom;
 }
 
 /* =Widgets
