@@ -31,6 +31,11 @@ function tidy_setup() {
 	load_theme_textdomain( 'tidy', get_template_directory() . '/languages' );
 
 	/**
+	 * Enable support for Editor Style
+	 */
+	add_editor_style();
+
+	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
