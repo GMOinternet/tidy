@@ -95,8 +95,8 @@ function tidy_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'tidy' ); ?></h1>
 		<div class="nav-links">
 
-			<?php previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="genericon genericon-leftarrow"></span> %title',  'Previous post link', 'tidy' ) ); ?>
-			<?php next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="genericon genericon-rightarrow"></span>', 'Next post link',     'tidy' ) ); ?>
+			<?php previous_post_link( '<div class="nav-previous"><span class="genericon genericon-leftarrow"></span> %link</div>', '%title' ); ?>
+			<?php next_post_link(     '<div class="nav-next">%link <span class="genericon genericon-rightarrow"></span></div>',    '%title' ); ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

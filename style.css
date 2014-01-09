@@ -1056,6 +1056,7 @@ body.single .entry-title, body.page .entry-title {
 }
 
 .post-navigation .genericon {
+  color: #0058ae;
   font-size: 10px;
   width: 10px;
   height: 10px;
@@ -1076,11 +1077,18 @@ body.single .entry-title, body.page .entry-title {
   float: right;
   text-align: right;
   width: 50%;
+  position: relative;
+  padding-right: 13px;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+[class*="navigation"] .nav-next .genericon {
+  position: absolute;
+  top: 6px;
+  right: 0;
 }
 
 ul.page-numbers {
