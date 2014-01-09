@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'iconmoon-tidy';
-	src:url('../font/iconmoon-tidy.eot');
-	src:url('../font/iconmoon-tidy.eot?#iefix') format('embedded-opentype'),
-		url('../font/iconmoon-tidy.ttf') format('truetype'),
-		url('../font/iconmoon-tidy.woff') format('woff'),
-		url('../font/iconmoon-tidy.svg#iconmoon-tidy') format('svg');
+	src:url('fonts/iconmoon-tidy.eot');
+	src:url('fonts/iconmoon-tidy.eot?#iefix') format('embedded-opentype'),
+		url('fonts/iconmoon-tidy.woff') format('woff'),
+		url('fonts/iconmoon-tidy.ttf') format('truetype'),
+		url('fonts/iconmoon-tidy.svg#iconmoon-tidy') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -145,4 +145,7 @@
 }
 .icon-pencil:before {
 	content: "\e628";
+}
+.icon-warning:before {
+	content: "\e629";
 }
