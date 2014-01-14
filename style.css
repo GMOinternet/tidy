@@ -649,7 +649,7 @@ a:hover, a:focus, a:active {
   opacity: 0.8;
 }
 .sns-icons [class^="icon-"], .sns-icons [class*=" icon-"] {
-  font-size: 1.28571em;
+  font-size: 18px;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -1592,7 +1592,6 @@ li.depth-1 {
 }
 .tidy_contact_sns_icons .sns-icons {
   text-align: left;
-  font-size: 18px;
 }
 .tidy_contact_sns_icons .sns-icons li {
   margin: 0 5px 8px 0;
