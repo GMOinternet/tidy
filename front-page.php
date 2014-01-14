@@ -13,14 +13,14 @@
 
 get_header(); ?>
 
-	<div id="merit-box-area" class="front-section">
+	<div id="merit-box-area" class="front-section"><div class="front-section-content merit-section-content">
 		
 		<?php get_template_part( 'meritbox' ) ?>
 		<?php get_template_part( 'meritbox' ) ?>
 		<?php get_template_part( 'meritbox', 'image' ) ?>
 		<?php get_template_part( 'meritbox', 'image' ) ?>
 
-	</div><!-- #merit-box-area -->
+	</div></div><!-- #merit-box-area -->
 
 	<div id="primary" class="content-area">
 		<?php do_action( 'tidy_before_primary' ); ?>
@@ -33,10 +33,12 @@ get_header(); ?>
 				</header>
 
 				<?php if ( have_posts() ) : ?>
+					<div class="front-section-content blog-section-content">
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'content' ); ?>
+						<?php get_template_part( 'content', 'typeB' ); ?>
 					<?php endwhile; ?>
+					</div>
 					<?php //tidy_paging_nav(); ?>
 				<?php else : ?>
 					<?php get_template_part( 'content', 'none' ); ?>
@@ -44,7 +46,7 @@ get_header(); ?>
 
 			</section><!-- #blog-area -->
 
-			<section id="gallery-area" class="front-section">
+			<section id="gallery-area" class="front-section ">
 				<header class="section-header">
 					<h1 class="section-title"><span class="icon-notebook"></span><?php _e( 'Portfolio', 'tidy' ); ?></h1>
 				</header>
@@ -63,7 +65,7 @@ get_header(); ?>
 				?>
 				
 				<?php if ( !empty( $tidy_gallery_posts ) ) : ?>
-					<div class="gallery-content-area">
+					<div class="front-section-content gallery-section-content">
 					<?php foreach ( $tidy_gallery_posts as $post ) : setup_postdata( $post ); ?>
 						<?php get_template_part( 'content', get_post_format() ); ?>
 					<?php endforeach; ?>

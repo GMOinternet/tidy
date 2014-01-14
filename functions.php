@@ -50,6 +50,7 @@ function tidy_setup() {
 	add_image_size( 'tidy-thumb-small', 125, 125, true);
 	add_image_size( 'tidy-thumb-medium', 580, 580);
 	add_image_size( 'tidy-meritbox', 370, 370);
+	add_image_size( 'tidy-thumb-blog', 270, 180, true);
 	add_image_size( 'tidy-thumb-portfolio', 270, 270, true);
 
 	/**

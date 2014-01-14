@@ -84,7 +84,7 @@
 		return index;
 	});
 
-	// archive-content ellipsis
+	// ellipsis
 	var ellipsis = '<span class="ellipsis">...</span>';
 
 	$('.archive-content .entry-title a').each( function() {
@@ -99,5 +99,12 @@
 			$(this).after( ellipsis );
 		}
 	});
+	$('.blog-section-content .entry-title a').each( function() {
+		var ath = $(this).height();
+		if (ath > 45) {
+			$(this).after( ellipsis );
+		}
+	});
+
 
 })(jQuery);
