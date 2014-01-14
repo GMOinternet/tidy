@@ -54,12 +54,29 @@
 		return false;
 	} );
 
+	// Portfolio toggle.
+	$( '.gallery-content-area .entry-box').hover(function(){
+		var w = $(this).width();
+		$(this).children( '.entry-conteiner' ).css({left:-w});
+		$(this).children( '.entry-conteiner' ).animate({
+			left: 0,
+		}, 'slow');
+		
+	}, function(){
+		var w = $(this).width();
+		$(this).children( '.entry-conteiner' ).animate({
+			left: w,
+		}, 'slow');
+		
+	});
+
 	// comment-form
 	$( 'p[class^="comment-form"] input, p[class^="comment-form"] textarea' ).focus( function(){
 		$(this).prev().fadeToggle();
 	} ).blur(function(){
 		$(this).prev().fadeToggle();
 	});
+
 	// submit btn
 	$( '.form-submit' ).css('bottom', function(index) {
 		var submitposi = $( '.form-allowed-tags' ).height() + 5;

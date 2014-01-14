@@ -26,29 +26,51 @@ get_header(); ?>
 		<?php do_action( 'tidy_before_primary' ); ?>
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<section id="blog-area" class="front-section">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+				<header class="section-header">
+					<h1 class="section-title"><span class="icon-pencil"></span><?php _e( 'Blog', 'tidy' ); ?></h1>
+				</header>
 
+				<?php if ( have_posts() ) : ?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'content' ); ?>
+					<?php endwhile; ?>
+					<?php //tidy_paging_nav(); ?>
+				<?php else : ?>
+					<?php get_template_part( 'content', 'none' ); ?>
+				<?php endif; ?>
+
+			</section><!-- #blog-area -->
+
+			<section id="gallery-area" class="front-section">
+				<header class="section-header">
+					<h1 class="section-title"><span class="icon-notebook"></span><?php _e( 'Portfolio', 'tidy' ); ?></h1>
+				</header>
 				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
+				$args = array(
+					'posts_per_page' => 5,
+					'tax_query'      => array(
+							array(
+								'taxonomy' => 'post_format',
+								'field'    => 'slug',
+								'terms'    => 'post-format-gallery'
+							)
+						)
+					);
+				$tidy_gallery_posts = get_posts( $args );
 				?>
-
-			<?php endwhile; ?>
-
-			<?php tidy_paging_nav(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
+				
+				<?php if ( !empty( $tidy_gallery_posts ) ) : ?>
+					<div class="gallery-content-area">
+					<?php foreach ( $tidy_gallery_posts as $post ) : setup_postdata( $post ); ?>
+						<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
+			</section>
 		</main><!-- #main -->
 		<?php do_action( 'tidy_after_primary' ); ?>
 	</div><!-- #primary -->

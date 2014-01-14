@@ -77,3 +77,27 @@ function tidy_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '"><span class="genericon genericon-rightarrow"></span>' . __( 'Read More', 'tidy' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'tidy_excerpt_more' );
+
+/**
+ * Filters pre_get_posts.
+ * @param string $query Default query.
+ * @return Void.
+*/
+add_action( 'pre_get_posts', 'tidy_modify_main_query' );
+function tidy_modify_main_query( $query ) {
+	if ( is_admin() || ! $query->is_main_query() )
+		return;
+
+	if ( $query->is_front_page() ) {
+		$query->set( 'tax_query', array(
+			array(
+				'taxonomy' => 'post_format',
+				'field'    => 'slug',
+				'terms'    => 'post-format-gallery',
+				'operator' => 'NOT IN'
+			)
+		) );
+		return;
+	}
+
+}

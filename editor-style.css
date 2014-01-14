@@ -529,6 +529,20 @@ a:hover, a:focus, a:active {
   font: normal 30px/20px 'Genericons';
   vertical-align: bottom;
 }
+.entry-content .gallery,
+.page-content .gallery {
+  margin-bottom: 30px;
+}
+.entry-content .gallery a img,
+.page-content .gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%;
+}
+.entry-content .gallery dd,
+.page-content .gallery dd {
+  margin: 0;
+}
 
 /* =Media
 ----------------------------------------------- */
@@ -561,20 +575,6 @@ a:hover, a:focus, a:active {
 
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
-}
-
-.site-main .gallery {
-  margin-bottom: 30px;
-}
-
-.site-main .gallery a img {
-  border: none;
-  height: auto;
-  max-width: 90%;
-}
-
-.site-main .gallery dd {
-  margin: 0;
 }
 
 /* Make sure embeds and iframes fit their containers */

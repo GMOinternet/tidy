@@ -4,13 +4,13 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('archive-content'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'archive-content' ); ?>>
 
 	<div class="tidy_post_thumbnail tidy-thumb-tiny"><a href="<?php the_permalink(); ?>" rel="bookmark">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'tidy-thumb-tiny' ); ?>
 		<?php else: ?>
-			<img src="<?php echo get_template_directory_uri(); ?>//images/tidy-thumb-tiny.png" alt="*">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/tidy-thumb-tiny.png" alt="*">
 		<?php endif; ?>
 	</a></div>
 
