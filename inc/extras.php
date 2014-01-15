@@ -67,16 +67,6 @@ function tidy_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'tidy_wp_title', 10, 2 );
 
-/**
- * Filters excerpt_more.
- * Make the "read more" link to the post
- * @param string $more Default title text for current view.
- * @return string Add "read more".
-*/
-function tidy_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '"><span class="genericon genericon-rightarrow"></span>' . __( 'Read More', 'tidy' ) . '</a>';
-}
-add_filter( 'excerpt_more', 'tidy_excerpt_more' );
 
 /**
  * Filters pre_get_posts.
