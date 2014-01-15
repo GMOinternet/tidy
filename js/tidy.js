@@ -59,13 +59,13 @@
 		var w = $(this).width();
 		$(this).children( '.entry-conteiner' ).css({left:-w});
 		$(this).children( '.entry-conteiner' ).animate({
-			left: 0,
+			left: 0
 		}, 'slow');
 		
 	}, function(){
 		var w = $(this).width();
 		$(this).children( '.entry-conteiner' ).animate({
-			left: w,
+			left: w
 		}, 'slow');
 		
 	});
