@@ -480,14 +480,14 @@ a:hover, a:focus, a:active {
 }
 
 /* Clearing */
-.clear, .sns-icons, .main-navigation, .hentry, .front-section-content, .blog-section-content .typeB, .comment-body .comment-meta,
+.clear, .sns-icons, .main-navigation, .hentry, .front-section-content, .blog-section-content .typeB, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny,
 .entry-content,
 .comment-content,
 .site-content,
 .inner {
   *zoom: 1;
 }
-.clear:after, .sns-icons:after, .main-navigation:after, .hentry:after, .front-section-content:after, .blog-section-content .typeB:after, .comment-body .comment-meta:after,
+.clear:after, .sns-icons:after, .main-navigation:after, .hentry:after, .front-section-content:after, .blog-section-content .typeB:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after,
 .entry-content:after,
 .comment-content:after,
 .site-content:after,
@@ -1611,30 +1611,27 @@ li.depth-1 {
 .widget_tidy_recent_posts li.tidy-thumb-small:nth-child(2n) {
   margin-right: 0;
 }
-.widget_tidy_recent_posts li.tidy-thumb-tiny {
-  line-height: 1;
-  margin-bottom: 10px;
+.widget_tidy_recent_posts li.tidy-thumb-small:nth-child(2n+1) {
+  clear: both;
 }
-.widget_tidy_recent_posts li.tidy-thumb-tiny a {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-box-align: center;
-  box-align: center;
+.widget_tidy_recent_posts li.tidy-thumb-tiny {
+  margin-bottom: 10px;
 }
 .widget_tidy_recent_posts li.tidy-thumb-tiny img {
   width: 80px;
+  height: 80px;
   margin-right: 10px;
+  float: left;
 }
 .widget_tidy_recent_posts li.tidy-thumb-tiny .post-title {
-  line-height: 1.4;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
+  height: 80px;
+  overflow: hidden;
+}
+.widget_tidy_recent_posts li.tidy-thumb-tiny .post-title a {
+  height: 80px;
+  display: table-cell;
+  vertical-align: middle;
+  overflow: hidden;
 }
 
 /* =Footer category list

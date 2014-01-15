@@ -281,7 +281,7 @@ class Tidy_Widget_Recent_Posts extends WP_Widget {
 			<?php if ( $title ) echo $before_title . $title . $after_title; ?>
 			<ul>
 			<?php while ( $r->have_posts() ) : $r->the_post(); ?>
-				<li class="<?php echo $size; ?>"><a href="<?php the_permalink(); ?>">
+				<li class="<?php echo $size; ?>"><a href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php
 					if ( has_post_thumbnail() ) {
 						the_post_thumbnail( $size );
@@ -289,10 +289,11 @@ class Tidy_Widget_Recent_Posts extends WP_Widget {
 						echo '<img src="' . get_template_directory_uri() . '/images/' . $size . '.png" >';
 					}
 				?>
+					</a>
 					<?php if ( $show_title ) : ?>
-						<div class="post-title"><?php get_the_title() ? the_title() : the_ID(); ?></div>
+						<div class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php get_the_title() ? the_title() : the_ID(); ?></a></div>
 					<?php endif; ?>
-				</a></li>
+				</li>
 			<?php endwhile; ?>
 			</ul>
 			<?php echo $after_widget; ?>
