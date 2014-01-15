@@ -590,6 +590,9 @@ a:hover, a:focus, a:active {
 .site-header-widget-area-content {
   margin-right: 30px;
 }
+.site-header-widget-area-content > p {
+  margin-bottom: 0;
+}
 
 .header-widget-area-close-btn {
   width: 20px;
