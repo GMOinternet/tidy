@@ -1626,6 +1626,7 @@ li.depth-1 {
 .widget_tidy_recent_posts li.tidy-thumb-tiny .post-title {
   height: 80px;
   overflow: hidden;
+  font-size: 14px;
 }
 .widget_tidy_recent_posts li.tidy-thumb-tiny .post-title a {
   height: 80px;
