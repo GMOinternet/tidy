@@ -68,10 +68,12 @@ function tidy_setup() {
 	/**
 	 * Setup the WordPress core custom background feature.
 	 */
+/*
 	add_theme_support( 'custom-background', apply_filters( 'tidy_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+*/
 }
 endif; // tidy_setup
 add_action( 'after_setup_theme', 'tidy_setup' );
@@ -217,9 +219,47 @@ require get_template_directory() . '/inc/widgets.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+// require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/*
+ * Loads the Theme Options Panel
+ */
+
+define( 'TIDY_ADMIN_DIRECTORY_URI',  get_template_directory_uri() . '/admin/' );
+define( 'TIDY_ADMIN_DIRECTORY_PATH', get_template_directory() . '/admin/' );
+require get_template_directory() . '/admin/options-framework.php';
+
+/*
+ * This is an example of how to add custom scripts to the options panel.
+ * This one shows/hides the an option when a checkbox is clicked.
+ *
+ * You can delete it if you not using that option
+ */
+
+/*
+add_action( 'optionsframework_custom_scripts', 'optionsframework_custom_scripts' );
+
+function optionsframework_custom_scripts() { ?>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+	jQuery('#example_showhidden').click(function() {
+		jQuery('#section-example_text_hidden').fadeToggle(400);
+	});
+
+	if (jQuery('#example_showhidden:checked').val() !== undefined) {
+		jQuery('#section-example_text_hidden').show();
+	}
+
+});
+</script>
+
+<?php
+}
+*/
