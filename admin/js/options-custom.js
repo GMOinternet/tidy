@@ -28,9 +28,20 @@ jQuery(document).ready(function($) {
 		// Hides all the .group sections to start
 		$('.group').hide();
 
+		// Find if a selected tab is saved in localStorage
+		var active_tab = '';
+		if ( typeof(localStorage) != 'undefined' ) {
+			active_tab = localStorage.getItem("active_tab");
+		}
+
 		// If active tab is saved and exists, load it's .group
-		$('.group:first').show();
-		$('.nav-tab-wrapper a:first').addClass('nav-tab-active');
+		if (active_tab != '' && $(active_tab).length ) {
+			$(active_tab).show();
+			$(active_tab + '-tab').addClass('nav-tab-active');
+		} else {
+			$('.group:first').show();
+			$('.nav-tab-wrapper a:first').addClass('nav-tab-active');
+		}
 
 		// Bind tabs clicks
 		$('.nav-tab-wrapper a').click(function(evt) {
@@ -43,6 +54,10 @@ jQuery(document).ready(function($) {
 			$(this).addClass('nav-tab-active').blur();
 
 			var group = $(this).attr('href');
+
+			if (typeof(localStorage) != 'undefined' ) {
+				localStorage.setItem("active_tab", $(this).attr('href') );
+			}
 
 			$('.group').hide();
 			$(group).show();

@@ -94,7 +94,7 @@ class Options_Framework_Interface {
 			}
 
 			// If the option is already saved, override $val
-			if ( ( $value['type'] != 'heading' ) && ( $value['type'] != 'info') && ( $value['type'] != 'feed') ) {
+			if ( ( $value['type'] != 'heading' ) && ( $value['type'] != 'info' ) && ( $value['type'] != 'feed' ) ) {
 				if ( isset( $settings[($value['id'])]) ) {
 					$val = $settings[($value['id'])];
 					// Striping slashes of non-array options
@@ -116,6 +116,11 @@ class Options_Framework_Interface {
 
 
 			switch ( $value['type'] ) {
+
+			// Basic text input
+			case 'sns':
+				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
+				break;
 
 			// Basic text input
 			case 'text':
@@ -151,7 +156,6 @@ class Options_Framework_Interface {
 				}
 				$output .= '</select>';
 				break;
-
 
 			// Radio Box
 			case "radio":
@@ -364,6 +368,7 @@ class Options_Framework_Interface {
 				wp_editor( $val, $value['id'], $editor_settings );
 				$output = '';
 				break;
+
 
 			// Info
 			case "info":

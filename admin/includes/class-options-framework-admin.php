@@ -299,7 +299,6 @@ class Options_Framework_Admin {
 			if ( ! isset( $option['type'] ) ) {
 				continue;
 			}
-
 			$id = preg_replace( '/[^a-zA-Z0-9._\-]/', '', strtolower( $option['id'] ) );
 
 			// Set checkbox to false if it wasn't sent in the $_POST

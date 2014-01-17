@@ -230,6 +230,12 @@ function of_sanitize_font_face( $value ) {
 }
 add_filter( 'of_font_face', 'of_sanitize_font_face' );
 
+
+/* SNS */
+
+add_filter( 'of_sanitize_sns', 'sanitize_text_field' );
+
+
 /**
  * Get recognized background repeat settings
  *

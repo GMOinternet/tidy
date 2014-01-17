@@ -28,6 +28,12 @@ function optionsframework_option_name() {
 function optionsframework_options() {
 
 	// Test data
+	$toggle_array = array(
+		'1' => __('On', 'tidy'),
+		'0' => __('Off', 'tidy')
+	);
+
+	// Test data
 	$test_array = array(
 		'one' => __('One', 'tidy'),
 		'two' => __('Two', 'tidy'),
@@ -304,11 +310,6 @@ function optionsframework_options() {
 		'options' => $test_array);
 
 	$options[] = array(
-		'name' => __('Example Info', 'tidy'),
-		'desc' => __('This is just some example information you can put in the panel.', 'tidy'),
-		'type' => 'info');
-
-	$options[] = array(
 		'name' => __('Input Checkbox', 'tidy'),
 		'desc' => __('Example checkbox, defaults to true.', 'tidy'),
 		'id' => 'example_checkbox',
@@ -318,15 +319,23 @@ function optionsframework_options() {
 	// Social Settings
 	$options[] = array(
 		'name' => __('Social Settings', 'tidy'),
+		'icon' => 'share',
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('Input Text Mini', 'tidy'),
-		'desc' => __('A mini text input field.', 'tidy'),
-		'id' => 'example_text_mini',
-		'std' => 'Default',
-		'class' => 'mini',
-		'type' => 'text');
+		'name' => __('Google+', 'tidy'),
+		'desc' => __('Google.', 'tidy'),
+		'id' => 'text_google',
+		'std' => 'text_google',
+		'type' => 'sns');
+
+	$options[] = array(
+		'name' => __('Toggle Google', 'tidy'),
+		'desc' => __('Radio select with default options "one".', 'tidy'),
+		'id' => 'toggle_google',
+		'std' => '0',
+		'type' => 'radio',
+		'options' => $toggle_array);
 
 
 /*
