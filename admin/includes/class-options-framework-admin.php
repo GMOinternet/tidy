@@ -222,7 +222,11 @@ class Options_Framework_Admin {
 
 		<?php // save options message here. ?>
 		<?php if ( $menu['banner'] ) : ?>
-		<div id="optionsframework-banner"><img src="<?php echo esc_attr( $menu['banner'] ) ?>" alt="*"></div>
+			<?php
+				$banner = '<img src="' . esc_attr( $menu['banner'] ) . '" alt="*">';
+				$banner = ( $menu['banner_link'] ) ? '<a href="' . esc_url( $menu['banner_link']) . '" target="_blank">' . $banner . '</a>' : $banner;
+			?>
+		<div id="optionsframework-banner"><?php echo $banner; ?></div>
 		<?php endif; ?>
 
 		<div id="optionsframework-tabs">
