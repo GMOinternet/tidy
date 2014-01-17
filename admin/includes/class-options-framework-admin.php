@@ -87,10 +87,12 @@ class Options_Framework_Admin {
 		$tidy_info = wp_get_theme();
 		$tidy_version = $tidy_info->get( 'Version' );
 			$menu = array(
-			'page_title' => sprintf( __( 'Tidy %s', 'tidy' ), $tidy_version),
-			'menu_title' => __( 'Theme Options', 'tidy' ),
-			'capability' => 'edit_theme_options',
-			'menu_slug' => 'tidy-options'
+			'page_title'  => sprintf( __( 'Tidy %s', 'tidy' ), $tidy_version),
+			'menu_title'  => __( 'Theme Options', 'tidy' ),
+			'capability'  => 'edit_theme_options',
+			'menu_slug'   => 'tidy-options',
+			'banner'      => get_template_directory_uri() . '/admin/images/admin-banner.png',
+			'banner_link' => 'http://wpshop.com/'
 		);
 
 		return apply_filters( 'optionsframework_menu', $menu );
@@ -219,8 +221,9 @@ class Options_Framework_Admin {
 		</div>
 
 		<?php // save options message here. ?>
-
-		<div id="optionsframework-banner">banner</div>
+		<?php if ( $menu['banner'] ) : ?>
+		<div id="optionsframework-banner"><img src="<?php echo esc_attr( $menu['banner'] ) ?>" alt="*"></div>
+		<?php endif; ?>
 
 		<div id="optionsframework-tabs">
 			<ul class="nav-tab-wrapper">

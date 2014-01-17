@@ -98,7 +98,7 @@ function optionsframework_options() {
 	}
 
 	// If using image radio buttons, define a directory path
-	$imagepath =  get_template_directory_uri() . '/admin/images/';
+	$imagepath = get_template_directory_uri() . '/admin/images/';
 
 	$options = array();
 
@@ -118,7 +118,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __( 'About WP Shop', 'tidy' ),
-		'desc' => __( '<p>WP Shop is a social marketplace for buying and selling WordPress themes, while providing a platform to showcase and share Asian design.</p><p>We connect buyers and sellers of digital contents for WordPress by offering more than just a marketplace.</p><p>WP Shop only offers safe and high quality themes produced according to the guidelines issued by wordpress.org and tested based on _s(underscores) provided by Automattic Inc. or default themes as a standard.</p>', 'tidy' ),
+		'desc' => sprintf( __( '<p class="about-photo"><img src="%1$s" alt="*"></p><p>WP Shop is a social marketplace for buying and selling WordPress themes, while providing a platform to showcase and share Asian design.</p><p>We connect buyers and sellers of digital contents for WordPress by offering more than just a marketplace.</p><p>WP Shop only offers safe and high quality themes produced according to the guidelines issued by wordpress.org and tested based on _s(underscores) provided by Automattic Inc. or default themes as a standard.</p><p class="shop_link"><a href="https://wpshop.com/signup" target="_blank" class="shop_btn"><span class="shop_name">Join WP Shop</span><span class="shop_dec">Starting from $0 / theme</span></a></p>', 'tidy' ), $imagepath . 'about-image.jpg' ),
 		'id' => 'about-wp-shop',
 		'class' => 'about-wp-shop',
 		'type' => 'info');

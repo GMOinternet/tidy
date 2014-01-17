@@ -16,7 +16,6 @@
 #optionsframework-banner {
 	clear: both;
 	margin: 15px 0;
-	border: solid 1px red;
 }
 
 #optionsframework-tabs {
@@ -77,6 +76,14 @@
 #optionsframework .group {
 	padding-bottom:40px;
 }
+#optionsframework .group:after {
+	content: "";
+	display: table;
+}
+#optionsframework .group:after {
+	clear: both;
+}
+
 #optionsframework .section .controls {
 	float: left;
 	min-width:350px;
@@ -273,4 +280,42 @@
 }
 #optionsframework .section:after {
 	clear: both;
+}
+
+/* about */
+#optionsframework p.about-photo,
+#optionsframework p.shop_link {
+	text-align: center;
+}
+#optionsframework .shop_btn {
+	display: inline-block;
+	background-color: #444444;
+	color: white;
+	padding: 10px 40px;
+	text-decoration: none;
+	
+}
+#optionsframework .shop_btn:hover {
+	background-color: #0074A2;
+}
+#optionsframework .shop_name {
+	font-weight: bold;
+	font-size: 2em;
+	display: block;
+}
+#optionsframework .shop_dec {
+	display: block;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: solid 1px #ccc;
+}
+#optionsframework .wp-shop-news,
+#optionsframework .wp-happennig-news {
+	width: 45%;
+}
+#optionsframework .wp-shop-news {
+	float: left;
+}
+#optionsframework .wp-happennig-news {
+	float: right;
 }
