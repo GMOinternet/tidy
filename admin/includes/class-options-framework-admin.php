@@ -144,10 +144,13 @@ class Options_Framework_Admin {
 	echo '<style type="text/css">
 	#wpadminbar ul li#wp-admin-bar-gmo a {
 		width: 77px;
+		height: 32px;
 		text-indent: -9999px;
 		background-image: url(' . TIDY_ADMIN_DIRECTORY_URI . 'images/adminbar-logo.png );
 		background-repeat: no-repeat;
-		background-position: 7px center
+	}
+	#wpadminbar ul li#wp-admin-bar-gmo a:hover {
+		background-position: 0 -32px;
 	}
 	</style>';
 	}
@@ -163,7 +166,7 @@ class Options_Framework_Admin {
 			return;
 
 		wp_enqueue_style( 'wp-color-picker' );
-		wp_enqueue_style( 'optionsframework', TIDY_ADMIN_DIRECTORY_URI . 'css/optionsframework.css', array(), Options_Framework::VERSION );
+		wp_enqueue_style( 'optionsframework', TIDY_ADMIN_DIRECTORY_URI . 'css/optionsframework.min.css', array(), Options_Framework::VERSION );
 	}
 
 	/**

@@ -48,9 +48,9 @@
 }
 #optionsframework-tabs .nav-tab-wrapper .nav-tab {
 	display: block;
-	font-weight: bold;
-	font-size: 14px;
+	font-size: 18px;
 	margin: 0 -1px 0 0;
+	padding: 10px 10px 12px;
 	border-bottom-width: 1px;
 }
 #optionsframework-tabs .nav-tab-wrapper .nav-tab-active,
