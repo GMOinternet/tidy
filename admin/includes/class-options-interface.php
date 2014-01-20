@@ -118,11 +118,6 @@ class Options_Framework_Interface {
 			switch ( $value['type'] ) {
 
 			// Basic text input
-			case 'sns':
-				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
-				break;
-
-			// Basic text input
 			case 'text':
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
 				break;
@@ -130,6 +125,12 @@ class Options_Framework_Interface {
 			// Password input
 			case 'password':
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="password" value="' . esc_attr( $val ) . '" />';
+				break;
+
+			// Email input
+			case 'email':
+				$output .= '<span class="icon-envelope"></span>';
+				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
 				break;
 
 			// Textarea
@@ -367,6 +368,26 @@ class Options_Framework_Interface {
 				$editor_settings = array_merge( $default_editor_settings, $editor_settings );
 				wp_editor( $val, $value['id'], $editor_settings );
 				$output = '';
+				break;
+
+			// sns width toggle
+			case 'sns':
+				$sns_toggle = ( $value['toggle'] ) ? 1 : 0;
+				$sns_defaults = array(
+					'account' => ( $value['account'] ),
+					'toggle' => $sns_toggle
+				);
+
+				$sns_stored = wp_parse_args( $val, $sns_defaults );
+
+				$output .= '<span class="icon-' . $value['id'] . '"></span>';
+				$output .= '<span class="toggle">';
+				$output .= '<label><input class="of-toggle" type="radio" name="' . esc_attr( $option_name . '[' . $value['id'] . '][toggle]' ) . '" id="' . esc_attr( $value['id'] ) . '_toggle_on" value="1" '. checked( $sns_stored['toggle'], 1, false) .' />' . __( 'On', 'tidy' ) . '</label>';
+				$output .= '<label><input class="of-toggle" type="radio" name="' . esc_attr( $option_name . '[' . $value['id'] . '][toggle]' ) . '" id="' . esc_attr( $value['id'] ) . '_toggle_off" value="0" '. checked( $sns_stored['toggle'], 0, false) .' />' . __( 'Off', 'tidy' ) . '</label>';
+				$output .= '</span>';
+
+				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . '][account]' ) . '" type="text" value="' . esc_attr( $sns_stored['account'] ) . '" />';
+
 				break;
 
 

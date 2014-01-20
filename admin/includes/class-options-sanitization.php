@@ -232,8 +232,26 @@ add_filter( 'of_font_face', 'of_sanitize_font_face' );
 
 
 /* SNS */
+function of_sanitize_sns_field( $input ) {
+	$output = wp_parse_args( $input, array(
+		'account' => '',
+		'toggle'  => ''
+	) );
+	return $output;
+}
+add_filter( 'of_sanitize_sns', 'of_sanitize_sns_field' );
 
-add_filter( 'of_sanitize_sns', 'sanitize_text_field' );
+/* E-mail */
+/*
+function of_sanitize_email_field( $input ) {
+	$output = wp_parse_args( $input, array(
+		'account' => '',
+		'toggle'  => ''
+	) );
+	return $output;
+}
+*/
+add_filter( 'of_sanitize_email', 'of_sanitize_email_field' );
 
 
 /**

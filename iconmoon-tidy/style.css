@@ -80,7 +80,7 @@
 .icon-flickr:before {
 	content: "\e612";
 }
-.icon-picassa:before {
+.icon-picasa:before {
 	content: "\e613";
 }
 .icon-dribbble:before {
@@ -148,4 +148,7 @@
 }
 .icon-warning:before {
 	content: "\e629";
+}
+.icon-envelope:before {
+	content: "\e62a";
 }

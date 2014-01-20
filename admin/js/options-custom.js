@@ -18,6 +18,14 @@ jQuery(document).ready(function($) {
 	$('.of-radio-img-img').show();
 	$('.of-radio-img-radio').hide();
 
+	// Toggle
+	$(".toggle label input[checked='checked']").parent().addClass( 'selected' );
+	$(".toggle label").click(function(){
+		$(this).next().removeClass( 'selected' );
+		$(this).prev().removeClass( 'selected' );
+		$(this).addClass( 'selected' );
+	});
+
 	// Loads tabbed sections if they exist
 	if ( $('.nav-tab-wrapper').length > 0 ) {
 		options_framework_tabs();

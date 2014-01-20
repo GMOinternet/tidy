@@ -35,37 +35,7 @@
 
 		<div id="site-social" class="site-header-social-area"><div class="inner">
 			<h1 class="sns-toggle"><?php _e( 'Social', 'tidy' ); ?><span class="genericon genericon-downarrow"></span></h1>
-			<ul class="sns-icons">
-				<li><a href="#"><span class="icon-facebook"></span></a></li>
-				<li><a href="#"><span class="icon-twitter"></span></a></li>
-				<li><a href="#"><span class="icon-pinterest"></span></a></li>
-				<li><a href="#"><span class="icon-flickr"></span></a></li>
-				<li><a href="#"><span class="icon-linkedin"></span></a></li>
-				<li><a href="#"><span class="icon-google-plus"></span></a></li>
-				<li><a href="#"><span class="icon-tumblr"></span></a></li>
-				<li><a href="#"><span class="icon-instagram"></span></a></li>
-				<li><a href="#"><span class="icon-youtube"></span></a></li>
-				<li><a href="#"><span class="icon-vimeo"></span></a></li>
-				<li><a href="#"><span class="icon-lanyrd"></span></a></li>
-				<li><a href="#"><span class="icon-picassa"></span></a></li>
-				<li><a href="#"><span class="icon-dribbble"></span></a></li>
-				<li><a href="#"><span class="icon-forrst"></span></a></li>
-				<li><a href="#"><span class="icon-deviantart"></span></a></li>
-				<li><a href="#"><span class="icon-steam"></span></a></li>
-				<li><a href="#"><span class="icon-github"></span></a></li>
-				<li><a href="#"><span class="icon-wordpress"></span></a></li>
-				<li><a href="#"><span class="icon-soundcloud"></span></a></li>
-				<li><a href="#"><span class="icon-skype"></span></a></li>
-				<li><a href="#"><span class="icon-reddit"></span></a></li>
-				<li><a href="#"><span class="icon-lastfm"></span></a></li>
-				<li><a href="#"><span class="icon-delicious"></span></a></li>
-				<li><a href="#"><span class="icon-stumbleupon"></span></a></li>
-				<li><a href="#"><span class="icon-stackoverflow"></span></a></li>
-				<li><a href="#"><span class="icon-flattr"></span></a></li>
-				<li><a href="#"><span class="icon-yelp"></span></a></li>
-				<li><a href="#"><span class="icon-foursquare"></span></a></li>
-				<li><?php the_feed_link( '<span class="icon-feed"></span>'); ?></li>
-			</ul>
+			<?php tidy_sns_lists(); ?>
 		</div></div>
 
 		<div class="site-header-main"><div class="inner">

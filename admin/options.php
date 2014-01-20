@@ -1,4 +1,39 @@
 <?php
+
+function tidy_sns_array() {
+	$sns_array = array(
+		'Facebook' => 'facebook',
+		'Twitter' => 'twitter',
+		'Pinterest' => 'pinterest',
+		'Flickr' => 'flickr',
+		'Linkedin' => 'linkedin',
+		'Google+' => 'google-plus',
+		'Tumblr' => 'tumblr',
+		'Instagram' => 'instagram',
+		'YouTube' => 'youtube',
+		'Vimeo' => 'vimeo',
+		'Lanyrd' => 'lanyrd',
+		'Picasa' => 'picasa',
+		'Dribbble' => 'dribbble',
+		'Forrst' => 'forrst',
+		'deviantART' => 'deviantart',
+		'Steam' => 'steam',
+		'GitHub' => 'github',
+		'WordPress' => 'wordpress',
+		'SoundCloud' => 'soundcloud',
+		'Skype' => 'skype',
+		'reddit' => 'reddit',
+		'Last.fm' => 'lastfm',
+		'Delicious' => 'delicious',
+		'StumbleUpon' => 'stumbleupon',
+		'Stack Overflow' => 'stackoverflow',
+		'Flattr' => 'flattr',
+		'Yelp' => 'yelp',
+		'Foursquare' => 'foursquare'
+	);
+	return $sns_array;
+}
+
 /**
  * A unique identifier is defined to store the options in the database and reference them from the theme.
  * By default it uses the theme name, in lowercase and without spaces, but this can be changed if needed.
@@ -26,12 +61,6 @@ function optionsframework_option_name() {
  */
 
 function optionsframework_options() {
-
-	// Test data
-	$toggle_array = array(
-		'1' => __('On', 'tidy'),
-		'0' => __('Off', 'tidy')
-	);
 
 	// Test data
 	$test_array = array(
@@ -323,19 +352,25 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('Google+', 'tidy'),
-		'desc' => __('Google.', 'tidy'),
-		'id' => 'text_google',
-		'std' => 'text_google',
-		'type' => 'sns');
+		'name' => __('E-mail', 'tidy'),
+		'desc' => __('You\'re E-mail address.', 'tidy'),
+		'id' => 'email',
+		'std' => '',
+		'type' => 'email');
 
-	$options[] = array(
-		'name' => __('Toggle Google', 'tidy'),
-		'desc' => __('Radio select with default options "one".', 'tidy'),
-		'id' => 'toggle_google',
-		'std' => '0',
-		'type' => 'radio',
-		'options' => $toggle_array);
+	$sns_array = tidy_sns_array();
+	if ( ! empty( $sns_array )) {
+		foreach( $sns_array as $key=>$val ) {
+			$options[] = array(
+				'name' => $key,
+				'desc' => sprintf( __('You\'re %s address.', 'tidy'), $key ),
+				'id' => $val,
+				'account' => '',
+				'toggle' => false,
+				'type' => 'sns');
+		}
+	}
+
 
 
 /*

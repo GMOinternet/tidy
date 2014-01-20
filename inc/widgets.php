@@ -97,6 +97,24 @@ class Tidy_Widget_About_Us extends WP_Widget {
 /**
  * Adds Tidy_Widget_Contact widget.
  */
+
+function tidy_sns_lists(){
+	$sns_array = tidy_sns_array();
+	?>
+	<ul class="sns-icons">
+		<?php
+			foreach( $sns_array as $key=>$val ) {
+				$sns = of_get_option($val);
+				if ( ( ! empty( $sns ) ) && ( $sns['toggle'] != 0 ) ) {
+					echo '<li><a href="' . esc_url( $sns['account'] ) . '" target="_blank"><span class="icon-' . $val . '"></span></a></li>' . "\n";
+				}
+			}
+		?>
+		<li><?php the_feed_link( '<span class="icon-feed"></span>'); ?></li>
+	</ul>
+	<?php
+}
+
 class Tidy_Widget_Contact extends WP_Widget {
 
 	/**
@@ -124,7 +142,7 @@ class Tidy_Widget_Contact extends WP_Widget {
 	public function widget( $args, $instance ) {
 		extract($args);
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Contact', 'tidy' ) : $instance['title'], $instance, $this->id_base );
-		$email = apply_filters( 'widget_email', empty( $instance['email'] ) ? '' : $instance['email'], $instance );
+		$email = apply_filters( 'widget_email', empty( $instance['email'] ) ? of_get_option('email') : $instance['email'], $instance );
 
 		echo $before_widget;
 		if ( !empty( $title ) ) {
@@ -136,39 +154,7 @@ class Tidy_Widget_Contact extends WP_Widget {
 			echo '</div>' . "\n";
 		}
 		echo '<div class="tidy_contact_sns_icons">' . "\n";
-		?>
-		<ul class="sns-icons">
-			<li><a href="#"><span class="icon-facebook"></span></a></li>
-			<li><a href="#"><span class="icon-twitter"></span></a></li>
-			<li><a href="#"><span class="icon-pinterest"></span></a></li>
-			<li><a href="#"><span class="icon-flickr"></span></a></li>
-			<li><a href="#"><span class="icon-linkedin"></span></a></li>
-			<li><a href="#"><span class="icon-google-plus"></span></a></li>
-			<li><a href="#"><span class="icon-tumblr"></span></a></li>
-			<li><a href="#"><span class="icon-instagram"></span></a></li>
-			<li><a href="#"><span class="icon-youtube"></span></a></li>
-			<li><a href="#"><span class="icon-vimeo"></span></a></li>
-			<li><a href="#"><span class="icon-lanyrd"></span></a></li>
-			<li><a href="#"><span class="icon-picassa"></span></a></li>
-			<li><a href="#"><span class="icon-dribbble"></span></a></li>
-			<li><a href="#"><span class="icon-forrst"></span></a></li>
-			<li><a href="#"><span class="icon-deviantart"></span></a></li>
-			<li><a href="#"><span class="icon-steam"></span></a></li>
-			<li><a href="#"><span class="icon-github"></span></a></li>
-			<li><a href="#"><span class="icon-wordpress"></span></a></li>
-			<li><a href="#"><span class="icon-soundcloud"></span></a></li>
-			<li><a href="#"><span class="icon-skype"></span></a></li>
-			<li><a href="#"><span class="icon-reddit"></span></a></li>
-			<li><a href="#"><span class="icon-lastfm"></span></a></li>
-			<li><a href="#"><span class="icon-delicious"></span></a></li>
-			<li><a href="#"><span class="icon-stumbleupon"></span></a></li>
-			<li><a href="#"><span class="icon-stackoverflow"></span></a></li>
-			<li><a href="#"><span class="icon-flattr"></span></a></li>
-			<li><a href="#"><span class="icon-yelp"></span></a></li>
-			<li><a href="#"><span class="icon-foursquare"></span></a></li>
-			<li><?php the_feed_link( '<span class="icon-feed"></span>'); ?></li>
-		</ul>
-		<?php
+		tidy_sns_lists();
 		echo '</div>' . "\n";
 		echo $after_widget;
 
