@@ -251,7 +251,7 @@ function of_sanitize_email_field( $input ) {
 	return $output;
 }
 */
-add_filter( 'of_sanitize_email', 'of_sanitize_email_field' );
+add_filter( 'of_sanitize_email', 'sanitize_text_field' );
 
 
 /**
