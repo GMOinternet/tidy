@@ -369,14 +369,14 @@ function optionsframework_options() {
 		'name' => __('Header icon color', 'tidy'),
 		'desc' => '',
 		'id' => 'sns-icon-color-header',
-		'std' => '0058AE',
+		'std' => '#0058AE',
 		'type' => 'color' );
 
 	$options[] = array(
 		'name' => __('Footer icon color', 'tidy'),
 		'desc' => '',
 		'id' => 'sns-icon-color-footer',
-		'std' => 'ffffff',
+		'std' => '#ffffff',
 		'type' => 'color' );
 
 	$options[] = array(
