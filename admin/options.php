@@ -352,11 +352,32 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('E-mail', 'tidy'),
-		'desc' => __('You\'re E-mail address.', 'tidy'),
-		'id' => 'email',
+		'name' => __('Display location', 'tidy'),
+		'desc' => '',
+		'id' => 'sns-location',
 		'std' => '',
-		'type' => 'email');
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => __('Header', 'tidy'),
+		'desc' => '',
+		'id' => 'sns-location-header',
+		'std' => '1',
+		'type' => 'toggle');
+
+	$options[] = array(
+		'name' => __('Footer', 'tidy'),
+		'desc' => '',
+		'id' => 'sns-location-footer',
+		'std' => '1',
+		'type' => 'toggle');
+
+	$options[] = array(
+		'name' => __('You\'re SNS address', 'tidy'),
+		'desc' => '',
+		'id' => 'sns-addr',
+		'std' => '',
+		'type' => 'info');
 
 	$sns_array = tidy_sns_array();
 	if ( ! empty( $sns_array )) {

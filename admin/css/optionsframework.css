@@ -206,11 +206,13 @@
   max-width: 74%;
 }
 #optionsframework .section-sns,
+#optionsframework .section-toggle,
 #optionsframework .section-email {
   overflow: hidden;
   *zoom: 1;
 }
 #optionsframework .section-sns h4,
+#optionsframework .section-toggle h4,
 #optionsframework .section-email h4 {
   float: left;
   margin-right: 10px;
@@ -218,15 +220,19 @@
   width: 100px;
 }
 #optionsframework .section-sns .option,
+#optionsframework .section-toggle .option,
 #optionsframework .section-email .option {
   overflow: hidden;
 }
 #optionsframework .section-sns .option [class^="icon-"], #optionsframework .section-sns .option [class*=" icon-"],
+#optionsframework .section-toggle .option [class^="icon-"],
+#optionsframework .section-toggle .option [class*=" icon-"],
 #optionsframework .section-email .option [class^="icon-"],
 #optionsframework .section-email .option [class*=" icon-"] {
   margin-right: 10px;
 }
 #optionsframework .section-sns .option .toggle,
+#optionsframework .section-toggle .option .toggle,
 #optionsframework .section-email .option .toggle {
   margin-right: 10px;
   display: inline-block;
@@ -234,10 +240,12 @@
   border-color: #DDDDDD;
 }
 #optionsframework .section-sns .option .of-toggle,
+#optionsframework .section-toggle .option .of-toggle,
 #optionsframework .section-email .option .of-toggle {
   display: none;
 }
 #optionsframework .section-sns .option label,
+#optionsframework .section-toggle .option label,
 #optionsframework .section-email .option label {
   display: inline-block;
   background-color: #F1F1F1;
@@ -246,12 +254,14 @@
   font-weight: bold;
 }
 #optionsframework .section-sns .option .selected,
+#optionsframework .section-toggle .option .selected,
 #optionsframework .section-email .option .selected {
   background-color: #2EA2CC;
   color: white;
-  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3) inset;
 }
 #optionsframework .section-sns .option input[type="text"],
+#optionsframework .section-toggle .option input[type="text"],
 #optionsframework .section-email .option input[type="text"] {
   width: 60%;
 }

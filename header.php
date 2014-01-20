@@ -33,10 +33,12 @@
 			<div class="header-widget-area-close-btn header-widget-toggle"><span class="genericon genericon-close"></span></div>
 		</div></div>
 
+		<?php if ( of_get_option('sns-location-header') != 0 ) : ?>
 		<div id="site-social" class="site-header-social-area"><div class="inner">
 			<h1 class="sns-toggle"><?php _e( 'Social', 'tidy' ); ?><span class="genericon genericon-downarrow"></span></h1>
 			<?php tidy_sns_lists(); ?>
 		</div></div>
+		<?php endif; ?>
 
 		<div class="site-header-main"><div class="inner">
 	

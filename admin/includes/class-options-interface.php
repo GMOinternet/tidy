@@ -387,8 +387,17 @@ class Options_Framework_Interface {
 				$output .= '</span>';
 
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . '][account]' ) . '" type="text" value="' . esc_attr( $sns_stored['account'] ) . '" />';
-
 				break;
+
+			// toggle
+			case 'toggle':
+				$val = ( $val ) ? 1 : 0;
+				$output .= '<span class="toggle">';
+				$output .= '<label><input class="of-toggle" type="radio" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" id="' . esc_attr( $value['id'] ) . '_toggle_on" value="1" '. checked( $val, 1, false) .' />' . __( 'On', 'tidy' ) . '</label>';
+				$output .= '<label><input class="of-toggle" type="radio" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" id="' . esc_attr( $value['id'] ) . '_toggle_off" value="0" '. checked( $val, 0, false) .' />' . __( 'Off', 'tidy' ) . '</label>';
+				$output .= '</span>';
+				break;
+
 
 
 			// Info
