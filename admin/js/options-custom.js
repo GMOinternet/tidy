@@ -27,10 +27,6 @@ jQuery(document).ready(function($) {
 	});
 
 	// Loads tabbed sections if they exist
-	if ( $('.nav-tab-wrapper').length > 0 ) {
-		options_framework_tabs();
-	}
-
 	function options_framework_tabs() {
 
 		// Hides all the .group sections to start
@@ -38,12 +34,12 @@ jQuery(document).ready(function($) {
 
 		// Find if a selected tab is saved in localStorage
 		var active_tab = '';
-		if ( typeof(localStorage) != 'undefined' ) {
+		if ( typeof(localStorage) !== 'undefined' ) {
 			active_tab = localStorage.getItem("active_tab");
 		}
 
 		// If active tab is saved and exists, load it's .group
-		if (active_tab != '' && $(active_tab).length ) {
+		if (active_tab !== '' && $(active_tab).length ) {
 			$(active_tab).show();
 			$(active_tab + '-tab').addClass('nav-tab-active');
 		} else {
@@ -63,7 +59,7 @@ jQuery(document).ready(function($) {
 
 			var group = $(this).attr('href');
 
-			if (typeof(localStorage) != 'undefined' ) {
+			if (typeof(localStorage) !== 'undefined' ) {
 				localStorage.setItem("active_tab", $(this).attr('href') );
 			}
 
@@ -80,5 +76,10 @@ jQuery(document).ready(function($) {
 
 		});
 	}
+
+	if ( $('.nav-tab-wrapper').length > 0 ) {
+		options_framework_tabs();
+	}
+
 
 });
