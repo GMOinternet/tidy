@@ -105,7 +105,7 @@ function tidy_sns_lists(){
 		<?php
 			foreach( $sns_array as $key=>$val ) {
 				$sns = of_get_option($val);
-				if ( ( ! empty( $sns ) ) && ( $sns['toggle'] != 0 ) ) {
+				if ( ( ! empty( $sns ) ) && ( $sns['toggle'] != 0 ) && ( $sns['account'] ) ) {
 					echo '<li><a href="' . esc_url( $sns['account'] ) . '" target="_blank"><span class="icon-' . $val . '"></span></a></li>' . "\n";
 				}
 			}
