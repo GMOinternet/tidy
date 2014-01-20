@@ -352,6 +352,34 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
+		'name' => __('Social Icon setting', 'tidy'),
+		'desc' => '',
+		'id' => 'sns-icon',
+		'std' => '',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => __('Frame', 'tidy'),
+		'desc' => '',
+		'id' => 'sns-icon-frame',
+		'std' => '1',
+		'type' => 'toggle');
+
+	$options[] = array(
+		'name' => __('Header icon color', 'tidy'),
+		'desc' => '',
+		'id' => 'sns-icon-color-header',
+		'std' => '0058AE',
+		'type' => 'color' );
+
+	$options[] = array(
+		'name' => __('Footer icon color', 'tidy'),
+		'desc' => '',
+		'id' => 'sns-icon-color-footer',
+		'std' => 'ffffff',
+		'type' => 'color' );
+
+	$options[] = array(
 		'name' => __('Display location', 'tidy'),
 		'desc' => '',
 		'id' => 'sns-location',

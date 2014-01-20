@@ -234,6 +234,7 @@ require get_template_directory() . '/inc/jetpack.php';
 define( 'TIDY_ADMIN_DIRECTORY_URI',  get_template_directory_uri() . '/admin/' );
 define( 'TIDY_ADMIN_DIRECTORY_PATH', get_template_directory() . '/admin/' );
 require get_template_directory() . '/admin/options-framework.php';
+require get_template_directory() . '/inc/custom-css.php';
 
 /*
  * This is an example of how to add custom scripts to the options panel.
