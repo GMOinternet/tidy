@@ -62,6 +62,14 @@ function optionsframework_option_name() {
 
 function optionsframework_options() {
 
+	// Icon array
+	$icon_array = array(
+		'copy' => __('Copy', 'tidy'),
+		'power-cord' => __('Plugin', 'tidy'),
+		'earth' => __('Graphic', 'tidy'),
+		'star' => __('Logo', 'tidy')
+	);
+
 	// Test data
 	$test_array = array(
 		'one' => __('One', 'tidy'),
@@ -260,12 +268,7 @@ function optionsframework_options() {
 			'2c-l-fixed' => $imagepath . '2cl.png',
 			'2c-r-fixed' => $imagepath . '2cr.png')
 	);
-
-	// Merit Box Settings
-	$options[] = array(
-		'name' => __('Merit Box Settings', 'tidy'),
-		'type' => 'heading');
-
+/*
 	$options[] = array(
 		'name' => __('Input Text Mini', 'tidy'),
 		'desc' => __('A mini text input field.', 'tidy'),
@@ -281,12 +284,6 @@ function optionsframework_options() {
 		'std' => 'Default Value',
 		'type' => 'text');
 
-	$options[] = array(
-		'name' => __('Textarea', 'tidy'),
-		'desc' => __('Textarea description.', 'tidy'),
-		'id' => 'example_textarea',
-		'std' => 'Default Text',
-		'type' => 'textarea');
 
 	$options[] = array(
 		'name' => __('Input Select Small', 'tidy'),
@@ -344,6 +341,64 @@ function optionsframework_options() {
 		'id' => 'example_checkbox',
 		'std' => '1',
 		'type' => 'checkbox');
+*/
+
+
+	// Merit Box Settings
+	$options[] = array(
+		'name' => __('Merit Box Settings', 'tidy'),
+		'type' => 'heading');
+
+	$options[] = array(
+		'name' => __('Select the number of merit box to display', 'tidy'),
+		'desc' => __('Default:4, Min:1, Max:4.', 'tidy'),
+		'id' => 'merit-box-num',
+		'std' => 4,
+		'min' => 1,
+		'max' => 4,
+		'type' => 'num');
+
+	// Merit box %s
+	for ($i = 1; $i <= 4; $i++) {
+
+		$options[] = array(
+			'name' => sprintf( __('Merit box %s', 'tidy') , $i),
+			'id' => 'merit-box-' . $i . '-head',
+			'type' => 'info');
+
+		$options[] = array(
+			'name' => __('Title', 'tidy'),
+			'id' => 'merit-box-' . $i . '-title',
+			'std' => '',
+			'type' => 'text');
+
+		$options[] = array(
+			'name' => __('Textarea', 'tidy'),
+			'desc' => __('Textarea description.', 'tidy'),
+			'id' => 'merit-box-' . $i . '-description',
+			'type' => 'textarea');
+	
+		$options[] = array(
+			'name' => __('Icon', 'tidy'),
+			'desc' => __('Small Select Box.', 'tidy'),
+			'id' => 'merit-box-' . $i . '-icon',
+			'std' => 'three',
+			'type' => 'select',
+			'class' => 'mini', //mini, tiny, small
+			'options' => $icon_array);
+	
+		$options[] = array(
+			'name' => __('Image', 'tidy'),
+			'desc' => __('Image will override any icon.', 'tidy'),
+			'id' => 'merit-box-' . $i . '-image',
+			'type' => 'upload');
+
+		$options[] = array(
+			'name' => __('URL', 'tidy'),
+			'id' => 'merit-box-' . $i . '-url',
+			'std' => '',
+			'type' => 'text');
+	}
 
 	// Social Settings
 	$options[] = array(
@@ -406,6 +461,13 @@ function optionsframework_options() {
 		'id' => 'sns-addr',
 		'std' => '',
 		'type' => 'info');
+
+	$options[] = array(
+		'name' => __('E-mail', 'tidy'),
+		'desc' => __('You\'re E-mail address.', 'tidy'),
+		'id' => 'email',
+		'std' => '',
+		'type' => 'email');
 
 	$sns_array = tidy_sns_array();
 	if ( ! empty( $sns_array )) {

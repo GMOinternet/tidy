@@ -256,6 +256,9 @@ add_filter( 'of_sanitize_email', 'sanitize_text_field' );
 /* toggle */
 add_filter( 'of_sanitize_toggle', 'sanitize_text_field' );
 
+/* toggle */
+add_filter( 'of_sanitize_num', 'sanitize_text_field' );
+
 /**
  * Get recognized background repeat settings
  *

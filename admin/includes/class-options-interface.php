@@ -78,7 +78,7 @@ class Options_Framework_Interface {
 
 				$output .= '<div id="' . esc_attr( $id ) .'" class="' . esc_attr( $class ) . '">'."\n";
 				if ( isset( $value['name'] ) ) {
-					$output .= '<h4 class="heading">' . esc_html( $value['name'] ) . '</h4>' . "\n";
+					$output .= '<h5 class="heading">' . esc_html( $value['name'] ) . '</h5>' . "\n";
 				}
 				if ( $value['type'] != 'editor' ) {
 					$output .= '<div class="option">' . "\n" . '<div class="controls">' . "\n";
@@ -130,7 +130,12 @@ class Options_Framework_Interface {
 			// Email input
 			case 'email':
 				$output .= '<span class="icon-envelope"></span>';
-				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
+				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="email" value="' . esc_attr( $val ) . '" />';
+				break;
+
+			// number
+			case 'num':
+				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="number" value="' . (int)$val . '" min="' . (int)$value['min'] . '" max="' . (int)$value['max'] . '" />';
 				break;
 
 			// Textarea

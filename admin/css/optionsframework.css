@@ -216,11 +216,11 @@
   overflow: hidden;
   *zoom: 1;
 }
-#optionsframework .section-sns h4,
-#optionsframework .section-toggle h4,
-#optionsframework .section-email h4,
-#optionsframework #section-sns-icon-color-header h4,
-#optionsframework #section-sns-icon-color-footer h4 {
+#optionsframework .section-sns h5,
+#optionsframework .section-toggle h5,
+#optionsframework .section-email h5,
+#optionsframework #section-sns-icon-color-header h5,
+#optionsframework #section-sns-icon-color-footer h5 {
   float: left;
   margin-right: 10px;
   margin-top: 8px;
