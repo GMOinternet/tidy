@@ -28,7 +28,7 @@
 
 		<div id="site-header-widget" class="site-header-widget-area"><div class="inner">
 			<div class="site-header-widget-area-content">
-					<p><?php _e( "Eeh what's that when it's at ooam big girl's blouse ah'll learn thi ey up. Click here.", 'tidy' ) ?></p>
+				<p><?php _e( "Eeh what's that when it's at ooam big girl's blouse ah'll learn thi ey up. Click here.", 'tidy' ) ?></p>
 			</div>
 			<div class="header-widget-area-close-btn header-widget-toggle"><span class="genericon genericon-close"></span></div>
 		</div></div>
@@ -43,7 +43,9 @@
 		<div class="site-header-main"><div class="inner">
 	
 			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php
+					$logo_image = ( get_theme_mod( 'logo_image' ) && ( get_theme_mod( 'logo_toggle' ) == 1 ) ) ? '<img src="' . esc_url( get_theme_mod( 'logo_image' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">' : get_bloginfo( 'name' ); ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $logo_image ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 	

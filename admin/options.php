@@ -184,23 +184,44 @@ function optionsframework_options() {
 		'class' => 'wp-happennig-news',
 		'type' => 'feed');
 
-
-	// Color Settings
-	$options[] = array(
-		'name' => __('Color Settings', 'tidy'),
-		'type' => 'heading');
-
-	$options[] = array(
-		'name' => __('Colorpicker', 'tidy'),
-		'desc' => __('No color selected by default.', 'tidy'),
-		'id' => 'example_colorpicker',
-		'std' => 'aaa',
-		'type' => 'color' );
-
 	// General Settings
 	$options[] = array(
 		'name' => __('General Settings', 'tidy'),
 		'type' => 'heading');
+
+	// Header logo
+	$options[] = array(
+		'name' => __('Header logo', 'tidy'),
+		'id' => 'general-settings-header',
+		'type' => 'info');
+
+	$options[] = array(
+		'name' => __( 'Logo image', 'tidy' ),
+		'desc' => '',
+		'id' => 'general-header-logo-toggle',
+		'std' => '0',
+		'type' => 'toggle');
+
+	$options[] = array(
+		'name' => __( 'Upload image', 'tidy' ),
+		'desc' => __('This creates a full size uploader that previews the image.', 'tidy'),
+		'id' => 'general-header-logo-image',
+		'std' => get_template_directory_uri() . '/images/logo-sample.png',
+		'type' => 'upload');
+
+	$options[] = array(
+		'name' => __('Site Title', 'tidy'),
+		'desc' => '',
+		'id' => 'general-header-site-title',
+		'std' => get_bloginfo( 'name' ),
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Tagline', 'tidy'),
+		'desc' => '',
+		'id' => 'general-header-site-tagline',
+		'std' => get_bloginfo( 'description' ),
+		'type' => 'text');
 
 	$options[] = array(
 		'name' => __('Check to Show a Hidden Text Input', 'tidy'),
@@ -216,11 +237,6 @@ function optionsframework_options() {
 		'class' => 'hidden',
 		'type' => 'text');
 
-	$options[] = array(
-		'name' => __('Uploader Test', 'tidy'),
-		'desc' => __('This creates a full size uploader that previews the image.', 'tidy'),
-		'id' => 'example_uploader',
-		'type' => 'upload');
 
 	$options[] = array(
 		'name' =>  __('Example Background', 'tidy'),
@@ -251,6 +267,19 @@ function optionsframework_options() {
 		'std' => $typography_defaults,
 		'type' => 'typography',
 		'options' => $typography_options );
+
+	// Color Settings
+	$options[] = array(
+		'name' => __('Color Settings', 'tidy'),
+		'type' => 'heading');
+
+	$options[] = array(
+		'name' => __('Colorpicker', 'tidy'),
+		'desc' => __('No color selected by default.', 'tidy'),
+		'id' => 'example_colorpicker',
+		'std' => 'aaa',
+		'type' => 'color' );
+
 
 	// Layout Settings
 	$options[] = array(
@@ -482,8 +511,6 @@ function optionsframework_options() {
 		}
 	}
 
-
-
 /*
 	$options[] = array(
 		'name' => __('Text Editor', 'tidy'),
@@ -512,6 +539,40 @@ function optionsframework_options() {
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
 */
-
 	return $options;
+}
+
+// overwride
+add_action( 'optionsframework_after_validate', 'optionsframework_after_validate_overwride' );
+function optionsframework_after_validate_overwride( $clean ) {
+	foreach( $clean as $k => $v ){
+		if ( $k == 'general-header-site-title' ) {
+			update_option( 'blogname', $v );
+		} elseif ( $k == 'general-header-site-tagline' ) {
+			update_option( 'description', $v );
+		} elseif ( $k == 'general-header-logo-toggle' ) {
+			set_theme_mod( 'logo_toggle', $v );
+		} elseif ( $k == 'general-header-logo-image' ) {
+			set_theme_mod( 'logo_image', $v );
+		}
+	}
+	return $clean;
+}
+
+add_filter( 'optionsframework_std', 'tidy_optionsframework_std', 10, 3);
+function tidy_optionsframework_std( $option_name, $value, $val ) {
+	if ( ! array_key_exists('id', $value) )
+		return $val;
+
+	if ( $value['id'] == 'general-header-site-title' ) {
+		$val = get_bloginfo( 'name' );
+	} elseif ( $value['id'] == 'general-header-site-tagline' ) {
+		$val = get_bloginfo( 'description' );
+	} elseif ( $value['id'] == 'general-header-logo-toggle' ) {
+		$val = ( get_theme_mod( 'logo_toggle' ) ) ? get_theme_mod( 'logo_toggle' ) : $value['std'];
+	} elseif ( $value['id'] == 'general-header-logo-image' ) {
+		$val = ( get_theme_mod( 'logo_image' ) ) ? get_theme_mod( 'logo_image' ) : $value['std'];
+	}
+
+	return $val;
 }
