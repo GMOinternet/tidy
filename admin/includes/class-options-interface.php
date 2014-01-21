@@ -218,7 +218,12 @@ class Options_Framework_Interface {
 					if ( $val !=  $value['std'] )
 						$default_color = ' data-default-color="' .$value['std'] . '" ';
 				}
-				$output .= '<input name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" id="' . esc_attr( $value['id'] ) . '" class="of-color"  type="text" value="' . esc_attr( $val ) . '"' . $default_color .' />';
+				$set_color = '';
+				if ( isset($val) ) {
+					$set_color = ' data-set-color="' . esc_attr( $val ) . '" ';
+				}
+
+				$output .= '<input name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" id="' . esc_attr( $value['id'] ) . '" class="of-color"  type="text" value="' . esc_attr( $val ) . '"' . $default_color . $set_color . ' />';
 
 				break;
 

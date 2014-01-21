@@ -29,7 +29,8 @@
 		<div id="site-header-widget" class="site-header-widget-area"><div class="inner">
 			<div class="site-header-widget-area-content">
 				<?php
-					$header_text = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' );
+					$tidy_default = tidy_default_array();
+					$header_text = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : $tidy_default['header_text'];
 					echo wp_kses_post( $header_text );
 				?>
 			</div>

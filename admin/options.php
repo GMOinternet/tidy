@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * tidy_sns_array
+ * @param   none
+ * @return  Array
+ */
 function tidy_sns_array() {
 	$sns_array = array(
 		'Facebook' => 'facebook',
@@ -35,6 +39,25 @@ function tidy_sns_array() {
 }
 
 /**
+ * tidy_default_array
+ * @param   none
+ * @return  Array
+ */
+function tidy_default_array() {
+	$tidy_default = array(
+		'logo_image' => get_template_directory_uri() . '/images/logo-sample.png',
+		'header_text' => __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' ),
+		'copyright' => '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.',
+		
+		'header_bg_color'     => '#E3E6EA',
+		'header_text_color'   => '#1C1C1C',
+		'header_anchor_color' => '#0058AE',
+		'header_border_color' => '#CDD0D4'
+	);
+	return $tidy_default;
+}
+
+/**
  * A unique identifier is defined to store the options in the database and reference them from the theme.
  * By default it uses the theme name, in lowercase and without spaces, but this can be changed if needed.
  * If the identifier changes, it'll appear as if the options have been reset.
@@ -61,6 +84,9 @@ function optionsframework_option_name() {
  */
 
 function optionsframework_options() {
+
+	// tidy_default_array
+	$tidy_default = tidy_default_array();
 
 	// Icon array
 	$icon_array = array(
@@ -131,7 +157,6 @@ function optionsframework_options() {
 		$options_tags[$tag->term_id] = $tag->name;
 	}
 
-
 	// Pull all the pages into an array
 	$options_pages = array();
 	$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
@@ -145,13 +170,16 @@ function optionsframework_options() {
 
 	$options = array();
 
-	// About
+	/**
+	 * section for About.
+	 */
 	$options[] = array(
 		'name' => __( 'About', 'tidy' ),
 		'icon' => 'info',
 		'type' => 'heading'
 	);
 
+	// About this Theme
 	$options[] = array(
 		'name' => __( 'About this Theme', 'tidy' ),
 		'desc' => __( '<p>This is a highly customizable, clean, modern, and responsive WordPress theme. originally developed plugin is included and it enables higher usability and easier production of stylish site and customization. It can be used in wide variation from private to business use. Give it a try and enjoy our beautiful theme.</p><p><strong>Features</strong></p><ul><li>Responsive</li><li>Social setting</li><li>Easy web advertisement setting</li><li>Portfolio</li><li>Icon menu</li><li>Easy tracking code &amp; Web mastertool setting</li><li>Color customization</li><li>Web fonts &amp; icon fonts</li><li>Wide variety of theme layouts</li><li>Stylish slider &quot;Classic Slider&quot;</li></ul>', 'tidy' ),
@@ -159,6 +187,7 @@ function optionsframework_options() {
 		'class' => 'about-this-theme',
 		'type' => 'info');
 
+	// About WP Shop
 	$options[] = array(
 		'name' => __( 'About WP Shop', 'tidy' ),
 		'desc' => sprintf( __( '<p class="about-photo"><img src="%1$s" alt="*"></p><p>WP Shop is a social marketplace for buying and selling WordPress themes, while providing a platform to showcase and share Asian design.</p><p>We connect buyers and sellers of digital contents for WordPress by offering more than just a marketplace.</p><p>WP Shop only offers safe and high quality themes produced according to the guidelines issued by wordpress.org and tested based on _s(underscores) provided by Automattic Inc. or default themes as a standard.</p><p class="shop_link"><a href="https://wpshop.com/signup" target="_blank" class="shop_btn"><span class="shop_name">Join WP Shop</span><span class="shop_dec">Starting from $0 / theme</span></a></p>', 'tidy' ), $imagepath . 'about-image.jpg' ),
@@ -166,6 +195,7 @@ function optionsframework_options() {
 		'class' => 'about-wp-shop',
 		'type' => 'info');
 
+	// WP Shop Headline News
 	$options[] = array(
 		'name' => __( 'WP Shop Headline News', 'tidy' ),
 		'desc' => '',
@@ -184,26 +214,31 @@ function optionsframework_options() {
 		'class' => 'wp-happennig-news',
 		'type' => 'feed');
 
-	// General Settings
+	/**
+	 * General Settings.
+	 */
 	$options[] = array(
 		'name' => __('General Settings', 'tidy'),
+		'icon' => 'info',
 		'type' => 'heading');
 
-	// Header logo
+	// Header logo toggle
 	$options[] = array(
 		'name' => __( 'Show Header logo', 'tidy' ),
 		'desc' => '',
-		'id' => 'general-header-logo-toggle',
+		'id' => 'logo_toggle',
 		'std' => '0',
 		'type' => 'toggle');
 
+	// Header logo image
 	$options[] = array(
 		'name' => __( 'Header logo image', 'tidy' ),
 		'desc' => '',
-		'id' => 'general-header-logo-image',
-		'std' => get_template_directory_uri() . '/images/logo-sample.png',
+		'id' => 'logo_image',
+		'std' => $tidy_default['logo_image'],
 		'type' => 'upload');
 
+	// Site title
 	$options[] = array(
 		'name' => __( 'Site Title', 'tidy' ),
 		'desc' => '',
@@ -211,6 +246,7 @@ function optionsframework_options() {
 		'std' => get_bloginfo( 'name' ),
 		'type' => 'text');
 
+	// Tagline
 	$options[] = array(
 		'name' => __( 'Tagline', 'tidy' ),
 		'desc' => '',
@@ -218,29 +254,95 @@ function optionsframework_options() {
 		'std' => get_bloginfo( 'description' ),
 		'type' => 'text');
 
-	// Text Input for Header text  
+	// Text Input for Header text
 	$options[] = array(
 		'name' => __( 'Header text', 'tidy' ),
 		'desc' => '',
-		'id' => 'general-header_text',
-		'std' => __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' ),
+		'id' => 'header_text',
+		'std' => $tidy_default['header_text'],
 		'type' => 'text');
 
-	// Copyright  
+	// Copyright
 	$options[] = array(
 		'name' => __( 'Copyright', 'tidy' ),
 		'desc' => '',
-		'id' => 'general-copyright',
-		'std' => '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.',
+		'id' => 'copyright',
+		'std' => $tidy_default['copyright'],
 		'type' => 'text');
 
+	// Favicon
 	$options[] = array(
 		'name' => __( 'Favicon', 'tidy' ),
 		'desc' => 'Please upload .ico image.',
-		'id' => 'general-favicon',
+		'id' => 'favicon',
 		'std' => '',
 		'type' => 'upload');
 
+	/**
+	 * Color Settings.
+	 */
+	$options[] = array(
+		'name' => __( 'Color Settings', 'tidy' ),
+		'icon' => 'info',
+		'type' => 'heading');
+
+	// Header color settings (info)
+	$options[] = array(
+		'name' => __( 'Header color settings', 'tidy' ),
+		'type' => 'info');
+
+	// Header background color
+	$options[] = array(
+		'name' => __( 'Header background color', 'tidy' ),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'header_bg_color',
+		'std' => $tidy_default['header_bg_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// Header text color
+	$options[] = array(
+		'name' => __( 'Header text color', 'tidy' ),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'header_text_color',
+		'std' => $tidy_default['header_text_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// Header anchor color
+	$options[] = array(
+		'name' => __( 'Header anchor color', 'tidy' ),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'header_anchor_color',
+		'std' => $tidy_default['header_anchor_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// Header border color
+	$options[] = array(
+		'name' => __('Header border color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'header_border_color',
+		'std' => $tidy_default['header_border_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// Layout Settings
+	$options[] = array(
+		'name' => __('Layout Settings', 'tidy'),
+		'type' => 'heading');
+
+	$options[] = array(
+		'name' => "Example Image Selector",
+		'desc' => "Images for layout.",
+		'id' => "example_images",
+		'std' => "2c-l-fixed",
+		'type' => "images",
+		'options' => array(
+			'1col-fixed' => $imagepath . '1col.png',
+			'2c-l-fixed' => $imagepath . '2cl.png',
+			'2c-r-fixed' => $imagepath . '2cr.png')
+	);
 /*
 	$options[] = array(
 		'name' =>  __('Example Background', 'tidy'),
@@ -271,38 +373,7 @@ function optionsframework_options() {
 		'std' => $typography_defaults,
 		'type' => 'typography',
 		'options' => $typography_options );
-*/
 
-	// Color Settings
-	$options[] = array(
-		'name' => __('Color Settings', 'tidy'),
-		'type' => 'heading');
-
-	$options[] = array(
-		'name' => __('Colorpicker', 'tidy'),
-		'desc' => __('No color selected by default.', 'tidy'),
-		'id' => 'example_colorpicker',
-		'std' => 'aaa',
-		'type' => 'color' );
-
-
-	// Layout Settings
-	$options[] = array(
-		'name' => __('Layout Settings', 'tidy'),
-		'type' => 'heading');
-
-	$options[] = array(
-		'name' => "Example Image Selector",
-		'desc' => "Images for layout.",
-		'id' => "example_images",
-		'std' => "2c-l-fixed",
-		'type' => "images",
-		'options' => array(
-			'1col-fixed' => $imagepath . '1col.png',
-			'2c-l-fixed' => $imagepath . '2cl.png',
-			'2c-r-fixed' => $imagepath . '2cr.png')
-	);
-/*
 	$options[] = array(
 		'name' => __('Input Text Mini', 'tidy'),
 		'desc' => __('A mini text input field.', 'tidy'),
@@ -376,7 +447,6 @@ function optionsframework_options() {
 		'std' => '1',
 		'type' => 'checkbox');
 */
-
 
 	// Merit Box Settings
 	$options[] = array(
@@ -554,17 +624,25 @@ function optionsframework_after_validate_overwride( $clean ) {
 		if ( $k == 'general-header-site-title' ) {
 			update_option( 'blogname', $v );
 		} elseif ( $k == 'general-header-site-tagline' ) {
-			update_option( 'description', $v );
-		} elseif ( $k == 'general-header-logo-toggle' ) {
+			update_option( 'blogdescription', $v );
+		} elseif ( $k == 'logo_toggle' ) {
 			set_theme_mod( 'logo_toggle', $v );
-		} elseif ( $k == 'general-header-logo-image' ) {
+		} elseif ( $k == 'logo_image' ) {
 			set_theme_mod( 'logo_image', $v );
-		} elseif ( $k == 'general-header_text' ) {
+		} elseif ( $k == 'header_text' ) {
 			set_theme_mod( 'header_text', $v );
-		} elseif ( $k == 'general-copyright' ) {
+		} elseif ( $k == 'copyright' ) {
 			set_theme_mod( 'copyright', $v );
-		} elseif ( $k == 'general-favicon' ) {
+		} elseif ( $k == 'favicon' ) {
 			set_theme_mod( 'favicon', $v );
+		} elseif ( $k == 'header_bg_color' ) {
+			set_theme_mod( 'header_bg_color', $v );
+		} elseif ( $k == 'header_text_color' ) {
+			set_theme_mod( 'header_text_color', $v );
+		} elseif ( $k == 'header_anchor_color' ) {
+			set_theme_mod( 'header_anchor_color', $v );
+		} elseif ( $k == 'header_border_color' ) {
+			set_theme_mod( 'header_border_color', $v );
 		}
 	}
 	return $clean;
@@ -572,23 +650,33 @@ function optionsframework_after_validate_overwride( $clean ) {
 
 add_filter( 'optionsframework_std', 'tidy_optionsframework_std', 10, 3);
 function tidy_optionsframework_std( $option_name, $value, $val ) {
-	if ( ! array_key_exists('id', $value) )
+	if ( ! array_key_exists( 'id', $value ) )
 		return $val;
+
+	$options = get_theme_mods();
 
 	if ( $value['id'] == 'general-header-site-title' ) {
 		$val = get_bloginfo( 'name' );
 	} elseif ( $value['id'] == 'general-header-site-tagline' ) {
 		$val = get_bloginfo( 'description' );
-	} elseif ( $value['id'] == 'general-header-logo-toggle' ) {
-		$val = ( get_theme_mod( 'logo_toggle' ) ) ? get_theme_mod( 'logo_toggle' ) : $value['std'];
-	} elseif ( $value['id'] == 'general-header-logo-image' ) {
-		$val = ( get_theme_mod( 'logo_image' ) ) ? get_theme_mod( 'logo_image' ) : $value['std'];
-	} elseif ( $value['id'] == 'general-header_text' ) {
-		$val = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : $value['std'];
-	} elseif ( $value['id'] == 'general-copyright' ) {
-		$val = ( get_theme_mod( 'copyright' ) ) ? get_theme_mod( 'copyright' ) : $value['std'];
-	} elseif ( $value['id'] == 'general-favicon' ) {
-		$val = ( get_theme_mod( 'logo_image' ) ) ? get_theme_mod( 'favicon' ) : $value['std'];
+	} elseif ( $value['id'] == 'logo_toggle' ) {
+		$val = ( get_theme_mods('logo_toggle') ) ? $options['logo_toggle'] : $value['std'];
+	} elseif ( $value['id'] == 'logo_image' ) {
+		$val = ( get_theme_mods('logo_image') ) ? $options['logo_image'] : $value['std'];
+	} elseif ( $value['id'] == 'header_text' ) {
+		$val = ( get_theme_mods('header_text') ) ? $options['header_text'] : $value['std'];
+	} elseif ( $value['id'] == 'copyright' ) {
+		$val = ( get_theme_mods('copyright') ) ? $options['copyright'] : $value['std'];
+	} elseif ( $value['id'] == 'favicon' ) {
+		$val = ( get_theme_mods('favicon') ) ? $options['favicon'] : $value['std'];
+	} elseif ( $value['id'] == 'header_bg_color' ) {
+		$val = ( get_theme_mods('header_bg_color') ) ? $options['header_bg_color'] : $value['std'];
+	} elseif ( $value['id'] == 'header_text_color' ) {
+		$val = ( get_theme_mods('header_text_color') ) ? $options['header_text_color'] : $value['std'];
+	} elseif ( $value['id'] == 'header_anchor_color' ) {
+		$val = ( get_theme_mods('header_anchor_color') ) ? $options['header_anchor_color'] : $value['std'];
+	} elseif ( $value['id'] == 'header_border_color' ) {
+		$val = ( get_theme_mods('header_border_color') ) ? $options['header_border_color'] : $value['std'];
 	}
 
 	return $val;

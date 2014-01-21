@@ -53,7 +53,8 @@
 
 		<div class="site-info"><div class="inner">
 			<?php
-				$copyright = ( get_theme_mod( 'copyright' ) ) ? get_theme_mod( 'copyright' ) : '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.';
+				$tidy_default = tidy_default_array();
+				$copyright = ( get_theme_mod( 'copyright' ) ) ? get_theme_mod( 'copyright' ) : $tidy_default['copyright'];
 				echo esc_html( $copyright );
 			?>
 		</div></div><!-- .site-info -->

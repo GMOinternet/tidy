@@ -7,6 +7,10 @@ jQuery(document).ready(function($) {
 
 	// Loads the color pickers
 	$('.of-color').wpColorPicker();
+	$('.customcolor .of-color').each(function(){
+		var c = $(this).attr( 'data-set-color' );
+		$(this).iris('color', c );
+	}); 
 
 	// Image Options
 	$('.of-radio-img-img').click(function(){

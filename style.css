@@ -1779,6 +1779,7 @@ li.depth-1 {
     color: #0058ae;
     position: relative;
     cursor: pointer;
+    margin-bottom: 0;
   }
   .sns-toggle .genericon {
     font-size: 8px;

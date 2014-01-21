@@ -11,14 +11,13 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function tidy_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'logo_toggle' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'logo_image' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'copyright' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'header_text' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'logo_toggle' )->transport     = 'postMessage';
+	$wp_customize->get_setting( 'logo_image' )->transport      = 'postMessage';
+	$wp_customize->get_setting( 'copyright' )->transport       = 'postMessage';
+	$wp_customize->get_setting( 'header_text' )->transport     = 'postMessage';
 
-//	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'tidy_customize_register' );
 
@@ -46,56 +45,65 @@ function get_tiry_option_name( $key = null ) {
 
 function tidy_customize_setup( $wp_customize ) {
 
-	// = header logo.
+	$tidy_default = tidy_default_array();
+
+	/**
+	 * section for title_tagline.
+	 */
+	// = header toggle.
 	$wp_customize->add_setting( get_tiry_option_name( 'logo_toggle' ), array(
 		'default'    => '0',
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, get_tiry_option_name( 'logo_toggle' ), array(
-		'label'    => __( 'Show Header logo', 'tidy' ),
-		'section'  => 'title_tagline',
-		'settings' => get_tiry_option_name( 'logo_toggle' ),
-		'type'     => 'radio',
-		'choices'  => array(
+		'label'      => __( 'Show Header logo', 'tidy' ),
+		'section'    => 'title_tagline',
+		//'priority'   => 15,
+		'settings'   => get_tiry_option_name( 'logo_toggle' ),
+		'type'       => 'radio',
+		'choices'    => array(
 			'1' => __( 'On', 'tidy' ),
 			'0' => __( 'Off', 'tidy' )
 		),
 	) ) );
 	
+	// = header logo.
 	$wp_customize->add_setting( get_tiry_option_name( 'logo_image' ), array(
-		'default'    => get_template_directory_uri() . '/images/logo-sample.png',
+		'default'    => $tidy_default['logo_image'],
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, get_tiry_option_name( 'logo_image' ), array(
-		'label'    => __( 'Header logo image', 'tidy' ),
-		'section'  => 'title_tagline',
-		'settings' => get_tiry_option_name( 'logo_image' ),
+		'label'      => __( 'Header logo image', 'tidy' ),
+		'section'    => 'title_tagline',
+		// 'priority'   => 21,
+		'settings'   => get_tiry_option_name( 'logo_image' ),
 	)));
 
 	// = Text Input for Header text
 	$wp_customize->add_setting( get_tiry_option_name( 'header_text' ), array(
-		'default'    => __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' ),
+		'default'    => $tidy_default['header_text'],
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	));
-
 	$wp_customize->add_control( get_tiry_option_name( 'header_text' ), array(
 		'label'      => __( 'Header text', 'tidy' ),
 		'section'    => 'title_tagline',
+		//'priority'   => 30,
 		'settings'   => get_tiry_option_name( 'header_text' ),
 	));
 
 	// = Text Input for Copyright
 	$wp_customize->add_setting( get_tiry_option_name( 'copyright' ), array(
-		'default'           => '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.',
+		'default'           => $tidy_default['copyright'],
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( get_tiry_option_name( 'copyright' ), array(
 		'label'      => __( 'Copyright', 'tidy' ),
 		'section'    => 'title_tagline',
+		//'priority'   => 31,
 		'settings'   => get_tiry_option_name( 'copyright' ),
 	));
 
@@ -107,44 +115,70 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, get_tiry_option_name( 'favicon' ), array(
 		'label'    => __( 'Favicon', 'tidy' ),
 		'section'  => 'title_tagline',
+		//'priority'   => 32,
 		'settings' => get_tiry_option_name( 'favicon' ),
 	)));
 
 	/**
-	 * customize for Header.
+	 * section for Header color Settings.
 	 */
-	$wp_customize->add_section( 'tidy_header_scheme', array(
-		'title'    => __('Header Scheme', 'tidy'),
+	$wp_customize->add_section( 'tidy_color_settings_header', array(
+		'title'    => __( 'Header color settings', 'tidy' ),
 		'priority' => 200,
 	));
 
 	// = Color Picker for header background color.
 	$wp_customize->add_setting( get_tiry_option_name( 'header_bg_color' ), array(
-		'default'           => '2ba6cb',
+		'default'           => $tidy_default['header_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 	));
-
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, get_tiry_option_name( 'header_bg_color' ), array(
-		'label'    => __('Background Color', 'tidy'),
-		'section'  => 'tidy_header_scheme',
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_bg_color' ), array(
+		'label'    => __( 'Header background color', 'tidy' ),
+		'section'  => 'tidy_color_settings_header',
 		'settings' => get_tiry_option_name( 'header_bg_color' ),
 	)));
 
 	// = Color Picker for header text color.
-	$wp_customize->add_setting( get_tiry_option_name( 'header_text_color' ) , array(
-		'default'           => 'ffffff',
+	$wp_customize->add_setting( get_tiry_option_name( 'header_text_color' ), array(
+		'default'           => $tidy_default['header_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 	));
-
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_text_color' ), array(
-		'label'    => __('Text Color', 'tidy'),
-		'section'  => 'tidy_header_scheme',
-		'settings' => get_tiry_option_name( 'header_text_color' )	,
+		'label'    => __('Header text color', 'tidy'),
+		'section'  => 'tidy_color_settings_header',
+		'settings' => get_tiry_option_name( 'header_text_color' ),
 	)));
+
+	// = Color Picker for header anchor color.
+	$wp_customize->add_setting( get_tiry_option_name( 'header_anchor_color' ), array(
+		'default'           => $tidy_default['header_anchor_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_anchor_color' ), array(
+		'label'    => __('Header anchor color', 'tidy'),
+		'section'  => 'tidy_color_settings_header',
+		'settings' => get_tiry_option_name( 'header_anchor_color' ),
+	)));
+
+	// = Color Picker for header border color.
+	$wp_customize->add_setting( get_tiry_option_name( 'header_border_color' ), array(
+		'default'           => $tidy_default['header_border_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_border_color' ), array(
+		'label'    => __('Header border color', 'tidy'),
+		'section'  => 'tidy_color_settings_header',
+		'settings' => get_tiry_option_name( 'header_border_color' ),
+	)));
+
 
 
 	/**
@@ -215,8 +249,23 @@ function tidy_customize_style() {
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['header_text_color'] ) ) : ?>
-		.site-header, .site-header a, .site-description {
+		.site-header-main {
 			color: <?php echo esc_html( $options['header_text_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['header_anchor_color'] ) ) : ?>
+		.site-header-main a,
+		.main-navigation .current_page_item a,
+		.main-navigation .current-menu-item a {
+			color: <?php echo esc_html( $options['header_anchor_color'] ); ?>;
+		}
+		.menu-toggle {
+			background-color: <?php echo esc_html( $options['header_anchor_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['header_border_color'] ) ) : ?>
+		.site-header-social-area .inner {
+			border-color: <?php echo esc_html( $options['header_border_color'] ); ?>;
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['footer_bg_color'] ) ) : ?>
