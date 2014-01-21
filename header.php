@@ -44,7 +44,8 @@
 	
 			<div class="site-branding">
 				<?php
-					$logo_image = ( get_theme_mod( 'logo_image' ) && ( get_theme_mod( 'logo_toggle' ) == 1 ) ) ? '<img src="' . esc_url( get_theme_mod( 'logo_image' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">' : get_bloginfo( 'name' ); ?>
+					$logo_image = ( get_theme_mod( 'logo_image' ) && ( get_theme_mod( 'logo_toggle' ) == 1 ) ) ? '<img src="' . esc_url( get_theme_mod( 'logo_image' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' : esc_html( get_bloginfo( 'name', 'display' ) );
+				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $logo_image ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>

@@ -191,53 +191,50 @@ function optionsframework_options() {
 
 	// Header logo
 	$options[] = array(
-		'name' => __('Header logo', 'tidy'),
-		'id' => 'general-settings-header',
-		'type' => 'info');
-
-	$options[] = array(
-		'name' => __( 'Logo image', 'tidy' ),
+		'name' => __( 'Show Header logo', 'tidy' ),
 		'desc' => '',
 		'id' => 'general-header-logo-toggle',
 		'std' => '0',
 		'type' => 'toggle');
 
 	$options[] = array(
-		'name' => __( 'Upload image', 'tidy' ),
-		'desc' => __('This creates a full size uploader that previews the image.', 'tidy'),
+		'name' => __( 'Header logo image', 'tidy' ),
+		'desc' => '',
 		'id' => 'general-header-logo-image',
 		'std' => get_template_directory_uri() . '/images/logo-sample.png',
 		'type' => 'upload');
 
 	$options[] = array(
-		'name' => __('Site Title', 'tidy'),
+		'name' => __( 'Site Title', 'tidy' ),
 		'desc' => '',
 		'id' => 'general-header-site-title',
 		'std' => get_bloginfo( 'name' ),
 		'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Tagline', 'tidy'),
+		'name' => __( 'Tagline', 'tidy' ),
 		'desc' => '',
 		'id' => 'general-header-site-tagline',
 		'std' => get_bloginfo( 'description' ),
 		'type' => 'text');
 
-	$options[] = array(
-		'name' => __('Check to Show a Hidden Text Input', 'tidy'),
-		'desc' => __('Click here and see what happens.', 'tidy'),
-		'id' => 'example_showhidden',
-		'type' => 'checkbox');
+	// Copyright  
 
 	$options[] = array(
-		'name' => __('Hidden Text Input', 'tidy'),
-		'desc' => __('This option is hidden unless activated by a checkbox click.', 'tidy'),
-		'id' => 'example_text_hidden',
-		'std' => 'Hello',
-		'class' => 'hidden',
+		'name' => __( 'Copyright', 'tidy' ),
+		'desc' => '',
+		'id' => 'general-copyright',
+		'std' => '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.',
 		'type' => 'text');
 
+	$options[] = array(
+		'name' => __( 'Favicon', 'tidy' ),
+		'desc' => 'Please upload .ico image.',
+		'id' => 'general-favicon',
+		'std' => '',
+		'type' => 'upload');
 
+/*
 	$options[] = array(
 		'name' =>  __('Example Background', 'tidy'),
 		'desc' => __('Change the background CSS.', 'tidy'),
@@ -267,6 +264,7 @@ function optionsframework_options() {
 		'std' => $typography_defaults,
 		'type' => 'typography',
 		'options' => $typography_options );
+*/
 
 	// Color Settings
 	$options[] = array(
@@ -554,6 +552,10 @@ function optionsframework_after_validate_overwride( $clean ) {
 			set_theme_mod( 'logo_toggle', $v );
 		} elseif ( $k == 'general-header-logo-image' ) {
 			set_theme_mod( 'logo_image', $v );
+		} elseif ( $k == 'general-copyright' ) {
+			set_theme_mod( 'copyright', $v );
+		} elseif ( $k == 'general-favicon' ) {
+			set_theme_mod( 'favicon', $v );
 		}
 	}
 	return $clean;
@@ -572,7 +574,22 @@ function tidy_optionsframework_std( $option_name, $value, $val ) {
 		$val = ( get_theme_mod( 'logo_toggle' ) ) ? get_theme_mod( 'logo_toggle' ) : $value['std'];
 	} elseif ( $value['id'] == 'general-header-logo-image' ) {
 		$val = ( get_theme_mod( 'logo_image' ) ) ? get_theme_mod( 'logo_image' ) : $value['std'];
+	} elseif ( $value['id'] == 'general-copyright' ) {
+		$val = ( get_theme_mod( 'copyright' ) ) ? get_theme_mod( 'copyright' ) : $value['std'];
+	} elseif ( $value['id'] == 'general-favicon' ) {
+		$val = ( get_theme_mod( 'logo_image' ) ) ? get_theme_mod( 'favicon' ) : $value['std'];
 	}
 
 	return $val;
+}
+
+// favicon
+add_action( 'wp_head', 'tidy_favicon' );
+add_action( 'admin_head', 'tidy_favicon' );
+function tidy_favicon() {
+	$favicon = get_theme_mod( 'favicon' );
+	if ( $favicon ) {
+		$link = '<link rel="Shortcut Icon" type="image/x-icon" href="%s" />'."\n";
+		printf( $link, esc_url( $favicon ) );
+	}
 }

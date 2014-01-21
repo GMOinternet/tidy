@@ -52,7 +52,10 @@
 		</div></div></div>
 
 		<div class="site-info"><div class="inner">
-			&copy; 2013 GMO Internet Pte Ltd. All Rights Reserved.
+			<?php
+				$copyright = ( get_theme_mod( 'copyright' ) ) ? get_theme_mod( 'copyright' ) : '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.';
+				echo esc_html( $copyright );
+			?>
 		</div></div><!-- .site-info -->
 		<?php do_action( 'tidy_after_footer' ); ?>
 	</footer><!-- #colophon -->

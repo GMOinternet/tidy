@@ -15,8 +15,9 @@ function tidy_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'logo_toggle' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'logo_image' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'copyright' )->transport = 'postMessage';
 
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+//	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'tidy_customize_register' );
 
@@ -51,7 +52,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, get_tiry_option_name( 'logo_toggle' ), array(
-		'label'    => __( 'Logo image', 'tidy'),
+		'label'    => __( 'Show Header logo', 'tidy' ),
 		'section'  => 'title_tagline',
 		'settings' => get_tiry_option_name( 'logo_toggle' ),
 		'type'     => 'radio',
@@ -67,9 +68,33 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, get_tiry_option_name( 'logo_image' ), array(
-		'label'    => __( 'Upload image', 'tidy'),
+		'label'    => __( 'Header logo image', 'tidy' ),
 		'section'  => 'title_tagline',
 		'settings' => get_tiry_option_name( 'logo_image' ),
+	)));
+
+	// = Text Input for Copyright
+	$wp_customize->add_setting( get_tiry_option_name( 'copyright' ), array(
+		'default'           => '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+
+	$wp_customize->add_control( get_tiry_option_name( 'copyright' ), array(
+		'label'      => __( 'Copyright', 'tidy' ),
+		'section'    => 'title_tagline',
+		'settings'   => get_tiry_option_name( 'copyright' ),
+	));
+
+	// = favicon.
+	$wp_customize->add_setting( get_tiry_option_name( 'favicon' ), array(
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, get_tiry_option_name( 'favicon' ), array(
+		'label'    => __( 'Favicon', 'tidy' ),
+		'section'  => 'title_tagline',
+		'settings' => get_tiry_option_name( 'favicon' ),
 	)));
 
 	/**
@@ -117,18 +142,6 @@ function tidy_customize_setup( $wp_customize ) {
 		'priority' => 210,
 	));
 
-	// = Text Input for Copyright
-	$wp_customize->add_setting( get_tiry_option_name( 'footer_text' ), array(
-		'default'           => '&copy; ' . esc_html( get_bloginfo( 'name', 'display' ) ),
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-	));
-
-	$wp_customize->add_control( get_tiry_option_name( 'footer_text' ), array(
-		'label'      => __('Copyright', 'tidy'),
-		'section'    => 'tidy_footer_scheme',
-		'settings'   => get_tiry_option_name( 'footer_text' ),
-	));
 
 	// = Color Picker for footer background color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_bg_color' ), array(
