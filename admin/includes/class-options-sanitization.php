@@ -9,7 +9,12 @@
 
 /* Text */
 
-add_filter( 'of_sanitize_text', 'sanitize_text_field' );
+add_filter( 'of_sanitize_text', 'of_sanitize_text' );
+function of_sanitize_text( $input ) {
+	global $allowedposttags;
+	$output = wp_kses( $input, $allowedposttags);
+	return $output;
+}
 
 /* Password */
 
@@ -17,7 +22,7 @@ add_filter( 'of_sanitize_password', 'sanitize_text_field' );
 
 /* Textarea */
 
-function of_sanitize_textarea(  $input) {
+function of_sanitize_textarea( $input ) {
 	global $allowedposttags;
 	$output = wp_kses( $input, $allowedposttags);
 	return $output;

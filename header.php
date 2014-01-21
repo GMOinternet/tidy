@@ -28,7 +28,10 @@
 
 		<div id="site-header-widget" class="site-header-widget-area"><div class="inner">
 			<div class="site-header-widget-area-content">
-				<p><?php _e( "Eeh what's that when it's at ooam big girl's blouse ah'll learn thi ey up. Click here.", 'tidy' ) ?></p>
+				<?php
+					$header_text = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' );
+					echo wp_kses_post( $header_text );
+				?>
 			</div>
 			<div class="header-widget-area-close-btn header-widget-toggle"><span class="genericon genericon-close"></span></div>
 		</div></div>

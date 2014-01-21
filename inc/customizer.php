@@ -16,6 +16,7 @@ function tidy_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'logo_toggle' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'logo_image' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'copyright' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'header_text' )->transport = 'postMessage';
 
 //	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
@@ -73,13 +74,25 @@ function tidy_customize_setup( $wp_customize ) {
 		'settings' => get_tiry_option_name( 'logo_image' ),
 	)));
 
+	// = Text Input for Header text
+	$wp_customize->add_setting( get_tiry_option_name( 'header_text' ), array(
+		'default'    => __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' ),
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	));
+
+	$wp_customize->add_control( get_tiry_option_name( 'header_text' ), array(
+		'label'      => __( 'Header text', 'tidy' ),
+		'section'    => 'title_tagline',
+		'settings'   => get_tiry_option_name( 'header_text' ),
+	));
+
 	// = Text Input for Copyright
 	$wp_customize->add_setting( get_tiry_option_name( 'copyright' ), array(
 		'default'           => '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 	));
-
 	$wp_customize->add_control( get_tiry_option_name( 'copyright' ), array(
 		'label'      => __( 'Copyright', 'tidy' ),
 		'section'    => 'title_tagline',

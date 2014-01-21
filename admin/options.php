@@ -218,8 +218,15 @@ function optionsframework_options() {
 		'std' => get_bloginfo( 'description' ),
 		'type' => 'text');
 
-	// Copyright  
+	// Text Input for Header text  
+	$options[] = array(
+		'name' => __( 'Header text', 'tidy' ),
+		'desc' => '',
+		'id' => 'general-header_text',
+		'std' => __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' ),
+		'type' => 'text');
 
+	// Copyright  
 	$options[] = array(
 		'name' => __( 'Copyright', 'tidy' ),
 		'desc' => '',
@@ -552,6 +559,8 @@ function optionsframework_after_validate_overwride( $clean ) {
 			set_theme_mod( 'logo_toggle', $v );
 		} elseif ( $k == 'general-header-logo-image' ) {
 			set_theme_mod( 'logo_image', $v );
+		} elseif ( $k == 'general-header_text' ) {
+			set_theme_mod( 'header_text', $v );
 		} elseif ( $k == 'general-copyright' ) {
 			set_theme_mod( 'copyright', $v );
 		} elseif ( $k == 'general-favicon' ) {
@@ -574,6 +583,8 @@ function tidy_optionsframework_std( $option_name, $value, $val ) {
 		$val = ( get_theme_mod( 'logo_toggle' ) ) ? get_theme_mod( 'logo_toggle' ) : $value['std'];
 	} elseif ( $value['id'] == 'general-header-logo-image' ) {
 		$val = ( get_theme_mod( 'logo_image' ) ) ? get_theme_mod( 'logo_image' ) : $value['std'];
+	} elseif ( $value['id'] == 'general-header_text' ) {
+		$val = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : $value['std'];
 	} elseif ( $value['id'] == 'general-copyright' ) {
 		$val = ( get_theme_mod( 'copyright' ) ) ? get_theme_mod( 'copyright' ) : $value['std'];
 	} elseif ( $value['id'] == 'general-favicon' ) {
