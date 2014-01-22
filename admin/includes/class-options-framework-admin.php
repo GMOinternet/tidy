@@ -105,8 +105,8 @@ class Options_Framework_Admin {
 	 *
 	 * add_filter( 'optionsframework_sns', function( $sns ) {
 	 *     $sns['twitter'] = 'twitterjp';
-	 *	   $sns['appId'] = (int);
-	 *	   $sns['shareurl'] = 'http://example.com/';
+	 *     $sns['appId'] = (int);
+	 *     $sns['shareurl'] = 'http://example.com/';
 	 *     return $sns;
 	 * });
 	 *
@@ -125,10 +125,10 @@ class Options_Framework_Admin {
 	}
 
 	/**
-     * Add a subpage called "Theme Options" to the appearance menu.
-     *
-     * @since 1.7.0
-     */
+	 * Add a subpage called "Theme Options" to the appearance menu.
+	 *
+	 * @since 1.7.0
+	 */
 	function add_custom_options_page() {
 
 		$menu = $this->menu_settings();
@@ -137,10 +137,10 @@ class Options_Framework_Admin {
 	}
 
 	/**
-     * Loads the required admin bar stylesheets
-     *
-     * @since 1.7.0
-     */
+	 * Loads the required admin bar stylesheets
+	 *
+	 * @since 1.7.0
+	 */
 	function admin_bar_style( $hook ) {
 
 	echo '<style type="text/css">
@@ -158,10 +158,10 @@ class Options_Framework_Admin {
 	}
 
 	/**
-     * Loads the required stylesheets
-     *
-     * @since 1.7.0
-     */
+	 * Loads the required stylesheets
+	 *
+	 * @since 1.7.0
+	 */
 	function enqueue_admin_styles( $hook ) {
 
 		if ( $this->options_screen != $hook )
@@ -173,10 +173,10 @@ class Options_Framework_Admin {
 	}
 
 	/**
-     * Loads the required javascript
-     *
-     * @since 1.7.0
-     */
+	 * Loads the required javascript
+	 *
+	 * @since 1.7.0
+	 */
 	function enqueue_admin_scripts( $hook ) {
 
 		if ( $this->options_screen != $hook )
@@ -195,8 +195,8 @@ class Options_Framework_Admin {
 	}
 
 	/**
-     * Builds out the options panel.
-     *
+	 * Builds out the options panel.
+	 *
 	 * If we were using the Settings API as it was intended we would use
 	 * do_settings_sections here.  But as we don't want the settings wrapped in a table,
 	 * we'll call our own custom optionsframework_fields.  See options-interface.php
@@ -204,8 +204,8 @@ class Options_Framework_Admin {
 	 *
 	 * Nonces are provided using the settings_fields()
 	 *
-     * @since 1.7.0
-     */
+	 * @since 1.7.0
+	 */
 	 function options_page() { ?>
 
 		<div id="optionsframework-wrap" class="wrap">

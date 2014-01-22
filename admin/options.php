@@ -206,7 +206,7 @@ function optionsframework_options() {
 	 */
 	$options[] = array(
 		'name' => __('General Settings', 'tidy'),
-		'icon' => 'info',
+		'icon' => 'admin-generic',
 		'type' => 'heading');
 
 	// Header logo toggle
@@ -270,7 +270,7 @@ function optionsframework_options() {
 	 */
 	$options[] = array(
 		'name' => __( 'Color Settings', 'tidy' ),
-		'icon' => 'info',
+		'icon' => 'admin-appearance',
 		'type' => 'heading');
 
 	// Header color settings (info)
@@ -550,6 +550,7 @@ function optionsframework_options() {
 	 */
 	$options[] = array(
 		'name' => __('Layout Settings', 'tidy'),
+		'icon' => 'welcome-widgets-menus',
 		'type' => 'heading');
 
 	$options[] = array(
@@ -671,10 +672,11 @@ function optionsframework_options() {
 	// Merit Box Settings
 	$options[] = array(
 		'name' => __('Merit Box Settings', 'tidy'),
+		'icon' => 'images-alt2',
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('Select the number of merit box to display', 'tidy'),
+		'name' => __('Number of box to show ', 'tidy'),
 		'desc' => __('Default:4, Min:1, Max:4.', 'tidy'),
 		'id' => 'merit-box-num',
 		'std' => 4,

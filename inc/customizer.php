@@ -395,7 +395,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'priority'   => 400,
 	));
 
-	// = Color Picker for main background color.
+	// = Color Picker for widget background color.
 	$wp_customize->add_setting( get_tiry_option_name( 'widget_bg_color' ), array(
 		'default'           => $tidy_default['widget_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
