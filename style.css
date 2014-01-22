@@ -915,7 +915,7 @@ body.single .entry-title, body.page .entry-title {
   margin-bottom: 10px;
 }
 
-.type-icon {
+.site-content .type-icon {
   width: 120px;
   height: 120px;
   color: white;
@@ -927,7 +927,7 @@ body.single .entry-title, body.page .entry-title {
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-.type-icon a {
+.site-content .type-icon a {
   color: white;
   text-decoration: none;
   display: block;
@@ -939,11 +939,16 @@ body.single .entry-title, body.page .entry-title {
   border: solid 2px white;
   width: 100%;
   height: 100%;
+  /*
+  		&:hover, &:active, &:focus {
+  			color: white;
+  		}
+  */
 }
-.type-icon a:hover {
+.site-content .type-icon a:hover {
   opacity: 0.8;
 }
-.type-icon .iconmoon {
+.site-content .type-icon .iconmoon {
   font-size: 50px;
   margin-top: 25px;
   display: inline-block;
@@ -1075,6 +1080,7 @@ body.single .entry-title, body.page .entry-title {
 
 .page-header {
   background-color: #e3e6ea;
+  color: #1c1c1c;
   padding: 10px;
   margin-bottom: 30px;
 }

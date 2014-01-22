@@ -16,11 +16,11 @@ function tidy_themeoption_header_style() {
 	?>
 	<style type="text/css">
 		.sns-icons a {
-			color: <?php echo $sns_icon_color_header; ?>;
+			color: <?php echo $sns_icon_color_header; ?> !important;
 			border-color: <?php echo $sns_icon_color_header; ?>;
 		}
 		.tidy_contact_sns_icons .sns-icons a {
-			color: <?php echo $sns_icon_color_footer; ?>;
+			color: <?php echo $sns_icon_color_footer; ?> !important;
 			border-color: <?php echo $sns_icon_color_footer; ?>;
 		}
 		<?php if ( $sns_icon_border == 0 ) : ?>

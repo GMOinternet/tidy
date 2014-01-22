@@ -1,5 +1,50 @@
 <?php
 /**
+ * tidy_sns_array
+ * @param   none
+ * @return  Array
+ */
+function tidy_customizer_array() {
+	$customizer_key = array(
+		'logo_toggle',
+		'logo_image',
+		'header_text',
+		'copyright',
+		'favicon',
+		'header_bg_color',
+		'header_text_color',
+		'header_anchor_color',
+		'header_border_color',
+		'header_widget_bg_color',
+		'header_widget_text_color',
+		'header_widget_anchor_color',
+		'main_bg_color',
+		'main_text_color',
+		'main_anchor_color',
+		'main_border_color',
+		'widget_bg_color',
+		'widget_title_color',
+		'widget_text_color',
+		'widget_anchor_color',
+		'widget_border_color',
+		'footer_bg_color',
+		'footer_title_color',
+		'footer_text_color',
+		'footer_anchor_color',
+		'footer_border_color',
+		'footer_category_bg_color',
+		'footer_category_title_color',
+		'footer_category_text_color',
+		'footer_category_anchor_color',
+		'footer_category_border_color',
+		'copyright_bg_color',
+		'copyright_text_color',
+		'copyright_anchor_color'
+	);
+	return $customizer_key;
+}
+
+/**
  * A unique identifier is defined to store the options in the database and reference them from the theme.
  * By default it uses the theme name, in lowercase and without spaces, but this can be changed if needed.
  * If the identifier changes, it'll appear as if the options have been reset.
@@ -233,7 +278,7 @@ function optionsframework_options() {
 		'name' => __( 'Header color settings', 'tidy' ),
 		'type' => 'info');
 
-	// Header background color
+	// = Color Picker for header background color.
 	$options[] = array(
 		'name' => __( 'Header background color', 'tidy' ),
 		'desc' => __( 'No color selected by default.', 'tidy'),
@@ -242,7 +287,7 @@ function optionsframework_options() {
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// Header text color
+	// = Color Picker for header text color.
 	$options[] = array(
 		'name' => __( 'Header text color', 'tidy' ),
 		'desc' => __( 'No color selected by default.', 'tidy'),
@@ -251,7 +296,7 @@ function optionsframework_options() {
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// Header anchor color
+	// = Color Picker for header anchor color.
 	$options[] = array(
 		'name' => __( 'Header anchor color', 'tidy' ),
 		'desc' => __( 'No color selected by default.', 'tidy'),
@@ -260,16 +305,249 @@ function optionsframework_options() {
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// Header border color
+	// = Color Picker for header border color.
 	$options[] = array(
-		'name' => __('Header border color', 'tidy'),
+		'name' => __( 'Header border color', 'tidy' ),
 		'desc' => __( 'No color selected by default.', 'tidy'),
 		'id' => 'header_border_color',
 		'std' => $tidy_default['header_border_color'],
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// Layout Settings
+	// = Color Picker for header widget background color.
+	$options[] = array(
+		'name' => __( 'Header widget background color', 'tidy' ),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'header_widget_bg_color',
+		'std' => $tidy_default['header_widget_bg_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for header widget text color.
+	$options[] = array(
+		'name' => __( 'Header widget text color', 'tidy' ),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'header_widget_text_color',
+		'std' => $tidy_default['header_widget_text_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for header widget anchor color.
+	$options[] = array(
+		'name' => __('Header widget anchor color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'header_widget_anchor_color',
+		'std' => $tidy_default['header_widget_anchor_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// Main color Settings (info)
+	$options[] = array(
+		'name' => __( 'Main color settings', 'tidy' ),
+		'type' => 'info');
+
+	// = Color Picker for main background color.
+	$options[] = array(
+		'name' => __( 'Main background color', 'tidy' ),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'main_bg_color',
+		'std' => $tidy_default['main_bg_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for main text color.
+	$options[] = array(
+		'name' => __('Main text color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'main_text_color',
+		'std' => $tidy_default['main_text_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for main anchor color.
+	$options[] = array(
+		'name' => __('Main anchor color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'main_anchor_color',
+		'std' => $tidy_default['main_anchor_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for main border color.
+	$options[] = array(
+		'name' => __('Main border color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'main_border_color',
+		'std' => $tidy_default['main_border_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// Widget color Settings (info)
+	$options[] = array(
+		'name' => __( 'Widget color settings', 'tidy' ),
+		'type' => 'info');
+
+	// = Color Picker for widget background color.
+	$options[] = array(
+		'name' => __( 'Widget background color', 'tidy' ),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'widget_bg_color',
+		'std' => $tidy_default['widget_bg_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for widget title color.
+	$options[] = array(
+		'name' => __('Widgte title color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'widget_title_color',
+		'std' => $tidy_default['widget_title_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for widget text color.
+	$options[] = array(
+		'name' => __('Widget text color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'widget_text_color',
+		'std' => $tidy_default['widget_text_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for widget anchor color.
+	$options[] = array(
+		'name' => __('Widget anchor color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'widget_anchor_color',
+		'std' => $tidy_default['widget_anchor_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for widget border color.
+	$options[] = array(
+		'name' => __('Widget border color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'widget_border_color',
+		'std' => $tidy_default['widget_border_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// Footer color Settings (info)
+	$options[] = array(
+		'name' => __( 'Footer color settings', 'tidy' ),
+		'type' => 'info');
+
+	// = Color Picker for footer background color.
+	$options[] = array(
+		'name' => __('Footer background color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_bg_color',
+		'std' => $tidy_default['footer_bg_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer title color.
+	$options[] = array(
+		'name' => __('Footer title color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_title_color',
+		'std' => $tidy_default['footer_title_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer text color.
+	$options[] = array(
+		'name' => __('Footer text color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_text_color',
+		'std' => $tidy_default['footer_text_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer anchor color.
+	$options[] = array(
+		'name' => __('Footer anchor color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_anchor_color',
+		'std' => $tidy_default['footer_anchor_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer border color.
+	$options[] = array(
+		'name' => __('Footer border color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_border_color',
+		'std' => $tidy_default['footer_border_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer all categories background color.
+	$options[] = array(
+		'name' => __('All categories background color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_category_bg_color',
+		'std' => $tidy_default['footer_category_bg_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer all categories title color.
+	$options[] = array(
+		'name' => __('All categories title color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_category_title_color',
+		'std' => $tidy_default['footer_category_title_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer all categories text color.
+	$options[] = array(
+		'name' => __('All categories text color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_category_text_color',
+		'std' => $tidy_default['footer_category_text_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer all categories anchor color.
+	$options[] = array(
+		'name' => __('All categories anchor color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_category_anchor_color',
+		'std' => $tidy_default['footer_category_anchor_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for footer all categories border color.
+	$options[] = array(
+		'name' => __('All categories border color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'footer_category_border_color',
+		'std' => $tidy_default['footer_category_border_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for copyright background color.
+	$options[] = array(
+		'name' => __('Copyright background color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'copyright_bg_color',
+		'std' => $tidy_default['copyright_bg_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	// = Color Picker for copyright text color.
+	$options[] = array(
+		'name' => __('Copyright text color', 'tidy'),
+		'desc' => __( 'No color selected by default.', 'tidy'),
+		'id' => 'copyright_text_color',
+		'std' => $tidy_default['copyright_text_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	/**
+	 * Layout Settings.
+	 */
 	$options[] = array(
 		'name' => __('Layout Settings', 'tidy'),
 		'type' => 'heading');
@@ -446,7 +724,9 @@ function optionsframework_options() {
 			'type' => 'text');
 	}
 
-	// Social Settings
+	/**
+	 * Social Settings.
+	 */
 	$options[] = array(
 		'name' => __('Social Settings', 'tidy'),
 		'icon' => 'share',
@@ -562,29 +842,14 @@ function optionsframework_options() {
 // overwride
 add_action( 'optionsframework_after_validate', 'optionsframework_after_validate_overwride' );
 function optionsframework_after_validate_overwride( $clean ) {
+	$customizer_key = tidy_customizer_array();
 	foreach( $clean as $k => $v ){
 		if ( $k == 'general-header-site-title' ) {
 			update_option( 'blogname', $v );
 		} elseif ( $k == 'general-header-site-tagline' ) {
 			update_option( 'blogdescription', $v );
-		} elseif ( $k == 'logo_toggle' ) {
-			set_theme_mod( 'logo_toggle', $v );
-		} elseif ( $k == 'logo_image' ) {
-			set_theme_mod( 'logo_image', $v );
-		} elseif ( $k == 'header_text' ) {
-			set_theme_mod( 'header_text', $v );
-		} elseif ( $k == 'copyright' ) {
-			set_theme_mod( 'copyright', $v );
-		} elseif ( $k == 'favicon' ) {
-			set_theme_mod( 'favicon', $v );
-		} elseif ( $k == 'header_bg_color' ) {
-			set_theme_mod( 'header_bg_color', $v );
-		} elseif ( $k == 'header_text_color' ) {
-			set_theme_mod( 'header_text_color', $v );
-		} elseif ( $k == 'header_anchor_color' ) {
-			set_theme_mod( 'header_anchor_color', $v );
-		} elseif ( $k == 'header_border_color' ) {
-			set_theme_mod( 'header_border_color', $v );
+		} elseif ( in_array( $k, $customizer_key ) ) {
+			set_theme_mod( $k, $v );
 		}
 	}
 	return $clean;
@@ -596,29 +861,14 @@ function tidy_optionsframework_std( $option_name, $value, $val ) {
 		return $val;
 
 	$options = get_theme_mods();
+	$customizer_key = tidy_customizer_array();
 
 	if ( $value['id'] == 'general-header-site-title' ) {
 		$val = get_bloginfo( 'name' );
 	} elseif ( $value['id'] == 'general-header-site-tagline' ) {
 		$val = get_bloginfo( 'description' );
-	} elseif ( $value['id'] == 'logo_toggle' ) {
-		$val = ( get_theme_mods('logo_toggle') ) ? $options['logo_toggle'] : $value['std'];
-	} elseif ( $value['id'] == 'logo_image' ) {
-		$val = ( get_theme_mods('logo_image') ) ? $options['logo_image'] : $value['std'];
-	} elseif ( $value['id'] == 'header_text' ) {
-		$val = ( get_theme_mods('header_text') ) ? $options['header_text'] : $value['std'];
-	} elseif ( $value['id'] == 'copyright' ) {
-		$val = ( get_theme_mods('copyright') ) ? $options['copyright'] : $value['std'];
-	} elseif ( $value['id'] == 'favicon' ) {
-		$val = ( get_theme_mods('favicon') ) ? $options['favicon'] : $value['std'];
-	} elseif ( $value['id'] == 'header_bg_color' ) {
-		$val = ( get_theme_mods('header_bg_color') ) ? $options['header_bg_color'] : $value['std'];
-	} elseif ( $value['id'] == 'header_text_color' ) {
-		$val = ( get_theme_mods('header_text_color') ) ? $options['header_text_color'] : $value['std'];
-	} elseif ( $value['id'] == 'header_anchor_color' ) {
-		$val = ( get_theme_mods('header_anchor_color') ) ? $options['header_anchor_color'] : $value['std'];
-	} elseif ( $value['id'] == 'header_border_color' ) {
-		$val = ( get_theme_mods('header_border_color') ) ? $options['header_border_color'] : $value['std'];
+	} elseif ( in_array( $value['id'], $customizer_key ) ) {
+		$val = ( get_theme_mods( $value['id'] ) ) ? $options[$value['id']] : $value['std'];
 	}
 
 	return $val;

@@ -58,7 +58,38 @@ function tidy_default_array() {
 		'header_bg_color'     => '#E3E6EA',
 		'header_text_color'   => '#1C1C1C',
 		'header_anchor_color' => '#0058AE',
-		'header_border_color' => '#CDD0D4'
+		'header_border_color' => '#CDD0D4',
+
+		'header_widget_bg_color'     => '#CDD0D4',
+		'header_widget_text_color'   => '#1C1C1C',
+		'header_widget_anchor_color' => '#0058AE',
+
+		'main_bg_color'     => '#FFFFFF',
+		'main_text_color'   => '#1C1C1C',
+		'main_anchor_color' => '#0058AE',
+		'main_border_color' => '#CDD0D4',
+
+		'widget_bg_color'     => '#FFFFFF',
+		'widget_title_color'  => '#1C1C1C',
+		'widget_text_color'   => '#1C1C1C',
+		'widget_anchor_color' => '#0058AE',
+		'widget_border_color' => '#CDD0D4',
+
+		'footer_bg_color'     => '#0058AE',
+		'footer_title_color'  => '#FFFFFF',
+		'footer_text_color'   => '#FFFFFF',
+		'footer_anchor_color' => '#FFFFFF',
+		'footer_border_color' => '#FFFFFF',
+
+		'footer_category_bg_color'     => '#E3E6EA',
+		'footer_category_title_color'  => '#1C1C1C',
+		'footer_category_text_color'   => '#1C1C1C',
+		'footer_category_anchor_color' => '#0058AE',
+		'footer_category_border_color' => '#CDD0D4',
+
+		'copyright_bg_color'     => '#CDD0D4',
+		'copyright_text_color'   => '#0058AE',
+		'copyright_anchor_color' => '#0058AE',
 	);
 	return $tidy_default;
 }
@@ -118,6 +149,7 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( get_tiry_option_name( 'header_text' ), array(
 		'label'      => __( 'Header text', 'tidy' ),
 		'section'    => 'title_tagline',
+		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'header_text' ),
 	));
 
@@ -130,6 +162,7 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( get_tiry_option_name( 'copyright' ), array(
 		'label'      => __( 'Copyright', 'tidy' ),
 		'section'    => 'title_tagline',
+		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'copyright' ),
 	));
 
@@ -150,7 +183,7 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, get_tiry_option_name( 'logo_toggle' ), array(
 		'label'      => __( 'Show Header logo', 'tidy' ),
 		'section'    => 'tidy_logo_settings',
-		//'priority'   => 15,
+		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'logo_toggle' ),
 		'type'       => 'radio',
 		'choices'    => array(
@@ -168,7 +201,7 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, get_tiry_option_name( 'logo_image' ), array(
 		'label'      => __( 'Header logo image', 'tidy' ),
 		'section'    => 'tidy_logo_settings',
-		// 'priority'   => 21,
+		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'logo_image' ),
 	)));
 
@@ -180,7 +213,7 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, get_tiry_option_name( 'favicon' ), array(
 		'label'      => __( 'Favicon', 'tidy' ),
 		'section'    => 'tidy_logo_settings',
-		//'priority'   => 32,
+		'priority'   => 13,
 		'settings'   => get_tiry_option_name( 'favicon' ),
 	)));
 
@@ -202,6 +235,7 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_bg_color' ), array(
 		'label'      => __( 'Header background color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
+		'priority'   => 10,
 		'settings'   => get_tiry_option_name( 'header_bg_color' ),
 	)));
 
@@ -213,8 +247,9 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_text_color' ), array(
-		'label'      => __('Header text color', 'tidy'),
+		'label'      => __( 'Header text color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
+		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'header_text_color' ),
 	)));
 
@@ -226,8 +261,9 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_anchor_color' ), array(
-		'label'      => __('Header anchor color', 'tidy'),
+		'label'      => __( 'Header anchor color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
+		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'header_anchor_color' ),
 	)));
 
@@ -239,62 +275,370 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_border_color' ), array(
-		'label'      => __('Header border color', 'tidy'),
+		'label'      => __( 'Header border color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
+		'priority'   => 13,
 		'settings'   => get_tiry_option_name( 'header_border_color' ),
 	)));
 
-
-
-	/**
-	 * customize for footer.
-	 */
-	$wp_customize->add_section( 'tidy_footer_scheme', array(
-		'title'      => __('Footer Scheme', 'tidy'),
-		'priority'   => 210,
-	));
-
-
-	// = Color Picker for footer background color.
-	$wp_customize->add_setting( get_tiry_option_name( 'footer_bg_color' ), array(
-		'default'           => '333333',
+	// = Color Picker for header widget background color.
+	$wp_customize->add_setting( get_tiry_option_name( 'header_widget_bg_color' ), array(
+		'default'           => $tidy_default['header_widget_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_widget_bg_color' ), array(
+		'label'      => __( 'Header widget background color', 'tidy' ),
+		'section'    => 'tidy_color_settings_header',
+		'priority'   => 14,
+		'settings'   => get_tiry_option_name( 'header_widget_bg_color' ),
+	)));
 
+	// = Color Picker for header widget text color.
+	$wp_customize->add_setting( get_tiry_option_name( 'header_widget_text_color' ), array(
+		'default'           => $tidy_default['header_widget_text_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_widget_text_color' ), array(
+		'label'      => __( 'Header widget text color', 'tidy' ),
+		'section'    => 'tidy_color_settings_header',
+		'priority'   => 15,
+		'settings'   => get_tiry_option_name( 'header_widget_text_color' ),
+	)));
+
+	// = Color Picker for header widget anchor color.
+	$wp_customize->add_setting( get_tiry_option_name( 'header_widget_anchor_color' ), array(
+		'default'           => $tidy_default['header_widget_anchor_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_widget_anchor_color' ), array(
+		'label'      => __('Header widget anchor color', 'tidy'),
+		'section'    => 'tidy_color_settings_header',
+		'priority'   => 16,
+		'settings'   => get_tiry_option_name( 'header_widget_anchor_color' ),
+	)));
+
+	/**
+	 * section for Main color Settings.
+	 */
+	$wp_customize->add_section( 'tidy_color_settings_main', array(
+		'title'      => __( 'Main color settings', 'tidy' ),
+		'priority'   => 300,
+	));
+
+	// = Color Picker for main background color.
+	$wp_customize->add_setting( get_tiry_option_name( 'main_bg_color' ), array(
+		'default'           => $tidy_default['main_bg_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'main_bg_color' ), array(
+		'label'      => __( 'Main background color', 'tidy' ),
+		'section'    => 'tidy_color_settings_main',
+		'priority'   => 11,
+		'settings'   => get_tiry_option_name( 'main_bg_color' ),
+	)));
+
+	// = Color Picker for main text color.
+	$wp_customize->add_setting( get_tiry_option_name( 'main_text_color' ), array(
+		'default'           => $tidy_default['main_text_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'main_text_color' ), array(
+		'label'      => __('Main text color', 'tidy'),
+		'section'    => 'tidy_color_settings_main',
+		'priority'   => 12,
+		'settings'   => get_tiry_option_name( 'main_text_color' ),
+	)));
+
+	// = Color Picker for main anchor color.
+	$wp_customize->add_setting( get_tiry_option_name( 'main_anchor_color' ), array(
+		'default'           => $tidy_default['main_anchor_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'main_anchor_color' ), array(
+		'label'      => __('Main anchor color', 'tidy'),
+		'section'    => 'tidy_color_settings_main',
+		'priority'   => 13,
+		'settings'   => get_tiry_option_name( 'main_anchor_color' ),
+	)));
+
+	// = Color Picker for main border color.
+	$wp_customize->add_setting( get_tiry_option_name( 'main_border_color' ), array(
+		'default'           => $tidy_default['main_border_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'main_border_color' ), array(
+		'label'      => __('Main border color', 'tidy'),
+		'section'    => 'tidy_color_settings_main',
+		'settings'   => get_tiry_option_name( 'main_border_color' ),
+		'priority'   => 14,
+	)));
+
+	/**
+	 * section for Widget color Settings.
+	 */
+	$wp_customize->add_section( 'tidy_color_settings_widget', array(
+		'title'      => __( 'Widget color settings', 'tidy' ),
+		'priority'   => 400,
+	));
+
+	// = Color Picker for main background color.
+	$wp_customize->add_setting( get_tiry_option_name( 'widget_bg_color' ), array(
+		'default'           => $tidy_default['widget_bg_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_bg_color' ), array(
+		'label'      => __( 'Widget background color', 'tidy' ),
+		'section'    => 'tidy_color_settings_widget',
+		'priority'   => 11,
+		'settings'   => get_tiry_option_name( 'widget_bg_color' ),
+	)));
+
+	// = Color Picker for widget title color.
+	$wp_customize->add_setting( get_tiry_option_name( 'widget_title_color' ), array(
+		'default'           => $tidy_default['widget_title_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_title_color' ), array(
+		'label'      => __('Widgte title color', 'tidy'),
+		'section'    => 'tidy_color_settings_widget',
+		'priority'   => 12,
+		'settings'   => get_tiry_option_name( 'widget_title_color' ),
+	)));
+
+	// = Color Picker for widget text color.
+	$wp_customize->add_setting( get_tiry_option_name( 'widget_text_color' ), array(
+		'default'           => $tidy_default['widget_text_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_text_color' ), array(
+		'label'      => __('Widget text color', 'tidy'),
+		'section'    => 'tidy_color_settings_widget',
+		'priority'   => 13,
+		'settings'   => get_tiry_option_name( 'widget_text_color' ),
+	)));
+
+	// = Color Picker for widget anchor color.
+	$wp_customize->add_setting( get_tiry_option_name( 'widget_anchor_color' ), array(
+		'default'           => $tidy_default['widget_anchor_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_anchor_color' ), array(
+		'label'      => __('Widget anchor color', 'tidy'),
+		'section'    => 'tidy_color_settings_widget',
+		'priority'   => 14,
+		'settings'   => get_tiry_option_name( 'widget_anchor_color' ),
+	)));
+
+	// = Color Picker for widget border color.
+	$wp_customize->add_setting( get_tiry_option_name( 'widget_border_color' ), array(
+		'default'           => $tidy_default['widget_border_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_border_color' ), array(
+		'label'      => __('Widget border color', 'tidy'),
+		'section'    => 'tidy_color_settings_widget',
+		'priority'   => 15,
+		'settings'   => get_tiry_option_name( 'widget_border_color' ),
+	)));
+
+	/**
+	 * section for Footer color Settings.
+	 */
+	$wp_customize->add_section( 'tidy_color_settings_footer', array(
+		'title'      => __( 'Footer color settings', 'tidy' ),
+		'priority'   => 500,
+	));
+
+	// = Color Picker for footer background color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_bg_color' ), array(
+		'default'           => $tidy_default['footer_bg_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_bg_color' ), array(
-		'label'      => __('Background Color', 'tidy'),
-		'section'    => 'tidy_footer_scheme',
+		'label'      => __('Footer background color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'footer_bg_color' ),
+	)));
+
+	// = Color Picker for footer title color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_title_color' ) , array(
+		'default'           => $tidy_default['footer_title_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_title_color' ), array(
+		'label'      => __('Footer title color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 12,
+		'settings'   => get_tiry_option_name( 'footer_title_color' )	,
 	)));
 
 	// = Color Picker for footer text color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_text_color' ) , array(
-		'default'           => 'cccccc',
+		'default'           => $tidy_default['footer_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 	));
-
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_text_color' ), array(
-		'label'      => __('Text Color', 'tidy'),
-		'section'    => 'tidy_footer_scheme',
+		'label'      => __('Footer text color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 13,
 		'settings'   => get_tiry_option_name( 'footer_text_color' )	,
 	)));
 
-	// = Color Picker for footer link color.
-	$wp_customize->add_setting( get_tiry_option_name( 'footer_link_color' ) , array(
-		'default'           => 'ffffff',
+	// = Color Picker for footer anchor color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_anchor_color' ) , array(
+		'default'           => $tidy_default['footer_anchor_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_anchor_color' ), array(
+		'label'      => __('Footer anchor color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 14,
+		'settings'   => get_tiry_option_name( 'footer_anchor_color' )	,
+	)));
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_link_color' ), array(
-		'label'      => __('Link Color', 'tidy'),
-		'section'    => 'tidy_footer_scheme',
-		'settings'   => get_tiry_option_name( 'footer_link_color' )	,
+	// = Color Picker for footer border color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_border_color' ), array(
+		'default'           => $tidy_default['footer_border_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_border_color' ), array(
+		'label'      => __('Footer border color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 15,
+		'settings'   => get_tiry_option_name( 'footer_border_color' ),
+	)));
+
+	// = Color Picker for footer all categories background color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_bg_color' ), array(
+		'default'           => $tidy_default['footer_category_bg_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_bg_color' ), array(
+		'label'      => __('All categories background color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 21,
+		'settings'   => get_tiry_option_name( 'footer_category_bg_color' ),
+	)));
+
+	// = Color Picker for footer all categories title color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_title_color' ) , array(
+		'default'           => $tidy_default['footer_category_title_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_title_color' ), array(
+		'label'      => __('All categories title color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 22,
+		'settings'   => get_tiry_option_name( 'footer_category_title_color' )	,
+	)));
+
+	// = Color Picker for footer all categories text color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_text_color' ) , array(
+		'default'           => $tidy_default['footer_category_text_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_text_color' ), array(
+		'label'      => __('All categories text color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 23,
+		'settings'   => get_tiry_option_name( 'footer_category_text_color' )	,
+	)));
+
+	// = Color Picker for footer all categories anchor color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_anchor_color' ) , array(
+		'default'           => $tidy_default['footer_category_anchor_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_anchor_color' ), array(
+		'label'      => __('All categories anchor color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 24,
+		'settings'   => get_tiry_option_name( 'footer_category_anchor_color' )	,
+	)));
+
+	// = Color Picker for footer all categories border color.
+	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_border_color' ), array(
+		'default'           => $tidy_default['footer_category_border_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_border_color' ), array(
+		'label'      => __('All categories border color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 25,
+		'settings'   => get_tiry_option_name( 'footer_category_border_color' ),
+	)));
+
+	// = Color Picker for copyright background color.
+	$wp_customize->add_setting( get_tiry_option_name( 'copyright_bg_color' ), array(
+		'default'           => $tidy_default['copyright_bg_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'copyright_bg_color' ), array(
+		'label'      => __('Copyright background color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 31,
+		'settings'   => get_tiry_option_name( 'copyright_bg_color' ),
+	)));
+
+	// = Color Picker for copyright text color.
+	$wp_customize->add_setting( get_tiry_option_name( 'copyright_text_color' ) , array(
+		'default'           => $tidy_default['copyright_text_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'copyright_text_color' ), array(
+		'label'      => __('Copyright text color', 'tidy'),
+		'section'    => 'tidy_color_settings_footer',
+		'priority'   => 33,
+		'settings'   => get_tiry_option_name( 'copyright_text_color' )	,
 	)));
 
 }
@@ -308,44 +652,174 @@ function tidy_customize_style() {
 	$options = get_theme_mods();
 	?>
 	<style type="text/css" id="tidy_customize_style">
+		<?php if ( !empty( $options['main_bg_color'] ) ) : ?>
+		body, .blog-section-content .typeB .more-link, .blog-section-content .typeB .ellipsis, .blog-section-content .typeB .more-link, .archive-content .ellipsis {
+			background-color: <?php echo esc_attr( $options['main_bg_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['main_anchor_color'] ) ) : ?>
+		.site-content a, .entry-meta, .post-navigation .genericon, .search-form .search-submit, .entry-title a:hover {
+			color: <?php echo esc_attr( $options['main_anchor_color'] ); ?>;
+		}
+		.search-form input[type="search"] {
+			border-color: <?php echo esc_attr( $options['main_anchor_color'] ); ?>;
+		}
+		ul.page-numbers li a:hover, ul.page-numbers li a:focus, ul.page-numbers li a:active {
+			background-color: <?php echo esc_attr( $options['main_anchor_color'] ); ?>;
+			color: <?php echo esc_attr( $options['main_bg_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['main_text_color'] ) ) : ?>
+		.site-content, .entry-title a {
+			color: <?php echo esc_attr( $options['main_text_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['main_border_color'] ) ) : ?>
+		.archive-title, .section-title, body.single .entry-title, body.page .entry-title, .site-main [class*="navigation"], .comment-list, li.depth-1, .widget-title, .widgettitle {
+			border-color: <?php echo esc_attr( $options['main_border_color'] ); ?>;
+		}
+		hr {
+			background-color: <?php echo esc_attr( $options['main_border_color'] ); ?>;
+		}
+		<?php endif; ?>
 		<?php if ( !empty( $options['header_bg_color'] ) ) : ?>
 		.site-header {
-			background-color: <?php echo esc_html( $options['header_bg_color'] ); ?>;
+			background-color: <?php echo esc_attr( $options['header_bg_color'] ); ?>;
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['header_text_color'] ) ) : ?>
 		.site-header-main {
-			color: <?php echo esc_html( $options['header_text_color'] ); ?>;
+			color: <?php echo esc_attr( $options['header_text_color'] ); ?>;
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['header_anchor_color'] ) ) : ?>
 		.site-header-main a,
 		.main-navigation .current_page_item a,
-		.main-navigation .current-menu-item a {
-			color: <?php echo esc_html( $options['header_anchor_color'] ); ?>;
+		.main-navigation .current-menu-item a,
+		.main-navigation li:hover > a,
+		.search-toggle {
+			color: <?php echo esc_attr( $options['header_anchor_color'] ); ?>;
 		}
 		.menu-toggle {
-			background-color: <?php echo esc_html( $options['header_anchor_color'] ); ?>;
+			background-color: <?php echo esc_attr( $options['header_anchor_color'] ); ?>;
+		}
+		.search-container .search-form input[type="search"] {
+			border-color: <?php echo esc_attr( $options['header_anchor_color'] ); ?>;
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['header_border_color'] ) ) : ?>
 		.site-header-social-area .inner {
-			border-color: <?php echo esc_html( $options['header_border_color'] ); ?>;
+			border-color: <?php echo esc_attr( $options['header_border_color'] ); ?>;
 		}
 		<?php endif; ?>
+		<?php if ( !empty( $options['header_widget_bg_color'] ) ) : ?>
+		.site-header-widget-area {
+			background-color: <?php echo esc_attr( $options['header_widget_bg_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['header_widget_text_color'] ) ) : ?>
+		.site-header-widget-area {
+			color: <?php echo esc_attr( $options['header_widget_text_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['header_widget_anchor_color'] ) ) : ?>
+		.site-header-widget-area a {
+			color: <?php echo esc_attr( $options['header_widget_anchor_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['widget_bg_color'] ) ) : ?>
+		#secondary .widget {
+			background-color: <?php echo esc_attr( $options['widget_bg_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['widget_text_color'] ) ) : ?>
+		#secondary .widget {
+			color: <?php echo esc_attr( $options['widget_text_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['widget_title_color'] ) ) : ?>
+		#secondary .widget-title, #secondary .widgettitle {
+			color: <?php echo esc_attr( $options['widget_title_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['widget_anchor_color'] ) ) : ?>
+		#secondary .widget a {
+			color: <?php echo esc_attr( $options['widget_anchor_color'] ); ?>;
+		}
+		#secondary .search-form input[type="search"] {
+			border-color: <?php echo esc_attr( $options['widget_anchor_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['widget_border_color'] ) ) : ?>
+		#secondary .widget-title, #secondary .widgettitle {
+			border-color: <?php echo esc_attr( $options['widget_border_color'] ); ?>;
+		}
+		<?php endif; ?>
+		
+		
 		<?php if ( !empty( $options['footer_bg_color'] ) ) : ?>
-		.site-footer {
-			background-color: <?php echo esc_html( $options['footer_bg_color'] ); ?>;
+		.site-footer-widget-area {
+			background-color: <?php echo esc_attr( $options['footer_bg_color'] ); ?>;
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['footer_text_color'] ) ) : ?>
-		.site-footer {
-			color: <?php echo esc_html( $options['footer_text_color'] ); ?>;
+		.site-footer-widget-area {
+			color: <?php echo esc_attr( $options['footer_text_color'] ); ?>;
 		}
 		<?php endif; ?>
-		<?php if ( !empty( $options['footer_link_color'] ) ) : ?>
-		.site-footer a {
-			color: <?php echo esc_html( $options['footer_link_color'] ); ?>;
+		<?php if ( !empty( $options['footer_title_color'] ) ) : ?>
+		.site-footer-widget-area .widget-title, .site-footer-widget-area .widgettitle {
+			color: <?php echo esc_attr( $options['footer_title_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['footer_anchor_color'] ) ) : ?>
+		.site-footer-widget-area a {
+			color: <?php echo esc_attr( $options['footer_anchor_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['footer_border_color'] ) ) : ?>
+		.site-footer-widget-area .widget-title, .site-footer-widget-area .widgettitle {
+			border-color: <?php echo esc_attr( $options['footer_border_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['copyright_bg_color'] ) ) : ?>
+		.site-info {
+			background-color: <?php echo esc_attr( $options['copyright_bg_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['copyright_text_color'] ) ) : ?>
+		.site-info {
+			color: <?php echo esc_attr( $options['copyright_text_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['copyright_anchor_color'] ) ) : ?>
+		.site-info a {
+			color: <?php echo esc_attr( $options['copyright_anchor_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['footer_category_bg_color'] ) ) : ?>
+		.footer-category-list {
+			background-color: <?php echo esc_attr( $options['footer_category_bg_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['footer_category_text_color'] ) ) : ?>
+		.footer-category-list {
+			color: <?php echo esc_attr( $options['footer_category_text_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['footer_category_title_color'] ) ) : ?>
+		.footer-category-list .widget-title {
+			color: <?php echo esc_attr( $options['footer_category_title_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['footer_category_anchor_color'] ) ) : ?>
+		.footer-category-list a {
+			color: <?php echo esc_attr( $options['footer_category_anchor_color'] ); ?>;
+		}
+		<?php endif; ?>
+		<?php if ( !empty( $options['footer_category_border_color'] ) ) : ?>
+		.footer-category-list .widget-title {
+			border-color: <?php echo esc_attr( $options['footer_category_border_color'] ); ?>;
 		}
 		<?php endif; ?>
 	</style>
