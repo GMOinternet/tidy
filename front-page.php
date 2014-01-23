@@ -14,12 +14,13 @@
 get_header(); ?>
 
 	<div id="merit-box-area" class="front-section"><div class="front-section-content merit-section-content">
-		
-		<?php get_template_part( 'meritbox' ) ?>
-		<?php get_template_part( 'meritbox' ) ?>
-		<?php get_template_part( 'meritbox', 'image' ) ?>
-		<?php get_template_part( 'meritbox', 'image' ) ?>
-
+		<?php
+			$merit_box = of_get_option( 'merit-box-num' );
+			$merit_box = ( of_get_option( 'merit-box-num' ) === false ) ? 4 : of_get_option( 'merit-box-num' );
+			for ( $i = 1; $i <= $merit_box; $i++ ) {
+				get_template_part( 'meritbox' );
+			}
+		?>
 	</div></div><!-- #merit-box-area -->
 
 	<div id="primary" class="content-area">

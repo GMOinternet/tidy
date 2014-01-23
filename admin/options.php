@@ -85,11 +85,10 @@ function optionsframework_options() {
 
 	// Test data
 	$test_array = array(
-		'one' => __('One', 'tidy'),
-		'two' => __('Two', 'tidy'),
-		'three' => __('Three', 'tidy'),
-		'four' => __('Four', 'tidy'),
-		'five' => __('Five', 'tidy')
+		'1' => __('One', 'tidy'),
+		'2' => __('Two', 'tidy'),
+		'3' => __('Three', 'tidy'),
+		'4' => __('Four', 'tidy')
 	);
 
 	// Multicheck Array
@@ -272,7 +271,6 @@ function optionsframework_options() {
 		'id' => 'copyright',
 		'std' => $tidy_default['copyright'],
 		'type' => 'text');
-
 
 	/**
 	 * Color Settings.
@@ -688,10 +686,16 @@ function optionsframework_options() {
 		'name' => __('Number of box to show ', 'tidy'),
 		'desc' => __('Default:4, Min:1, Max:4.', 'tidy'),
 		'id' => 'merit-box-num',
-		'std' => 4,
-		'min' => 1,
-		'max' => 4,
-		'type' => 'num');
+		'std' => '4',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => array(
+			1 => 1,
+			2 => 2,
+			3 => 3,
+			4 => 4
+		)
+	);
 
 	// Merit box %s
 	for ($i = 1; $i <= 4; $i++) {
@@ -704,20 +708,21 @@ function optionsframework_options() {
 		$options[] = array(
 			'name' => __('Title', 'tidy'),
 			'id' => 'merit-box-' . $i . '-title',
-			'std' => '',
+			'std' => 'merit-box-' . $i . '-title',
 			'type' => 'text');
 
 		$options[] = array(
 			'name' => __('Textarea', 'tidy'),
 			'desc' => __('Textarea description.', 'tidy'),
 			'id' => 'merit-box-' . $i . '-description',
+			'std' => 'merit-box-' . $i . '-description',
 			'type' => 'textarea');
 	
 		$options[] = array(
 			'name' => __('Icon', 'tidy'),
 			'desc' => __('Small Select Box.', 'tidy'),
 			'id' => 'merit-box-' . $i . '-icon',
-			'std' => 'three',
+			'std' => 'copy',
 			'type' => 'select',
 			'class' => 'mini', //mini, tiny, small
 			'options' => $icon_array);

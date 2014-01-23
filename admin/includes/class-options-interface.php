@@ -134,11 +134,6 @@ class Options_Framework_Interface {
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="email" value="' . esc_attr( $val ) . '" />';
 				break;
 
-			// number
-			case 'num':
-				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="number" value="' . (int)$val . '" min="' . (int)$value['min'] . '" max="' . (int)$value['max'] . '" />';
-				break;
-
 			// Textarea
 			case 'textarea':
 				$rows = '8';

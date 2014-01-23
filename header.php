@@ -50,7 +50,7 @@
 			<div class="site-branding">
 				<?php
 					$view_header_logo = get_theme_mod( 'logo_toggle' );
-					$view_header_logo = ( $view_header_logo === false ) ? 1 : 0 ;
+					$view_header_logo = ( ( $view_header_logo === false ) or ( $view_header_logo == 1 ) ) ? 1 : 0 ;
 					$header_logo_img  = ( get_theme_mod( 'logo_image' ) === false ) ? $tidy_default['logo_image'] : get_theme_mod( 'logo_image' ) ;
 					$logo_image = ( !empty($header_logo_img) && ( $view_header_logo == 1 ) ) ? '<img src="' . esc_url( $header_logo_img ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' : esc_html( get_bloginfo( 'name', 'display' ) );
 				?>
