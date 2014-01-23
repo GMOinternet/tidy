@@ -225,6 +225,14 @@ function optionsframework_options() {
 		'std' => $tidy_default['logo_image'],
 		'type' => 'upload');
 
+	// Favicon
+	$options[] = array(
+		'name' => __( 'Favicon', 'tidy' ),
+		'desc' => 'Please upload .ico image.',
+		'id' => 'favicon',
+		'std' => '',
+		'type' => 'upload');
+
 	// Site title
 	$options[] = array(
 		'name' => __( 'Site Title', 'tidy' ),
@@ -249,6 +257,14 @@ function optionsframework_options() {
 		'std' => $tidy_default['header_text'],
 		'type' => 'text');
 
+	// Text Input for About text
+	$options[] = array(
+		'name' => __( 'About text', 'tidy' ),
+		'desc' => '',
+		'id' => 'about_text',
+		'std' => '',
+		'type' => 'textarea');
+
 	// Copyright
 	$options[] = array(
 		'name' => __( 'Copyright', 'tidy' ),
@@ -257,13 +273,6 @@ function optionsframework_options() {
 		'std' => $tidy_default['copyright'],
 		'type' => 'text');
 
-	// Favicon
-	$options[] = array(
-		'name' => __( 'Favicon', 'tidy' ),
-		'desc' => 'Please upload .ico image.',
-		'id' => 'favicon',
-		'std' => '',
-		'type' => 'upload');
 
 	/**
 	 * Color Settings.

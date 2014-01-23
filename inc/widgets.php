@@ -43,53 +43,19 @@ class Tidy_Widget_About_Us extends WP_Widget {
 	public function widget( $args, $instance ) {
 		extract($args);
 		$title = apply_filters( 'tidy_about_widget_title', empty( $instance['title'] ) ? __( 'About Us', 'tidy' ) : $instance['title'], $instance, $this->id_base );
-		$text  = apply_filters( 'tidy_about_widget_text', empty( $instance['text'] ) ? __( 'Sample text.', 'tidy' ) : $instance['text'], $instance );
+		$t = of_get_option( 'about_text' );
+		if ( $t === FALSE ) {
+			$t = __( 'Sample text.', 'tidy' );
+		}
+		$text  = apply_filters( 'tidy_about_widget_text', $t );
 
 		echo $before_widget;
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; }
 		echo '<div class="tidy_text_widget">' . "\n";
-		echo !empty( $instance['filter'] ) ? wpautop( $text ) : $text;
+		echo wpautop( $text );
 		echo '</div>' . "\n";
 		echo $after_widget;
 
-	}
-
-	/**
-	 * Back-end widget form.
-	 *
-	 * @see WP_Widget::form()
-	 *
-	 * @param array $instance Previously saved values from database.
-	 */
-	public function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'text' => '' ) );
-		$text = esc_textarea($instance['text']);
-
-		?>
-		<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo $text; ?></textarea>
-		<p><input id="<?php echo $this->get_field_id( 'filter' ); ?>" name="<?php echo $this->get_field_name( 'filter' ); ?>" type="checkbox" <?php checked(isset($instance['filter']) ? $instance['filter'] : 0); ?> />&nbsp;<label for="<?php echo $this->get_field_id('filter'); ?>"><?php _e( 'Automatically add paragraphs', 'tidy' ); ?></label></p>
-		<?php 
-	}
-
-	/**
-	 * Sanitize widget form values as they are saved.
-	 *
-	 * @see WP_Widget::update()
-	 *
-	 * @param array $new_instance Values just sent to be saved.
-	 * @param array $old_instance Previously saved values from database.
-	 *
-	 * @return array Updated safe values to be saved.
-	 */
-	public function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		if ( current_user_can('unfiltered_html') )
-			$instance['text'] =  $new_instance['text'];
-		else
-			$instance['text'] = stripslashes( wp_filter_post_kses( addslashes($new_instance['text']) ) ); // wp_filter_post_kses() expects slashed
-		$instance['filter'] = isset($new_instance['filter']);
-		return $instance;
-		
 	}
 
 } // class Tidy_Widget_About_Us
