@@ -16,7 +16,7 @@ get_header(); ?>
 	<div id="merit-box-area" class="front-section"><div class="front-section-content merit-section-content">
 		<?php
 			$merit_box = of_get_option( 'merit-box-num' );
-			$merit_box = ( of_get_option( 'merit-box-num' ) === false ) ? 4 : of_get_option( 'merit-box-num' );
+			$merit_box = ( of_get_option( 'merit-box-num' ) === false ) ? 1 : of_get_option( 'merit-box-num' );
 			for ( $i = 1; $i <= $merit_box; $i++ ) {
 				get_template_part( 'meritbox' );
 			}

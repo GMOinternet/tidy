@@ -676,7 +676,9 @@ function optionsframework_options() {
 		'type' => 'checkbox');
 */
 
-	// Merit Box Settings
+	/**
+	 * Merit Box Settings.
+	 */
 	$options[] = array(
 		'name' => __('Merit Box Settings', 'tidy'),
 		'icon' => 'images-alt2',
@@ -686,7 +688,7 @@ function optionsframework_options() {
 		'name' => __('Number of box to show ', 'tidy'),
 		'desc' => __('Default:4, Min:1, Max:4.', 'tidy'),
 		'id' => 'merit-box-num',
-		'std' => '4',
+		'std' => 1,
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
 		'options' => array(
@@ -703,40 +705,45 @@ function optionsframework_options() {
 		$options[] = array(
 			'name' => sprintf( __('Merit box %s', 'tidy') , $i),
 			'id' => 'merit-box-' . $i . '-head',
+			'class' => 'merit-box-' . $i,
 			'type' => 'info');
 
 		$options[] = array(
 			'name' => __('Title', 'tidy'),
 			'id' => 'merit-box-' . $i . '-title',
 			'std' => 'merit-box-' . $i . '-title',
+			'class' => 'merit-box-' . $i,
 			'type' => 'text');
 
 		$options[] = array(
 			'name' => __('Textarea', 'tidy'),
-			'desc' => __('Textarea description.', 'tidy'),
+			'desc' => '',
 			'id' => 'merit-box-' . $i . '-description',
 			'std' => 'merit-box-' . $i . '-description',
+			'class' => 'merit-box-' . $i,
 			'type' => 'textarea');
 	
 		$options[] = array(
 			'name' => __('Icon', 'tidy'),
-			'desc' => __('Small Select Box.', 'tidy'),
+			'desc' => '',
 			'id' => 'merit-box-' . $i . '-icon',
 			'std' => 'copy',
 			'type' => 'select',
-			'class' => 'mini', //mini, tiny, small
+			'class' => 'mnicon mini merit-box-' . $i,
 			'options' => $icon_array);
 	
 		$options[] = array(
 			'name' => __('Image', 'tidy'),
 			'desc' => __('Image will override any icon.', 'tidy'),
 			'id' => 'merit-box-' . $i . '-image',
+			'class' => 'merit-box-' . $i,
 			'type' => 'upload');
 
 		$options[] = array(
 			'name' => __('URL', 'tidy'),
 			'id' => 'merit-box-' . $i . '-url',
 			'std' => '',
+			'class' => 'merit-box-' . $i,
 			'type' => 'text');
 	}
 

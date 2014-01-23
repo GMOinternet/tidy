@@ -30,6 +30,52 @@ jQuery(document).ready(function($) {
 		$(this).addClass( 'selected' );
 	});
 
+	// Merit box
+	function options_merit_box( str ) {
+
+		// Hides all the .merit-box sections to start
+		$( '.meritboxsettings .merit-box-2' ).hide();
+		$( '.meritboxsettings .merit-box-3' ).hide();
+		$( '.meritboxsettings .merit-box-4' ).hide();
+
+		// Find if a selected tab is saved in localStorage
+		if ( str == 1 ) {
+			$( '.meritboxsettings .merit-box-2' ).hide();
+			$( '.meritboxsettings .merit-box-3' ).hide();
+			$( '.meritboxsettings .merit-box-4' ).hide();
+		} else if ( str == 2 ) {
+			$( '.meritboxsettings .merit-box-2' ).show();
+			$( '.meritboxsettings .merit-box-3' ).hide();
+			$( '.meritboxsettings .merit-box-4' ).hide();
+		} else if ( str == 3 ) {
+			$( '.meritboxsettings .merit-box-2' ).show();
+			$( '.meritboxsettings .merit-box-3' ).show();
+			$( '.meritboxsettings .merit-box-4' ).hide();
+		} else if ( str == 4 ) {
+			$( '.meritboxsettings .merit-box-2' ).show();
+			$( '.meritboxsettings .merit-box-3' ).show();
+			$( '.meritboxsettings .merit-box-4' ).show();
+		}
+	}
+	var boxcnt = $("#section-merit-box-num select option:selected").val();
+	options_merit_box(boxcnt);
+	
+/*
+	$("#section-merit-box-num select").change(function() {
+		var cnt = $(this).val();
+		options_merit_box(cnt);
+	});
+
+	$('.mnicon .controls').append('<span class="icon-copy"></span>') ;
+	$(".mnicon select").change(function () {
+		var icon = $(this).val();
+		var pid  = $(this).parent().ch;
+		$(this).parent().child('icon-copy').css('color:red')
+		alert(pid);
+		$('[id=pid]').html(icon);
+	});
+*/
+
 	// Loads tabbed sections if they exist
 	function options_framework_tabs() {
 
