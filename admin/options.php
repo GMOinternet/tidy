@@ -214,7 +214,7 @@ function optionsframework_options() {
 		'name' => __( 'Show Header logo', 'tidy' ),
 		'desc' => '',
 		'id' => 'logo_toggle',
-		'std' => '0',
+		'std' => '1',
 		'type' => 'toggle');
 
 	// Header logo image
@@ -862,7 +862,6 @@ function tidy_optionsframework_std( $option_name, $value, $val ) {
 	if ( ! array_key_exists( 'id', $value ) )
 		return $val;
 
-	$options = get_theme_mods();
 	$customizer_key = tidy_customizer_array();
 
 	if ( $value['id'] == 'general-header-site-title' ) {
@@ -870,7 +869,13 @@ function tidy_optionsframework_std( $option_name, $value, $val ) {
 	} elseif ( $value['id'] == 'general-header-site-tagline' ) {
 		$val = get_bloginfo( 'description' );
 	} elseif ( in_array( $value['id'], $customizer_key ) ) {
-		$val = ( get_theme_mods( $value['id'] ) ) ? $options[$value['id']] : $value['std'];
+		$val = $value['std'];
+		$d = get_theme_mods( $value['id'] );
+		if ( is_array($d) ) {
+			$val = $value['std'];
+		} elseif ( ! empty( $d ) ) {
+			get_theme_mods( $value['id'] );
+		}
 	}
 
 	return $val;

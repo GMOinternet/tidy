@@ -37,7 +37,8 @@
 			<div class="header-widget-area-close-btn header-widget-toggle"><span class="genericon genericon-close"></span></div>
 		</div></div>
 
-		<?php if ( of_get_option('sns-location-header') != 0 ) : ?>
+		<?php $view_sns_header = of_get_option('sns-location-header'); ?>
+		<?php if ( ( $view_sns_header === FALSE ) or ( $view_sns_header != 0 ) ) : ?>
 		<div id="site-social" class="site-header-social-area"><div class="inner">
 			<h1 class="sns-toggle"><?php _e( 'Social', 'tidy' ); ?><span class="genericon genericon-downarrow"></span></h1>
 			<?php tidy_sns_lists(); ?>
@@ -48,7 +49,10 @@
 	
 			<div class="site-branding">
 				<?php
-					$logo_image = ( get_theme_mod( 'logo_image' ) && ( get_theme_mod( 'logo_toggle' ) == 1 ) ) ? '<img src="' . esc_url( get_theme_mod( 'logo_image' ) ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' : esc_html( get_bloginfo( 'name', 'display' ) );
+					$view_header_logo = get_theme_mod( 'logo_toggle' );
+					$view_header_logo = ( $view_header_logo === false ) ? 1 : 0 ;
+					$header_logo_img  = ( get_theme_mod( 'logo_image' ) === false ) ? $tidy_default['logo_image'] : get_theme_mod( 'logo_image' ) ;
+					$logo_image = ( !empty($header_logo_img) && ( $view_header_logo == 1 ) ) ? '<img src="' . esc_url( $header_logo_img ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' : esc_html( get_bloginfo( 'name', 'display' ) );
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $logo_image ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>

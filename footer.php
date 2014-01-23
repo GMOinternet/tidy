@@ -43,7 +43,8 @@
 
 		<div class="site-footer-widget-area-conteiner">
 		<?php if ( ! dynamic_sidebar( 'footer-4' ) ) : ?>
-			<?php if ( of_get_option('sns-location-footer') != 0 ) : ?>
+			<?php $view_sns_footer = of_get_option('sns-location-footer'); ?>
+			<?php if ( ( $view_sns_footer === FALSE ) or ( $view_sns_footer != 0 ) ) : ?>
 				<?php the_widget( 'Tidy_Widget_Contact' ); ?>
 			<?php endif; ?>
 		<?php endif; // end footer-4 widget area ?>

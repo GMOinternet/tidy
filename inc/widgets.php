@@ -42,8 +42,8 @@ class Tidy_Widget_About_Us extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		extract($args);
-		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'About Us', 'tidy' ) : $instance['title'], $instance, $this->id_base );
-		$text  = apply_filters( 'widget_text', empty( $instance['text'] ) ? __( 'Sample text.', 'tidy' ) : $instance['text'], $instance );
+		$title = apply_filters( 'tidy_about_widget_title', empty( $instance['title'] ) ? __( 'About Us', 'tidy' ) : $instance['title'], $instance, $this->id_base );
+		$text  = apply_filters( 'tidy_about_widget_text', empty( $instance['text'] ) ? __( 'Sample text.', 'tidy' ) : $instance['text'], $instance );
 
 		echo $before_widget;
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; }
@@ -141,8 +141,8 @@ class Tidy_Widget_Contact extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		extract($args);
-		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Contact', 'tidy' ) : $instance['title'], $instance, $this->id_base );
-		$email = apply_filters( 'widget_email', empty( $instance['email'] ) ? of_get_option('email') : $instance['email'], $instance );
+		$title = apply_filters( 'tidy_contact_widget_title', empty( $instance['title'] ) ? __( 'Contact', 'tidy' ) : $instance['title'], $instance, $this->id_base );
+		$email = apply_filters( 'tidy_contact_widget_email', empty( $instance['email'] ) ? of_get_option('email') : $instance['email'], $instance );
 
 		echo $before_widget;
 		if ( !empty( $title ) ) {
@@ -252,7 +252,7 @@ class Tidy_Widget_Recent_Posts extends WP_Widget {
 		ob_start();
 		extract($args);
 		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts' );
-		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+		$title = apply_filters( 'tidy_post_widget_title', $title, $instance, $this->id_base );
 		$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 4;
 		if ( ! $number )
 			$number = 4;
