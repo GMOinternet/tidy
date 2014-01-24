@@ -164,6 +164,12 @@ function tidy_scripts() {
 		array( 'google-fonts', 'genericons', 'iconmoon-tidy' ),
 		$tidy_version
 	);
+	wp_enqueue_style(
+		'tidy-mobile',
+		get_template_directory_uri() . '/mobile.css',
+		array( 'tidy-style' ),
+		$tidy_version
+	);
 
 	wp_enqueue_script(
 		'tidy-skip-link-focus-fix',

@@ -60,21 +60,21 @@ jQuery(document).ready(function($) {
 	var boxcnt = $("#section-merit-box-num select option:selected").val();
 	options_merit_box(boxcnt);
 	
-/*
-	$("#section-merit-box-num select").change(function() {
+	$( "#section-merit-box-num select" ).change(function() {
 		var cnt = $(this).val();
 		options_merit_box(cnt);
 	});
 
-	$('.mnicon .controls').append('<span class="icon-copy"></span>') ;
-	$(".mnicon select").change(function () {
-		var icon = $(this).val();
-		var pid  = $(this).parent().ch;
-		$(this).parent().child('icon-copy').css('color:red')
-		alert(pid);
-		$('[id=pid]').html(icon);
+	$( '.mnicon .controls' ).each(function(index) {
+		var icond = $(this).children().children( "option:selected" ).val();
+		$(this).append('<div class="type-icon"><a href="#"><span class="icon-' + icond + '"></span></a></div>') ;
 	});
-*/
+
+	$( ".mnicon select" ).change(function () {
+		var icon = $(this).val();
+		icon = 'icon-' + icon;
+		$(this).next().children().children().toggleClass(icon);
+	});
 
 	// Loads tabbed sections if they exist
 	function options_framework_tabs() {

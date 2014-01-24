@@ -46,4 +46,7 @@ global $merit_box, $i;
 	<div class="merit-box-thumbnail <?php echo $type; ?>"><a href="<?php echo esc_url($url); ?>"><?php echo $img; ?></a></div>
 	<div class="merit-box-title"><?php echo esc_html( $title ); ?></div>
 	<div class="merit-box-caption"><?php echo wpautop( $description ); ?></div>
+	<?php if ( $url != "#" ) : ?>
+	<div class="more-link"><a rel="bookmark" href="<?php echo esc_url($url); ?>" class="read-more"><span class="genericon genericon-rightarrow"></span><?php _e( 'Read More', 'tidy' ) ?></a></div>
+	<?php endif; ?>
 </aside>
