@@ -68,12 +68,10 @@ function tidy_setup() {
 	/**
 	 * Setup the WordPress core custom background feature.
 	 */
-/*
 	add_theme_support( 'custom-background', apply_filters( 'tidy_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-*/
 }
 endif; // tidy_setup
 add_action( 'after_setup_theme', 'tidy_setup' );

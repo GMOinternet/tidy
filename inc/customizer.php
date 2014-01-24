@@ -653,7 +653,7 @@ function tidy_customize_style() {
 	?>
 	<style type="text/css" id="tidy_customize_style">
 		<?php if ( !empty( $options['main_bg_color'] ) ) : ?>
-		body, .blog-section-content .typeB .more-link, .blog-section-content .typeB .ellipsis, .blog-section-content .typeB .more-link, .archive-content .ellipsis {
+		.site-content, .blog-section-content .typeB .more-link, .blog-section-content .typeB .ellipsis, .blog-section-content .typeB .more-link, .archive-content .ellipsis {
 			background-color: <?php echo esc_attr( $options['main_bg_color'] ); ?>;
 		}
 		<?php endif; ?>
@@ -755,8 +755,6 @@ function tidy_customize_style() {
 			border-color: <?php echo esc_attr( $options['widget_border_color'] ); ?>;
 		}
 		<?php endif; ?>
-		
-		
 		<?php if ( !empty( $options['footer_bg_color'] ) ) : ?>
 		.site-footer-widget-area {
 			background-color: <?php echo esc_attr( $options['footer_bg_color'] ); ?>;

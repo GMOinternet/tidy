@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tidy
 Domain Path: /languages/
-Tags:
+Tags: post-formats, theme-options
 */
 /* =Reset
 -------------------------------------------------------------- */
@@ -822,6 +822,10 @@ a:hover, a:focus, a:active {
 
 /* =Content
 ----------------------------------------------- */
+.sticky {
+  clear: both;
+}
+
 .hentry {
   clear: both;
   margin: 0 0 30px;
@@ -880,6 +884,20 @@ body.single .entry-title, body.page .entry-title {
 .entry-meta .edit-link {
   margin-right: 10px;
   margin-bottom: 10px;
+}
+
+.tidy_post_thumbnail a {
+  display: block;
+  background-color: black;
+  background-image: url("images/a-hover-icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.tidy_post_thumbnail img {
+  vertical-align: top;
+}
+.tidy_post_thumbnail a:hover img {
+  opacity: 0.6;
 }
 
 /* front-section */
@@ -963,6 +981,9 @@ body.single .entry-title, body.page .entry-title {
   margin-bottom: 0;
   max-width: 370px;
 }
+.merit-box-1 .type-icon {
+  text-align: center;
+}
 .merit-box-1 .merit-box-title,
 .merit-box-1 .merit-box-caption {
   overflow: hidden;
@@ -994,19 +1015,6 @@ body.single .entry-title, body.page .entry-title {
   width: 270px;
   height: 180px;
   overflow: hidden;
-}
-.blog-section-content .typeB .tidy_post_thumbnail a {
-  display: block;
-  background-color: black;
-  background-image: url("images/a-hover-icon.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.blog-section-content .typeB .tidy_post_thumbnail img {
-  vertical-align: top;
-}
-.blog-section-content .typeB .tidy_post_thumbnail a:hover img {
-  opacity: 0.6;
 }
 .blog-section-content .typeB .entry-title {
   max-height: 2.8em;
@@ -1134,19 +1142,6 @@ body.single .entry-title, body.page .entry-title {
   width: 100px;
   padding-right: 20px;
   float: left;
-}
-.archive-content .tidy_post_thumbnail a {
-  display: block;
-  background-color: black;
-  background-image: url("images/a-hover-icon.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.archive-content .tidy_post_thumbnail img {
-  vertical-align: top;
-}
-.archive-content .tidy_post_thumbnail a:hover img {
-  opacity: 0.6;
 }
 .archive-content .entry-conteiner {
   overflow: hidden;
@@ -1325,6 +1320,10 @@ li.pagination-icon a {
 .page-content .gallery {
   margin-bottom: 30px;
 }
+.entry-content .gallery-caption,
+.page-content .gallery-caption {
+  color: #e3e6ea;
+}
 .entry-content .gallery a img,
 .page-content .gallery a img {
   border: none;
@@ -1453,6 +1452,10 @@ li.depth-1 {
 }
 .comment-body .comment-body > *:last-child {
   margin-bottom: 0;
+}
+
+.bypostauthor {
+  font-weight: bold;
 }
 
 /* nav */

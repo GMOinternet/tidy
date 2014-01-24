@@ -389,6 +389,9 @@ function optionsframework_options() {
 		'class' => 'customcolor',
 		'type' => 'color' );
 
+
+
+
 	// Widget color Settings (info)
 	$options[] = array(
 		'name' => __( 'Widget color settings', 'tidy' ),
