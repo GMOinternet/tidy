@@ -288,7 +288,7 @@ function optionsframework_options() {
 	// = Color Picker for header background color.
 	$options[] = array(
 		'name' => __( 'Header background color', 'tidy' ),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'header_bg_color',
 		'std' => $tidy_default['header_bg_color'],
 		'class' => 'customcolor',
@@ -297,7 +297,7 @@ function optionsframework_options() {
 	// = Color Picker for header text color.
 	$options[] = array(
 		'name' => __( 'Header text color', 'tidy' ),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'header_text_color',
 		'std' => $tidy_default['header_text_color'],
 		'class' => 'customcolor',
@@ -306,7 +306,7 @@ function optionsframework_options() {
 	// = Color Picker for header anchor color.
 	$options[] = array(
 		'name' => __( 'Header anchor color', 'tidy' ),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'header_anchor_color',
 		'std' => $tidy_default['header_anchor_color'],
 		'class' => 'customcolor',
@@ -315,7 +315,7 @@ function optionsframework_options() {
 	// = Color Picker for header border color.
 	$options[] = array(
 		'name' => __( 'Header border color', 'tidy' ),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'header_border_color',
 		'std' => $tidy_default['header_border_color'],
 		'class' => 'customcolor',
@@ -324,7 +324,7 @@ function optionsframework_options() {
 	// = Color Picker for header widget background color.
 	$options[] = array(
 		'name' => __( 'Header widget background color', 'tidy' ),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'header_widget_bg_color',
 		'std' => $tidy_default['header_widget_bg_color'],
 		'class' => 'customcolor',
@@ -333,7 +333,7 @@ function optionsframework_options() {
 	// = Color Picker for header widget text color.
 	$options[] = array(
 		'name' => __( 'Header widget text color', 'tidy' ),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'header_widget_text_color',
 		'std' => $tidy_default['header_widget_text_color'],
 		'class' => 'customcolor',
@@ -342,7 +342,7 @@ function optionsframework_options() {
 	// = Color Picker for header widget anchor color.
 	$options[] = array(
 		'name' => __('Header widget anchor color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'header_widget_anchor_color',
 		'std' => $tidy_default['header_widget_anchor_color'],
 		'class' => 'customcolor',
@@ -356,7 +356,7 @@ function optionsframework_options() {
 	// = Color Picker for main background color.
 	$options[] = array(
 		'name' => __( 'Main background color', 'tidy' ),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'main_bg_color',
 		'std' => $tidy_default['main_bg_color'],
 		'class' => 'customcolor',
@@ -365,7 +365,7 @@ function optionsframework_options() {
 	// = Color Picker for main text color.
 	$options[] = array(
 		'name' => __('Main text color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'main_text_color',
 		'std' => $tidy_default['main_text_color'],
 		'class' => 'customcolor',
@@ -374,7 +374,7 @@ function optionsframework_options() {
 	// = Color Picker for main anchor color.
 	$options[] = array(
 		'name' => __('Main anchor color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'main_anchor_color',
 		'std' => $tidy_default['main_anchor_color'],
 		'class' => 'customcolor',
@@ -383,14 +383,45 @@ function optionsframework_options() {
 	// = Color Picker for main border color.
 	$options[] = array(
 		'name' => __('Main border color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'main_border_color',
 		'std' => $tidy_default['main_border_color'],
 		'class' => 'customcolor',
 		'type' => 'color' );
 
+	// Image hover Settings (info)
+	$options[] = array(
+		'name' => __( 'Image hover settings', 'tidy' ),
+		'type' => 'info');
 
+	// = Color Picker for image hover color.
+	$options[] = array(
+		'name' => __('Image hover color', 'tidy'),
+		'desc' => '',
+		'id' => 'image_hover_color',
+		'std' => $tidy_default['image_hover_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
 
+	// = Image hover opacity.
+	$options[] = array(
+		'name' => __('Image hover opacity', 'tidy'),
+		'desc' => '',
+		'id' => 'image_hover_opacity',
+		'std' => $tidy_default['image_hover_opacity'],
+		'class' => 'mini',
+		'type' => 'text' );
+
+/*
+	// = Color Picker for image hover text.
+	$options[] = array(
+		'name' => __('Image hover text color', 'tidy'),
+		'desc' => '',
+		'id' => 'image_hover_text',
+		'std' => $tidy_default['image_hover_text'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+*/
 
 	// Widget color Settings (info)
 	$options[] = array(
@@ -400,7 +431,7 @@ function optionsframework_options() {
 	// = Color Picker for widget background color.
 	$options[] = array(
 		'name' => __( 'Widget background color', 'tidy' ),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'widget_bg_color',
 		'std' => $tidy_default['widget_bg_color'],
 		'class' => 'customcolor',
@@ -409,7 +440,7 @@ function optionsframework_options() {
 	// = Color Picker for widget title color.
 	$options[] = array(
 		'name' => __('Widgte title color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'widget_title_color',
 		'std' => $tidy_default['widget_title_color'],
 		'class' => 'customcolor',
@@ -418,7 +449,7 @@ function optionsframework_options() {
 	// = Color Picker for widget text color.
 	$options[] = array(
 		'name' => __('Widget text color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'widget_text_color',
 		'std' => $tidy_default['widget_text_color'],
 		'class' => 'customcolor',
@@ -427,7 +458,7 @@ function optionsframework_options() {
 	// = Color Picker for widget anchor color.
 	$options[] = array(
 		'name' => __('Widget anchor color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'widget_anchor_color',
 		'std' => $tidy_default['widget_anchor_color'],
 		'class' => 'customcolor',
@@ -436,7 +467,7 @@ function optionsframework_options() {
 	// = Color Picker for widget border color.
 	$options[] = array(
 		'name' => __('Widget border color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'widget_border_color',
 		'std' => $tidy_default['widget_border_color'],
 		'class' => 'customcolor',
@@ -450,7 +481,7 @@ function optionsframework_options() {
 	// = Color Picker for footer background color.
 	$options[] = array(
 		'name' => __('Footer background color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_bg_color',
 		'std' => $tidy_default['footer_bg_color'],
 		'class' => 'customcolor',
@@ -459,7 +490,7 @@ function optionsframework_options() {
 	// = Color Picker for footer title color.
 	$options[] = array(
 		'name' => __('Footer title color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_title_color',
 		'std' => $tidy_default['footer_title_color'],
 		'class' => 'customcolor',
@@ -468,7 +499,7 @@ function optionsframework_options() {
 	// = Color Picker for footer text color.
 	$options[] = array(
 		'name' => __('Footer text color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_text_color',
 		'std' => $tidy_default['footer_text_color'],
 		'class' => 'customcolor',
@@ -477,7 +508,7 @@ function optionsframework_options() {
 	// = Color Picker for footer anchor color.
 	$options[] = array(
 		'name' => __('Footer anchor color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_anchor_color',
 		'std' => $tidy_default['footer_anchor_color'],
 		'class' => 'customcolor',
@@ -486,7 +517,7 @@ function optionsframework_options() {
 	// = Color Picker for footer border color.
 	$options[] = array(
 		'name' => __('Footer border color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_border_color',
 		'std' => $tidy_default['footer_border_color'],
 		'class' => 'customcolor',
@@ -495,7 +526,7 @@ function optionsframework_options() {
 	// = Color Picker for footer all categories background color.
 	$options[] = array(
 		'name' => __('All categories background color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_category_bg_color',
 		'std' => $tidy_default['footer_category_bg_color'],
 		'class' => 'customcolor',
@@ -504,7 +535,7 @@ function optionsframework_options() {
 	// = Color Picker for footer all categories title color.
 	$options[] = array(
 		'name' => __('All categories title color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_category_title_color',
 		'std' => $tidy_default['footer_category_title_color'],
 		'class' => 'customcolor',
@@ -513,7 +544,7 @@ function optionsframework_options() {
 	// = Color Picker for footer all categories text color.
 	$options[] = array(
 		'name' => __('All categories text color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_category_text_color',
 		'std' => $tidy_default['footer_category_text_color'],
 		'class' => 'customcolor',
@@ -522,7 +553,7 @@ function optionsframework_options() {
 	// = Color Picker for footer all categories anchor color.
 	$options[] = array(
 		'name' => __('All categories anchor color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_category_anchor_color',
 		'std' => $tidy_default['footer_category_anchor_color'],
 		'class' => 'customcolor',
@@ -531,7 +562,7 @@ function optionsframework_options() {
 	// = Color Picker for footer all categories border color.
 	$options[] = array(
 		'name' => __('All categories border color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'footer_category_border_color',
 		'std' => $tidy_default['footer_category_border_color'],
 		'class' => 'customcolor',
@@ -540,7 +571,7 @@ function optionsframework_options() {
 	// = Color Picker for copyright background color.
 	$options[] = array(
 		'name' => __('Copyright background color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'copyright_bg_color',
 		'std' => $tidy_default['copyright_bg_color'],
 		'class' => 'customcolor',
@@ -549,7 +580,7 @@ function optionsframework_options() {
 	// = Color Picker for copyright text color.
 	$options[] = array(
 		'name' => __('Copyright text color', 'tidy'),
-		'desc' => __( 'No color selected by default.', 'tidy'),
+		'desc' => '',
 		'id' => 'copyright_text_color',
 		'std' => $tidy_default['copyright_text_color'],
 		'class' => 'customcolor',
@@ -563,10 +594,41 @@ function optionsframework_options() {
 		'icon' => 'welcome-widgets-menus',
 		'type' => 'heading');
 
+	// Responsive
 	$options[] = array(
-		'name' => "Example Image Selector",
-		'desc' => "Images for layout.",
-		'id' => "example_images",
+		'name' => __( 'Responsive', 'tidy' ),
+		'desc' => '',
+		'id' => 'responsive_style',
+		'std' => '1',
+		'type' => 'toggle');
+		
+	
+	// tab head
+	$layouttabs = array(
+		__( 'Home Layout', 'tidy' ),
+		__( 'Posts and Pages Layout', 'tidy' ),
+		__( 'Blog Archive Layout', 'tidy' ),
+		__( 'Portfolio Archive Layout', 'tidy' ),
+		__( 'Archive and Search result', 'tidy' ),
+		__( 'Contact Layout', 'tidy' )
+	);
+	$options[] = array(
+		'id' => 'layout-tab-head',
+		'tab' => $layouttabs,
+		'type' => 'tabhead'
+	);
+
+	// TOP Layout (info)
+	$options[] = array(
+		'id' => 'ltab-0',
+		'class' => "start",
+		'type' => 'tabcontent'
+	);
+
+	$options[] = array(
+		'name' => __( 'Select column', 'tidy' ),
+		'desc' => "",
+		'id' => "home_c",
 		'std' => "2c-l-fixed",
 		'type' => "images",
 		'options' => array(
@@ -574,6 +636,167 @@ function optionsframework_options() {
 			'2c-l-fixed' => $imagepath . '2cl.png',
 			'2c-r-fixed' => $imagepath . '2cr.png')
 	);
+	
+	$options[] = array(
+		'id' => 'ltab-0',
+		'class' => "end",
+		'type' => 'tabcontent'
+	);
+
+	// All Blog Layout (info)
+	$options[] = array(
+		'id' => 'ltab-1',
+		'class' => "start",
+		'type' => 'tabcontent'
+	);
+
+	$options[] = array(
+		'name' => __( 'Select column', 'tidy' ),
+		'desc' => "",
+		'id' => "blog_c",
+		'std' => "2c-l-fixed",
+		'type' => "images",
+		'options' => array(
+			'1col-fixed' => $imagepath . '1col.png',
+			'2c-l-fixed' => $imagepath . '2cl.png',
+			'2c-r-fixed' => $imagepath . '2cr.png')
+	);
+
+	$options[] = array(
+		'id' => 'ltab-1',
+		'class' => "end",
+		'type' => 'tabcontent'
+	);
+
+
+	// All Portfolio Layout (info)
+	$options[] = array(
+		'id' => 'ltab-2',
+		'class' => "start",
+		'type' => 'tabcontent'
+	);
+	$options[] = array(
+		'name' => __( 'Select column', 'tidy' ),
+		'desc' => "",
+		'id' => "port_c",
+		'std' => "2c-l-fixed",
+		'type' => "images",
+		'options' => array(
+			'1col-fixed' => $imagepath . '1col.png',
+			'2c-l-fixed' => $imagepath . '2cl.png',
+			'2c-r-fixed' => $imagepath . '2cr.png')
+	);
+	$options[] = array(
+		'id' => 'ltab-2',
+		'class' => "end",
+		'type' => 'tabcontent'
+	);
+
+	// Posts and Pages Layout (info)
+	$options[] = array(
+		'id' => 'ltab-3',
+		'class' => "start",
+		'type' => 'tabcontent'
+	);
+	$options[] = array(
+		'name' => __( 'Select column', 'tidy' ),
+		'desc' => "",
+		'id' => "port_c",
+		'std' => "2c-l-fixed",
+		'type' => "images",
+		'options' => array(
+			'1col-fixed' => $imagepath . '1col.png',
+			'2c-l-fixed' => $imagepath . '2cl.png',
+			'2c-r-fixed' => $imagepath . '2cr.png')
+	);
+	$options[] = array(
+		'id' => 'ltab-3',
+		'class' => "end",
+		'type' => 'tabcontent'
+	);
+
+	// Archive and Search result Layout (info)
+	$options[] = array(
+		'id' => 'ltab-4',
+		'class' => "start",
+		'type' => 'tabcontent'
+	);
+
+	$options[] = array(
+		'name' => __( 'Select column', 'tidy' ),
+		'desc' => "",
+		'id' => "index_c",
+		'std' => "2c-l-fixed",
+		'type' => "images",
+		'options' => array(
+			'1col-fixed' => $imagepath . '1col.png',
+			'2c-l-fixed' => $imagepath . '2cl.png',
+			'2c-r-fixed' => $imagepath . '2cr.png')
+	);
+	
+	$options[] = array(
+		'id' => 'ltab-4',
+		'class' => "end",
+		'type' => 'tabcontent'
+	);
+
+	// Contact Layout (info)
+	$options[] = array(
+		'id' => 'ltab-5',
+		'class' => "start",
+		'type' => 'tabcontent'
+	);
+
+	$options[] = array(
+		'name' => __( 'Select layout', 'tidy' ),
+		'desc' => __( 'A = page content area.', 'tidy' ),
+		'id' => "cont_c",
+		'std' => "cont_c1",
+		'type' => "images",
+		'options' => array(
+			'cont_c1' => $imagepath . 'cont_c1.png',
+			'cont_c2' => $imagepath . 'cont_c2.png',
+			'cont_c3' => $imagepath . 'cont_c3.png',
+			'cont_s1' => $imagepath . 'cont_s1.png',
+			'cont_s2' => $imagepath . 'cont_s2.png'
+		)
+	);
+
+	/**
+	 * For $settings options see:
+	 * http://codex.wordpress.org/Function_Reference/wp_editor
+	 *
+	 * 'media_buttons' are not supported as there is no post to attach items to
+	 * 'textarea_name' is set by the 'id' you choose
+	 */
+
+	$wp_editor_settings = array(
+		'wpautop' => true, // Default
+		'textarea_rows' => 5,
+		'tinymce' => array( 'plugins' => 'wordpress' )
+	);
+
+	$options[] = array(
+		'name' => __('Area B', 'tidy'),
+		'desc' => '',
+		'id' => 'cont_b_text',
+		'type' => 'editor',
+		'settings' => $wp_editor_settings );
+
+	$options[] = array(
+		'name' => __('Area C', 'tidy'),
+		'desc' => '',
+		'id' => 'cont_c_text',
+		'type' => 'editor',
+		'settings' => $wp_editor_settings );
+
+	$options[] = array(
+		'id' => 'ltab-5',
+		'class' => "end",
+		'type' => 'tabcontent'
+	);
+
+
 /*
 	$options[] = array(
 		'name' =>  __('Example Background', 'tidy'),
@@ -834,34 +1057,6 @@ function optionsframework_options() {
 		}
 	}
 
-/*
-	$options[] = array(
-		'name' => __('Text Editor', 'tidy'),
-		'type' => 'heading' );
-*/
-
-	/**
-	 * For $settings options see:
-	 * http://codex.wordpress.org/Function_Reference/wp_editor
-	 *
-	 * 'media_buttons' are not supported as there is no post to attach items to
-	 * 'textarea_name' is set by the 'id' you choose
-	 */
-
-/*
-	$wp_editor_settings = array(
-		'wpautop' => true, // Default
-		'textarea_rows' => 5,
-		'tinymce' => array( 'plugins' => 'wordpress' )
-	);
-
-	$options[] = array(
-		'name' => __('Default Text Editor hogemoge', 'tidy'),
-		'desc' => sprintf( __( 'You can also pass settings to the editor.  Read more about wp_editor in <a href="%1$s" target="_blank">the WordPress codex</a>', 'tidy' ), 'http://codex.wordpress.org/Function_Reference/wp_editor' ),
-		'id' => 'example_editor',
-		'type' => 'editor',
-		'settings' => $wp_editor_settings );
-*/
 	return $options;
 }
 

@@ -61,7 +61,7 @@ class Options_Framework_Interface {
 			$output = '';
 
 			// Wrap all options
-			if ( ( $value['type'] != "heading" ) && ( $value['type'] != "info" ) && ( $value['type'] != "feed" ) ) {
+			if ( ( $value['type'] != "heading" ) && ( $value['type'] != "info" ) && ( $value['type'] != "tabhead" ) && ( $value['type'] != "tabcontent" ) && ( $value['type'] != "feed" ) ) {
 
 				// Keep all ids lowercase with no spaces
 				$value['id'] = preg_replace('/[^a-zA-Z0-9._\-]/', '', strtolower($value['id']) );
@@ -94,7 +94,7 @@ class Options_Framework_Interface {
 			}
 
 			// If the option is already saved, override $val
-			if ( ( $value['type'] != 'heading' ) && ( $value['type'] != 'info' ) && ( $value['type'] != 'feed' ) ) {
+			if ( ( $value['type'] != 'heading' ) && ( $value['type'] != 'info' ) && ( $value['type'] != "tabhead" ) && ( $value['type'] != "tabcontent" ) && ( $value['type'] != 'feed' ) ) {
 				if ( isset( $settings[($value['id'])]) ) {
 					$val = $settings[($value['id'])];
 					// Striping slashes of non-array options
@@ -404,7 +404,47 @@ class Options_Framework_Interface {
 				$output .= '</span>';
 				break;
 
+			// tabhead
+			case "tabhead":
+				$id = '';
+				$class = 'section tabhead';
+				if ( isset( $value['id'] ) ) {
+					$id = 'id="' . esc_attr( $value['id'] ) . '" ';
+				}
+				if ( isset( $value['class'] ) ) {
+					$class .= ' ' . $value['class'];
+				}
 
+				$output .= '<div ' . $id . 'class="' . esc_attr( $class ) . '">' . "\n";
+				if ( isset( $value['tab'] ) ) {
+					$tabs  = '<ul class="content-tab-wrapper">' . "\n";
+					$i = 0;
+					foreach ( $value['tab'] as $t ) {
+						$tabs .= '<li><a href="#ltab-' . $i . '" id="ltab-' . $i . '-tab">' . $t . '</a></li>' . "\n";
+						$i++;
+					}
+					$tabs .= '</ul>' . "\n";;
+					$output .= apply_filters('of_sanitize_tabhead', $tabs ) . "\n";
+				}
+				$output .= '</div>' . "\n";
+				break;
+
+			// tabcontent
+			case "tabcontent":
+				$id = '';
+				$class = 'tabcontent';
+				if ( isset( $value['id'] ) ) {
+					$id = 'id="' . esc_attr( $value['id'] ) . '" ';
+				}
+				if ( isset( $value['class'] ) ) {
+					
+					if ( $value['class'] == "start" ) {
+						$output .= '<div ' . $id . 'class="' . esc_attr( $class ) . '">' . "\n";
+					} else {
+						$output .= '</div>' . "\n";
+					}
+				}
+				break;
 
 			// Info
 			case "info":
@@ -503,7 +543,7 @@ class Options_Framework_Interface {
 				break;
 			}
 
-			if ( ( $value['type'] != "heading" ) && ( $value['type'] != "info" ) && ( $value['type'] != "feed" ) ) {
+			if ( ( $value['type'] != "heading" ) && ( $value['type'] != "info" ) && ( $value['type'] != "tabhead" ) && ( $value['type'] != "tabcontent" ) && ( $value['type'] != "feed" ) ) {
 				$output .= '</div>';
 				if ( ( $value['type'] != "checkbox" ) && ( $value['type'] != "editor" ) ) {
 					$output .= '<div class="explain">' . wp_kses( $explain_value, $allowedtags) . '</div>'."\n";

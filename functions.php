@@ -162,13 +162,15 @@ function tidy_scripts() {
 		array( 'google-fonts', 'genericons', 'iconmoon-tidy' ),
 		$tidy_version
 	);
-	wp_enqueue_style(
-		'tidy-mobile',
-		get_template_directory_uri() . '/mobile.css',
-		array( 'tidy-style' ),
-		$tidy_version
-	);
-
+	$responsive_style = of_get_option('responsive_style');
+	if ( ( $responsive_style === FALSE ) or ( $responsive_style != 0 ) ) {
+		wp_enqueue_style(
+			'tidy-mobile',
+			get_template_directory_uri() . '/mobile.css',
+			array( 'tidy-style' ),
+			$tidy_version
+		);
+	}
 	wp_enqueue_script(
 		'tidy-skip-link-focus-fix',
 		get_template_directory_uri() . '/js/skip-link-focus-fix.js',

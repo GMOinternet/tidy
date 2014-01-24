@@ -131,5 +131,58 @@ jQuery(document).ready(function($) {
 		options_framework_tabs();
 	}
 
+	// Loads tabbed sections if they exist
+	function options_framework_content_tabs() {
 
+		// Hides all the .group sections to start
+		$('.tabcontent').hide();
+
+		// Find if a selected tab is saved in localStorage
+		var active_content_tab = '';
+		if ( typeof(localStorage) !== 'undefined' ) {
+			active_content_tab = localStorage.getItem("active_content_tab");
+		}
+
+		// If active tab is saved and exists, load it's .group
+		if (active_content_tab !== '' && $(active_content_tab).length ) {
+			$(active_content_tab).show();
+			$(active_content_tab + '-tab').addClass('nav-tab-active');
+		} else {
+			$('.tabcontent:first').show();
+			$('.content-tab-wrapper a:first').addClass('nav-tab-active');
+		}
+
+		// Bind tabs clicks
+		$('.content-tab-wrapper a').click(function(evt) {
+
+			evt.preventDefault();
+
+			// Remove active class from all tabs
+			$('.content-tab-wrapper a').removeClass('nav-tab-active');
+
+			$(this).addClass('nav-tab-active').blur();
+
+			var group = $(this).attr('href');
+
+			if (typeof(localStorage) !== 'undefined' ) {
+				localStorage.setItem("active_content_tab", $(this).attr('href') );
+			}
+
+			$('.tabcontent').hide();
+			$(group).show();
+
+			// Editor height sometimes needs adjustment when unhidden
+			$('.wp-editor-wrap').each(function() {
+				var editor_iframe = $(this).find('iframe');
+				if ( editor_iframe.height() < 30 ) {
+					editor_iframe.css({'height':'auto'});
+				}
+			});
+
+		});
+	}
+
+	if ( $('.content-tab-wrapper').length > 0 ) {
+		options_framework_content_tabs();
+	}
 });

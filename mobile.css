@@ -34,6 +34,37 @@
     padding-bottom: 60px;
   }
 
+  .cont_c1, .cont_c2, .cont_c3 {
+    margin-right: 0;
+  }
+  .cont_c1 .site-main, .cont_c2 .site-main, .cont_c3 .site-main {
+    margin: 0;
+  }
+
+  .cont_c2 .cont_b_text, .cont_c2 .cont_c_text {
+    clear: both;
+    width: 100%;
+    float: none;
+  }
+
+  .cont_c3 .page, .cont_c3 .cont_b_text {
+    clear: both;
+    width: 100%;
+    float: none;
+  }
+
+  .cont_s1 {
+    float: none;
+    margin: 0;
+  }
+  .cont_s1 .site-main {
+    margin: 0;
+  }
+
+  .site-content .widget-area.left {
+    float: none;
+  }
+
   /* =Header
   ----------------------------------------------- */
   .site-header-widget-area {

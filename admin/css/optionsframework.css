@@ -353,6 +353,31 @@
   margin-bottom: 5px;
 }
 
+/* =content-tab-wrapper
+----------------------------------------------- */
+.content-tab-wrapper {
+  border-bottom: solid 1px #DDDDDD;
+  text-align: center;
+}
+.content-tab-wrapper li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.content-tab-wrapper a {
+  color: #444;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  border: solid 1px #DDDDDD;
+  margin-bottom: -1px;
+  padding: 5px 2px;
+  background-color: #F1F1F1;
+}
+.content-tab-wrapper a.nav-tab-active {
+  border-bottom-color: #fff;
+  background-color: #fff;
+}
+
 /* =Banner
 ----------------------------------------------- */
 #optionsframework-submit {

@@ -26,7 +26,7 @@ class Tidy_Widget_About_Us extends WP_Widget {
 			'tidy_about_us_widget', // Base ID
 			__( 'About Us (Tidy)', 'tidy' ), // Name
 			array(
-				'description' => __( 'Arbitrary text or HTML.', 'tidy' ),
+				'description' => '',
 				'classname' => 'widget_tidy_about_us',
 			)
 		);
@@ -183,7 +183,7 @@ class Tidy_Widget_Recent_Posts extends WP_Widget {
 			'tidy_recent_posts_widget', // Base ID
 			__( 'Recent Posts (Tidy)', 'tidy' ), // Name
 			array(
-				'description' => __( "Your site&#8217;s most recent Posts."),
+				'description' => __( "Your site&#8217;s most recent Posts.", 'tidy' ),
 				'classname' => 'widget_tidy_recent_posts',
 			)
 		);
@@ -217,7 +217,7 @@ class Tidy_Widget_Recent_Posts extends WP_Widget {
 
 		ob_start();
 		extract($args);
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts', 'tidy' );
 		$title = apply_filters( 'tidy_post_widget_title', $title, $instance, $this->id_base );
 		$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 4;
 		if ( ! $number )

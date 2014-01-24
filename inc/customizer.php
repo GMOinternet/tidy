@@ -64,10 +64,12 @@ function tidy_default_array() {
 		'header_widget_text_color'   => '#1C1C1C',
 		'header_widget_anchor_color' => '#0058AE',
 
-		'main_bg_color'     => '#FFFFFF',
-		'main_text_color'   => '#1C1C1C',
-		'main_anchor_color' => '#0058AE',
-		'main_border_color' => '#CDD0D4',
+		'main_bg_color'       => '#FFFFFF',
+		'main_text_color'     => '#1C1C1C',
+		'main_anchor_color'   => '#0058AE',
+		'main_border_color'   => '#CDD0D4',
+		'image_hover_color'   => '#000000',
+		'image_hover_opacity' => '0.6',
 
 		'widget_bg_color'     => '#FFFFFF',
 		'widget_title_color'  => '#1C1C1C',
@@ -386,6 +388,49 @@ function tidy_customize_setup( $wp_customize ) {
 		'settings'   => get_tiry_option_name( 'main_border_color' ),
 		'priority'   => 14,
 	)));
+
+	// = Color Picker for image hover color.
+	$wp_customize->add_setting( get_tiry_option_name( 'image_hover_color' ), array(
+		'default'           => $tidy_default['image_hover_color'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'image_hover_color' ), array(
+		'label'      => __('Image hover color', 'tidy'),
+		'section'    => 'tidy_color_settings_main',
+		'settings'   => get_tiry_option_name( 'image_hover_color' ),
+		'priority'   => 21,
+	)));
+
+	// = Image hover opacity.
+	$wp_customize->add_setting( get_tiry_option_name( 'image_hover_opacity' ), array(
+		'default'    => $tidy_default['image_hover_opacity'],
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	));
+	$wp_customize->add_control( get_tiry_option_name( 'image_hover_opacity' ), array(
+		'label'      => __('Image hover opacity', 'tidy'),
+		'section'    => 'tidy_color_settings_main',
+		'priority'   => 22,
+		'settings'   => get_tiry_option_name( 'image_hover_opacity' ),
+	));
+
+	// = Color Picker for image hover text.
+/*
+	$wp_customize->add_setting( get_tiry_option_name( 'image_hover_text' ), array(
+		'default'           => $tidy_default['image_hover_text'],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'image_hover_text' ), array(
+		'label'      => __('Image hover text color', 'tidy'),
+		'section'    => 'tidy_color_settings_main',
+		'settings'   => get_tiry_option_name( 'image_hover_text' ),
+		'priority'   => 23,
+	)));
+*/
 
 	/**
 	 * section for Widget color Settings.
@@ -727,6 +772,22 @@ function tidy_customize_style() {
 			color: <?php echo esc_attr( $options['header_widget_anchor_color'] ); ?>;
 		}
 		<?php endif; ?>
+		<?php if ( !empty( $options['image_hover_color'] ) ) : ?>
+			.tidy_post_thumbnail a {
+				background-color: <?php echo esc_attr( $options['image_hover_color'] ); ?>;
+			}
+		<?php endif; ?>
+		<?php if ( !empty( $options['image_hover_opacity'] ) ) : ?>
+			.tidy_post_thumbnail a:hover img {
+				opacity: <?php echo esc_attr( $options['image_hover_opacity'] ); ?>;
+			}
+		<?php endif; ?>
+		<?php /* if ( !empty( $options['image_hover_text'] ) ) : ?>
+			.tidy_post_thumbnail a {
+				color: <?php echo esc_attr( $options['image_hover_text'] ); ?>;
+			}
+		<?php endif; */ ?>
+
 		<?php if ( !empty( $options['widget_bg_color'] ) ) : ?>
 		#secondary .widget {
 			background-color: <?php echo esc_attr( $options['widget_bg_color'] ); ?>;

@@ -4,8 +4,10 @@
  *
  * @package Tidy
  */
+ 
+global $side;
 ?>
-	<div id="secondary" class="widget-area" role="complementary">
+	<div id="secondary" class="widget-area <?php echo esc_attr( $side ); ?>" role="complementary">
 		<?php do_action( 'tidy_before_secondary' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 

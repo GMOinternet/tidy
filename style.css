@@ -480,14 +480,14 @@ a:hover, a:focus, a:active {
 }
 
 /* Clearing */
-.clear, .sns-icons, .main-navigation, .hentry, .front-section-content, .blog-section-content .typeB, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny,
+.clear, .sns-icons, .main-navigation, .hentry, .contact-area, .front-section-content, .blog-section-content .typeB, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny,
 .entry-content,
 .comment-content,
 .site-content,
 .inner {
   *zoom: 1;
 }
-.clear:after, .sns-icons:after, .main-navigation:after, .hentry:after, .front-section-content:after, .blog-section-content .typeB:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after,
+.clear:after, .sns-icons:after, .main-navigation:after, .hentry:after, .contact-area:after, .front-section-content:after, .blog-section-content .typeB:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after,
 .entry-content:after,
 .comment-content:after,
 .site-content:after,
@@ -541,7 +541,54 @@ a:hover, a:focus, a:active {
   width: 100%;
 }
 
-/*
+.cont_c1, .cont_c2, .cont_c3 {
+  margin-right: 0;
+}
+.cont_c1 .site-main, .cont_c2 .site-main, .cont_c3 .site-main {
+  margin: 0;
+}
+
+.cont_c2 .cont_b_text {
+  clear: none;
+  width: 45%;
+  float: left;
+}
+.cont_c2 .cont_c_text {
+  clear: none;
+  width: 45%;
+  float: right;
+}
+
+.cont_c3 .page {
+  clear: none;
+  width: 45%;
+  float: left;
+}
+.cont_c3 .cont_b_text {
+  clear: none;
+  width: 45%;
+  float: right;
+}
+
+.cont_s1 {
+  float: right;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: -270px;
+}
+.cont_s1 .site-main {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 310px;
+}
+
+.site-content .widget-area.left {
+  float: left;
+}
+
+/*widget-area left
  * Layout: Sidebar-Content
  */
 /*
@@ -826,7 +873,7 @@ a:hover, a:focus, a:active {
   clear: both;
 }
 
-.hentry {
+.hentry, .contact-area {
   clear: both;
   margin: 0 0 30px;
 }
@@ -1378,6 +1425,7 @@ object {
 /* =Comments
 ----------------------------------------------- */
 .comments-area {
+  clear: both;
   margin-top: 60px;
 }
 
