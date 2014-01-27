@@ -115,3 +115,12 @@ function tidy_modify_main_query( $query ) {
 
 
 }
+/**
+ * add action showtime.
+ * @param none.
+ * @return Void.
+*/
+add_action( 'tidy_before_content', 'tidy_showtime' );
+function tidy_showtime() {
+	if ( function_exists( 'showtime' ) ) showtime();
+}
