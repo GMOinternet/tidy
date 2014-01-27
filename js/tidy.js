@@ -63,8 +63,8 @@
 	// Portfolio
 	$(".normal > article").flatHeights();
 	$(".entry-box").each(function(i){
-		var w = $(this).children('.tidy-thumb-portfolio').children('img').width();
-		var h = $(this).children('.tidy-thumb-portfolio').children('img').height();
+		var w = $(this).children('.tidy-thumb-portfolio').children('a').children('img').width();
+		var h = $(this).children('.tidy-thumb-portfolio').children('a').children('img').height();
 		$(this).width(w);
 		$(this).children('.entry-conteiner').height(h);
 	});

@@ -35,7 +35,7 @@
 			<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
 				<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
 			<?php endif; // End if 'post' == get_post_type() ?>
-	
+			<?php do_action( 'tidy_after_entry_meta' ); ?>
 		</footer><!-- .entry-meta -->
 	</div>
 

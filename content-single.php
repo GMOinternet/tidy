@@ -41,7 +41,6 @@ $blog_type = ( $blog_type == 'typeB' ) ? 'medium' : 'full';
 				'after'  => '</div>',
 			) );
 		?>
-		<?php do_action( 'tidy_after_entry_content' ); ?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
