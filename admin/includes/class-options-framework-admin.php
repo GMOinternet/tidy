@@ -382,7 +382,7 @@ class Options_Framework_Admin {
 		$wp_admin_bar->add_menu( array(
 			'id' => 'gmo',
 			'title' => __( 'WP Shop', 'tidy' ),
-			'href' => admin_url( 'themes.php?page=' . $menu['menu_slug'] )
+			'href' => admin_url( 'themes.php?page=' . $menu['menu_slug'] . '#about' )
 		) );
 
 	}

@@ -23,7 +23,6 @@ jQuery(document).ready(function($) {
 	$('.of-radio-img-radio').hide();
 
 	// Portfolio
-
 	var pd = $("#section-port_c .of-radio-img-selected").attr('src');
 	var pdp = pd.split('/');
 	var pdf = pdp.pop();
@@ -33,7 +32,7 @@ jQuery(document).ready(function($) {
 	var hdf = hdp.pop();
 	hdf = hdf.replace(/\.png/g,'');
 	
-	if ( (pdf != '1col') || (pdf != '1col')) {
+	if ( (pdf !== '1col') || (pdf !== '1col')) {
 		$("#port_cont_c option[value='4']").attr('disabled', 'disabled');
 	} else {
 		$("#port_cont_c option[value='4']").removeAttr('disabled');
@@ -44,7 +43,7 @@ jQuery(document).ready(function($) {
 		var path = val.split('/');
 		var file_name = path.pop();
 		file_name = file_name.replace(/\.png/g,'');
-		if (file_name != '1col') {
+		if (file_name !== '1col') {
 			$("#port_cont_c option[value='4']").attr('disabled', 'disabled');
 		} else {
 			$("#port_cont_c option[value='4']").removeAttr('disabled');
@@ -68,19 +67,19 @@ jQuery(document).ready(function($) {
 		$( '.meritboxsettings .merit-box-4' ).hide();
 
 		// Find if a selected tab is saved in localStorage
-		if ( str == 1 ) {
+		if ( str === 1 ) {
 			$( '.meritboxsettings .merit-box-2' ).hide();
 			$( '.meritboxsettings .merit-box-3' ).hide();
 			$( '.meritboxsettings .merit-box-4' ).hide();
-		} else if ( str == 2 ) {
+		} else if ( str === 2 ) {
 			$( '.meritboxsettings .merit-box-2' ).show();
 			$( '.meritboxsettings .merit-box-3' ).hide();
 			$( '.meritboxsettings .merit-box-4' ).hide();
-		} else if ( str == 3 ) {
+		} else if ( str === 3 ) {
 			$( '.meritboxsettings .merit-box-2' ).show();
 			$( '.meritboxsettings .merit-box-3' ).show();
 			$( '.meritboxsettings .merit-box-4' ).hide();
-		} else if ( str == 4 ) {
+		} else if ( str === 4 ) {
 			$( '.meritboxsettings .merit-box-2' ).show();
 			$( '.meritboxsettings .merit-box-3' ).show();
 			$( '.meritboxsettings .merit-box-4' ).show();
@@ -117,7 +116,10 @@ jQuery(document).ready(function($) {
 
 		// Find if a selected tab is saved in localStorage
 		var active_tab = '';
-		if ( typeof(localStorage) !== 'undefined' ) {
+		var ref = location.hash;
+		if (ref === '#about') {
+			active_tab = localStorage.getItem("#options-group-1");
+		} else if ( typeof(localStorage) !== 'undefined' ) {
 			active_tab = localStorage.getItem("active_tab");
 		}
 

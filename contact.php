@@ -19,11 +19,17 @@ get_header(); ?>
 
 				<?php if ( of_get_option( 'cont_b_text' ) ) : ?>
 					<div class="contact-area cont_b_text">
+					<?php if ( of_get_option( 'cont_b_title' ) ) : ?>
+						<h2><?php echo esc_html( of_get_option( 'cont_b_title' ) ); ?></h2>
+					<?php endif; ?>
 					<?php echo apply_filters('the_content', of_get_option( 'cont_b_text' )); ?>
 					</div>
 				<?php endif; ?>
 				<?php if ( of_get_option( 'cont_c_text' ) ) : ?>
 					<div class="contact-area cont_c_text">
+					<?php if ( of_get_option( 'cont_c_title' ) ) : ?>
+						<h2><?php echo esc_html( of_get_option( 'cont_c_title' ) ); ?></h2>
+					<?php endif; ?>
 					<?php echo apply_filters('the_content', of_get_option( 'cont_c_text' )); ?>
 					</div>
 				<?php endif; ?>

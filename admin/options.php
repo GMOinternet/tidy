@@ -458,8 +458,8 @@ function optionsframework_options() {
 		'flickr2' => __('Flickr2', 'tidy'),
 		'flickr3' => __('Flickr3', 'tidy'),
 		'flickr4' => __('Flickr4', 'tidy'),
-		'picassa' => __('Picassa', 'tidy'),
-		'picassa2' => __('Picassa2', 'tidy'),
+		'picasa' => __('Picasa', 'tidy'),
+		'picasa2' => __('Picasa2', 'tidy'),
 		'dribbble' => __('Dribbble', 'tidy'),
 		'dribbble2' => __('Dribbble2', 'tidy'),
 		'dribbble3' => __('Dribbble3', 'tidy'),
@@ -1400,12 +1400,36 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('Area B', 'tidy'),
 		'desc' => '',
+		'id' => 'cont_b',
+		'type' => 'info'
+	);
+	$options[] = array(
+		'name' => __('Area B Title', 'tidy'),
+		'desc' => '',
+		'id' => 'cont_b_title',
+		'type' => 'text'
+	);
+	$options[] = array(
+		'name' => __('Area B conents', 'tidy'),
+		'desc' => '',
 		'id' => 'cont_b_text',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
 
 	$options[] = array(
 		'name' => __('Area C', 'tidy'),
+		'desc' => '',
+		'id' => 'cont_c',
+		'type' => 'info'
+	);
+	$options[] = array(
+		'name' => __('Area C Title', 'tidy'),
+		'desc' => '',
+		'id' => 'cont_c_title',
+		'type' => 'text'
+	);
+	$options[] = array(
+		'name' => __('Area C conents', 'tidy'),
 		'desc' => '',
 		'id' => 'cont_c_text',
 		'type' => 'editor',
