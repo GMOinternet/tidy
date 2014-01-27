@@ -76,7 +76,7 @@ function tidy_sns_lists(){
 				}
 			}
 		?>
-		<li><?php the_feed_link( '<span class="icon-feed"></span>'); ?></li>
+		<li><?php the_feed_link( '<span class="icon-feed2"></span>'); ?></li>
 	</ul>
 	<?php
 }
