@@ -63,40 +63,6 @@
   max-width: 840px;
   background: #fff;
   /*
-  	.section-checkbox .controls {
-  		width: 98%;
-  	}
-  	.section-checkbox .explain {
-  		max-width:94%;
-  	}
-  	
-  	.section-radio label,
-  	.section-multicheck label {
-  		float:left;
-  		max-width:90%;
-  		line-height: 16px;
-  		margin-bottom: 5px;
-  	}
-  	
-  	input.checkbox,
-  	input.of-radio {
-  		margin: 0 10px 5px 0;
-  		float:left;
-  		clear:both;
-  	}
-  	
-  	.section-typography {
-  		.controls {
-  			float:none;
-  			width:auto;
-  		}
-  		.explain {
-  			float:none;
-  			width:auto;
-  		}
-  	}
-  */
-  /*
   	.controls {
   		.of-typography-size {
   			width:80px;
@@ -222,6 +188,33 @@
 #optionsframework .wp-picker-container input.wp-color-picker[type="text"] {
   width: 65px;
 }
+#optionsframework input.checkbox,
+#optionsframework input.of-radio {
+  margin: 0 10px 5px 0;
+  float: left;
+  clear: both;
+}
+#optionsframework .section-radio label,
+#optionsframework .section-multicheck label {
+  float: left;
+  max-width: 90%;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+#optionsframework .section-checkbox .controls {
+  width: 98%;
+}
+#optionsframework .section-checkbox .explain {
+  max-width: 94%;
+}
+#optionsframework .section-typography .controls {
+  float: none;
+  width: auto;
+}
+#optionsframework .section-typography .explain {
+  float: none;
+  width: auto;
+}
 #optionsframework input.upload {
   width: 75%;
 }
@@ -278,14 +271,14 @@
 #optionsframework .of-toggle {
   display: none;
 }
-#optionsframework label {
+#optionsframework .toggle label {
   display: inline-block;
   background-color: #F1F1F1;
   padding: 8px 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
   color: #BBB;
 }
-#optionsframework .selected {
+#optionsframework .toggle .selected {
   background-color: #2EA2CC;
   color: white;
   box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3) inset;
@@ -401,7 +394,6 @@
 
 /* =About
 ----------------------------------------------- */
-/* about */
 p.about-photo,
 p.shop_link {
   text-align: center;
@@ -480,4 +472,81 @@ p.shop_link {
   font-size: 50px !important;
   margin-top: 30px;
   display: inline-block;
+}
+
+/* =generalsettings
+----------------------------------------------- */
+#optionsframework .generalsettings h5 {
+  white-space: nowrap;
+  width: 10em;
+}
+
+/* =color settings
+----------------------------------------------- */
+#optionsframework .colorsettings h5 {
+  white-space: nowrap;
+  width: 16.5em;
+  margin-top: 0.75em;
+}
+
+/* =layoutsettings
+----------------------------------------------- */
+#optionsframework .layoutsettings h5 {
+  white-space: nowrap;
+  width: 11em;
+}
+#optionsframework .layoutsettings .section-images .controls {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+}
+#optionsframework .layoutsettings .section-images .explain {
+  clear: both;
+  display: block;
+  width: 100%;
+}
+#optionsframework .layoutsettings .section-editor h5 {
+  margin-top: 3.5em;
+}
+#optionsframework .layoutsettings .mnicon .controls {
+  width: 300px;
+}
+#optionsframework .layoutsettings .mnicon .type-icon {
+  float: left;
+  background-color: #FFFFFF;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  color: #444444;
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+  padding: 5px;
+}
+#optionsframework .layoutsettings .mnicon .type-icon a {
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  color: #444444;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  width: 100%;
+}
+#optionsframework .layoutsettings .mnicon .type-icon [class*=" icon-"], #optionsframework .layoutsettings .mnicon .type-icon [class^="icon-"] {
+  font-size: 20px !important;
+  margin-top: 0;
+}
+
+/* =SNS settings
+----------------------------------------------- */
+#optionsframework .socialsettings .section-color h5 {
+  white-space: nowrap;
+  width: 10em;
+  margin-top: 0.75em;
 }

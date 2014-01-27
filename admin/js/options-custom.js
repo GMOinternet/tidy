@@ -22,6 +22,35 @@ jQuery(document).ready(function($) {
 	$('.of-radio-img-img').show();
 	$('.of-radio-img-radio').hide();
 
+	// Portfolio
+
+	var pd = $("#section-port_c .of-radio-img-selected").attr('src');
+	var pdp = pd.split('/');
+	var pdf = pdp.pop();
+	pdf = pdf.replace(/\.png/g,'');
+	var hd = $("#section-home_c .of-radio-img-selected").attr('src');
+	var hdp = hd.split('/');
+	var hdf = hdp.pop();
+	hdf = hdf.replace(/\.png/g,'');
+	
+	if ( (pdf != '1col') || (pdf != '1col')) {
+		$("#port_cont_c option[value='4']").attr('disabled', 'disabled');
+	} else {
+		$("#port_cont_c option[value='4']").removeAttr('disabled');
+	}
+	
+	$("#section-port_c .of-radio-img-img").click(function(){
+		var val = $(this).attr('src');
+		var path = val.split('/');
+		var file_name = path.pop();
+		file_name = file_name.replace(/\.png/g,'');
+		if (file_name != '1col') {
+			$("#port_cont_c option[value='4']").attr('disabled', 'disabled');
+		} else {
+			$("#port_cont_c option[value='4']").removeAttr('disabled');
+		}
+	});
+
 	// Toggle
 	$(".toggle label input[checked='checked']").parent().addClass( 'selected' );
 	$(".toggle label").click(function(){
@@ -65,6 +94,7 @@ jQuery(document).ready(function($) {
 		options_merit_box(cnt);
 	});
 
+	// icon
 	$( '.mnicon .controls' ).each(function(index) {
 		var icond = $(this).children().children( "option:selected" ).val();
 		$(this).append('<div class="type-icon"><a href="#"><span class="icon-' + icond + '"></span></a></div>') ;
@@ -72,9 +102,12 @@ jQuery(document).ready(function($) {
 
 	$( ".mnicon select" ).change(function () {
 		var icon = $(this).val();
+		var className = $(this).next().children().children().attr('class');
 		icon = 'icon-' + icon;
-		$(this).next().children().children().toggleClass(icon);
+		$(this).next().children().children().removeClass(className);
+		$(this).next().children().children().addClass(icon);
 	});
+
 
 	// Loads tabbed sections if they exist
 	function options_framework_tabs() {

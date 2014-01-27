@@ -262,7 +262,7 @@
   }
 
   /* gallery-area */
-  .gallery-section-content .gallery {
+  .gallery-section-content .hentry, .gallery-section-content .contact-area {
     width: 100%;
     padding-left: 0;
     float: none;
@@ -272,6 +272,18 @@
   }
   .gallery-section-content .entry-meta {
     text-align: center;
+  }
+
+  .gallery-1 .hentry, .gallery-1 .contact-area {
+    width: 100%;
+  }
+
+  .gallery-2 .hentry, .gallery-2 .contact-area {
+    width: 100%;
+  }
+
+  .gallery-3 .hentry, .gallery-3 .contact-area {
+    width: 100%;
   }
 
   /* archive */

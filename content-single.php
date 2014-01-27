@@ -2,6 +2,8 @@
 /**
  * @package Tidy
  */
+$blog_type = of_get_option( 'blog_type', 'full' );
+$blog_type = ( $blog_type == 'typeB' ) ? 'medium' : 'full';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -11,7 +13,7 @@
 
 		<div class="entry-meta">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="tidy_post_thumbnail tidy-thumb-medium"><?php the_post_thumbnail( 'tidy-thumb-medium' ); ?></div>
+				<div class="tidy_post_thumbnail tidy-thumb-<?php echo esc_attr( $blog_type ); ?>"><?php the_post_thumbnail( 'tidy-thumb-' . esc_attr( $blog_type ) ); ?></div>
 			<?php endif; ?>
 			<div class="tidy_posted_on">
 				<?php tidy_posted_on(); ?>

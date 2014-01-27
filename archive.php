@@ -6,13 +6,15 @@
  *
  * @package Tidy
  */
-
+$layout = of_get_option( 'arc_c', 'cont_s2' );
+$icon   = of_get_option( 'arc_icon', 'pencil' );
+$title  = of_get_option( 'arc_title',  __( 'Blog Archive', 'tidy' ) );
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
 		<main id="main" class="site-main" role="main">
 
-		<div class="archive-title"><span class="icon-pencil"></span><?php _e( 'Blog Archive', 'tidy' ); ?></div>
+		<div class="archive-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php echo esc_html( $title ); ?></div>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -44,10 +46,6 @@ get_header(); ?>
 
 						elseif ( is_year() ) :
 							printf( __( 'Year: %s', 'tidy' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'tidy' ) ) . '</span>' );
-
-						elseif ( is_tax( 'post_format' ) ) :
-							
-							printf( __( 'Post format: %s', 'tidy' ), '<span>' . single_term_title( '', false ) . '</span>' );
 
 						else :
 							_e( 'Archives', 'tidy' );
@@ -82,5 +80,10 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php
+	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
+		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+		get_sidebar();
+	}
+?>
 <?php get_footer(); ?>

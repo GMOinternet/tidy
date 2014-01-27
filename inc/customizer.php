@@ -715,7 +715,7 @@ function tidy_customize_style() {
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['main_text_color'] ) ) : ?>
-		.site-content, .entry-title a {
+		.site-content, .entry-title a, .archive-title a, .section-title a {
 			color: <?php echo esc_attr( $options['main_text_color'] ); ?>;
 		}
 		<?php endif; ?>

@@ -77,18 +77,468 @@ function optionsframework_options() {
 
 	// Icon array
 	$icon_array = array(
+		'home' => __('Home', 'tidy'),
+		'home2' => __('Home2', 'tidy'),
+		'home3' => __('Home3', 'tidy'),
+		'office' => __('Office', 'tidy'),
+		'newspaper' => __('Newspaper', 'tidy'),
+		'pencil' => __('Pencil', 'tidy'),
+		'pencil2' => __('Pencil2', 'tidy'),
+		'quill' => __('Quill', 'tidy'),
+		'pen' => __('Pen', 'tidy'),
+		'blog' => __('Blog', 'tidy'),
+		'droplet' => __('Droplet', 'tidy'),
+		'paint-format' => __('Paint Format', 'tidy'),
+		'image' => __('Image', 'tidy'),
+		'image2' => __('Image2', 'tidy'),
+		'images' => __('Images', 'tidy'),
+		'camera' => __('Camera', 'tidy'),
+		'music' => __('Music', 'tidy'),
+		'headphones' => __('Headphones', 'tidy'),
+		'play' => __('Play', 'tidy'),
+		'film' => __('Film', 'tidy'),
+		'camera2' => __('Camera2', 'tidy'),
+		'dice' => __('Dice', 'tidy'),
+		'pacman' => __('Pacman', 'tidy'),
+		'spades' => __('Spades', 'tidy'),
+		'clubs' => __('Clubs', 'tidy'),
+		'diamonds' => __('Diamonds', 'tidy'),
+		'pawn' => __('Pawn', 'tidy'),
+		'bullhorn' => __('Bullhorn', 'tidy'),
+		'connection' => __('Connection', 'tidy'),
+		'podcast' => __('Podcast', 'tidy'),
+		'feed' => __('Feed', 'tidy'),
+		'book' => __('Book', 'tidy'),
+		'books' => __('Books', 'tidy'),
+		'library' => __('Library', 'tidy'),
+		'file' => __('File', 'tidy'),
+		'profile' => __('Profile', 'tidy'),
+		'file2' => __('File2', 'tidy'),
+		'file3' => __('File3', 'tidy'),
+		'file4' => __('File4', 'tidy'),
 		'copy' => __('Copy', 'tidy'),
-		'power-cord' => __('Plugin', 'tidy'),
-		'earth' => __('Graphic', 'tidy'),
-		'star' => __('Logo', 'tidy')
+		'copy2' => __('Copy2', 'tidy'),
+		'copy3' => __('Copy3', 'tidy'),
+		'paste' => __('Paste', 'tidy'),
+		'paste2' => __('Paste2', 'tidy'),
+		'paste3' => __('Paste3', 'tidy'),
+		'stack' => __('Stack', 'tidy'),
+		'folder' => __('Folder', 'tidy'),
+		'folder-open' => __('Folder Open', 'tidy'),
+		'tag' => __('Tag', 'tidy'),
+		'tags' => __('Tags', 'tidy'),
+		'barcode' => __('Barcode', 'tidy'),
+		'qrcode' => __('Qrcode', 'tidy'),
+		'ticket' => __('Ticket', 'tidy'),
+		'cart' => __('Cart', 'tidy'),
+		'cart2' => __('Cart2', 'tidy'),
+		'cart3' => __('Cart3', 'tidy'),
+		'coin' => __('Coin', 'tidy'),
+		'credit' => __('Credit', 'tidy'),
+		'calculate' => __('Calculate', 'tidy'),
+		'support' => __('Support', 'tidy'),
+		'phone' => __('Phone', 'tidy'),
+		'phone-hang-up' => __('Phone Hang Up', 'tidy'),
+		'address-book' => __('Address Book', 'tidy'),
+		'notebook' => __('Notebook', 'tidy'),
+		'envelope' => __('Envelope', 'tidy'),
+		'pushpin' => __('Pushpin', 'tidy'),
+		'location' => __('Location', 'tidy'),
+		'location2' => __('Location2', 'tidy'),
+		'compass' => __('Compass', 'tidy'),
+		'map' => __('Map', 'tidy'),
+		'map2' => __('Map2', 'tidy'),
+		'history' => __('History', 'tidy'),
+		'clock' => __('Clock', 'tidy'),
+		'clock2' => __('Clock2', 'tidy'),
+		'alarm' => __('Alarm', 'tidy'),
+		'alarm2' => __('Alarm2', 'tidy'),
+		'bell' => __('Bell', 'tidy'),
+		'stopwatch' => __('Stopwatch', 'tidy'),
+		'calendar' => __('Calendar', 'tidy'),
+		'calendar2' => __('Calendar2', 'tidy'),
+		'print' => __('Print', 'tidy'),
+		'keyboard' => __('Keyboard', 'tidy'),
+		'screen' => __('Screen', 'tidy'),
+		'laptop' => __('Laptop', 'tidy'),
+		'mobile' => __('Mobile', 'tidy'),
+		'mobile2' => __('Mobile2', 'tidy'),
+		'tablet' => __('Tablet', 'tidy'),
+		'tv' => __('Tv', 'tidy'),
+		'cabinet' => __('Cabinet', 'tidy'),
+		'drawer' => __('Drawer', 'tidy'),
+		'drawer2' => __('Drawer2', 'tidy'),
+		'drawer3' => __('Drawer3', 'tidy'),
+		'box-add' => __('Box Add', 'tidy'),
+		'box-remove' => __('Box Remove', 'tidy'),
+		'download' => __('Download', 'tidy'),
+		'upload' => __('Upload', 'tidy'),
+		'disk' => __('Disk', 'tidy'),
+		'storage' => __('Storage', 'tidy'),
+		'undo' => __('Undo', 'tidy'),
+		'redo' => __('Redo', 'tidy'),
+		'flip' => __('Flip', 'tidy'),
+		'flip2' => __('Flip2', 'tidy'),
+		'undo2' => __('Undo2', 'tidy'),
+		'redo2' => __('Redo2', 'tidy'),
+		'forward' => __('Forward', 'tidy'),
+		'reply' => __('Reply', 'tidy'),
+		'bubble' => __('Bubble', 'tidy'),
+		'bubbles' => __('Bubbles', 'tidy'),
+		'bubbles2' => __('Bubbles2', 'tidy'),
+		'bubble2' => __('Bubble2', 'tidy'),
+		'bubbles3' => __('Bubbles3', 'tidy'),
+		'bubbles4' => __('Bubbles4', 'tidy'),
+		'user' => __('User', 'tidy'),
+		'users' => __('Users', 'tidy'),
+		'user2' => __('User2', 'tidy'),
+		'users2' => __('Users2', 'tidy'),
+		'user3' => __('User3', 'tidy'),
+		'user4' => __('User4', 'tidy'),
+		'quotes-left' => __('Quotes Left', 'tidy'),
+		'busy' => __('Busy', 'tidy'),
+		'spinner' => __('Spinner', 'tidy'),
+		'spinner2' => __('Spinner2', 'tidy'),
+		'spinner3' => __('Spinner3', 'tidy'),
+		'spinner4' => __('Spinner4', 'tidy'),
+		'spinner5' => __('Spinner5', 'tidy'),
+		'spinner6' => __('Spinner6', 'tidy'),
+		'binoculars' => __('Binoculars', 'tidy'),
+		'search' => __('Search', 'tidy'),
+		'zoom-in' => __('Zoom In', 'tidy'),
+		'zoom-out' => __('Zoom Out', 'tidy'),
+		'expand' => __('Expand', 'tidy'),
+		'contract' => __('Contract', 'tidy'),
+		'expand2' => __('Expand2', 'tidy'),
+		'contract2' => __('Contract2', 'tidy'),
+		'key' => __('Key', 'tidy'),
+		'key2' => __('Key2', 'tidy'),
+		'lock' => __('Lock', 'tidy'),
+		'lock2' => __('Lock2', 'tidy'),
+		'unlocked' => __('Unlocked', 'tidy'),
+		'wrench' => __('Wrench', 'tidy'),
+		'settings' => __('Settings', 'tidy'),
+		'equalizer' => __('Equalizer', 'tidy'),
+		'cog' => __('Cog', 'tidy'),
+		'cogs' => __('Cogs', 'tidy'),
+		'cog2' => __('Cog2', 'tidy'),
+		'hammer' => __('Hammer', 'tidy'),
+		'wand' => __('Wand', 'tidy'),
+		'aid' => __('Aid', 'tidy'),
+		'bug' => __('Bug', 'tidy'),
+		'pie' => __('Pie', 'tidy'),
+		'stats' => __('Stats', 'tidy'),
+		'bars' => __('Bars', 'tidy'),
+		'bars2' => __('Bars2', 'tidy'),
+		'gift' => __('Gift', 'tidy'),
+		'trophy' => __('Trophy', 'tidy'),
+		'glass' => __('Glass', 'tidy'),
+		'mug' => __('Mug', 'tidy'),
+		'food' => __('Food', 'tidy'),
+		'leaf' => __('Leaf', 'tidy'),
+		'rocket' => __('Rocket', 'tidy'),
+		'meter' => __('Meter', 'tidy'),
+		'meter2' => __('Meter2', 'tidy'),
+		'dashboard' => __('Dashboard', 'tidy'),
+		'hammer2' => __('Hammer2', 'tidy'),
+		'fire' => __('Fire', 'tidy'),
+		'lab' => __('Lab', 'tidy'),
+		'magnet' => __('Magnet', 'tidy'),
+		'remove' => __('Remove', 'tidy'),
+		'remove2' => __('Remove2', 'tidy'),
+		'briefcase' => __('Briefcase', 'tidy'),
+		'airplane' => __('Airplane', 'tidy'),
+		'truck' => __('Truck', 'tidy'),
+		'road' => __('Road', 'tidy'),
+		'accessibility' => __('Accessibility', 'tidy'),
+		'target' => __('Target', 'tidy'),
+		'shield' => __('Shield', 'tidy'),
+		'lightning' => __('Lightning', 'tidy'),
+		'switch' => __('Switch', 'tidy'),
+		'power-cord' => __('Power Cord', 'tidy'),
+		'signup' => __('Signup', 'tidy'),
+		'list' => __('List', 'tidy'),
+		'list2' => __('List2', 'tidy'),
+		'numbered-list' => __('Numbered List', 'tidy'),
+		'menu' => __('Menu', 'tidy'),
+		'menu2' => __('Menu2', 'tidy'),
+		'tree' => __('Tree', 'tidy'),
+		'cloud' => __('Cloud', 'tidy'),
+		'cloud-download' => __('Cloud Download', 'tidy'),
+		'cloud-upload' => __('Cloud Upload', 'tidy'),
+		'download2' => __('Download2', 'tidy'),
+		'upload2' => __('Upload2', 'tidy'),
+		'download3' => __('Download3', 'tidy'),
+		'upload3' => __('Upload3', 'tidy'),
+		'globe' => __('Globe', 'tidy'),
+		'earth' => __('Earth', 'tidy'),
+		'link' => __('Link', 'tidy'),
+		'flag' => __('Flag', 'tidy'),
+		'attachment' => __('Attachment', 'tidy'),
+		'eye' => __('Eye', 'tidy'),
+		'eye-blocked' => __('Eye Blocked', 'tidy'),
+		'eye2' => __('Eye2', 'tidy'),
+		'bookmark' => __('Bookmark', 'tidy'),
+		'bookmarks' => __('Bookmarks', 'tidy'),
+		'brightness-medium' => __('Brightness Medium', 'tidy'),
+		'brightness-contrast' => __('Brightness Contrast', 'tidy'),
+		'contrast' => __('Contrast', 'tidy'),
+		'star' => __('Star', 'tidy'),
+		'star2' => __('Star2', 'tidy'),
+		'star3' => __('Star3', 'tidy'),
+		'heart' => __('Heart', 'tidy'),
+		'heart2' => __('Heart2', 'tidy'),
+		'heart-broken' => __('Heart Broken', 'tidy'),
+		'thumbs-up' => __('Thumbs Up', 'tidy'),
+		'thumbs-up2' => __('Thumbs Up2', 'tidy'),
+		'happy' => __('Happy', 'tidy'),
+		'happy2' => __('Happy2', 'tidy'),
+		'smiley' => __('Smiley', 'tidy'),
+		'smiley2' => __('Smiley2', 'tidy'),
+		'tongue' => __('Tongue', 'tidy'),
+		'tongue2' => __('Tongue2', 'tidy'),
+		'sad' => __('Sad', 'tidy'),
+		'sad2' => __('Sad2', 'tidy'),
+		'wink' => __('Wink', 'tidy'),
+		'wink2' => __('Wink2', 'tidy'),
+		'grin' => __('Grin', 'tidy'),
+		'grin2' => __('Grin2', 'tidy'),
+		'cool' => __('Cool', 'tidy'),
+		'cool2' => __('Cool2', 'tidy'),
+		'angry' => __('Angry', 'tidy'),
+		'angry2' => __('Angry2', 'tidy'),
+		'evil' => __('Evil', 'tidy'),
+		'evil2' => __('Evil2', 'tidy'),
+		'shocked' => __('Shocked', 'tidy'),
+		'shocked2' => __('Shocked2', 'tidy'),
+		'confused' => __('Confused', 'tidy'),
+		'confused2' => __('Confused2', 'tidy'),
+		'neutral' => __('Neutral', 'tidy'),
+		'neutral2' => __('Neutral2', 'tidy'),
+		'wondering' => __('Wondering', 'tidy'),
+		'wondering2' => __('Wondering2', 'tidy'),
+		'point-up' => __('Point Up', 'tidy'),
+		'point-right' => __('Point Right', 'tidy'),
+		'point-down' => __('Point Down', 'tidy'),
+		'point-left' => __('Point Left', 'tidy'),
+		'warning' => __('Warning', 'tidy'),
+		'notification' => __('Notification', 'tidy'),
+		'question' => __('Question', 'tidy'),
+		'info' => __('Info', 'tidy'),
+		'info2' => __('Info2', 'tidy'),
+		'blocked' => __('Blocked', 'tidy'),
+		'cancel-circle' => __('Cancel Circle', 'tidy'),
+		'checkmark-circle' => __('Checkmark Circle', 'tidy'),
+		'spam' => __('Spam', 'tidy'),
+		'close' => __('Close', 'tidy'),
+		'checkmark' => __('Checkmark', 'tidy'),
+		'checkmark2' => __('Checkmark2', 'tidy'),
+		'spell-check' => __('Spell Check', 'tidy'),
+		'minus' => __('Minus', 'tidy'),
+		'plus' => __('Plus', 'tidy'),
+		'enter' => __('Enter', 'tidy'),
+		'exit' => __('Exit', 'tidy'),
+		'play2' => __('Play2', 'tidy'),
+		'pause' => __('Pause', 'tidy'),
+		'stop' => __('Stop', 'tidy'),
+		'backward' => __('Backward', 'tidy'),
+		'forward2' => __('Forward2', 'tidy'),
+		'play3' => __('Play3', 'tidy'),
+		'pause2' => __('Pause2', 'tidy'),
+		'stop2' => __('Stop2', 'tidy'),
+		'backward2' => __('Backward2', 'tidy'),
+		'forward3' => __('Forward3', 'tidy'),
+		'first' => __('First', 'tidy'),
+		'last' => __('Last', 'tidy'),
+		'previous' => __('Previous', 'tidy'),
+		'next' => __('Next', 'tidy'),
+		'eject' => __('Eject', 'tidy'),
+		'volume-high' => __('Volume High', 'tidy'),
+		'volume-medium' => __('Volume Medium', 'tidy'),
+		'volume-low' => __('Volume Low', 'tidy'),
+		'volume-mute' => __('Volume Mute', 'tidy'),
+		'volume-mute2' => __('Volume Mute2', 'tidy'),
+		'volume-increase' => __('Volume Increase', 'tidy'),
+		'volume-decrease' => __('Volume Decrease', 'tidy'),
+		'loop' => __('Loop', 'tidy'),
+		'loop2' => __('Loop2', 'tidy'),
+		'loop3' => __('Loop3', 'tidy'),
+		'shuffle' => __('Shuffle', 'tidy'),
+		'arrow-up-left' => __('Arrow Up Left', 'tidy'),
+		'arrow-up' => __('Arrow Up', 'tidy'),
+		'arrow-up-right' => __('Arrow Up Right', 'tidy'),
+		'arrow-right' => __('Arrow Right', 'tidy'),
+		'arrow-down-right' => __('Arrow Down Right', 'tidy'),
+		'arrow-down' => __('Arrow Down', 'tidy'),
+		'arrow-down-left' => __('Arrow Down Left', 'tidy'),
+		'arrow-left' => __('Arrow Left', 'tidy'),
+		'arrow-up-left2' => __('Arrow Up Left2', 'tidy'),
+		'arrow-up2' => __('Arrow Up2', 'tidy'),
+		'arrow-up-right2' => __('Arrow Up Right2', 'tidy'),
+		'arrow-right2' => __('Arrow Right2', 'tidy'),
+		'arrow-down-right2' => __('Arrow Down Right2', 'tidy'),
+		'arrow-down2' => __('Arrow Down2', 'tidy'),
+		'arrow-down-left2' => __('Arrow Down Left2', 'tidy'),
+		'arrow-left2' => __('Arrow Left2', 'tidy'),
+		'arrow-up-left3' => __('Arrow Up Left3', 'tidy'),
+		'arrow-up3' => __('Arrow Up3', 'tidy'),
+		'arrow-up-right3' => __('Arrow Up Right3', 'tidy'),
+		'arrow-right3' => __('Arrow Right3', 'tidy'),
+		'arrow-down-right3' => __('Arrow Down Right3', 'tidy'),
+		'arrow-down3' => __('Arrow Down3', 'tidy'),
+		'arrow-down-left3' => __('Arrow Down Left3', 'tidy'),
+		'arrow-left3' => __('Arrow Left3', 'tidy'),
+		'tab' => __('Tab', 'tidy'),
+		'checkbox-checked' => __('Checkbox Checked', 'tidy'),
+		'checkbox-unchecked' => __('Checkbox Unchecked', 'tidy'),
+		'checkbox-partial' => __('Checkbox Partial', 'tidy'),
+		'radio-checked' => __('Radio Checked', 'tidy'),
+		'radio-unchecked' => __('Radio Unchecked', 'tidy'),
+		'crop' => __('Crop', 'tidy'),
+		'scissors' => __('Scissors', 'tidy'),
+		'filter' => __('Filter', 'tidy'),
+		'filter2' => __('Filter2', 'tidy'),
+		'font' => __('Font', 'tidy'),
+		'text-height' => __('Text Height', 'tidy'),
+		'text-width' => __('Text Width', 'tidy'),
+		'bold' => __('Bold', 'tidy'),
+		'underline' => __('Underline', 'tidy'),
+		'italic' => __('Italic', 'tidy'),
+		'strikethrough' => __('Strikethrough', 'tidy'),
+		'omega' => __('Omega', 'tidy'),
+		'sigma' => __('Sigma', 'tidy'),
+		'table' => __('Table', 'tidy'),
+		'table2' => __('Table2', 'tidy'),
+		'insert-template' => __('Insert Template', 'tidy'),
+		'pilcrow' => __('Pilcrow', 'tidy'),
+		'left-toright' => __('Left Toright', 'tidy'),
+		'right-Toleft' => __('Right Toleft', 'tidy'),
+		'paragraph-left' => __('Paragraph Left', 'tidy'),
+		'paragraph-center' => __('Paragraph Center', 'tidy'),
+		'paragraph-right' => __('Paragraph Right', 'tidy'),
+		'paragraph-justify' => __('Paragraph Justify', 'tidy'),
+		'paragraph-left2' => __('Paragraph Left2', 'tidy'),
+		'paragraph-center2' => __('Paragraph Center2', 'tidy'),
+		'paragraph-right2' => __('Paragraph Right2', 'tidy'),
+		'paragraph-justify2' => __('Paragraph Justify2', 'tidy'),
+		'indent-increase' => __('Indent Increase', 'tidy'),
+		'indent-decrease' => __('Indent Decrease', 'tidy'),
+		'new-tab' => __('New Tab', 'tidy'),
+		'embed' => __('Embed', 'tidy'),
+		'code' => __('Code', 'tidy'),
+		'console' => __('Console', 'tidy'),
+		'share' => __('Share', 'tidy'),
+		'mail' => __('Mail', 'tidy'),
+		'mail2' => __('Mail2', 'tidy'),
+		'mail3' => __('Mail3', 'tidy'),
+		'mail4' => __('Mail4', 'tidy'),
+		'google' => __('Google', 'tidy'),
+		'google-plus' => __('Google Plus', 'tidy'),
+		'google-plus2' => __('Google Plus2', 'tidy'),
+		'google-plus3' => __('Google Plus3', 'tidy'),
+		'google-plus4' => __('Google Plus4', 'tidy'),
+		'google-drive' => __('Google Drive', 'tidy'),
+		'facebook' => __('Facebook', 'tidy'),
+		'facebook2' => __('Facebook2', 'tidy'),
+		'facebook3' => __('Facebook3', 'tidy'),
+		'instagram' => __('Instagram', 'tidy'),
+		'twitter' => __('Twitter', 'tidy'),
+		'twitter2' => __('Twitter2', 'tidy'),
+		'twitter3' => __('Twitter3', 'tidy'),
+		'feed2' => __('Feed2', 'tidy'),
+		'feed3' => __('Feed3', 'tidy'),
+		'feed4' => __('Feed4', 'tidy'),
+		'youtube' => __('Youtube', 'tidy'),
+		'youtube2' => __('Youtube2', 'tidy'),
+		'vimeo' => __('Vimeo', 'tidy'),
+		'vimeo2' => __('Vimeo2', 'tidy'),
+		'vimeo3' => __('Vimeo3', 'tidy'),
+		'lanyrd' => __('Lanyrd', 'tidy'),
+		'flickr' => __('Flickr', 'tidy'),
+		'flickr2' => __('Flickr2', 'tidy'),
+		'flickr3' => __('Flickr3', 'tidy'),
+		'flickr4' => __('Flickr4', 'tidy'),
+		'picassa' => __('Picassa', 'tidy'),
+		'picassa2' => __('Picassa2', 'tidy'),
+		'dribbble' => __('Dribbble', 'tidy'),
+		'dribbble2' => __('Dribbble2', 'tidy'),
+		'dribbble3' => __('Dribbble3', 'tidy'),
+		'forrst' => __('Forrst', 'tidy'),
+		'forrst2' => __('Forrst2', 'tidy'),
+		'deviantart' => __('Deviantart', 'tidy'),
+		'deviantart2' => __('Deviantart2', 'tidy'),
+		'steam' => __('Steam', 'tidy'),
+		'steam2' => __('Steam2', 'tidy'),
+		'github' => __('Github', 'tidy'),
+		'github2' => __('Github2', 'tidy'),
+		'github3' => __('Github3', 'tidy'),
+		'github4' => __('Github4', 'tidy'),
+		'github5' => __('Github5', 'tidy'),
+		'wordpress' => __('Wordpress', 'tidy'),
+		'wordpress2' => __('Wordpress2', 'tidy'),
+		'joomla' => __('Joomla', 'tidy'),
+		'blogger' => __('Blogger', 'tidy'),
+		'blogger2' => __('Blogger2', 'tidy'),
+		'tumblr' => __('Tumblr', 'tidy'),
+		'tumblr2' => __('Tumblr2', 'tidy'),
+		'yahoo' => __('Yahoo', 'tidy'),
+		'tux' => __('Tux', 'tidy'),
+		'apple' => __('Apple', 'tidy'),
+		'finder' => __('Finder', 'tidy'),
+		'android' => __('Android', 'tidy'),
+		'windows' => __('Windows', 'tidy'),
+		'windows8' => __('Windows8', 'tidy'),
+		'soundcloud' => __('Soundcloud', 'tidy'),
+		'soundcloud2' => __('Soundcloud2', 'tidy'),
+		'skype' => __('Skype', 'tidy'),
+		'reddit' => __('Reddit', 'tidy'),
+		'linkedin' => __('Linkedin', 'tidy'),
+		'lastfm' => __('Lastfm', 'tidy'),
+		'lastfm2' => __('Lastfm2', 'tidy'),
+		'delicious' => __('Delicious', 'tidy'),
+		'stumbleupon' => __('Stumbleupon', 'tidy'),
+		'stumbleupon2' => __('Stumbleupon2', 'tidy'),
+		'stackoverflow' => __('Stackoverflow', 'tidy'),
+		'pinterest' => __('Pinterest', 'tidy'),
+		'pinterest2' => __('Pinterest2', 'tidy'),
+		'xing' => __('Xing', 'tidy'),
+		'xing2' => __('Xing2', 'tidy'),
+		'flattr' => __('Flattr', 'tidy'),
+		'foursquare' => __('Foursquare', 'tidy'),
+		'foursquare2' => __('Foursquare2', 'tidy'),
+		'paypal' => __('Paypal', 'tidy'),
+		'paypal2' => __('Paypal2', 'tidy'),
+		'paypal3' => __('Paypal3', 'tidy'),
+		'yelp' => __('Yelp', 'tidy'),
+		'libreoffice' => __('Libreoffice', 'tidy'),
+		'file-pdf' => __('File Pdf', 'tidy'),
+		'file-openoffice' => __('File Openoffice', 'tidy'),
+		'file-word' => __('File Word', 'tidy'),
+		'file-excel' => __('File Excel', 'tidy'),
+		'file-zip' => __('File Zip', 'tidy'),
+		'file-powerpoint' => __('File Powerpoint', 'tidy'),
+		'file-xml' => __('File Xml', 'tidy'),
+		'file-css' => __('File Css', 'tidy'),
+		'html5' => __('Html5', 'tidy'),
+		'html52' => __('Html52', 'tidy'),
+		'css3' => __('Css3', 'tidy'),
+		'chrome' => __('Chrome', 'tidy'),
+		'firefox' => __('Firefox', 'tidy'),
+		'ie' => __('Ie', 'tidy'),
+		'opera' => __('Opera', 'tidy'),
+		'safari' => __('Safari', 'tidy'),
+		'icomoon' => __('Icomoon', 'tidy')
 	);
 
-	// Test data
-	$test_array = array(
-		'1' => __('One', 'tidy'),
-		'2' => __('Two', 'tidy'),
-		'3' => __('Three', 'tidy'),
-		'4' => __('Four', 'tidy')
+	// posts_per_page
+	$posts_per_page = get_option( 'posts_per_page' );
+
+	// Select Column Number
+	$column_array = array(
+		1 => 1,
+		2 => 2,
+		3 => 3,
+		4 => 4
 	);
 
 	// Multicheck Array
@@ -606,10 +1056,10 @@ function optionsframework_options() {
 	// tab head
 	$layouttabs = array(
 		__( 'Home Layout', 'tidy' ),
-		__( 'Posts and Pages Layout', 'tidy' ),
-		__( 'Blog Archive Layout', 'tidy' ),
-		__( 'Portfolio Archive Layout', 'tidy' ),
+		__( 'All Blog Layout', 'tidy' ),
+		__( 'All Portfolio Layout', 'tidy' ),
 		__( 'Archive and Search result', 'tidy' ),
+		__( 'Pages Layout', 'tidy' ),
 		__( 'Contact Layout', 'tidy' )
 	);
 	$options[] = array(
@@ -618,7 +1068,7 @@ function optionsframework_options() {
 		'type' => 'tabhead'
 	);
 
-	// TOP Layout (info)
+	// Home Layout (info)
 	$options[] = array(
 		'id' => 'ltab-0',
 		'class' => "start",
@@ -626,24 +1076,82 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => __( 'Select column', 'tidy' ),
-		'desc' => "",
+		'name' => __( 'Select layout', 'tidy' ),
+		'desc' => '',
 		'id' => "home_c",
-		'std' => "2c-l-fixed",
+		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'1col-fixed' => $imagepath . '1col.png',
-			'2c-l-fixed' => $imagepath . '2cl.png',
-			'2c-r-fixed' => $imagepath . '2cr.png')
+			'cont_c1' => $imagepath . '1col.png',
+			'cont_s1' => $imagepath . '2cl.png',
+			'cont_s2' => $imagepath . '2cr.png'
+		)
 	);
 	
 	$options[] = array(
+		'name' => __( 'Blog area', 'tidy' ),
+		'desc' => '',
+		'type' => 'info'
+	);
+
+	$options[] = array(
+		'name' => __( 'Number to display', 'tidy' ),
+		'id' => 'home_blog_num',
+		'std' => $posts_per_page,
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __( 'Title', 'tidy' ),
+		'id' => 'home_blog_title',
+		'std' => __( 'Blog', 'tidy' ),
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Icon', 'tidy'),
+		'desc' => '',
+		'id' => 'home_blog_icon',
+		'std' => 'pencil',
+		'type' => 'select',
+		'class' => 'mnicon mini arc_icon',
+		'options' => $icon_array);
+
+	$options[] = array(
+		'name' => __( 'Portfolio area', 'tidy' ),
+		'desc' => '',
+		'type' => 'info'
+	);
+
+	$options[] = array(
+		'name' => __( 'Number to display', 'tidy' ),
+		'id' => 'home_port_num',
+		'std' => $posts_per_page,
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __( 'Title', 'tidy' ),
+		'id' => 'home_port_title',
+		'std' => __( 'Portfolio', 'tidy' ),
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Icon', 'tidy'),
+		'desc' => '',
+		'id' => 'home_port_icon',
+		'std' => 'notebook',
+		'type' => 'select',
+		'class' => 'mnicon mini arc_icon',
+		'options' => $icon_array);
+
+	$options[] = array(
 		'id' => 'ltab-0',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
-	// All Blog Layout (info)
+
+	// Blog Archive Layout (info)
 	$options[] = array(
 		'id' => 'ltab-1',
 		'class' => "start",
@@ -651,23 +1159,37 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => __( 'Select column', 'tidy' ),
-		'desc' => "",
+		'name' => __( 'Select layout', 'tidy' ),
+		'desc' => '',
 		'id' => "blog_c",
-		'std' => "2c-l-fixed",
+		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'1col-fixed' => $imagepath . '1col.png',
-			'2c-l-fixed' => $imagepath . '2cl.png',
-			'2c-r-fixed' => $imagepath . '2cr.png')
+			'cont_c1' => $imagepath . '1col.png',
+			'cont_s1' => $imagepath . '2cl.png',
+			'cont_s2' => $imagepath . '2cr.png'
+		)
 	);
+
+
+	$options[] = array(
+		'name' => __( 'Select text location', 'tidy' ),
+		'desc' => '',
+		'id' => "blog_type",
+		'std' => "typeA",
+		'type' => "images",
+		'options' => array(
+			'typeA' => $imagepath . 'typeA.png',
+			'typeB' => $imagepath . 'typeB.png',
+		)
+	);
+
 
 	$options[] = array(
 		'id' => 'ltab-1',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
-
 
 	// All Portfolio Layout (info)
 	$options[] = array(
@@ -675,47 +1197,145 @@ function optionsframework_options() {
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
+	
 	$options[] = array(
-		'name' => __( 'Select column', 'tidy' ),
-		'desc' => "",
+		'name' => __( 'Select archive layout', 'tidy' ),
+		'desc' => '',
 		'id' => "port_c",
-		'std' => "2c-l-fixed",
+		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'1col-fixed' => $imagepath . '1col.png',
-			'2c-l-fixed' => $imagepath . '2cl.png',
-			'2c-r-fixed' => $imagepath . '2cr.png')
+			'cont_c1' => $imagepath . '1col.png',
+			'cont_s1' => $imagepath . '2cl.png',
+			'cont_s2' => $imagepath . '2cr.png'
+		)
 	);
+
+	$options[] = array(
+		'name' => __('Select Column Number', 'tidy'),
+		'desc' => '',
+		'id' => 'port_cont_c',
+		'std' => '1',
+		'type' => 'select',
+		'class' => 'mini',
+		'options' => $column_array);
+
+	$options[] = array(
+		'name' => __( 'Select display pattern', 'tidy' ),
+		'desc' => '',
+		'id' => "port_d",
+		'std' => "normal",
+		'type' => "images",
+		'options' => array(
+			'normal' => $imagepath . 'normal.png',
+			'grid' => $imagepath . 'grid.png'
+		)
+	);
+
+	$options[] = array(
+		'name' => __('Select display pattern', 'tidy'),
+		'id' => 'port_content',
+		'std' => 'type1',
+		'type' => 'radio',
+		'options' => array(
+			'type1' => __('Only image', 'tidy'),
+			'type2' => __('Image with title', 'tidy'),
+			'type3' => __('Image with title and text', 'tidy')
+		)
+	);
+	$options[] = array(
+		'name' => __('Number to display', 'tidy'),
+		'id' => 'port_num',
+		'std' => $posts_per_page,
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Title', 'tidy'),
+		'id' => 'port_title',
+		'std' => __( 'Portfolio', 'tidy' ),
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Icon', 'tidy'),
+		'desc' => '',
+		'id' => 'port_icon',
+		'std' => 'notebook',
+		'type' => 'select',
+		'class' => 'mnicon mini arc_icon',
+		'options' => $icon_array);
+
 	$options[] = array(
 		'id' => 'ltab-2',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
-	// Posts and Pages Layout (info)
+	// Archive and Search result Layout (info)
 	$options[] = array(
 		'id' => 'ltab-3',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
+
 	$options[] = array(
-		'name' => __( 'Select column', 'tidy' ),
-		'desc' => "",
-		'id' => "port_c",
-		'std' => "2c-l-fixed",
+		'name' => __( 'Select layout', 'tidy' ),
+		'desc' => '',
+		'id' => "arc_c",
+		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'1col-fixed' => $imagepath . '1col.png',
-			'2c-l-fixed' => $imagepath . '2cl.png',
-			'2c-r-fixed' => $imagepath . '2cr.png')
+			'cont_c1' => $imagepath . '1col.png',
+			'cont_s1' => $imagepath . '2cl.png',
+			'cont_s2' => $imagepath . '2cr.png'
+		)
 	);
+	
+	$options[] = array(
+		'name' => __('Number to display', 'tidy'),
+		'id' => 'arc_num',
+		'std' => $posts_per_page,
+		'class' => 'mini',
+		'type' => 'text');
+	
+	$options[] = array(
+		'name' => __('Archive title', 'tidy'),
+		'id' => 'arc_title',
+		'std' => __( 'Blog Archive', 'tidy' ),
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Icon', 'tidy'),
+		'desc' => '',
+		'id' => 'arc_icon',
+		'std' => 'pencil',
+		'type' => 'select',
+		'class' => 'mnicon mini arc_icon',
+		'options' => $icon_array);
+
+	$options[] = array(
+		'name' => __('Search Result title', 'tidy'),
+		'id' => 'ser_title',
+		'desc' => '%s : Search keywords.',
+		'std' => __( 'Search Results for: %s', 'tidy' ),
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Icon', 'tidy'),
+		'desc' => '',
+		'id' => 'ser_icon',
+		'std' => 'search',
+		'type' => 'select',
+		'class' => 'mnicon mini arc_icon',
+		'options' => $icon_array);
+
 	$options[] = array(
 		'id' => 'ltab-3',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
-	// Archive and Search result Layout (info)
+	// Posts and Pages Layout (info)
 	$options[] = array(
 		'id' => 'ltab-4',
 		'class' => "start",
@@ -723,17 +1343,18 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => __( 'Select column', 'tidy' ),
-		'desc' => "",
-		'id' => "index_c",
-		'std' => "2c-l-fixed",
+		'name' => __( 'Select layout', 'tidy' ),
+		'desc' => '',
+		'id' => "post_c",
+		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'1col-fixed' => $imagepath . '1col.png',
-			'2c-l-fixed' => $imagepath . '2cl.png',
-			'2c-r-fixed' => $imagepath . '2cr.png')
+			'cont_c1' => $imagepath . '1col.png',
+			'cont_s1' => $imagepath . '2cl.png',
+			'cont_s2' => $imagepath . '2cr.png'
+		)
 	);
-	
+
 	$options[] = array(
 		'id' => 'ltab-4',
 		'class' => "end",

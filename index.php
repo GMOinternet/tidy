@@ -10,12 +10,16 @@
  *
  * @package Tidy
  */
-
+$layout = of_get_option( 'arc_c', 'cont_s2' );
+$icon = of_get_option( 'arc_icon', 'pencil' );
+$title  = of_get_option( 'arc_title',  __( 'Blog Archive', 'tidy' ) );
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
 		<?php do_action( 'tidy_before_primary' ); ?>
 		<main id="main" class="site-main" role="main">
+
+		<div class="archive-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php echo  esc_html( $title ); ?></div>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -38,5 +42,10 @@ get_header(); ?>
 		<?php do_action( 'tidy_after_primary' ); ?>
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php
+	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
+		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+		get_sidebar();
+	}
+?>
 <?php get_footer(); ?>

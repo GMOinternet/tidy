@@ -54,8 +54,16 @@
 		return false;
 	} );
 
-	// Portfolio toggle.
-	$( '.gallery-content-area .entry-box').hover(function(){
+	// Portfolio
+	$(".normal > article").flatHeights();
+	$(".entry-box").each(function(i){
+		var w = $(this).children('.tidy-thumb-portfolio').children('img').width();
+		var h = $(this).children('.tidy-thumb-portfolio').children('img').height();
+		$(this).width(w);
+		$(this).children('.entry-conteiner').height(h);
+	});
+
+	$( '.entry-box').hover(function(){
 		var w = $(this).width();
 		$(this).children( '.entry-conteiner' ).css({left:-w});
 		$(this).children( '.entry-conteiner' ).animate({
