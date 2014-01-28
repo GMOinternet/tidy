@@ -1734,12 +1734,8 @@ function tidy_optionsframework_std( $option_name, $value, $val ) {
 		$val = get_bloginfo( 'description' );
 	} elseif ( in_array( $value['id'], $customizer_key ) ) {
 		$val = $value['std'];
-		$d = get_theme_mods( $value['id'] );
-		if ( is_array($d) ) {
-			$val = $value['std'];
-		} elseif ( ! empty( $d ) ) {
-			get_theme_mods( $value['id'] );
-		}
+		$d = get_theme_mods();
+		$val = (isset($d[$value['id']])) ? $d[$value['id']] : $value['std'];
 	}
 
 	return $val;
