@@ -1536,6 +1536,14 @@ function optionsframework_options() {
 		}
 	}
 
+	// for restore
+	$options[] = array(
+		'name' => 'restore',
+		'id' => 'restore_hidden',
+		'std' => '0',
+		'class' => 'hidden',
+		'type' => 'text');
+
 	return $options;
 }
 
@@ -1555,8 +1563,8 @@ function optionsframework_after_validate_overwride( $clean ) {
 	return $clean;
 }
 
-add_filter( 'optionsframework_std', 'tidy_optionsframework_std', 10, 3);
-function tidy_optionsframework_std( $option_name, $value, $val ) {
+add_filter( 'optionsframework_std', 'tidy_optionsframework_std', 10, 4);
+function tidy_optionsframework_std( $option_name, $value, $val , $restore) {
 	if ( ! array_key_exists( 'id', $value ) )
 		return $val;
 
@@ -1567,11 +1575,14 @@ function tidy_optionsframework_std( $option_name, $value, $val ) {
 	} elseif ( $value['id'] == 'general-header-site-tagline' ) {
 		$val = get_bloginfo( 'description' );
 	} elseif ( in_array( $value['id'], $customizer_key ) ) {
-		$val = $value['std'];
 		$d = get_theme_mods();
-		$val = (isset($d[$value['id']])) ? $d[$value['id']] : $value['std'];
+		if ( $restore === true ) {
+			$val = $value['std'];
+			set_theme_mod( $value['id'], $val );
+		} else {
+			$val = (isset($d[$value['id']])) ? $d[$value['id']] : $value['std'];
+		}
 	}
-
 	return $val;
 }
 
@@ -1584,4 +1595,17 @@ function tidy_favicon() {
 		$link = '<link rel="Shortcut Icon" type="image/x-icon" href="%s" />'."\n";
 		printf( $link, esc_url( $favicon ) );
 	}
+}
+
+// restore
+add_filter( 'of_sanitize_text', 'tidy_of_sanitize_hidden_orverwride', 10, 2);
+function tidy_of_sanitize_hidden_orverwride( $std, $option ) {
+	if ( $option['id'] == 'restore_hidden' ) {
+		if ( isset( $_POST['reset'] ) ) {
+			$std = 1;
+		} else {
+			$std = 0;
+		}
+	}
+	return $std;
 }

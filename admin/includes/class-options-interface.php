@@ -53,6 +53,7 @@ class Options_Framework_Interface {
 
 		$counter = 0;
 		$menu = '';
+		$restore = ($settings['restore_hidden']==1) ? true: false;
 
 		foreach ( $options as $value ) {
 
@@ -110,7 +111,7 @@ class Options_Framework_Interface {
 				$explain_value = $value['desc'];
 			}
 
-			$val = apply_filters( 'optionsframework_std', $option_name, $value, $val );
+			$val = apply_filters( 'optionsframework_std', $option_name, $value, $val, $restore );
 
 			if ( has_filter( 'optionsframework_' . $value['type'] ) ) {
 				$output .= apply_filters( 'optionsframework_' . $value['type'], $option_name, $value, $val );

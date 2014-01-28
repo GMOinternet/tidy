@@ -220,4 +220,9 @@ jQuery(document).ready(function($) {
 	if ( $('.content-tab-wrapper').length > 0 ) {
 		options_framework_content_tabs();
 	}
+	
+	// restore 
+	$('input[name="reset"]').click(function() {
+		$('#restore_hidden').val(1);
+	});
 });
