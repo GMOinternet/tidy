@@ -183,7 +183,7 @@ class Tidy_Widget_Recent_Posts extends WP_Widget {
 			'tidy_recent_posts_widget', // Base ID
 			__( 'Recent Posts (Tidy)', 'tidy' ), // Name
 			array(
-				'description' => __( "Your site&#8217;s most recent Posts.", 'tidy' ),
+				'description' => __( "The most recent posts on your site", 'tidy' ),
 				'classname' => 'widget_tidy_recent_posts',
 			)
 		);

@@ -47,6 +47,9 @@ get_header(); ?>
 						elseif ( is_year() ) :
 							printf( __( 'Year: %s', 'tidy' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'tidy' ) ) . '</span>' );
 
+						elseif ( is_tax( 'post_format' ) ) :
+							printf( __( 'Post format: %s', 'tidy' ), '<span>' . single_term_title( '', false ) . '</span>' );
+
 						else :
 							_e( 'Archives', 'tidy' );
 
