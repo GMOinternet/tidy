@@ -212,12 +212,19 @@ class Options_Framework_Admin {
 		<div id="optionsframework-wrap" class="wrap">
 
 		<?php $menu = $this->menu_settings(); $sns = $this->sns_settings(); ?>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<?php echo esc_attr( $sns['appId'] ); ?>";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<div id="optionsframework-header">
 			<h2>
 				<span class="optionsframework-title"><?php echo esc_html( $menu['page_title'] ); ?></span>
-				<span class="optionsframework-share"><a href="https://twitter.com/<?php echo esc_html( $sns['twitter'] ); ?>" class="twitter-follow-button" data-show-count="false">Follow @<?php echo esc_html( $sns['twitter'] ); ?></a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-				<iframe src="//www.facebook.com/plugins/like.php?href=<?php echo urlencode( $sns['shareurl'] ); ?>&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=421661494527166" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+				<span class="optionsframework-share"><a href="https://twitter.com/<?php echo esc_attr( $sns['twitter'] ); ?>" class="twitter-follow-button" data-show-count="false">Follow @<?php echo esc_html( $sns['twitter'] ); ?></a>
+				<div class="fb-like" data-href="<?php echo esc_attr( $sns['shareurl'] ); ?>" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
 				</span>
 			</h2>
 		</div>
@@ -254,7 +261,7 @@ class Options_Framework_Admin {
 		</div><!-- / #tabs -->
 
 		<?php do_action( 'optionsframework_after' ); ?>
-
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		</div> <!-- / .wrap -->
 
 	<?php

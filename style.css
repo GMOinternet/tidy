@@ -922,6 +922,9 @@ body.single .entry-title, body.page .entry-title {
   float: left;
   margin-right: 40px;
 }
+.entry-meta .tidy-thumb-full {
+  text-align: center;
+}
 .entry-meta [class^="icon-"], .entry-meta [class*=" icon-"] {
   font-size: 14px;
   display: inline-block;

@@ -2,8 +2,14 @@
 /**
  * @package Tidy
  */
+
+global $post_format;
 $blog_type = of_get_option( 'blog_type', 'full' );
-$blog_type = ( $blog_type == 'typeB' ) ? 'medium' : 'full';
+if ( $post_format == "gallery") {
+	$blog_type = 'full';
+} else {
+	$blog_type = ( $blog_type == 'typeB' ) ? 'medium' : 'full';
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
