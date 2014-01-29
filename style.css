@@ -1132,6 +1132,9 @@ body.single .entry-title, body.page .entry-title {
 .gallery-section-content .tidy-thumb-portfolio img .entry-box {
   position: relative;
 }
+.gallery-section-content .tidy-thumb-portfolio a:hover img {
+  opacity: 1;
+}
 .gallery-section-content .entry-conteiner {
   display: block;
   position: absolute;
@@ -1142,7 +1145,7 @@ body.single .entry-title, body.page .entry-title {
   height: 270px;
   color: white;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   background-image: url("images/a-hover-icon.png");
   background-repeat: no-repeat;
   background-position: center center;
