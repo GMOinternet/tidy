@@ -698,7 +698,7 @@ function tidy_customize_style() {
 	?>
 	<style type="text/css" id="tidy_customize_style">
 		<?php if ( !empty( $options['main_bg_color'] ) ) : ?>
-		.site-content, .blog-section-content .typeB .more-link, .blog-section-content .typeB .ellipsis, .blog-section-content .typeB .more-link, .archive-content .ellipsis {
+		.site-content, .blog-section-content .hentry .ellipsis, .blog-section-content .hentry .more-link {
 			background-color: <?php echo esc_attr( $options['main_bg_color'] ); ?>;
 		}
 		<?php endif; ?>

@@ -480,14 +480,14 @@ a:hover, a:focus, a:active {
 }
 
 /* Clearing */
-.clear, .sns-icons, .main-navigation, .hentry, .contact-area, .front-section-content, .blog-section-content .hentry, .blog-section-content .contact-area, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny,
+.clear, .contact-area, .sns-icons, .main-navigation, .hentry, .front-section-content, .blog-section-content .hentry, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny,
 .entry-content,
 .comment-content,
 .site-content,
 .inner {
   *zoom: 1;
 }
-.clear:after, .sns-icons:after, .main-navigation:after, .hentry:after, .contact-area:after, .front-section-content:after, .blog-section-content .hentry:after, .blog-section-content .contact-area:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after,
+.clear:after, .contact-area:after, .sns-icons:after, .main-navigation:after, .hentry:after, .front-section-content:after, .blog-section-content .hentry:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after,
 .entry-content:after,
 .comment-content:after,
 .site-content:after,
@@ -546,6 +546,11 @@ a:hover, a:focus, a:active {
 }
 .cont_c1 .site-main, .cont_c2 .site-main, .cont_c3 .site-main {
   margin: 0;
+}
+
+.contact-area {
+  clear: both;
+  margin: 0 0 30px;
 }
 
 .cont_c2 .cont_b_text {
@@ -873,7 +878,7 @@ a:hover, a:focus, a:active {
   clear: both;
 }
 
-.hentry, .contact-area {
+.hentry {
   clear: both;
   margin: 0 0 30px;
 }
@@ -1048,35 +1053,34 @@ body.single .entry-title, body.page .entry-title {
 }
 
 /* blog-area */
-.blog-section-content .hentry, .blog-section-content .contact-area {
+.blog-section-content .hentry {
   clear: none;
   width: 310px;
   padding-left: 40px;
   float: left;
 }
-.blog-section-content .hentry .tidy_post_thumbnail, .blog-section-content .contact-area .tidy_post_thumbnail {
+.blog-section-content .hentry .tidy_post_thumbnail {
   margin: 0 auto 20px auto;
   width: 270px;
   height: 180px;
   overflow: hidden;
 }
-.blog-section-content .hentry .entry-title, .blog-section-content .contact-area .entry-title {
+.blog-section-content .hentry .entry-title {
   max-height: 2.8em;
   overflow: hidden;
   position: relative;
 }
-.blog-section-content .hentry .entry-summary, .blog-section-content .contact-area .entry-summary {
+.blog-section-content .hentry .entry-summary {
   margin-bottom: 20px;
   max-height: 4.2em;
   overflow: hidden;
   position: relative;
 }
-.blog-section-content .hentry .entry-summary > p, .blog-section-content .contact-area .entry-summary > p {
+.blog-section-content .hentry .entry-summary > p {
   white-space: normal;
 }
-.blog-section-content .hentry .ellipsis, .blog-section-content .contact-area .ellipsis,
-.blog-section-content .hentry .more-link,
-.blog-section-content .contact-area .more-link {
+.blog-section-content .hentry .ellipsis,
+.blog-section-content .hentry .more-link {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1084,7 +1088,7 @@ body.single .entry-title, body.page .entry-title {
   background-color: white;
   padding-left: 5px;
 }
-.blog-section-content .hentry .entry-meta, .blog-section-content .contact-area .entry-meta {
+.blog-section-content .hentry .entry-meta {
   margin-bottom: 0;
 }
 .blog-section-content .typeB {
@@ -1106,7 +1110,7 @@ body.single .entry-title, body.page .entry-title {
   margin-bottom: 0;
 }
 
-.gallery-section-content .hentry, .gallery-section-content .contact-area {
+.gallery-section-content .hentry {
   clear: none;
   width: 310px;
   padding-left: 40px;
@@ -1175,15 +1179,15 @@ body.single .entry-title, body.page .entry-title {
   margin-bottom: 0;
 }
 
-.gallery-1 .hentry, .gallery-1 .contact-area {
+.gallery-1 .hentry {
   width: 100%;
 }
 
-.gallery-2 .hentry, .gallery-2 .contact-area {
+.gallery-2 .hentry {
   width: 50%;
 }
 
-.gallery-3 .hentry, .gallery-3 .contact-area {
+.gallery-3 .hentry {
   width: 33%;
 }
 
