@@ -51,7 +51,7 @@ function tidy_setup() {
 	add_image_size( 'tidy-thumb-medium', 580, 580);
 	add_image_size( 'tidy-meritbox', 370, 370);
 	add_image_size( 'tidy-thumb-blog', 270, 180, true);
-	add_image_size( 'tidy-thumb-portfolio', 9999, 270, true);
+	add_image_size( 'tidy-thumb-portfolio', 270, 270, true);
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -146,13 +146,13 @@ function tidy_scripts() {
 
 	wp_enqueue_style(
 		'genericons',
-		get_template_directory_uri() . '/genericons/genericons.css',
+		get_template_directory_uri() . '/genericons/genericons.min.css',
 		array(),
 		'3.0.2'
 	);
 	wp_enqueue_style(
 		'iconmoon-tidy',
-		get_template_directory_uri() . '/iconmoon-tidy/style.css',
+		get_template_directory_uri() . '/iconmoon-tidy/style.min.css',
 		array(),
 		$tidy_version
 	);
