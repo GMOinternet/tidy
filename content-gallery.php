@@ -23,13 +23,13 @@ $port_content = of_get_option( 'port_content', 'type1' );
 	</div>
 
 	<?php if ( $port_content != "type1") : ?>
-	<header class="entry-header">
+	<header class="entry-header show">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 	<?php endif; ?>
 
 	<?php if ( $port_content == "type3") : ?>
-	<div class="entry-summary">
+	<div class="entry-summary show">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php endif; ?>
