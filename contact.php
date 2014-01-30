@@ -5,7 +5,7 @@
  *
  * @package Tidy
  */
-$layout = of_get_option( 'cont_c', 'cont_c1' );
+$layout = of_get_option( 'cont_l', 'cont_c1' );
 get_header(); ?>
 
 	<div id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">

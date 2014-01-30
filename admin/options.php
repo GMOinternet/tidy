@@ -1155,7 +1155,7 @@ function optionsframework_options() {
 		'name' => __('Select Column Number', 'tidy'),
 		'desc' => '',
 		'id' => 'port_cont_c',
-		'std' => '1',
+		'std' => '3',
 		'type' => 'select',
 		'class' => 'mini',
 		'options' => $column_array);
@@ -1311,7 +1311,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __( 'Select layout', 'tidy' ),
 		'desc' => __( 'A = page content area.', 'tidy' ),
-		'id' => "cont_c",
+		'id' => "cont_l",
 		'std' => "cont_c1",
 		'type' => "images",
 		'options' => array(
@@ -1393,7 +1393,7 @@ function optionsframework_options() {
 		'name' => __('Number of box to show ', 'tidy'),
 		'desc' => __('Default:1, Min:1, Max:4.', 'tidy'),
 		'id' => 'merit-box-num',
-		'std' => 1,
+		'std' => 4,
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
 		'options' => array(
