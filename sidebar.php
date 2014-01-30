@@ -16,10 +16,14 @@ global $side;
 			</aside>
 
 			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', 'tidy' ); ?></h1>
+				<h1 class="widget-title"><?php _e( 'Category', 'tidy' ); ?></h1>
 				<ul>
-					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+					<?php wp_list_categories( 'title_li=' ); ?>
 				</ul>
+			</aside>
+
+			<aside id="archives" class="widget">
+				<?php the_widget( 'Tidy_Widget_Recent_Posts' ); ?>
 			</aside>
 
 			<aside id="meta" class="widget">
