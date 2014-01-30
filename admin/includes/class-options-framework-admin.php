@@ -118,7 +118,7 @@ class Options_Framework_Admin {
 		
 			$sns = array(
 			'twitter'  => 'wpshop_gmo',
-			'appId'    =>  421661494527166,
+			'appId'    =>  716597455040778,
 			'shareurl' => 'http://wpshop.com/'
 		);
 
