@@ -1394,6 +1394,16 @@ li.pagination-icon a {
   padding: 5px;
 }
 
+/* gallery-navigation */
+.gallery-navigation {
+  /*
+  	.tidy_post_thumbnail {
+  		width: 270px;
+  		height: 270px;
+  	}
+  */
+}
+
 /* =Entry Content
 ----------------------------------------------- */
 .entry-content,
@@ -2137,4 +2147,62 @@ li.depth-1 {
 .bxslider li {
   margin: 0;
   padding: 0;
+}
+.bxslider li img {
+  width: 100%;
+}
+
+.bx-wrapper .bx-viewport {
+  border: none;
+  box-shadow: none;
+  left: 0;
+}
+
+.bx-wrapper {
+  margin-bottom: 20px;
+}
+
+#bx-pager {
+  text-align: center;
+}
+#bx-pager a {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  margin: 10px 20px;
+  background-color: black;
+}
+#bx-pager img {
+  opacity: 0.4;
+}
+#bx-pager a.active img {
+  opacity: 1;
+}
+
+.gallery-navigation .bx-wrapper {
+  margin-bottom: 0;
+}
+.gallery-navigation .bx-pager.bx-default-pager {
+  display: none;
+}
+
+/* =Mobile
+----------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .portfolio {
+    margin-bottom: 40px;
+  }
+
+  #bx-pager a {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: black;
+  }
+  #bx-pager a.active {
+    background-color: #666666;
+  }
+  #bx-pager img {
+    display: none;
+  }
 }

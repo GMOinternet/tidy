@@ -60,6 +60,7 @@
 		var w = $(this).children('a').children('img').width();
 		$(this).width(w);
 	});
+
 	// Portfolio
 	$(".normal > article").flatHeights();
 	$(".entry-box").each(function(i){

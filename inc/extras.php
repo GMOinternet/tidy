@@ -124,3 +124,33 @@ add_action( 'tidy_before_content', 'tidy_showtime' );
 function tidy_showtime() {
 	if ( function_exists( 'showtime' ) ) showtime();
 }
+
+/**
+ * Filters post-format name.
+ * @param string $query Default query.
+ * @return array.
+*/
+function tidy_rename_post_formats( $safe_text ) {
+    if ( $safe_text == 'Gallery' )
+        return __( 'Portfolio', 'tidy' );
+
+    return $safe_text;
+}
+add_filter( 'esc_html', 'tidy_rename_post_formats' );
+
+//rename Aside in posts list table
+function tidy_live_rename_formats() { 
+	global $current_screen;
+
+	if ( $current_screen->id == 'edit-post' ) { ?>
+		<script type="text/javascript">
+		jQuery('document').ready(function() {
+			jQuery("span.post-state-format").each(function() { 
+				if ( jQuery(this).text() == "Gallery" )
+					jQuery(this).text("<?php _e( 'Portfolio', 'tidy' ); ?>");
+			});
+		});
+		</script>
+<?php }
+}
+add_action('admin_head', 'tidy_live_rename_formats');
