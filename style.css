@@ -910,6 +910,10 @@ body.single .entry-title, body.page .entry-title {
   border-bottom: solid 1px #e3e6ea;
 }
 
+.portfolio {
+  margin-bottom: 80px;
+}
+
 .entry-meta {
   margin-bottom: 20px;
   font-size: 0.85714em;
@@ -1426,10 +1430,6 @@ li.pagination-icon a {
 .page-content .gallery {
   margin-bottom: 30px;
 }
-.entry-content .gallery-caption,
-.page-content .gallery-caption {
-  color: #e3e6ea;
-}
 .entry-content .gallery a img,
 .page-content .gallery a img {
   border: none;
@@ -1859,4 +1859,9 @@ li.depth-1 {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
   display: block;
+}
+
+.slide .right-photo-left,
+.slide .left-photo-right {
+  margin-top: -30px;
 }
