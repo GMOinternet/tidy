@@ -37,9 +37,9 @@ $port_content = of_get_option( 'port_content', 'type1' );
 	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php tidy_posted_on(); ?>
-		<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
 			<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
 		<?php endif; // End if 'post' == get_post_type() ?>
+		<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
 
 	</footer><!-- .entry-meta -->
 

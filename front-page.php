@@ -31,8 +31,8 @@ get_header(); ?>
 				<?php
 					$blogicon  = of_get_option( 'home_blog_icon', 'pencil' );
 					$blogtitle = of_get_option( 'home_blog_title',  _x( 'Blog', 'Front page', 'tidy' ) );
-					$blog_type = of_get_option( 'blog_type', 'typeA' );
-					$blog_type = ( $layout == 'cont_c1' ) ? $blog_type : 'typeA' ;
+					// $blog_type = of_get_option( 'blog_type', 'typeA' );
+					$blog_type = ( $layout == 'cont_c1' ) ? 'typeB' : 'typeA' ;
 					
 				?>
 
