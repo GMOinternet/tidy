@@ -1323,6 +1323,22 @@ function optionsframework_options() {
 		)
 	);
 
+	$options[] = array(
+		'name' => __('Page Title', 'tidy'),
+		'desc' => '',
+		'std' => 'About',
+		'id' => 'cont_a_title',
+		'type' => 'text'
+	);
+	$options[] = array(
+		'name' => __('Icon', 'tidy'),
+		'desc' => '',
+		'id' => 'cont_a_icon',
+		'std' => 'quill',
+		'type' => 'select',
+		'class' => 'mnicon mini arc_icon',
+		'options' => $icon_array);
+
 	/**
 	 * For $settings options see:
 	 * http://codex.wordpress.org/Function_Reference/wp_editor
@@ -1345,13 +1361,13 @@ function optionsframework_options() {
 	);
 	$options[] = array(
 		'name' => __('Area B Title', 'tidy'),
-		'desc' => '',
+		'std' => 'Area B Title',
 		'id' => 'cont_b_title',
 		'type' => 'text'
 	);
 	$options[] = array(
 		'name' => __('Area B conents', 'tidy'),
-		'desc' => '',
+		'std' => 'Area B conents',
 		'id' => 'cont_b_text',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
@@ -1364,13 +1380,13 @@ function optionsframework_options() {
 	);
 	$options[] = array(
 		'name' => __('Area C Title', 'tidy'),
-		'desc' => '',
+		'std' => 'Area C Title',
 		'id' => 'cont_c_title',
 		'type' => 'text'
 	);
 	$options[] = array(
 		'name' => __('Area C conents', 'tidy'),
-		'desc' => '',
+		'std' => 'Area C conents',
 		'id' => 'cont_c_text',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
