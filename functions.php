@@ -146,13 +146,13 @@ function tidy_scripts() {
 
 	wp_enqueue_style(
 		'genericons',
-		get_template_directory_uri() . '/genericons/genericons.min.css',
+		get_template_directory_uri() . '/genericons/genericons.css',
 		array(),
 		'3.0.2'
 	);
 	wp_enqueue_style(
 		'iconmoon-tidy',
-		get_template_directory_uri() . '/iconmoon-tidy/style.min.css',
+		get_template_directory_uri() . '/iconmoon-tidy/style.css',
 		array(),
 		$tidy_version
 	);

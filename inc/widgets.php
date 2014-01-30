@@ -69,10 +69,11 @@ function tidy_sns_lists(){
 	?>
 	<ul class="sns-icons">
 		<?php
-			foreach( $sns_array as $key=>$val ) {
-				$sns = of_get_option($val);
+			foreach( $sns_array as $key => $val ) {
+				$snskey = $val[0];
+				$sns = of_get_option( $snskey, array( 'account' => $val[1], 'toggle'  => '1' ) );
 				if ( ( ! empty( $sns ) ) && ( $sns['toggle'] != 0 ) && ( $sns['account'] ) ) {
-					echo '<li><a href="' . esc_url( $sns['account'] ) . '" target="_blank"><span class="icon-' . $val . '"></span></a></li>' . "\n";
+					echo '<li><a href="' . esc_url( $sns['account'] ) . '" target="_blank"><span class="icon-' . $snskey . '"></span></a></li>' . "\n";
 				}
 			}
 		?>

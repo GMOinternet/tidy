@@ -1520,7 +1520,7 @@ function optionsframework_options() {
 		'name' => __('E-mail', 'tidy'),
 		'desc' => __('You\'re E-mail address.', 'tidy'),
 		'id' => 'email',
-		'std' => '',
+		'std' => 'info@example.com',
 		'type' => 'email');
 
 	$sns_array = tidy_sns_array();
@@ -1529,9 +1529,9 @@ function optionsframework_options() {
 			$options[] = array(
 				'name' => $key,
 				'desc' => sprintf( __('You\'re %s address.', 'tidy'), $key ),
-				'id' => $val,
-				'account' => '',
-				'toggle' => false,
+				'id' => $val[0],
+				'account' => $val[1],
+				'toggle' => 1,
 				'type' => 'sns');
 		}
 	}
