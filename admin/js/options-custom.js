@@ -60,26 +60,25 @@ jQuery(document).ready(function($) {
 
 	// Merit box
 	function options_merit_box( str ) {
-
 		// Hides all the .merit-box sections to start
 		$( '.meritboxsettings .merit-box-2' ).hide();
 		$( '.meritboxsettings .merit-box-3' ).hide();
 		$( '.meritboxsettings .merit-box-4' ).hide();
 
 		// Find if a selected tab is saved in localStorage
-		if ( str === 1 ) {
+		if ( str === '1' ) {
 			$( '.meritboxsettings .merit-box-2' ).hide();
 			$( '.meritboxsettings .merit-box-3' ).hide();
 			$( '.meritboxsettings .merit-box-4' ).hide();
-		} else if ( str === 2 ) {
+		} else if ( str === '2' ) {
 			$( '.meritboxsettings .merit-box-2' ).show();
 			$( '.meritboxsettings .merit-box-3' ).hide();
 			$( '.meritboxsettings .merit-box-4' ).hide();
-		} else if ( str === 3 ) {
+		} else if ( str === '3' ) {
 			$( '.meritboxsettings .merit-box-2' ).show();
 			$( '.meritboxsettings .merit-box-3' ).show();
 			$( '.meritboxsettings .merit-box-4' ).hide();
-		} else if ( str === 4 ) {
+		} else if ( str === '4' ) {
 			$( '.meritboxsettings .merit-box-2' ).show();
 			$( '.meritboxsettings .merit-box-3' ).show();
 			$( '.meritboxsettings .merit-box-4' ).show();
