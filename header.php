@@ -31,7 +31,7 @@
 				<?php
 					$tidy_default = tidy_default_array();
 					$header_text = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : $tidy_default['header_text'];
-					echo wpautop( $header_text );
+					echo $header_text;
 				?>
 			</div>
 			<div class="header-widget-area-close-btn header-widget-toggle"><span class="genericon genericon-close"></span></div>
