@@ -644,7 +644,7 @@ function optionsframework_options() {
 		'desc' => '',
 		'id' => 'header_text',
 		'std' => $tidy_default['header_text'],
-		'type' => 'text');
+		'type' => 'textarea');
 
 	// Text Input for About text
 	$options[] = array(
@@ -1624,4 +1624,9 @@ function tidy_of_sanitize_hidden_orverwride( $std, $option ) {
 		}
 	}
 	return $std;
+}
+
+add_filter( 'of_sanitize_textarea', 'tidy_of_sanitize_textarea', 20 );
+function tidy_of_sanitize_textarea( $input ) {
+	return $input;
 }
