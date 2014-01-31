@@ -1586,7 +1586,9 @@ function tidy_optionsframework_std( $option_name, $value, $val , $restore) {
 
 	$customizer_key = tidy_customizer_array();
 
-	if ( $value['id'] == 'general-header-site-title' ) {
+	if ( $value['id'] == 'restore_hidden' ) {
+		$val = 0;
+	} elseif ( $value['id'] == 'general-header-site-title' ) {
 		$val = get_bloginfo( 'name' );
 	} elseif ( $value['id'] == 'general-header-site-tagline' ) {
 		$val = get_bloginfo( 'description' );
@@ -1617,16 +1619,10 @@ function tidy_favicon() {
 add_filter( 'of_sanitize_text', 'tidy_of_sanitize_hidden_orverwride', 10, 2);
 function tidy_of_sanitize_hidden_orverwride( $std, $option ) {
 	if ( $option['id'] == 'restore_hidden' ) {
+		$std = 0;
 		if ( isset( $_POST['reset'] ) ) {
 			$std = 1;
-		} else {
-			$std = 0;
 		}
 	}
 	return $std;
-}
-
-add_filter( 'of_sanitize_textarea', 'tidy_of_sanitize_textarea', 20 );
-function tidy_of_sanitize_textarea( $input ) {
-	return $input;
 }
