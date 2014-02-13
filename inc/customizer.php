@@ -17,7 +17,7 @@ function tidy_sns_array() {
 		'Pinterest'      => array( 'pinterest', 'http://www.pinterest.com/' ),
 		'Flickr'         => array( 'flickr', 'http://www.flickr.com/' ),
 		'Linkedin'       => array( 'linkedin', 'https://linkedin.com/' ),
-		'Google+'        => array( 'google-plus', 'https://plus.google.com/‎' ),
+		'Google+'        => array( 'google-plus', 'https://plus.google.com/' ),
 		'Tumblr'         => array( 'tumblr', 'https://www.tumblr.com/' ),
 		'Instagram'      => array( 'instagram', 'http://instagram.com/' ),
 		'YouTube'        => array( 'youtube', 'http://www.youtube.com/' ),
@@ -690,8 +690,8 @@ function tidy_customize_setup( $wp_customize ) {
 add_action( 'customize_register', 'tidy_customize_setup' );
 
 /**
- * Preview Style
- */
+ * Preview Style
+ */
 add_action( 'wp_head', 'tidy_customize_style' );
 function tidy_customize_style() {
 	$options = get_theme_mods();
