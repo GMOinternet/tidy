@@ -145,7 +145,7 @@ function tidy_scripts() {
 	);
 
 	wp_enqueue_style(
-		'genericons',
+		'tidy-genericons',
 		get_template_directory_uri() . '/genericons/genericons.min.css',
 		array(),
 		'3.0.2'
@@ -183,7 +183,7 @@ function tidy_scripts() {
 	wp_enqueue_style(
 		'tidy-style',
 		get_stylesheet_uri(),
-		array( 'google-fonts', 'genericons', 'iconmoon-tidy' ),
+		array( 'google-fonts', 'tidy-genericons', 'iconmoon-tidy' ),
 		$tidy_version
 	);
 
