@@ -51,8 +51,10 @@ function tidy_sns_array() {
  */
 function tidy_default_array() {
 	$tidy_default = array(
-		'logo_image' => get_template_directory_uri() . '/images/logo-sample.png',
-		'header_text' => __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' ),
+		// 'logo_image' => get_template_directory_uri() . '/images/logo-sample.png',
+		'logo_image' => '',
+		// 'header_text' => __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' ),
+		'header_text' => '',
 		'copyright' => '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.',
 		
 		'header_bg_color'     => '#E3E6EA',
