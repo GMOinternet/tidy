@@ -413,7 +413,7 @@ function optionsframework_options() {
 		'insert-template' => _x( 'Insert Template', 'Icon name', 'tidy' ),
 		'pilcrow' => _x( 'Pilcrow', 'Icon name', 'tidy' ),
 		'left-toright' => _x( 'Left Toright', 'Icon name', 'tidy' ),
-		'right-Toleft' => _x( 'Right Toleft', 'Icon name', 'tidy' ),
+		'right-toleft' => _x( 'Right Toleft', 'Icon name', 'tidy' ),
 		'paragraph-left' => _x( 'Paragraph Left', 'Icon name', 'tidy' ),
 		'paragraph-center' => _x( 'Paragraph Center', 'Icon name', 'tidy' ),
 		'paragraph-right' => _x( 'Paragraph Right', 'Icon name', 'tidy' ),
@@ -525,10 +525,10 @@ function optionsframework_options() {
 		'css3' => _x( 'Css3', 'Icon name', 'tidy' ),
 		'chrome' => _x( 'Chrome', 'Icon name', 'tidy' ),
 		'firefox' => _x( 'Firefox', 'Icon name', 'tidy' ),
-		'ie' => _x( 'Ie', 'Icon name', 'tidy' ),
+		'IE' => _x( 'IE', 'Icon name', 'tidy' ),
 		'opera' => _x( 'Opera', 'Icon name', 'tidy' ),
 		'safari' => _x( 'Safari', 'Icon name', 'tidy' ),
-		'icomoon' => _x( 'Icomoon', 'Icon name', 'tidy' )
+		'IcoMoon' => _x( 'Icomoon', 'Icon name', 'tidy' )
 	);
 
 	// posts_per_page
