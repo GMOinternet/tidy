@@ -941,6 +941,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for footer all categories text color.
+/*
 	$options[] = array(
 		'name' => __('All categories text color', 'tidy'),
 		'desc' => '',
@@ -948,6 +949,7 @@ function optionsframework_options() {
 		'std' => $tidy_default['footer_category_text_color'],
 		'class' => 'customcolor',
 		'type' => 'color' );
+*/
 
 	// = Color Picker for footer all categories anchor color.
 	$options[] = array(

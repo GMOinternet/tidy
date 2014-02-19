@@ -636,6 +636,7 @@ function tidy_customize_setup( $wp_customize ) {
 	)));
 
 	// = Color Picker for footer all categories text color.
+/*
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_text_color' ) , array(
 		'default'           => $tidy_default['footer_category_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -648,6 +649,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'priority'   => 23,
 		'settings'   => get_tiry_option_name( 'footer_category_text_color' )	,
 	)));
+*/
 
 	// = Color Picker for footer all categories anchor color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_anchor_color' ) , array(
