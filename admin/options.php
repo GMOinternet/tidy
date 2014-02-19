@@ -1558,7 +1558,7 @@ function optionsframework_options() {
 				'desc' => sprintf( __('You\'re %s address.', 'tidy'), $key ),
 				'id' => $val[0],
 				'account' => $val[1],
-				'toggle' => 1,
+				'toggle' => 0,
 				'type' => 'sns');
 		}
 	}
