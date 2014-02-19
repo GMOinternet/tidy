@@ -15,6 +15,8 @@
 
 	if ( headerWidgetToggle ) {
 		$( headerWidgetClass ).hide();
+	} else {
+		$( headerWidgetClass ).show();
 	}
 
 	$( headerWidgetBtn ).click( function(){

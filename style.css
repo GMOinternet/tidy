@@ -578,6 +578,7 @@ a:hover, a:focus, a:active {
 .site-header-widget-area {
   background-color: #cdd0d4;
   padding: 10px 0;
+  display: none;
 }
 .site-header-widget-area .inner {
   position: relative;

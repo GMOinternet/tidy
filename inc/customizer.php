@@ -107,6 +107,7 @@ function tidy_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'logo_toggle' )->transport     = 'postMessage';
 	$wp_customize->get_setting( 'logo_image' )->transport      = 'postMessage';
 	$wp_customize->get_setting( 'copyright' )->transport       = 'postMessage';
+	$wp_customize->get_setting( 'header_text_toggle' )->transport     = 'postMessage';
 	$wp_customize->get_setting( 'header_text' )->transport     = 'postMessage';
 
 }
@@ -142,6 +143,24 @@ function tidy_customize_setup( $wp_customize ) {
 	 * section for title_tagline.
 	 */
 
+	// = header toggle.
+	$wp_customize->add_setting( get_tiry_option_name( 'header_text_toggle' ), array(
+		'default'    => '1',
+		'type'       => 'option',
+		'capability' => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, get_tiry_option_name( 'header_text_toggle' ), array(
+		'label'      => __( 'Show Header text', 'tidy' ),
+		'section'    => 'title_tagline',
+		'priority'   => 11,
+		'settings'   => get_tiry_option_name( 'header_text_toggle' ),
+		'type'       => 'radio',
+		'choices'    => array(
+			'1' => __( 'On', 'tidy' ),
+			'0' => __( 'Off', 'tidy' )
+		),
+	) ) );
+
 	// = Text Input for Header text
 	$wp_customize->add_setting( get_tiry_option_name( 'header_text' ), array(
 		'default'    => $tidy_default['header_text'],
@@ -151,7 +170,7 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( get_tiry_option_name( 'header_text' ), array(
 		'label'      => __( 'Header text', 'tidy' ),
 		'section'    => 'title_tagline',
-		'priority'   => 11,
+		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'header_text' ),
 	));
 
@@ -164,7 +183,7 @@ function tidy_customize_setup( $wp_customize ) {
 	$wp_customize->add_control( get_tiry_option_name( 'copyright' ), array(
 		'label'      => __( 'Copyright', 'tidy' ),
 		'section'    => 'title_tagline',
-		'priority'   => 12,
+		'priority'   => 13,
 		'settings'   => get_tiry_option_name( 'copyright' ),
 	));
 
@@ -697,6 +716,7 @@ function tidy_customize_style() {
 	$options = get_theme_mods();
 	?>
 	<style type="text/css" id="tidy_customize_style">
+	
 		<?php if ( !empty( $options['main_bg_color'] ) ) : ?>
 		.site-content, .blog-section-content .hentry .ellipsis, .blog-section-content .hentry .more-link {
 			background-color: <?php echo esc_attr( $options['main_bg_color'] ); ?>;

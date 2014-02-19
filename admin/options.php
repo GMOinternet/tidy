@@ -8,6 +8,7 @@ function tidy_customizer_array() {
 	$customizer_key = array(
 		'logo_toggle',
 		'logo_image',
+		'header_text_toggle',
 		'header_text',
 		'copyright',
 		'favicon',
@@ -637,6 +638,14 @@ function optionsframework_options() {
 		'id' => 'general-header-site-tagline',
 		'std' => get_bloginfo( 'description' ),
 		'type' => 'text');
+
+	// Header text toggle
+	$options[] = array(
+		'name' => __( 'Show Header text', 'tidy' ),
+		'desc' => '',
+		'id' => 'header_text_toggle',
+		'std' => '1',
+		'type' => 'toggle');
 
 	// Text Input for Header text
 	$options[] = array(
