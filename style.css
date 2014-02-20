@@ -1389,6 +1389,10 @@ li.pagination-icon a {
 .page-content .gallery {
   margin-bottom: 30px;
 }
+.entry-content .gallery-caption,
+.page-content .gallery-caption {
+  font-size: 0.85714em;
+}
 .entry-content .gallery a img,
 .page-content .gallery a img {
   border: none;
