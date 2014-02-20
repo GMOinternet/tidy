@@ -8,6 +8,12 @@
 
 (function($){
 
+	// site-header
+	if ( ($("body").has("#gmo-show-time .right-photo-left").length) || ($("body").has("#gmo-show-time .left-photo-right").length)) {
+		$("#masthead").css("padding-bottom","30px");
+		$("#gmo-show-time").css("top","-30px");
+	}
+
 	// site-header-widget-area
 	var headerWidgetToggle = $.cookie( 'tidy-header-widget-toggle' );
 	var headerWidgetClass  = '#site-header-widget';
