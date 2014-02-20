@@ -9,9 +9,11 @@
 (function($){
 
 	// site-header
-	if ( ($("body").has("#gmo-show-time .right-photo-left").length) || ($("body").has("#gmo-show-time .left-photo-right").length)) {
-		$("#masthead").css("padding-bottom","30px");
-		$("#gmo-show-time").css("top","-30px");
+	if ($(window).width() > 600) {
+		if ( ($("body").has("#gmo-show-time .right-photo-left").length) || ($("body").has("#gmo-show-time .left-photo-right").length)) {
+			$("#masthead").css("padding-bottom","30px");
+			$("#gmo-show-time").css("top","-30px");
+		}
 	}
 
 	// site-header-widget-area
