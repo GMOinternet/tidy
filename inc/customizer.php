@@ -66,6 +66,7 @@ function tidy_default_array() {
 		'header_widget_text_color'   => '#1C1C1C',
 		'header_widget_anchor_color' => '#0058AE',
 
+		'background_color'       => '#FFFFFF',
 		'main_bg_color'       => '#FFFFFF',
 		'main_text_color'     => '#1C1C1C',
 		'main_anchor_color'   => '#0058AE',

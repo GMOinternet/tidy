@@ -19,6 +19,7 @@ function tidy_customizer_array() {
 		'header_widget_bg_color',
 		'header_widget_text_color',
 		'header_widget_anchor_color',
+		'background_color',
 		'main_bg_color',
 		'main_text_color',
 		'main_anchor_color',
@@ -751,6 +752,15 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __( 'Main color settings', 'tidy' ),
 		'type' => 'info');
+
+	// = Color Picker for body background color.
+	$options[] = array(
+		'name' => __( 'Body background color', 'tidy' ),
+		'desc' => '',
+		'id' => 'background_color',
+		'std' => $tidy_default['background_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
 
 	// = Color Picker for main background color.
 	$options[] = array(
