@@ -37,7 +37,7 @@ get_header(); ?>
 				?>
 
 				<header class="section-header">
-					<h1 class="section-title"><span class="icon-<?php echo esc_attr( $blogicon ); ?>"></span> <?php echo esc_html( $blogtitle ); ?></h1>
+					<h1 class="section-title"><a href="<?php echo add_query_arg( 'post_format','standard');?>"><span class="icon-<?php echo esc_attr( $blogicon ); ?>"></span> <?php echo esc_html( $blogtitle ); ?></a></h1>
 				</header>
 
 				<?php if ( have_posts() ) : ?>

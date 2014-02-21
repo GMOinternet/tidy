@@ -115,6 +115,33 @@ function tidy_modify_main_query( $query ) {
 
 
 }
+
+add_action('pre_get_posts', 'tidy_query_format_standard');
+function tidy_query_format_standard($query) {
+	if (isset($query->query_vars['post_format']) && $query->query_vars['post_format'] == 'post-format-standard') {
+		if (($post_formats = get_theme_support('post-formats')) && is_array($post_formats[0]) && count($post_formats[0])) {
+			$terms = array();
+			foreach ($post_formats[0] as $format) {
+				$terms[] = 'post-format-'.$format;
+			}
+			$query->is_tax = null;
+			unset($query->query_vars['post_format']);
+			unset($query->query_vars['taxonomy']);
+			unset($query->query_vars['term']);
+			unset($query->query['post_format']);
+			$query->set('tax_query', array(
+				'relation' => 'AND',
+				array(
+				'taxonomy' => 'post_format',
+				'terms' => $terms,
+				'field' => 'slug',
+				'operator' => 'NOT IN'
+				)
+			));
+		}
+	}
+}
+
 /**
  * add action showtime.
  * @param none.
