@@ -25,7 +25,10 @@ function tidy_themeoption_header_style() {
 		}
 		<?php if ( $sns_icon_border == 0 ) : ?>
 		.sns-icons a,
-		.tidy_contact_sns_icons .sns-icons a {
+		.tidy_contact_sns_icons .sns-icons a,
+		.tidy_contact_sns_icons .sns-icons a,
+		.gallery-section-content .entry-conteiner a,
+		.gmo-shares a {
 			border-style: none;
 			border-width: 0px;
 		}
