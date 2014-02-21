@@ -586,6 +586,7 @@ a:hover, a:focus, a:active {
 }
 
 .site-header-widget-area-content {
+  min-height: 20px;
   margin-right: 30px;
 }
 .site-header-widget-area-content > p {
