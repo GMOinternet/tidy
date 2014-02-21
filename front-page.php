@@ -58,7 +58,7 @@ get_header(); ?>
 			$galleryicon   = of_get_option( 'home_port_icon', 'notebook' );
 			$gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
 			$home_port_num = of_get_option( 'home_port_num', $posts_per_page );
-			$port_cont_c   = of_get_option( 'port_cont_c', '3' );
+			$port_cont_c   = of_get_option( 'homeport_cont_c', '3' );
 			$port_d = of_get_option( 'port_d', 'normal' );
 			$args = array(
 				'posts_per_page' => $home_port_num,

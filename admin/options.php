@@ -1074,6 +1074,15 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
+		'name' => __('Select Column Number', 'tidy'),
+		'desc' => '',
+		'id' => 'homeport_cont_c',
+		'std' => '3',
+		'type' => 'select',
+		'class' => 'mini',
+		'options' => $column_array);
+
+	$options[] = array(
 		'name' => __( 'Number to display', 'tidy' ),
 		'id' => 'home_port_num',
 		'std' => $posts_per_page,
