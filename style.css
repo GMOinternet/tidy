@@ -433,6 +433,7 @@ a:hover, a:focus, a:active {
 
 /* Text meant only for screen readers */
 .screen-reader-text {
+  display: none;
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
 }
