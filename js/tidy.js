@@ -136,7 +136,7 @@
 	if(ie() <= 9) {
 		var searchText = $(".search-field").attr("placeholder");
 		$(".search-field").val(searchText);
-		$(".search-field").css("color", "#999");
+		$(".search-field").css("color", "#75A5CA");
 		$(".search-field").focus(function() {
 			if($(this).val() == searchText) {
 				$(this).val("");
@@ -145,7 +145,7 @@
 		}).blur(function() {
 			if($(this).val() == "") {
 				$(this).val(searchText);
-				$(".search-field").css("color", "#999");
+				$(".search-field").css("color", "#75A5CA");
 			}
 		});
 	}
