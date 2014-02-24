@@ -833,7 +833,8 @@ function tidy_customize_style() {
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['widget_anchor_color'] ) ) : ?>
-		#secondary .widget a {
+		#secondary .widget a,
+		#secondary .search-form .search-submit {
 			color: <?php echo esc_attr( $options['widget_anchor_color'] ); ?>;
 		}
 		#secondary .search-form input[type="search"] {
