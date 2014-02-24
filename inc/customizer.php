@@ -12,34 +12,34 @@
  */
 function tidy_sns_array() {
 	$sns_array = array(
-		'Facebook'       => array( 'facebook', 'https://www.facebook.com/' ),
-		'Twitter'        => array( 'twitter', 'https://twitter.com/' ),
-		'Pinterest'      => array( 'pinterest', 'http://www.pinterest.com/' ),
-		'Flickr'         => array( 'flickr', 'http://www.flickr.com/' ),
-		'Linkedin'       => array( 'linkedin', 'https://linkedin.com/' ),
-		'Google+'        => array( 'google-plus', 'https://plus.google.com/' ),
-		'Tumblr'         => array( 'tumblr', 'https://www.tumblr.com/' ),
-		'Instagram'      => array( 'instagram', 'http://instagram.com/' ),
-		'YouTube'        => array( 'youtube', 'http://www.youtube.com/' ),
-		'Vimeo'          => array( 'vimeo', 'https://vimeo.com/' ),
-		'Lanyrd'         => array( 'lanyrd', 'http://lanyrd.com/' ),
-		'Picasa'         => array( 'picasa', 'http://picasaweb.google.com/' ),
-		'Dribbble'       => array( 'dribbble', 'http://dribbble.com/' ),
-		'Forrst'         => array( 'forrst', 'http://forrst.com/'),
-		'deviantART'     => array( 'deviantart', 'http://www.deviantart.com/'),
-		'Steam'          => array( 'steam', 'http://store.steampowered.com/'),
-		'GitHub'         => array( 'github', 'https://github.com/'),
-		'WordPress'      => array( 'wordpress', 'http://wordpress.com/'),
-		'SoundCloud'     => array( 'soundcloud', 'https://soundcloud.com/'),
-		'Skype'          => array( 'skype', 'http://www.skype.com/'),
-		'reddit'         => array( 'reddit', 'http://www.reddit.com/'),
-		'Last.fm'        => array( 'lastfm', 'http://www.last.fm/'),
-		'Delicious'      => array( 'delicious', 'https://delicious.com/'),
-		'StumbleUpon'    => array( 'stumbleupon', 'http://www.stumbleupon.com/'),
-		'Stack Overflow' => array( 'stackoverflow', 'http://stackoverflow.com/'),
-		'Flattr'         => array( 'flattr', 'http://flattr.com/'),
-		'Yelp'           => array( 'yelp', 'http://www.yelp.com/'),
-		'Foursquare'     => array( 'foursquare', 'https://foursquare.com/')
+		'Facebook'       => array( 'facebook', '' ),
+		'Twitter'        => array( 'twitter', '' ),
+		'Pinterest'      => array( 'pinterest', '' ),
+		'Flickr'         => array( 'flickr', '' ),
+		'Linkedin'       => array( 'linkedin', '' ),
+		'Google+'        => array( 'google-plus', '' ),
+		'Tumblr'         => array( 'tumblr', '' ),
+		'Instagram'      => array( 'instagram', '' ),
+		'YouTube'        => array( 'youtube', '' ),
+		'Vimeo'          => array( 'vimeo', '' ),
+		'Lanyrd'         => array( 'lanyrd', '' ),
+		'Picasa'         => array( 'picasa', '' ),
+		'Dribbble'       => array( 'dribbble', '' ),
+		'Forrst'         => array( 'forrst', ''),
+		'deviantART'     => array( 'deviantart', ''),
+		'Steam'          => array( 'steam', ''),
+		'GitHub'         => array( 'github', ''),
+		'WordPress'      => array( 'wordpress', ''),
+		'SoundCloud'     => array( 'soundcloud', ''),
+		'Skype'          => array( 'skype', ''),
+		'reddit'         => array( 'reddit', ''),
+		'Last.fm'        => array( 'lastfm', ''),
+		'Delicious'      => array( 'delicious', ''),
+		'StumbleUpon'    => array( 'stumbleupon', ''),
+		'Stack Overflow' => array( 'stackoverflow', ''),
+		'Flattr'         => array( 'flattr', ''),
+		'Yelp'           => array( 'yelp', ''),
+		'Foursquare'     => array( 'foursquare', '')
 	);
 	return $sns_array;
 }
@@ -66,7 +66,7 @@ function tidy_default_array() {
 		'header_widget_text_color'   => '#1C1C1C',
 		'header_widget_anchor_color' => '#0058AE',
 
-		'background_color'       => '#FFFFFF',
+		'background_color'    => '#FFFFFF',
 		'main_bg_color'       => '#FFFFFF',
 		'main_text_color'     => '#1C1C1C',
 		'main_anchor_color'   => '#0058AE',
@@ -721,7 +721,11 @@ function tidy_customize_style() {
 	$options = get_theme_mods();
 	?>
 	<style type="text/css" id="tidy_customize_style">
-	
+		<?php if ( !empty( $options['background_color'] ) ) : ?>
+		body.custom-background {
+			background-color: <?php echo esc_attr( $options['background_color'] ); ?>;
+		}
+		<?php endif; ?>
 		<?php if ( !empty( $options['main_bg_color'] ) ) : ?>
 		.site-content, .blog-section-content .hentry .ellipsis, .blog-section-content .hentry .more-link {
 			background-color: <?php echo esc_attr( $options['main_bg_color'] ); ?>;
