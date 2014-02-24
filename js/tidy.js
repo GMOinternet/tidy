@@ -132,4 +132,32 @@
 	});
 
 
+	// placeholder for IE 9
+	if(ie() <= 9) {
+		var searchText = $("#s").attr("placeholder");
+		$(".search-field").val(searchText);
+		$(".search-field").css("color", "#999");
+		$(".search-field").focus(function() {
+			if($(this).val() == searchText) {
+				$(this).val("");
+				$(this).css("color", "#0058AE");
+			}
+		}).blur(function() {
+			if($(this).val() == "") {
+				$(this).val(searchText);
+				$(".search-field").css("color", "#999");
+			}
+		});
+	}
+
+//IE使用バージョン取得
 })(jQuery);
+
+function ie() {
+	var undef, v = 3, div = document.createElement('div');
+	while (
+		div.innerHTML = '<!--[if gt IE '+(++v)+']><i></i><![endif]-->',
+		div.getElementsByTagName('i')[0]
+	);
+	return v > 4 ? v : undef;
+}
