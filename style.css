@@ -99,10 +99,6 @@ a:active {
 
 /* =Global
 ----------------------------------------------- */
-main {
-  display: block;
-}
-
 body,
 button,
 input,
@@ -503,6 +499,7 @@ a:hover, a:focus, a:active {
 }
 
 .site-main {
+  display: block;
   margin-top: 0;
   margin-right: 310px;
   margin-bottom: 0;
