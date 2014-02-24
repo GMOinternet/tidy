@@ -103,8 +103,8 @@
 	});
 
 	// submit btn
-	$( '.form-submit' ).css('bottom', function(index) {
-		var submitposi = $( '.form-allowed-tags' ).height() + 5;
+	$( '.comment-form' ).css('margin-bottom', function(index) {
+		var submitposi = $( '.form-allowed-tags' ).height() + 18;
 		index = index + submitposi;
 		return index;
 	});

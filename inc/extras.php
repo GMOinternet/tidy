@@ -158,10 +158,10 @@ function tidy_showtime() {
  * @return array.
 */
 function tidy_rename_post_formats( $safe_text ) {
-    if ( $safe_text == 'Gallery' )
-        return __( 'Portfolio', 'tidy' );
+	if ( $safe_text == 'Gallery' )
+		return __( 'Portfolio', 'tidy' );
 
-    return $safe_text;
+	return $safe_text;
 }
 add_filter( 'esc_html', 'tidy_rename_post_formats' );
 

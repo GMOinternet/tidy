@@ -1549,7 +1549,7 @@ li.depth-1 {
 
 .comment-form {
   color: #cdd0d4;
-  margin-bottom: 60px;
+  margin-bottom: 5em;
   position: relative;
 }
 .comment-form p {
@@ -1587,6 +1587,12 @@ li.depth-1 {
 .comment-form input[type="search"]:focus,
 .comment-form textarea:focus {
   text-indent: 0;
+}
+.comment-form textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 3em;
 }
 .comment-form .comment-form-author,
 .comment-form .comment-form-email,
@@ -1637,10 +1643,14 @@ li.depth-1 {
 .comment-form .comment-form-comment label:before {
   content: '\f300';
 }
-.comment-form .form-submit {
+.comment-form .form-allowed-tags {
   position: absolute;
-  bottom: 0;
-  right: 4%;
+}
+.comment-form .form-submit {
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
   z-index: 100;
 }
 
