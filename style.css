@@ -667,6 +667,7 @@ a:hover, a:focus, a:active {
 
 .site-branding {
   float: left;
+  width: 50%;
 }
 
 .site-title {
