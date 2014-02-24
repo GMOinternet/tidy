@@ -91,6 +91,10 @@ a:active {
 
 /* =Global
 ----------------------------------------------- */
+main {
+  display: block;
+}
+
 body,
 button,
 input,
