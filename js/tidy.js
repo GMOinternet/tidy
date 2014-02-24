@@ -134,7 +134,7 @@
 
 	// placeholder for IE 9
 	if(ie() <= 9) {
-		var searchText = $("#s").attr("placeholder");
+		var searchText = $(".search-field").attr("placeholder");
 		$(".search-field").val(searchText);
 		$(".search-field").css("color", "#999");
 		$(".search-field").focus(function() {
