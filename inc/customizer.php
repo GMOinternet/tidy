@@ -107,11 +107,13 @@ function tidy_default_array() {
 function tidy_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+/*
 	$wp_customize->get_setting( 'logo_toggle' )->transport     = 'postMessage';
 	$wp_customize->get_setting( 'logo_image' )->transport      = 'postMessage';
 	$wp_customize->get_setting( 'copyright' )->transport       = 'postMessage';
 	$wp_customize->get_setting( 'header_text_toggle' )->transport     = 'postMessage';
 	$wp_customize->get_setting( 'header_text' )->transport     = 'postMessage';
+*/
 
 }
 add_action( 'customize_register', 'tidy_customize_register' );
