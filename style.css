@@ -602,8 +602,7 @@ a:hover, a:focus, a:active {
   height: 30px;
   font-size: 10px;
   text-align: center;
-  background-color: rgba(28, 28, 28, 0.8);
-  color: #e3e6ea;
+  background-color: #cdd0d4;
   cursor: pointer;
 }
 .header-widget-toggle-btn .genericon-uparrow {
