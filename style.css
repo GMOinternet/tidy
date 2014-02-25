@@ -587,28 +587,30 @@ a:hover, a:focus, a:active {
   position: relative;
 }
 
-.site-header-widget-area-content {
-  min-height: 20px;
-  margin-right: 30px;
-}
 .site-header-widget-area-content > p {
   margin-bottom: 0;
 }
 
-.header-widget-area-close-btn {
-  width: 20px;
-  height: 20px;
+.header-widget-toggle {
+  text-align: right;
+}
+
+.header-widget-toggle-btn {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
   font-size: 10px;
   text-align: center;
   background-color: rgba(28, 28, 28, 0.8);
   color: #e3e6ea;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
-.header-widget-area-close-btn .genericon {
+.header-widget-toggle-btn .genericon-uparrow {
   margin-top: 3px;
+}
+.header-widget-toggle-btn .genericon-downarrow {
+  margin-top: 10px;
 }
 
 .site-header-social-area {

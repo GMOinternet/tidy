@@ -8,7 +8,7 @@
 
 (function($){
 
-	// site-header
+	// gmo-show-time
 	if ($(window).width() > 600) {
 		if ( ($("body").has("#gmo-show-time .right-photo-left").length) || ($("body").has("#gmo-show-time .left-photo-right").length)) {
 			$("#masthead").css("padding-bottom","30px");
@@ -18,20 +18,34 @@
 
 	// site-header-widget-area
 	var headerWidgetToggle = $.cookie( 'tidy-header-widget-toggle' );
-	var headerWidgetClass  = '#site-header-widget';
-	var headerWidgetBtn    = '.header-widget-toggle';
+	var headerWidgetOpen   = '#site-header-widget';
+	var headerWidgetBtn    = '.header-widget-toggle-btn';
 
 	if ( headerWidgetToggle ) {
-		$( headerWidgetClass ).hide();
+		$( headerWidgetOpen ).hide();
+		$('.header-widget-toggle-btn .genericon').removeClass('genericon-uparrow');
+		$('.header-widget-toggle-btn .genericon').addClass('genericon-downarrow');
 	} else {
-		$( headerWidgetClass ).show();
+		$( headerWidgetOpen ).show();
+		$('.header-widget-toggle-btn .genericon').removeClass('genericon-downarrow');
+		$('.header-widget-toggle-btn .genericon').addClass('genericon-uparrow');
 	}
 
 	$( headerWidgetBtn ).click( function(){
-		$( headerWidgetClass ).slideUp();
-		$.cookie( 'tidy-header-widget-toggle' , 'hide', {
-			path: "/"
-		});
+		headerWidgetToggle = $.cookie( 'tidy-header-widget-toggle' );
+		if ( headerWidgetToggle ) {
+			$( headerWidgetOpen ).slideDown();
+			$.removeCookie("tidy-header-widget-toggle");
+			$('.header-widget-toggle-btn .genericon').removeClass('genericon-downarrow');
+			$('.header-widget-toggle-btn .genericon').addClass('genericon-uparrow');
+		} else {
+			$( headerWidgetOpen ).slideUp();
+			$.cookie( 'tidy-header-widget-toggle' , 'hide', {
+				path: "/"
+			});
+			$('.header-widget-toggle-btn .genericon').removeClass('genericon-uparrow');
+			$('.header-widget-toggle-btn .genericon').addClass('genericon-downarrow');
+		}
 		return false;
 	} );
 

@@ -27,20 +27,20 @@
 		<?php do_action( 'tidy_before_header' ); ?>
 
 		<?php
+		$tidy_default = tidy_default_array();
+		$header_text = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : $tidy_default['header_text'];
+
 		$site_header_widget_toggle = get_theme_mod( 'header_text_toggle' );
 		$site_header_widget_toggle = ( ( $site_header_widget_toggle === false ) or ( $site_header_widget_toggle == 1 ) ) ? 1 : 0 ;
+
 		if ( $site_header_widget_toggle == 1 ) :
 		?>
-		<div class="site-header-widget-toggle"><div id="site-header-widget" class="site-header-widget-area"><div class="inner">
-			<div class="site-header-widget-area-content">
-				<?php
-					$tidy_default = tidy_default_array();
-					$header_text = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : $tidy_default['header_text'];
-					echo $header_text;
-				?>
-			</div>
-			<div class="header-widget-area-close-btn header-widget-toggle"><span class="genericon genericon-close"></span></div>
-		</div></div></div>
+		<div class="site-header-widget-toggle">
+			<div id="site-header-widget" class="site-header-widget-area"><div class="inner">
+				<div class="site-header-widget-area-content"><?php echo $header_text; ?></div>
+			</div></div>
+			<div class="header-widget-toggle"><div class="inner"><span class="header-widget-toggle-btn"><span class="genericon"></span></span></div></div>
+		</div>
 		<?php endif; ?>
 
 		<?php $view_sns_header = of_get_option('sns-location-header'); ?>
