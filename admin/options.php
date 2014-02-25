@@ -1016,12 +1016,12 @@ function optionsframework_options() {
 	
 	// tab head
 	$layouttabs = array(
-		__( 'Home Layout', 'tidy' ),
-		__( 'All Blog Layout', 'tidy' ),
-		__( 'All Portfolio Layout', 'tidy' ),
+		__( 'Home', 'tidy' ),
+		__( 'All Blog', 'tidy' ),
+		__( 'All Portfolio', 'tidy' ),
 		__( 'Archive and Search result', 'tidy' ),
-		__( 'Pages Layout', 'tidy' ),
-		__( 'Contact Layout', 'tidy' )
+		__( 'Pages', 'tidy' ),
+		__( 'Contact', 'tidy' )
 	);
 	$options[] = array(
 		'id' => 'layout-tab-head',

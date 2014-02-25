@@ -30,6 +30,8 @@
 }
 
 #optionsframework-tabs .nav-tab-wrapper {
+  position: relative;
+  z-index: 2;
   float: left;
 }
 
@@ -39,31 +41,42 @@
 
 /* =Nav
 ----------------------------------------------- */
+#optionsframework-tabs {
+  border: solid 1px #cccccc;
+}
 #optionsframework-tabs .nav-tab-wrapper {
-  border-right: solid 1px #cccccc;
-  margin-right: 4px;
-  margin-top: 10px;
+  margin-top: 0;
 }
 #optionsframework-tabs .nav-tab-wrapper li {
-  margin: 6px 0;
+  margin: 0;
 }
 #optionsframework-tabs .nav-tab-wrapper .nav-tab {
   display: block;
   font-size: 18px;
   margin: 0 -1px 0 0;
   padding: 10px 10px 12px;
-  border-bottom-width: 1px;
+  border: none;
+  border-bottom: solid 1px #cccccc;
+  border-right: solid 1px #cccccc;
 }
 #optionsframework-tabs .nav-tab-wrapper .nav-tab-active,
 #optionsframework-tabs .nav-tab-wrapper .nav-tab-active:hover {
-  border-color: #CCCCCC #F1F1F1 #CCCCCC #CCCCCC;
+  background-color: white;
+  border-right: solid 1px white;
 }
 
 /* =Main
 ----------------------------------------------- */
+#wpbody-content .metabox-holder {
+  padding: 0;
+}
+
 #optionsframework {
+  margin: 0;
   max-width: 840px;
   background: #fff;
+  border: none;
+  border-left: solid 1px #cccccc;
   /*
   	.controls {
   		.of-typography-size {
@@ -268,7 +281,7 @@
   margin-bottom: 10px;
   display: inline-block;
   vertical-align: top;
-  border-color: #DDDDDD;
+  border-color: #cccccc;
 }
 #optionsframework .of-toggle {
   display: none;
@@ -351,7 +364,7 @@
 /* =content-tab-wrapper
 ----------------------------------------------- */
 .content-tab-wrapper {
-  border-bottom: solid 1px #DDDDDD;
+  border-bottom: solid 1px #cccccc;
   text-align: center;
 }
 .content-tab-wrapper li {
@@ -360,13 +373,14 @@
 }
 .content-tab-wrapper a {
   color: #444;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   display: block;
-  border: solid 1px #DDDDDD;
+  border: solid 1px #cccccc;
   margin-bottom: -1px;
-  padding: 5px 2px;
-  background-color: #F1F1F1;
+  padding: 5px 8px;
+  background-color: #E4E4E4;
 }
 .content-tab-wrapper a.nav-tab-active {
   border-bottom-color: #fff;
