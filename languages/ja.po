@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tidy 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tidy\n"
-"POT-Creation-Date: 2014-01-28 09:09:08+00:00\n"
+"POT-Creation-Date: 2014-02-25 10:03:50+00:00\n"
 "PO-Revision-Date: 2013-04-08 16:45+0900\n"
 "Last-Translator: Kazue Igarashi <igarashi@digitalcube.jp>\n"
 "Language-Team: GMO\n"
@@ -24,50 +24,52 @@ msgid ""
 "changed, or is temporarily unavailable."
 msgstr ""
 
-#: admin/includes/class-options-framework-admin.php:92
-#: admin/includes/class-options-framework-admin.php:403
+#: admin/includes/class-options-framework-admin.php:91
+#: admin/includes/class-options-framework-admin.php:410
 msgid "Theme Options"
 msgstr "テーマオプション"
 
-#: admin/includes/class-options-framework-admin.php:247
+#: admin/includes/class-options-framework-admin.php:253
 msgid "Save Changes"
 msgstr "変更を保存"
 
-#: admin/includes/class-options-framework-admin.php:248
+#: admin/includes/class-options-framework-admin.php:254
 msgid "Restore Defaults"
 msgstr "デフォルトに復元"
 
-#: admin/includes/class-options-framework-admin.php:248
+#: admin/includes/class-options-framework-admin.php:254
 msgid "Click OK to reset. Any theme settings will be lost!"
 msgstr "リセットするには、[OK]をクリックします。テーマの設定は失われます！"
 
-#: admin/includes/class-options-framework-admin.php:282
+#: admin/includes/class-options-framework-admin.php:288
 msgid "Default options restored."
 msgstr "デフォルトの設定に復元しました。"
 
-#: admin/includes/class-options-framework-admin.php:335
+#: admin/includes/class-options-framework-admin.php:341
 msgid "Options saved."
 msgstr "設定を保存しました。"
 
-#: admin/includes/class-options-framework-admin.php:385
+#: admin/includes/class-options-framework-admin.php:392
 msgid "WP Shop"
 msgstr "WP Shop"
 
-#: admin/includes/class-options-interface.php:391
-#: admin/includes/class-options-interface.php:402 inc/customizer.php:192
+#: admin/includes/class-options-interface.php:392
+#: admin/includes/class-options-interface.php:403 inc/customizer.php:164
+#: inc/customizer.php:216
 msgid "On"
 msgstr "On"
 
-#: admin/includes/class-options-interface.php:392
-#: admin/includes/class-options-interface.php:403 inc/customizer.php:193
+#: admin/includes/class-options-interface.php:393
+#: admin/includes/class-options-interface.php:404 inc/customizer.php:165
+#: inc/customizer.php:217
 msgid "Off"
 msgstr "Off"
 
-#: admin/includes/class-options-interface.php:498
+#: admin/includes/class-options-interface.php:499
 msgid "<strong>RSS Error</strong>: %s"
 msgstr "<strong>RSS エラー</strong>: %s"
 
-#: admin/includes/class-options-interface.php:502
+#: admin/includes/class-options-interface.php:503
 msgid "Apparently, there are no updates to show!"
 msgstr "変更内容はありません。"
 
@@ -169,2270 +171,2270 @@ msgstr ""
 msgid "Bold Italic"
 msgstr ""
 
-#: admin/options.php:80
+#: admin/options.php:82
 msgctxt "Icon name"
 msgid "Home"
 msgstr ""
 
-#: admin/options.php:81
+#: admin/options.php:83
 msgctxt "Icon name"
 msgid "Home2"
 msgstr ""
 
-#: admin/options.php:82
+#: admin/options.php:84
 msgctxt "Icon name"
 msgid "Home3"
 msgstr ""
 
-#: admin/options.php:83
+#: admin/options.php:85
 msgctxt "Icon name"
 msgid "Office"
 msgstr ""
 
-#: admin/options.php:84
+#: admin/options.php:86
 msgctxt "Icon name"
 msgid "Newspaper"
 msgstr ""
 
-#: admin/options.php:85
+#: admin/options.php:87
 msgctxt "Icon name"
 msgid "Pencil"
 msgstr ""
 
-#: admin/options.php:86
+#: admin/options.php:88
 msgctxt "Icon name"
 msgid "Pencil2"
 msgstr ""
 
-#: admin/options.php:87
+#: admin/options.php:89
 msgctxt "Icon name"
 msgid "Quill"
 msgstr ""
 
-#: admin/options.php:88
+#: admin/options.php:90
 msgctxt "Icon name"
 msgid "Pen"
 msgstr ""
 
-#: admin/options.php:89
+#: admin/options.php:91
 msgctxt "Icon name"
 msgid "Blog"
 msgstr ""
 
-#: admin/options.php:90
+#: admin/options.php:92
 msgctxt "Icon name"
 msgid "Droplet"
 msgstr ""
 
-#: admin/options.php:91
+#: admin/options.php:93
 msgctxt "Icon name"
 msgid "Paint Format"
 msgstr ""
 
-#: admin/options.php:92
+#: admin/options.php:94
 msgctxt "Icon name"
 msgid "Image"
 msgstr ""
 
-#: admin/options.php:93
+#: admin/options.php:95
 msgctxt "Icon name"
 msgid "Image2"
 msgstr ""
 
-#: admin/options.php:94
+#: admin/options.php:96
 msgctxt "Icon name"
 msgid "Images"
 msgstr ""
 
-#: admin/options.php:95
+#: admin/options.php:97
 msgctxt "Icon name"
 msgid "Camera"
 msgstr ""
 
-#: admin/options.php:96
+#: admin/options.php:98
 msgctxt "Icon name"
 msgid "Music"
 msgstr ""
 
-#: admin/options.php:97
+#: admin/options.php:99
 msgctxt "Icon name"
 msgid "Headphones"
 msgstr ""
 
-#: admin/options.php:98
+#: admin/options.php:100
 msgctxt "Icon name"
 msgid "Play"
 msgstr ""
 
-#: admin/options.php:99
+#: admin/options.php:101
 msgctxt "Icon name"
 msgid "Film"
 msgstr ""
 
-#: admin/options.php:100
+#: admin/options.php:102
 msgctxt "Icon name"
 msgid "Camera2"
 msgstr ""
 
-#: admin/options.php:101
+#: admin/options.php:103
 msgctxt "Icon name"
 msgid "Dice"
 msgstr ""
 
-#: admin/options.php:102
+#: admin/options.php:104
 msgctxt "Icon name"
 msgid "Pacman"
 msgstr ""
 
-#: admin/options.php:103
+#: admin/options.php:105
 msgctxt "Icon name"
 msgid "Spades"
 msgstr ""
 
-#: admin/options.php:104
+#: admin/options.php:106
 msgctxt "Icon name"
 msgid "Clubs"
 msgstr ""
 
-#: admin/options.php:105
+#: admin/options.php:107
 msgctxt "Icon name"
 msgid "Diamonds"
 msgstr ""
 
-#: admin/options.php:106
+#: admin/options.php:108
 msgctxt "Icon name"
 msgid "Pawn"
 msgstr ""
 
-#: admin/options.php:107
+#: admin/options.php:109
 msgctxt "Icon name"
 msgid "Bullhorn"
 msgstr ""
 
-#: admin/options.php:108
+#: admin/options.php:110
 msgctxt "Icon name"
 msgid "Connection"
 msgstr ""
 
-#: admin/options.php:109
+#: admin/options.php:111
 msgctxt "Icon name"
 msgid "Podcast"
 msgstr ""
 
-#: admin/options.php:110
+#: admin/options.php:112
 msgctxt "Icon name"
 msgid "Feed"
 msgstr ""
 
-#: admin/options.php:111
+#: admin/options.php:113
 msgctxt "Icon name"
 msgid "Book"
 msgstr ""
 
-#: admin/options.php:112
+#: admin/options.php:114
 msgctxt "Icon name"
 msgid "Books"
 msgstr ""
 
-#: admin/options.php:113
+#: admin/options.php:115
 msgctxt "Icon name"
 msgid "Library"
 msgstr ""
 
-#: admin/options.php:114
+#: admin/options.php:116
 msgctxt "Icon name"
 msgid "File"
 msgstr ""
 
-#: admin/options.php:115
+#: admin/options.php:117
 msgctxt "Icon name"
 msgid "Profile"
 msgstr ""
 
-#: admin/options.php:116
+#: admin/options.php:118
 msgctxt "Icon name"
 msgid "File2"
 msgstr ""
 
-#: admin/options.php:117
+#: admin/options.php:119
 msgctxt "Icon name"
 msgid "File3"
 msgstr ""
 
-#: admin/options.php:118
+#: admin/options.php:120
 msgctxt "Icon name"
 msgid "File4"
 msgstr ""
 
-#: admin/options.php:119
+#: admin/options.php:121
 msgctxt "Icon name"
 msgid "Copy"
 msgstr ""
 
-#: admin/options.php:120
+#: admin/options.php:122
 msgctxt "Icon name"
 msgid "Copy2"
 msgstr ""
 
-#: admin/options.php:121
+#: admin/options.php:123
 msgctxt "Icon name"
 msgid "Copy3"
 msgstr ""
 
-#: admin/options.php:122
+#: admin/options.php:124
 msgctxt "Icon name"
 msgid "Paste"
 msgstr ""
 
-#: admin/options.php:123
+#: admin/options.php:125
 msgctxt "Icon name"
 msgid "Paste2"
 msgstr ""
 
-#: admin/options.php:124
+#: admin/options.php:126
 msgctxt "Icon name"
 msgid "Paste3"
 msgstr ""
 
-#: admin/options.php:125
+#: admin/options.php:127
 msgctxt "Icon name"
 msgid "Stack"
 msgstr ""
 
-#: admin/options.php:126
+#: admin/options.php:128
 msgctxt "Icon name"
 msgid "Folder"
 msgstr ""
 
-#: admin/options.php:127
+#: admin/options.php:129
 msgctxt "Icon name"
 msgid "Folder Open"
 msgstr ""
 
-#: admin/options.php:128
+#: admin/options.php:130
 msgctxt "Icon name"
 msgid "Tag"
 msgstr ""
 
-#: admin/options.php:129
+#: admin/options.php:131
 msgctxt "Icon name"
 msgid "Tags"
 msgstr ""
 
-#: admin/options.php:130
+#: admin/options.php:132
 msgctxt "Icon name"
 msgid "Barcode"
 msgstr ""
 
-#: admin/options.php:131
+#: admin/options.php:133
 msgctxt "Icon name"
 msgid "Qrcode"
 msgstr ""
 
-#: admin/options.php:132
+#: admin/options.php:134
 msgctxt "Icon name"
 msgid "Ticket"
 msgstr ""
 
-#: admin/options.php:133
+#: admin/options.php:135
 msgctxt "Icon name"
 msgid "Cart"
 msgstr ""
 
-#: admin/options.php:134
+#: admin/options.php:136
 msgctxt "Icon name"
 msgid "Cart2"
 msgstr ""
 
-#: admin/options.php:135
+#: admin/options.php:137
 msgctxt "Icon name"
 msgid "Cart3"
 msgstr ""
 
-#: admin/options.php:136
+#: admin/options.php:138
 msgctxt "Icon name"
 msgid "Coin"
 msgstr ""
 
-#: admin/options.php:137
+#: admin/options.php:139
 msgctxt "Icon name"
 msgid "Credit"
 msgstr ""
 
-#: admin/options.php:138
+#: admin/options.php:140
 msgctxt "Icon name"
 msgid "Calculate"
 msgstr ""
 
-#: admin/options.php:139
+#: admin/options.php:141
 msgctxt "Icon name"
 msgid "Support"
 msgstr ""
 
-#: admin/options.php:140
+#: admin/options.php:142
 msgctxt "Icon name"
 msgid "Phone"
 msgstr ""
 
-#: admin/options.php:141
+#: admin/options.php:143
 msgctxt "Icon name"
 msgid "Phone Hang Up"
 msgstr ""
 
-#: admin/options.php:142
+#: admin/options.php:144
 msgctxt "Icon name"
 msgid "Address Book"
 msgstr ""
 
-#: admin/options.php:143
+#: admin/options.php:145
 msgctxt "Icon name"
 msgid "Notebook"
 msgstr ""
 
-#: admin/options.php:144
+#: admin/options.php:146
 msgctxt "Icon name"
 msgid "Envelope"
 msgstr ""
 
-#: admin/options.php:145
+#: admin/options.php:147
 msgctxt "Icon name"
 msgid "Pushpin"
 msgstr ""
 
-#: admin/options.php:146
+#: admin/options.php:148
 msgctxt "Icon name"
 msgid "Location"
 msgstr ""
 
-#: admin/options.php:147
+#: admin/options.php:149
 msgctxt "Icon name"
 msgid "Location2"
 msgstr ""
 
-#: admin/options.php:148
+#: admin/options.php:150
 msgctxt "Icon name"
 msgid "Compass"
 msgstr ""
 
-#: admin/options.php:149
+#: admin/options.php:151
 msgctxt "Icon name"
 msgid "Map"
 msgstr ""
 
-#: admin/options.php:150
+#: admin/options.php:152
 msgctxt "Icon name"
 msgid "Map2"
 msgstr ""
 
-#: admin/options.php:151
+#: admin/options.php:153
 msgctxt "Icon name"
 msgid "History"
 msgstr ""
 
-#: admin/options.php:152
+#: admin/options.php:154
 msgctxt "Icon name"
 msgid "Clock"
 msgstr ""
 
-#: admin/options.php:153
+#: admin/options.php:155
 msgctxt "Icon name"
 msgid "Clock2"
 msgstr ""
 
-#: admin/options.php:154
+#: admin/options.php:156
 msgctxt "Icon name"
 msgid "Alarm"
 msgstr ""
 
-#: admin/options.php:155
+#: admin/options.php:157
 msgctxt "Icon name"
 msgid "Alarm2"
 msgstr ""
 
-#: admin/options.php:156
+#: admin/options.php:158
 msgctxt "Icon name"
 msgid "Bell"
 msgstr ""
 
-#: admin/options.php:157
+#: admin/options.php:159
 msgctxt "Icon name"
 msgid "Stopwatch"
 msgstr ""
 
-#: admin/options.php:158
+#: admin/options.php:160
 msgctxt "Icon name"
 msgid "Calendar"
 msgstr ""
 
-#: admin/options.php:159
+#: admin/options.php:161
 msgctxt "Icon name"
 msgid "Calendar2"
 msgstr ""
 
-#: admin/options.php:160
+#: admin/options.php:162
 msgctxt "Icon name"
 msgid "Print"
 msgstr ""
 
-#: admin/options.php:161
+#: admin/options.php:163
 msgctxt "Icon name"
 msgid "Keyboard"
 msgstr ""
 
-#: admin/options.php:162
+#: admin/options.php:164
 msgctxt "Icon name"
 msgid "Screen"
 msgstr ""
 
-#: admin/options.php:163
+#: admin/options.php:165
 msgctxt "Icon name"
 msgid "Laptop"
 msgstr ""
 
-#: admin/options.php:164
+#: admin/options.php:166
 msgctxt "Icon name"
 msgid "Mobile"
 msgstr ""
 
-#: admin/options.php:165
+#: admin/options.php:167
 msgctxt "Icon name"
 msgid "Mobile2"
 msgstr ""
 
-#: admin/options.php:166
+#: admin/options.php:168
 msgctxt "Icon name"
 msgid "Tablet"
 msgstr ""
 
-#: admin/options.php:167
+#: admin/options.php:169
 msgctxt "Icon name"
 msgid "Tv"
 msgstr ""
 
-#: admin/options.php:168
+#: admin/options.php:170
 msgctxt "Icon name"
 msgid "Cabinet"
 msgstr ""
 
-#: admin/options.php:169
+#: admin/options.php:171
 msgctxt "Icon name"
 msgid "Drawer"
 msgstr ""
 
-#: admin/options.php:170
+#: admin/options.php:172
 msgctxt "Icon name"
 msgid "Drawer2"
 msgstr ""
 
-#: admin/options.php:171
+#: admin/options.php:173
 msgctxt "Icon name"
 msgid "Drawer3"
 msgstr ""
 
-#: admin/options.php:172
+#: admin/options.php:174
 msgctxt "Icon name"
 msgid "Box Add"
 msgstr ""
 
-#: admin/options.php:173
+#: admin/options.php:175
 msgctxt "Icon name"
 msgid "Box Remove"
 msgstr ""
 
-#: admin/options.php:174
+#: admin/options.php:176
 msgctxt "Icon name"
 msgid "Download"
 msgstr ""
 
-#: admin/options.php:175
+#: admin/options.php:177
 msgctxt "Icon name"
 msgid "Upload"
 msgstr ""
 
-#: admin/options.php:176
+#: admin/options.php:178
 msgctxt "Icon name"
 msgid "Disk"
 msgstr ""
 
-#: admin/options.php:177
+#: admin/options.php:179
 msgctxt "Icon name"
 msgid "Storage"
 msgstr ""
 
-#: admin/options.php:178
+#: admin/options.php:180
 msgctxt "Icon name"
 msgid "Undo"
 msgstr ""
 
-#: admin/options.php:179
+#: admin/options.php:181
 msgctxt "Icon name"
 msgid "Redo"
 msgstr ""
 
-#: admin/options.php:180
+#: admin/options.php:182
 msgctxt "Icon name"
 msgid "Flip"
 msgstr ""
 
-#: admin/options.php:181
+#: admin/options.php:183
 msgctxt "Icon name"
 msgid "Flip2"
 msgstr ""
 
-#: admin/options.php:182
+#: admin/options.php:184
 msgctxt "Icon name"
 msgid "Undo2"
 msgstr ""
 
-#: admin/options.php:183
+#: admin/options.php:185
 msgctxt "Icon name"
 msgid "Redo2"
 msgstr ""
 
-#: admin/options.php:184
+#: admin/options.php:186
 msgctxt "Icon name"
 msgid "Forward"
 msgstr ""
 
-#: admin/options.php:185
+#: admin/options.php:187
 msgctxt "Icon name"
 msgid "Reply"
 msgstr ""
 
-#: admin/options.php:186
+#: admin/options.php:188
 msgctxt "Icon name"
 msgid "Bubble"
 msgstr ""
 
-#: admin/options.php:187
+#: admin/options.php:189
 msgctxt "Icon name"
 msgid "Bubbles"
 msgstr ""
 
-#: admin/options.php:188
+#: admin/options.php:190
 msgctxt "Icon name"
 msgid "Bubbles2"
 msgstr ""
 
-#: admin/options.php:189
+#: admin/options.php:191
 msgctxt "Icon name"
 msgid "Bubble2"
 msgstr ""
 
-#: admin/options.php:190
+#: admin/options.php:192
 msgctxt "Icon name"
 msgid "Bubbles3"
 msgstr ""
 
-#: admin/options.php:191
+#: admin/options.php:193
 msgctxt "Icon name"
 msgid "Bubbles4"
 msgstr ""
 
-#: admin/options.php:192
+#: admin/options.php:194
 msgctxt "Icon name"
 msgid "User"
 msgstr ""
 
-#: admin/options.php:193
+#: admin/options.php:195
 msgctxt "Icon name"
 msgid "Users"
 msgstr ""
 
-#: admin/options.php:194
+#: admin/options.php:196
 msgctxt "Icon name"
 msgid "User2"
 msgstr ""
 
-#: admin/options.php:195
+#: admin/options.php:197
 msgctxt "Icon name"
 msgid "Users2"
 msgstr ""
 
-#: admin/options.php:196
+#: admin/options.php:198
 msgctxt "Icon name"
 msgid "User3"
 msgstr ""
 
-#: admin/options.php:197
+#: admin/options.php:199
 msgctxt "Icon name"
 msgid "User4"
 msgstr ""
 
-#: admin/options.php:198
+#: admin/options.php:200
 msgctxt "Icon name"
 msgid "Quotes Left"
 msgstr ""
 
-#: admin/options.php:199
+#: admin/options.php:201
 msgctxt "Icon name"
 msgid "Busy"
 msgstr ""
 
-#: admin/options.php:200
+#: admin/options.php:202
 msgctxt "Icon name"
 msgid "Spinner"
 msgstr ""
 
-#: admin/options.php:201
+#: admin/options.php:203
 msgctxt "Icon name"
 msgid "Spinner2"
 msgstr ""
 
-#: admin/options.php:202
+#: admin/options.php:204
 msgctxt "Icon name"
 msgid "Spinner3"
 msgstr ""
 
-#: admin/options.php:203
+#: admin/options.php:205
 msgctxt "Icon name"
 msgid "Spinner4"
 msgstr ""
 
-#: admin/options.php:204
+#: admin/options.php:206
 msgctxt "Icon name"
 msgid "Spinner5"
 msgstr ""
 
-#: admin/options.php:205
+#: admin/options.php:207
 msgctxt "Icon name"
 msgid "Spinner6"
 msgstr ""
 
-#: admin/options.php:206
+#: admin/options.php:208
 msgctxt "Icon name"
 msgid "Binoculars"
 msgstr ""
 
-#: admin/options.php:207
+#: admin/options.php:209
 msgctxt "Icon name"
 msgid "Search"
 msgstr ""
 
-#: admin/options.php:208
+#: admin/options.php:210
 msgctxt "Icon name"
 msgid "Zoom In"
 msgstr ""
 
-#: admin/options.php:209
+#: admin/options.php:211
 msgctxt "Icon name"
 msgid "Zoom Out"
 msgstr ""
 
-#: admin/options.php:210
+#: admin/options.php:212
 msgctxt "Icon name"
 msgid "Expand"
 msgstr ""
 
-#: admin/options.php:211
+#: admin/options.php:213
 msgctxt "Icon name"
 msgid "Contract"
 msgstr ""
 
-#: admin/options.php:212
+#: admin/options.php:214
 msgctxt "Icon name"
 msgid "Expand2"
 msgstr ""
 
-#: admin/options.php:213
+#: admin/options.php:215
 msgctxt "Icon name"
 msgid "Contract2"
 msgstr ""
 
-#: admin/options.php:214
+#: admin/options.php:216
 msgctxt "Icon name"
 msgid "Key"
 msgstr ""
 
-#: admin/options.php:215
+#: admin/options.php:217
 msgctxt "Icon name"
 msgid "Key2"
 msgstr ""
 
-#: admin/options.php:216
+#: admin/options.php:218
 msgctxt "Icon name"
 msgid "Lock"
 msgstr ""
 
-#: admin/options.php:217
+#: admin/options.php:219
 msgctxt "Icon name"
 msgid "Lock2"
 msgstr ""
 
-#: admin/options.php:218
+#: admin/options.php:220
 msgctxt "Icon name"
 msgid "Unlocked"
 msgstr ""
 
-#: admin/options.php:219
+#: admin/options.php:221
 msgctxt "Icon name"
 msgid "Wrench"
 msgstr ""
 
-#: admin/options.php:220
+#: admin/options.php:222
 msgctxt "Icon name"
 msgid "Settings"
 msgstr ""
 
-#: admin/options.php:221
+#: admin/options.php:223
 msgctxt "Icon name"
 msgid "Equalizer"
 msgstr ""
 
-#: admin/options.php:222
+#: admin/options.php:224
 msgctxt "Icon name"
 msgid "Cog"
 msgstr ""
 
-#: admin/options.php:223
+#: admin/options.php:225
 msgctxt "Icon name"
 msgid "Cogs"
 msgstr ""
 
-#: admin/options.php:224
+#: admin/options.php:226
 msgctxt "Icon name"
 msgid "Cog2"
 msgstr ""
 
-#: admin/options.php:225
+#: admin/options.php:227
 msgctxt "Icon name"
 msgid "Hammer"
 msgstr ""
 
-#: admin/options.php:226
+#: admin/options.php:228
 msgctxt "Icon name"
 msgid "Wand"
 msgstr ""
 
-#: admin/options.php:227
+#: admin/options.php:229
 msgctxt "Icon name"
 msgid "Aid"
 msgstr ""
 
-#: admin/options.php:228
+#: admin/options.php:230
 msgctxt "Icon name"
 msgid "Bug"
 msgstr ""
 
-#: admin/options.php:229
+#: admin/options.php:231
 msgctxt "Icon name"
 msgid "Pie"
 msgstr ""
 
-#: admin/options.php:230
+#: admin/options.php:232
 msgctxt "Icon name"
 msgid "Stats"
 msgstr ""
 
-#: admin/options.php:231
+#: admin/options.php:233
 msgctxt "Icon name"
 msgid "Bars"
 msgstr ""
 
-#: admin/options.php:232
+#: admin/options.php:234
 msgctxt "Icon name"
 msgid "Bars2"
 msgstr ""
 
-#: admin/options.php:233
+#: admin/options.php:235
 msgctxt "Icon name"
 msgid "Gift"
 msgstr ""
 
-#: admin/options.php:234
+#: admin/options.php:236
 msgctxt "Icon name"
 msgid "Trophy"
 msgstr ""
 
-#: admin/options.php:235
+#: admin/options.php:237
 msgctxt "Icon name"
 msgid "Glass"
 msgstr ""
 
-#: admin/options.php:236
+#: admin/options.php:238
 msgctxt "Icon name"
 msgid "Mug"
 msgstr ""
 
-#: admin/options.php:237
+#: admin/options.php:239
 msgctxt "Icon name"
 msgid "Food"
 msgstr ""
 
-#: admin/options.php:238
+#: admin/options.php:240
 msgctxt "Icon name"
 msgid "Leaf"
 msgstr ""
 
-#: admin/options.php:239
+#: admin/options.php:241
 msgctxt "Icon name"
 msgid "Rocket"
 msgstr ""
 
-#: admin/options.php:240
+#: admin/options.php:242
 msgctxt "Icon name"
 msgid "Meter"
 msgstr ""
 
-#: admin/options.php:241
+#: admin/options.php:243
 msgctxt "Icon name"
 msgid "Meter2"
 msgstr ""
 
-#: admin/options.php:242
+#: admin/options.php:244
 msgctxt "Icon name"
 msgid "Dashboard"
 msgstr ""
 
-#: admin/options.php:243
+#: admin/options.php:245
 msgctxt "Icon name"
 msgid "Hammer2"
 msgstr ""
 
-#: admin/options.php:244
+#: admin/options.php:246
 msgctxt "Icon name"
 msgid "Fire"
 msgstr ""
 
-#: admin/options.php:245
+#: admin/options.php:247
 msgctxt "Icon name"
 msgid "Lab"
 msgstr ""
 
-#: admin/options.php:246
+#: admin/options.php:248
 msgctxt "Icon name"
 msgid "Magnet"
 msgstr ""
 
-#: admin/options.php:247
+#: admin/options.php:249
 msgctxt "Icon name"
 msgid "Remove"
 msgstr ""
 
-#: admin/options.php:248
+#: admin/options.php:250
 msgctxt "Icon name"
 msgid "Remove2"
 msgstr ""
 
-#: admin/options.php:249
+#: admin/options.php:251
 msgctxt "Icon name"
 msgid "Briefcase"
 msgstr ""
 
-#: admin/options.php:250
+#: admin/options.php:252
 msgctxt "Icon name"
 msgid "Airplane"
 msgstr ""
 
-#: admin/options.php:251
+#: admin/options.php:253
 msgctxt "Icon name"
 msgid "Truck"
 msgstr ""
 
-#: admin/options.php:252
+#: admin/options.php:254
 msgctxt "Icon name"
 msgid "Road"
 msgstr ""
 
-#: admin/options.php:253
+#: admin/options.php:255
 msgctxt "Icon name"
 msgid "Accessibility"
 msgstr ""
 
-#: admin/options.php:254
+#: admin/options.php:256
 msgctxt "Icon name"
 msgid "Target"
 msgstr ""
 
-#: admin/options.php:255
+#: admin/options.php:257
 msgctxt "Icon name"
 msgid "Shield"
 msgstr ""
 
-#: admin/options.php:256
+#: admin/options.php:258
 msgctxt "Icon name"
 msgid "Lightning"
 msgstr ""
 
-#: admin/options.php:257
+#: admin/options.php:259
 msgctxt "Icon name"
 msgid "Switch"
 msgstr ""
 
-#: admin/options.php:258
+#: admin/options.php:260
 msgctxt "Icon name"
 msgid "Power Cord"
 msgstr ""
 
-#: admin/options.php:259
+#: admin/options.php:261
 msgctxt "Icon name"
 msgid "Signup"
 msgstr ""
 
-#: admin/options.php:260
+#: admin/options.php:262
 msgctxt "Icon name"
 msgid "List"
 msgstr ""
 
-#: admin/options.php:261
+#: admin/options.php:263
 msgctxt "Icon name"
 msgid "List2"
 msgstr ""
 
-#: admin/options.php:262
+#: admin/options.php:264
 msgctxt "Icon name"
 msgid "Numbered List"
 msgstr ""
 
-#: admin/options.php:263
+#: admin/options.php:265
 msgctxt "Icon name"
 msgid "Menu"
 msgstr ""
 
-#: admin/options.php:264
+#: admin/options.php:266
 msgctxt "Icon name"
 msgid "Menu2"
 msgstr ""
 
-#: admin/options.php:265
+#: admin/options.php:267
 msgctxt "Icon name"
 msgid "Tree"
 msgstr ""
 
-#: admin/options.php:266
+#: admin/options.php:268
 msgctxt "Icon name"
 msgid "Cloud"
 msgstr ""
 
-#: admin/options.php:267
+#: admin/options.php:269
 msgctxt "Icon name"
 msgid "Cloud Download"
 msgstr ""
 
-#: admin/options.php:268
+#: admin/options.php:270
 msgctxt "Icon name"
 msgid "Cloud Upload"
 msgstr ""
 
-#: admin/options.php:269
+#: admin/options.php:271
 msgctxt "Icon name"
 msgid "Download2"
 msgstr ""
 
-#: admin/options.php:270
+#: admin/options.php:272
 msgctxt "Icon name"
 msgid "Upload2"
 msgstr ""
 
-#: admin/options.php:271
+#: admin/options.php:273
 msgctxt "Icon name"
 msgid "Download3"
 msgstr ""
 
-#: admin/options.php:272
+#: admin/options.php:274
 msgctxt "Icon name"
 msgid "Upload3"
 msgstr ""
 
-#: admin/options.php:273
+#: admin/options.php:275
 msgctxt "Icon name"
 msgid "Globe"
 msgstr ""
 
-#: admin/options.php:274
+#: admin/options.php:276
 msgctxt "Icon name"
 msgid "Earth"
 msgstr ""
 
-#: admin/options.php:275
+#: admin/options.php:277
 msgctxt "Icon name"
 msgid "Link"
 msgstr ""
 
-#: admin/options.php:276
+#: admin/options.php:278
 msgctxt "Icon name"
 msgid "Flag"
 msgstr ""
 
-#: admin/options.php:277
+#: admin/options.php:279
 msgctxt "Icon name"
 msgid "Attachment"
 msgstr ""
 
-#: admin/options.php:278
+#: admin/options.php:280
 msgctxt "Icon name"
 msgid "Eye"
 msgstr ""
 
-#: admin/options.php:279
+#: admin/options.php:281
 msgctxt "Icon name"
 msgid "Eye Blocked"
 msgstr ""
 
-#: admin/options.php:280
+#: admin/options.php:282
 msgctxt "Icon name"
 msgid "Eye2"
 msgstr ""
 
-#: admin/options.php:281
+#: admin/options.php:283
 msgctxt "Icon name"
 msgid "Bookmark"
 msgstr ""
 
-#: admin/options.php:282
+#: admin/options.php:284
 msgctxt "Icon name"
 msgid "Bookmarks"
 msgstr ""
 
-#: admin/options.php:283
+#: admin/options.php:285
 msgctxt "Icon name"
 msgid "Brightness Medium"
 msgstr ""
 
-#: admin/options.php:284
+#: admin/options.php:286
 msgctxt "Icon name"
 msgid "Brightness Contrast"
 msgstr ""
 
-#: admin/options.php:285
+#: admin/options.php:287
 msgctxt "Icon name"
 msgid "Contrast"
 msgstr ""
 
-#: admin/options.php:286
+#: admin/options.php:288
 msgctxt "Icon name"
 msgid "Star"
 msgstr ""
 
-#: admin/options.php:287
+#: admin/options.php:289
 msgctxt "Icon name"
 msgid "Star2"
 msgstr ""
 
-#: admin/options.php:288
+#: admin/options.php:290
 msgctxt "Icon name"
 msgid "Star3"
 msgstr ""
 
-#: admin/options.php:289
+#: admin/options.php:291
 msgctxt "Icon name"
 msgid "Heart"
 msgstr ""
 
-#: admin/options.php:290
+#: admin/options.php:292
 msgctxt "Icon name"
 msgid "Heart2"
 msgstr ""
 
-#: admin/options.php:291
+#: admin/options.php:293
 msgctxt "Icon name"
 msgid "Heart Broken"
 msgstr ""
 
-#: admin/options.php:292
+#: admin/options.php:294
 msgctxt "Icon name"
 msgid "Thumbs Up"
 msgstr ""
 
-#: admin/options.php:293
+#: admin/options.php:295
 msgctxt "Icon name"
 msgid "Thumbs Up2"
 msgstr ""
 
-#: admin/options.php:294
+#: admin/options.php:296
 msgctxt "Icon name"
 msgid "Happy"
 msgstr ""
 
-#: admin/options.php:295
+#: admin/options.php:297
 msgctxt "Icon name"
 msgid "Happy2"
 msgstr ""
 
-#: admin/options.php:296
+#: admin/options.php:298
 msgctxt "Icon name"
 msgid "Smiley"
 msgstr ""
 
-#: admin/options.php:297
+#: admin/options.php:299
 msgctxt "Icon name"
 msgid "Smiley2"
 msgstr ""
 
-#: admin/options.php:298
+#: admin/options.php:300
 msgctxt "Icon name"
 msgid "Tongue"
 msgstr ""
 
-#: admin/options.php:299
+#: admin/options.php:301
 msgctxt "Icon name"
 msgid "Tongue2"
 msgstr ""
 
-#: admin/options.php:300
+#: admin/options.php:302
 msgctxt "Icon name"
 msgid "Sad"
 msgstr ""
 
-#: admin/options.php:301
+#: admin/options.php:303
 msgctxt "Icon name"
 msgid "Sad2"
 msgstr ""
 
-#: admin/options.php:302
+#: admin/options.php:304
 msgctxt "Icon name"
 msgid "Wink"
 msgstr ""
 
-#: admin/options.php:303
+#: admin/options.php:305
 msgctxt "Icon name"
 msgid "Wink2"
 msgstr ""
 
-#: admin/options.php:304
+#: admin/options.php:306
 msgctxt "Icon name"
 msgid "Grin"
 msgstr ""
 
-#: admin/options.php:305
+#: admin/options.php:307
 msgctxt "Icon name"
 msgid "Grin2"
 msgstr ""
 
-#: admin/options.php:306
+#: admin/options.php:308
 msgctxt "Icon name"
 msgid "Cool"
 msgstr ""
 
-#: admin/options.php:307
+#: admin/options.php:309
 msgctxt "Icon name"
 msgid "Cool2"
 msgstr ""
 
-#: admin/options.php:308
+#: admin/options.php:310
 msgctxt "Icon name"
 msgid "Angry"
 msgstr ""
 
-#: admin/options.php:309
+#: admin/options.php:311
 msgctxt "Icon name"
 msgid "Angry2"
 msgstr ""
 
-#: admin/options.php:310
+#: admin/options.php:312
 msgctxt "Icon name"
 msgid "Evil"
 msgstr ""
 
-#: admin/options.php:311
+#: admin/options.php:313
 msgctxt "Icon name"
 msgid "Evil2"
 msgstr ""
 
-#: admin/options.php:312
+#: admin/options.php:314
 msgctxt "Icon name"
 msgid "Shocked"
 msgstr ""
 
-#: admin/options.php:313
+#: admin/options.php:315
 msgctxt "Icon name"
 msgid "Shocked2"
 msgstr ""
 
-#: admin/options.php:314
+#: admin/options.php:316
 msgctxt "Icon name"
 msgid "Confused"
 msgstr ""
 
-#: admin/options.php:315
+#: admin/options.php:317
 msgctxt "Icon name"
 msgid "Confused2"
 msgstr ""
 
-#: admin/options.php:316
+#: admin/options.php:318
 msgctxt "Icon name"
 msgid "Neutral"
 msgstr ""
 
-#: admin/options.php:317
+#: admin/options.php:319
 msgctxt "Icon name"
 msgid "Neutral2"
 msgstr ""
 
-#: admin/options.php:318
+#: admin/options.php:320
 msgctxt "Icon name"
 msgid "Wondering"
 msgstr ""
 
-#: admin/options.php:319
+#: admin/options.php:321
 msgctxt "Icon name"
 msgid "Wondering2"
 msgstr ""
 
-#: admin/options.php:320
+#: admin/options.php:322
 msgctxt "Icon name"
 msgid "Point Up"
 msgstr ""
 
-#: admin/options.php:321
+#: admin/options.php:323
 msgctxt "Icon name"
 msgid "Point Right"
 msgstr ""
 
-#: admin/options.php:322
+#: admin/options.php:324
 msgctxt "Icon name"
 msgid "Point Down"
 msgstr ""
 
-#: admin/options.php:323
+#: admin/options.php:325
 msgctxt "Icon name"
 msgid "Point Left"
 msgstr ""
 
-#: admin/options.php:324
+#: admin/options.php:326
 msgctxt "Icon name"
 msgid "Warning"
 msgstr ""
 
-#: admin/options.php:325
+#: admin/options.php:327
 msgctxt "Icon name"
 msgid "Notification"
 msgstr ""
 
-#: admin/options.php:326
+#: admin/options.php:328
 msgctxt "Icon name"
 msgid "Question"
 msgstr ""
 
-#: admin/options.php:327
+#: admin/options.php:329
 msgctxt "Icon name"
 msgid "Info"
 msgstr ""
 
-#: admin/options.php:328
+#: admin/options.php:330
 msgctxt "Icon name"
 msgid "Info2"
 msgstr ""
 
-#: admin/options.php:329
+#: admin/options.php:331
 msgctxt "Icon name"
 msgid "Blocked"
 msgstr ""
 
-#: admin/options.php:330
+#: admin/options.php:332
 msgctxt "Icon name"
 msgid "Cancel Circle"
 msgstr ""
 
-#: admin/options.php:331
+#: admin/options.php:333
 msgctxt "Icon name"
 msgid "Checkmark Circle"
 msgstr ""
 
-#: admin/options.php:332
+#: admin/options.php:334
 msgctxt "Icon name"
 msgid "Spam"
 msgstr ""
 
-#: admin/options.php:333
+#: admin/options.php:335
 msgctxt "Icon name"
 msgid "Close"
 msgstr ""
 
-#: admin/options.php:334
+#: admin/options.php:336
 msgctxt "Icon name"
 msgid "Checkmark"
 msgstr ""
 
-#: admin/options.php:335
+#: admin/options.php:337
 msgctxt "Icon name"
 msgid "Checkmark2"
 msgstr ""
 
-#: admin/options.php:336
+#: admin/options.php:338
 msgctxt "Icon name"
 msgid "Spell Check"
 msgstr ""
 
-#: admin/options.php:337
+#: admin/options.php:339
 msgctxt "Icon name"
 msgid "Minus"
 msgstr ""
 
-#: admin/options.php:338
+#: admin/options.php:340
 msgctxt "Icon name"
 msgid "Plus"
 msgstr ""
 
-#: admin/options.php:339
+#: admin/options.php:341
 msgctxt "Icon name"
 msgid "Enter"
 msgstr ""
 
-#: admin/options.php:340
+#: admin/options.php:342
 msgctxt "Icon name"
 msgid "Exit"
 msgstr ""
 
-#: admin/options.php:341
+#: admin/options.php:343
 msgctxt "Icon name"
 msgid "Play2"
 msgstr ""
 
-#: admin/options.php:342
+#: admin/options.php:344
 msgctxt "Icon name"
 msgid "Pause"
 msgstr ""
 
-#: admin/options.php:343
+#: admin/options.php:345
 msgctxt "Icon name"
 msgid "Stop"
 msgstr ""
 
-#: admin/options.php:344
+#: admin/options.php:346
 msgctxt "Icon name"
 msgid "Backward"
 msgstr ""
 
-#: admin/options.php:345
+#: admin/options.php:347
 msgctxt "Icon name"
 msgid "Forward2"
 msgstr ""
 
-#: admin/options.php:346
+#: admin/options.php:348
 msgctxt "Icon name"
 msgid "Play3"
 msgstr ""
 
-#: admin/options.php:347
+#: admin/options.php:349
 msgctxt "Icon name"
 msgid "Pause2"
 msgstr ""
 
-#: admin/options.php:348
+#: admin/options.php:350
 msgctxt "Icon name"
 msgid "Stop2"
 msgstr ""
 
-#: admin/options.php:349
+#: admin/options.php:351
 msgctxt "Icon name"
 msgid "Backward2"
 msgstr ""
 
-#: admin/options.php:350
+#: admin/options.php:352
 msgctxt "Icon name"
 msgid "Forward3"
 msgstr ""
 
-#: admin/options.php:351
+#: admin/options.php:353
 msgctxt "Icon name"
 msgid "First"
 msgstr ""
 
-#: admin/options.php:352
+#: admin/options.php:354
 msgctxt "Icon name"
 msgid "Last"
 msgstr ""
 
-#: admin/options.php:353
+#: admin/options.php:355
 msgctxt "Icon name"
 msgid "Previous"
 msgstr ""
 
-#: admin/options.php:354
+#: admin/options.php:356
 msgctxt "Icon name"
 msgid "Next"
 msgstr ""
 
-#: admin/options.php:355
+#: admin/options.php:357
 msgctxt "Icon name"
 msgid "Eject"
 msgstr ""
 
-#: admin/options.php:356
+#: admin/options.php:358
 msgctxt "Icon name"
 msgid "Volume High"
 msgstr ""
 
-#: admin/options.php:357
+#: admin/options.php:359
 msgctxt "Icon name"
 msgid "Volume Medium"
 msgstr ""
 
-#: admin/options.php:358
+#: admin/options.php:360
 msgctxt "Icon name"
 msgid "Volume Low"
 msgstr ""
 
-#: admin/options.php:359
+#: admin/options.php:361
 msgctxt "Icon name"
 msgid "Volume Mute"
 msgstr ""
 
-#: admin/options.php:360
+#: admin/options.php:362
 msgctxt "Icon name"
 msgid "Volume Mute2"
 msgstr ""
 
-#: admin/options.php:361
+#: admin/options.php:363
 msgctxt "Icon name"
 msgid "Volume Increase"
 msgstr ""
 
-#: admin/options.php:362
+#: admin/options.php:364
 msgctxt "Icon name"
 msgid "Volume Decrease"
 msgstr ""
 
-#: admin/options.php:363
+#: admin/options.php:365
 msgctxt "Icon name"
 msgid "Loop"
 msgstr ""
 
-#: admin/options.php:364
+#: admin/options.php:366
 msgctxt "Icon name"
 msgid "Loop2"
 msgstr ""
 
-#: admin/options.php:365
+#: admin/options.php:367
 msgctxt "Icon name"
 msgid "Loop3"
 msgstr ""
 
-#: admin/options.php:366
+#: admin/options.php:368
 msgctxt "Icon name"
 msgid "Shuffle"
 msgstr ""
 
-#: admin/options.php:367
+#: admin/options.php:369
 msgctxt "Icon name"
 msgid "Arrow Up Left"
 msgstr ""
 
-#: admin/options.php:368
+#: admin/options.php:370
 msgctxt "Icon name"
 msgid "Arrow Up"
 msgstr ""
 
-#: admin/options.php:369
+#: admin/options.php:371
 msgctxt "Icon name"
 msgid "Arrow Up Right"
 msgstr ""
 
-#: admin/options.php:370
+#: admin/options.php:372
 msgctxt "Icon name"
 msgid "Arrow Right"
 msgstr ""
 
-#: admin/options.php:371
+#: admin/options.php:373
 msgctxt "Icon name"
 msgid "Arrow Down Right"
 msgstr ""
 
-#: admin/options.php:372
+#: admin/options.php:374
 msgctxt "Icon name"
 msgid "Arrow Down"
 msgstr ""
 
-#: admin/options.php:373
+#: admin/options.php:375
 msgctxt "Icon name"
 msgid "Arrow Down Left"
 msgstr ""
 
-#: admin/options.php:374
+#: admin/options.php:376
 msgctxt "Icon name"
 msgid "Arrow Left"
 msgstr ""
 
-#: admin/options.php:375
+#: admin/options.php:377
 msgctxt "Icon name"
 msgid "Arrow Up Left2"
 msgstr ""
 
-#: admin/options.php:376
+#: admin/options.php:378
 msgctxt "Icon name"
 msgid "Arrow Up2"
 msgstr ""
 
-#: admin/options.php:377
+#: admin/options.php:379
 msgctxt "Icon name"
 msgid "Arrow Up Right2"
 msgstr ""
 
-#: admin/options.php:378
+#: admin/options.php:380
 msgctxt "Icon name"
 msgid "Arrow Right2"
 msgstr ""
 
-#: admin/options.php:379
+#: admin/options.php:381
 msgctxt "Icon name"
 msgid "Arrow Down Right2"
 msgstr ""
 
-#: admin/options.php:380
+#: admin/options.php:382
 msgctxt "Icon name"
 msgid "Arrow Down2"
 msgstr ""
 
-#: admin/options.php:381
+#: admin/options.php:383
 msgctxt "Icon name"
 msgid "Arrow Down Left2"
 msgstr ""
 
-#: admin/options.php:382
+#: admin/options.php:384
 msgctxt "Icon name"
 msgid "Arrow Left2"
 msgstr ""
 
-#: admin/options.php:383
+#: admin/options.php:385
 msgctxt "Icon name"
 msgid "Arrow Up Left3"
 msgstr ""
 
-#: admin/options.php:384
+#: admin/options.php:386
 msgctxt "Icon name"
 msgid "Arrow Up3"
 msgstr ""
 
-#: admin/options.php:385
+#: admin/options.php:387
 msgctxt "Icon name"
 msgid "Arrow Up Right3"
 msgstr ""
 
-#: admin/options.php:386
+#: admin/options.php:388
 msgctxt "Icon name"
 msgid "Arrow Right3"
 msgstr ""
 
-#: admin/options.php:387
+#: admin/options.php:389
 msgctxt "Icon name"
 msgid "Arrow Down Right3"
 msgstr ""
 
-#: admin/options.php:388
+#: admin/options.php:390
 msgctxt "Icon name"
 msgid "Arrow Down3"
 msgstr ""
 
-#: admin/options.php:389
+#: admin/options.php:391
 msgctxt "Icon name"
 msgid "Arrow Down Left3"
 msgstr ""
 
-#: admin/options.php:390
+#: admin/options.php:392
 msgctxt "Icon name"
 msgid "Arrow Left3"
 msgstr ""
 
-#: admin/options.php:391
+#: admin/options.php:393
 msgctxt "Icon name"
 msgid "Tab"
 msgstr ""
 
-#: admin/options.php:392
+#: admin/options.php:394
 msgctxt "Icon name"
 msgid "Checkbox Checked"
 msgstr ""
 
-#: admin/options.php:393
+#: admin/options.php:395
 msgctxt "Icon name"
 msgid "Checkbox Unchecked"
 msgstr ""
 
-#: admin/options.php:394
+#: admin/options.php:396
 msgctxt "Icon name"
 msgid "Checkbox Partial"
 msgstr ""
 
-#: admin/options.php:395
+#: admin/options.php:397
 msgctxt "Icon name"
 msgid "Radio Checked"
 msgstr ""
 
-#: admin/options.php:396
+#: admin/options.php:398
 msgctxt "Icon name"
 msgid "Radio Unchecked"
 msgstr ""
 
-#: admin/options.php:397
+#: admin/options.php:399
 msgctxt "Icon name"
 msgid "Crop"
 msgstr ""
 
-#: admin/options.php:398
+#: admin/options.php:400
 msgctxt "Icon name"
 msgid "Scissors"
 msgstr ""
 
-#: admin/options.php:399
+#: admin/options.php:401
 msgctxt "Icon name"
 msgid "Filter"
 msgstr ""
 
-#: admin/options.php:400
+#: admin/options.php:402
 msgctxt "Icon name"
 msgid "Filter2"
 msgstr ""
 
-#: admin/options.php:401
+#: admin/options.php:403
 msgctxt "Icon name"
 msgid "Font"
 msgstr ""
 
-#: admin/options.php:402
+#: admin/options.php:404
 msgctxt "Icon name"
 msgid "Text Height"
 msgstr ""
 
-#: admin/options.php:403
+#: admin/options.php:405
 msgctxt "Icon name"
 msgid "Text Width"
 msgstr ""
 
-#: admin/options.php:404
+#: admin/options.php:406
 msgctxt "Icon name"
 msgid "Bold"
 msgstr ""
 
-#: admin/options.php:405
+#: admin/options.php:407
 msgctxt "Icon name"
 msgid "Underline"
 msgstr ""
 
-#: admin/options.php:406
+#: admin/options.php:408
 msgctxt "Icon name"
 msgid "Italic"
 msgstr ""
 
-#: admin/options.php:407
+#: admin/options.php:409
 msgctxt "Icon name"
 msgid "Strikethrough"
 msgstr ""
 
-#: admin/options.php:408
+#: admin/options.php:410
 msgctxt "Icon name"
 msgid "Omega"
 msgstr ""
 
-#: admin/options.php:409
+#: admin/options.php:411
 msgctxt "Icon name"
 msgid "Sigma"
 msgstr ""
 
-#: admin/options.php:410
+#: admin/options.php:412
 msgctxt "Icon name"
 msgid "Table"
 msgstr ""
 
-#: admin/options.php:411
+#: admin/options.php:413
 msgctxt "Icon name"
 msgid "Table2"
 msgstr ""
 
-#: admin/options.php:412
+#: admin/options.php:414
 msgctxt "Icon name"
 msgid "Insert Template"
 msgstr ""
 
-#: admin/options.php:413
+#: admin/options.php:415
 msgctxt "Icon name"
 msgid "Pilcrow"
 msgstr ""
 
-#: admin/options.php:414
+#: admin/options.php:416
 msgctxt "Icon name"
 msgid "Left Toright"
 msgstr ""
 
-#: admin/options.php:415
+#: admin/options.php:417
 msgctxt "Icon name"
 msgid "Right Toleft"
 msgstr ""
 
-#: admin/options.php:416
+#: admin/options.php:418
 msgctxt "Icon name"
 msgid "Paragraph Left"
 msgstr ""
 
-#: admin/options.php:417
+#: admin/options.php:419
 msgctxt "Icon name"
 msgid "Paragraph Center"
 msgstr ""
 
-#: admin/options.php:418
+#: admin/options.php:420
 msgctxt "Icon name"
 msgid "Paragraph Right"
 msgstr ""
 
-#: admin/options.php:419
+#: admin/options.php:421
 msgctxt "Icon name"
 msgid "Paragraph Justify"
 msgstr ""
 
-#: admin/options.php:420
+#: admin/options.php:422
 msgctxt "Icon name"
 msgid "Paragraph Left2"
 msgstr ""
 
-#: admin/options.php:421
+#: admin/options.php:423
 msgctxt "Icon name"
 msgid "Paragraph Center2"
 msgstr ""
 
-#: admin/options.php:422
+#: admin/options.php:424
 msgctxt "Icon name"
 msgid "Paragraph Right2"
 msgstr ""
 
-#: admin/options.php:423
+#: admin/options.php:425
 msgctxt "Icon name"
 msgid "Paragraph Justify2"
 msgstr ""
 
-#: admin/options.php:424
+#: admin/options.php:426
 msgctxt "Icon name"
 msgid "Indent Increase"
 msgstr ""
 
-#: admin/options.php:425
+#: admin/options.php:427
 msgctxt "Icon name"
 msgid "Indent Decrease"
 msgstr ""
 
-#: admin/options.php:426
+#: admin/options.php:428
 msgctxt "Icon name"
 msgid "New Tab"
 msgstr ""
 
-#: admin/options.php:427
+#: admin/options.php:429
 msgctxt "Icon name"
 msgid "Embed"
 msgstr ""
 
-#: admin/options.php:428
+#: admin/options.php:430
 msgctxt "Icon name"
 msgid "Code"
 msgstr ""
 
-#: admin/options.php:429
+#: admin/options.php:431
 msgctxt "Icon name"
 msgid "Console"
 msgstr ""
 
-#: admin/options.php:430
+#: admin/options.php:432
 msgctxt "Icon name"
 msgid "Share"
 msgstr ""
 
-#: admin/options.php:431
+#: admin/options.php:433
 msgctxt "Icon name"
 msgid "Mail"
 msgstr ""
 
-#: admin/options.php:432
+#: admin/options.php:434
 msgctxt "Icon name"
 msgid "Mail2"
 msgstr ""
 
-#: admin/options.php:433
+#: admin/options.php:435
 msgctxt "Icon name"
 msgid "Mail3"
 msgstr ""
 
-#: admin/options.php:434
+#: admin/options.php:436
 msgctxt "Icon name"
 msgid "Mail4"
 msgstr ""
 
-#: admin/options.php:435
+#: admin/options.php:437
 msgctxt "Icon name"
 msgid "Google"
 msgstr ""
 
-#: admin/options.php:436
+#: admin/options.php:438
 msgctxt "Icon name"
 msgid "Google Plus"
 msgstr ""
 
-#: admin/options.php:437
+#: admin/options.php:439
 msgctxt "Icon name"
 msgid "Google Plus2"
 msgstr ""
 
-#: admin/options.php:438
+#: admin/options.php:440
 msgctxt "Icon name"
 msgid "Google Plus3"
 msgstr ""
 
-#: admin/options.php:439
+#: admin/options.php:441
 msgctxt "Icon name"
 msgid "Google Plus4"
 msgstr ""
 
-#: admin/options.php:440
+#: admin/options.php:442
 msgctxt "Icon name"
 msgid "Google Drive"
 msgstr ""
 
-#: admin/options.php:441
+#: admin/options.php:443
 msgctxt "Icon name"
 msgid "Facebook"
 msgstr ""
 
-#: admin/options.php:442
+#: admin/options.php:444
 msgctxt "Icon name"
 msgid "Facebook2"
 msgstr ""
 
-#: admin/options.php:443
+#: admin/options.php:445
 msgctxt "Icon name"
 msgid "Facebook3"
 msgstr ""
 
-#: admin/options.php:444
+#: admin/options.php:446
 msgctxt "Icon name"
 msgid "Instagram"
 msgstr ""
 
-#: admin/options.php:445
+#: admin/options.php:447
 msgctxt "Icon name"
 msgid "Twitter"
 msgstr ""
 
-#: admin/options.php:446
+#: admin/options.php:448
 msgctxt "Icon name"
 msgid "Twitter2"
 msgstr ""
 
-#: admin/options.php:447
+#: admin/options.php:449
 msgctxt "Icon name"
 msgid "Twitter3"
 msgstr ""
 
-#: admin/options.php:448
+#: admin/options.php:450
 msgctxt "Icon name"
 msgid "Feed2"
 msgstr ""
 
-#: admin/options.php:449
+#: admin/options.php:451
 msgctxt "Icon name"
 msgid "Feed3"
 msgstr ""
 
-#: admin/options.php:450
+#: admin/options.php:452
 msgctxt "Icon name"
 msgid "Feed4"
 msgstr ""
 
-#: admin/options.php:451
+#: admin/options.php:453
 msgctxt "Icon name"
 msgid "Youtube"
 msgstr ""
 
-#: admin/options.php:452
+#: admin/options.php:454
 msgctxt "Icon name"
 msgid "Youtube2"
 msgstr ""
 
-#: admin/options.php:453
+#: admin/options.php:455
 msgctxt "Icon name"
 msgid "Vimeo"
 msgstr ""
 
-#: admin/options.php:454
+#: admin/options.php:456
 msgctxt "Icon name"
 msgid "Vimeo2"
 msgstr ""
 
-#: admin/options.php:455
+#: admin/options.php:457
 msgctxt "Icon name"
 msgid "Vimeo3"
 msgstr ""
 
-#: admin/options.php:456
+#: admin/options.php:458
 msgctxt "Icon name"
 msgid "Lanyrd"
 msgstr ""
 
-#: admin/options.php:457
+#: admin/options.php:459
 msgctxt "Icon name"
 msgid "Flickr"
 msgstr ""
 
-#: admin/options.php:458
+#: admin/options.php:460
 msgctxt "Icon name"
 msgid "Flickr2"
 msgstr ""
 
-#: admin/options.php:459
+#: admin/options.php:461
 msgctxt "Icon name"
 msgid "Flickr3"
 msgstr ""
 
-#: admin/options.php:460
+#: admin/options.php:462
 msgctxt "Icon name"
 msgid "Flickr4"
 msgstr ""
 
-#: admin/options.php:461
+#: admin/options.php:463
 msgctxt "Icon name"
 msgid "Picasa"
 msgstr ""
 
-#: admin/options.php:462
+#: admin/options.php:464
 msgctxt "Icon name"
 msgid "Picasa2"
 msgstr ""
 
-#: admin/options.php:463
+#: admin/options.php:465
 msgctxt "Icon name"
 msgid "Dribbble"
 msgstr ""
 
-#: admin/options.php:464
+#: admin/options.php:466
 msgctxt "Icon name"
 msgid "Dribbble2"
 msgstr ""
 
-#: admin/options.php:465
+#: admin/options.php:467
 msgctxt "Icon name"
 msgid "Dribbble3"
 msgstr ""
 
-#: admin/options.php:466
+#: admin/options.php:468
 msgctxt "Icon name"
 msgid "Forrst"
 msgstr ""
 
-#: admin/options.php:467
+#: admin/options.php:469
 msgctxt "Icon name"
 msgid "Forrst2"
 msgstr ""
 
-#: admin/options.php:468
+#: admin/options.php:470
 msgctxt "Icon name"
 msgid "Deviantart"
 msgstr ""
 
-#: admin/options.php:469
+#: admin/options.php:471
 msgctxt "Icon name"
 msgid "Deviantart2"
 msgstr ""
 
-#: admin/options.php:470
+#: admin/options.php:472
 msgctxt "Icon name"
 msgid "Steam"
 msgstr ""
 
-#: admin/options.php:471
+#: admin/options.php:473
 msgctxt "Icon name"
 msgid "Steam2"
 msgstr ""
 
-#: admin/options.php:472
+#: admin/options.php:474
 msgctxt "Icon name"
 msgid "Github"
 msgstr ""
 
-#: admin/options.php:473
+#: admin/options.php:475
 msgctxt "Icon name"
 msgid "Github2"
 msgstr ""
 
-#: admin/options.php:474
+#: admin/options.php:476
 msgctxt "Icon name"
 msgid "Github3"
 msgstr ""
 
-#: admin/options.php:475
+#: admin/options.php:477
 msgctxt "Icon name"
 msgid "Github4"
 msgstr ""
 
-#: admin/options.php:476
+#: admin/options.php:478
 msgctxt "Icon name"
 msgid "Github5"
 msgstr ""
 
-#: admin/options.php:477
+#: admin/options.php:479
 msgctxt "Icon name"
 msgid "Wordpress"
 msgstr ""
 
-#: admin/options.php:478
+#: admin/options.php:480
 msgctxt "Icon name"
 msgid "Wordpress2"
 msgstr ""
 
-#: admin/options.php:479
+#: admin/options.php:481
 msgctxt "Icon name"
 msgid "Joomla"
 msgstr ""
 
-#: admin/options.php:480
+#: admin/options.php:482
 msgctxt "Icon name"
 msgid "Blogger"
 msgstr ""
 
-#: admin/options.php:481
+#: admin/options.php:483
 msgctxt "Icon name"
 msgid "Blogger2"
 msgstr ""
 
-#: admin/options.php:482
+#: admin/options.php:484
 msgctxt "Icon name"
 msgid "Tumblr"
 msgstr ""
 
-#: admin/options.php:483
+#: admin/options.php:485
 msgctxt "Icon name"
 msgid "Tumblr2"
 msgstr ""
 
-#: admin/options.php:484
+#: admin/options.php:486
 msgctxt "Icon name"
 msgid "Yahoo"
 msgstr ""
 
-#: admin/options.php:485
+#: admin/options.php:487
 msgctxt "Icon name"
 msgid "Tux"
 msgstr ""
 
-#: admin/options.php:486
+#: admin/options.php:488
 msgctxt "Icon name"
 msgid "Apple"
 msgstr ""
 
-#: admin/options.php:487
+#: admin/options.php:489
 msgctxt "Icon name"
 msgid "Finder"
 msgstr ""
 
-#: admin/options.php:488
+#: admin/options.php:490
 msgctxt "Icon name"
 msgid "Android"
 msgstr ""
 
-#: admin/options.php:489
+#: admin/options.php:491
 msgctxt "Icon name"
 msgid "Windows"
 msgstr ""
 
-#: admin/options.php:490
+#: admin/options.php:492
 msgctxt "Icon name"
 msgid "Windows8"
 msgstr ""
 
-#: admin/options.php:491
+#: admin/options.php:493
 msgctxt "Icon name"
 msgid "Soundcloud"
 msgstr ""
 
-#: admin/options.php:492
+#: admin/options.php:494
 msgctxt "Icon name"
 msgid "Soundcloud2"
 msgstr ""
 
-#: admin/options.php:493
+#: admin/options.php:495
 msgctxt "Icon name"
 msgid "Skype"
 msgstr ""
 
-#: admin/options.php:494
+#: admin/options.php:496
 msgctxt "Icon name"
 msgid "Reddit"
 msgstr ""
 
-#: admin/options.php:495
+#: admin/options.php:497
 msgctxt "Icon name"
 msgid "Linkedin"
 msgstr ""
 
-#: admin/options.php:496
+#: admin/options.php:498
 msgctxt "Icon name"
 msgid "Lastfm"
 msgstr ""
 
-#: admin/options.php:497
+#: admin/options.php:499
 msgctxt "Icon name"
 msgid "Lastfm2"
 msgstr ""
 
-#: admin/options.php:498
+#: admin/options.php:500
 msgctxt "Icon name"
 msgid "Delicious"
 msgstr ""
 
-#: admin/options.php:499
+#: admin/options.php:501
 msgctxt "Icon name"
 msgid "Stumbleupon"
 msgstr ""
 
-#: admin/options.php:500
+#: admin/options.php:502
 msgctxt "Icon name"
 msgid "Stumbleupon2"
 msgstr ""
 
-#: admin/options.php:501
+#: admin/options.php:503
 msgctxt "Icon name"
 msgid "Stackoverflow"
 msgstr ""
 
-#: admin/options.php:502
+#: admin/options.php:504
 msgctxt "Icon name"
 msgid "Pinterest"
 msgstr ""
 
-#: admin/options.php:503
+#: admin/options.php:505
 msgctxt "Icon name"
 msgid "Pinterest2"
 msgstr ""
 
-#: admin/options.php:504
+#: admin/options.php:506
 msgctxt "Icon name"
 msgid "Xing"
 msgstr ""
 
-#: admin/options.php:505
+#: admin/options.php:507
 msgctxt "Icon name"
 msgid "Xing2"
 msgstr ""
 
-#: admin/options.php:506
+#: admin/options.php:508
 msgctxt "Icon name"
 msgid "Flattr"
 msgstr ""
 
-#: admin/options.php:507
+#: admin/options.php:509
 msgctxt "Icon name"
 msgid "Foursquare"
 msgstr ""
 
-#: admin/options.php:508
+#: admin/options.php:510
 msgctxt "Icon name"
 msgid "Foursquare2"
 msgstr ""
 
-#: admin/options.php:509
+#: admin/options.php:511
 msgctxt "Icon name"
 msgid "Paypal"
 msgstr ""
 
-#: admin/options.php:510
+#: admin/options.php:512
 msgctxt "Icon name"
 msgid "Paypal2"
 msgstr ""
 
-#: admin/options.php:511
+#: admin/options.php:513
 msgctxt "Icon name"
 msgid "Paypal3"
 msgstr ""
 
-#: admin/options.php:512
+#: admin/options.php:514
 msgctxt "Icon name"
 msgid "Yelp"
 msgstr ""
 
-#: admin/options.php:513
+#: admin/options.php:515
 msgctxt "Icon name"
 msgid "Libreoffice"
 msgstr ""
 
-#: admin/options.php:514
+#: admin/options.php:516
 msgctxt "Icon name"
 msgid "File Pdf"
 msgstr ""
 
-#: admin/options.php:515
+#: admin/options.php:517
 msgctxt "Icon name"
 msgid "File Openoffice"
 msgstr ""
 
-#: admin/options.php:516
+#: admin/options.php:518
 msgctxt "Icon name"
 msgid "File Word"
 msgstr ""
 
-#: admin/options.php:517
+#: admin/options.php:519
 msgctxt "Icon name"
 msgid "File Excel"
 msgstr ""
 
-#: admin/options.php:518
+#: admin/options.php:520
 msgctxt "Icon name"
 msgid "File Zip"
 msgstr ""
 
-#: admin/options.php:519
+#: admin/options.php:521
 msgctxt "Icon name"
 msgid "File Powerpoint"
 msgstr ""
 
-#: admin/options.php:520
+#: admin/options.php:522
 msgctxt "Icon name"
 msgid "File Xml"
 msgstr ""
 
-#: admin/options.php:521
+#: admin/options.php:523
 msgctxt "Icon name"
 msgid "File Css"
 msgstr ""
 
-#: admin/options.php:522
+#: admin/options.php:524
 msgctxt "Icon name"
 msgid "Html5"
 msgstr ""
 
-#: admin/options.php:523
+#: admin/options.php:525
 msgctxt "Icon name"
 msgid "Html52"
 msgstr ""
 
-#: admin/options.php:524
+#: admin/options.php:526
 msgctxt "Icon name"
 msgid "Css3"
 msgstr ""
 
-#: admin/options.php:525
+#: admin/options.php:527
 msgctxt "Icon name"
 msgid "Chrome"
 msgstr ""
 
-#: admin/options.php:526
+#: admin/options.php:528
 msgctxt "Icon name"
 msgid "Firefox"
 msgstr ""
 
-#: admin/options.php:527
-msgctxt "Icon name"
-msgid "Ie"
-msgstr ""
-
-#: admin/options.php:528
-msgctxt "Icon name"
-msgid "Opera"
-msgstr ""
-
 #: admin/options.php:529
 msgctxt "Icon name"
-msgid "Safari"
+msgid "IE"
 msgstr ""
 
 #: admin/options.php:530
 msgctxt "Icon name"
+msgid "Opera"
+msgstr ""
+
+#: admin/options.php:531
+msgctxt "Icon name"
+msgid "Safari"
+msgstr ""
+
+#: admin/options.php:532
+msgctxt "Icon name"
 msgid "Icomoon"
 msgstr ""
 
-#: admin/options.php:553
+#: admin/options.php:555
 msgid "About"
 msgstr "About"
 
-#: admin/options.php:560
+#: admin/options.php:562
 msgid "About this Theme"
 msgstr ""
 
-#: admin/options.php:561
+#: admin/options.php:563
 msgid ""
 "<p>This is a highly customizable, clean, modern, and responsive WordPress "
 "theme. originally developed plugin is included and it enables higher "
@@ -2446,11 +2448,11 @@ msgid ""
 "Classic Slider&quot;</li></ul>"
 msgstr ""
 
-#: admin/options.php:568
+#: admin/options.php:570
 msgid "About WP Shop"
 msgstr ""
 
-#: admin/options.php:569
+#: admin/options.php:571
 msgid ""
 "<p class=\"about-photo\"><img src=\"%1$s\" alt=\"*\"></p><p>WP Shop is a "
 "social marketplace for buying and selling WordPress themes, while providing "
@@ -2464,425 +2466,435 @@ msgid ""
 "span><span class=\"shop_dec\">Starting from $0 / theme</span></a></p>"
 msgstr ""
 
-#: admin/options.php:576
+#: admin/options.php:578
 msgid "WP Shop Headline News"
 msgstr ""
 
-#: admin/options.php:585
+#: admin/options.php:587
 msgid "What's happennig at WordPress?"
 msgstr ""
 
-#: admin/options.php:597
+#: admin/options.php:599
 msgid "General Settings"
 msgstr ""
 
-#: admin/options.php:603 inc/customizer.php:186
+#: admin/options.php:605 inc/customizer.php:210
 msgid "Show Header logo"
 msgstr ""
 
-#: admin/options.php:611 inc/customizer.php:204
+#: admin/options.php:613 inc/customizer.php:228
 msgid "Header logo image"
 msgstr ""
 
-#: admin/options.php:619 inc/customizer.php:216
+#: admin/options.php:621 inc/customizer.php:240
 msgid "Favicon"
 msgstr ""
 
-#: admin/options.php:620
+#: admin/options.php:622
 msgid "Please upload .ico image."
 msgstr ""
 
-#: admin/options.php:627
+#: admin/options.php:629
 msgid "Site Title"
 msgstr "サイトのタイトル"
 
-#: admin/options.php:635
+#: admin/options.php:637
 msgid "Tagline"
 msgstr "キャッチフレーズ"
 
-#: admin/options.php:643 inc/customizer.php:152
+#: admin/options.php:645 inc/customizer.php:158
+msgid "Show Header text"
+msgstr "ヘッダーテキスト表示"
+
+#: admin/options.php:653 inc/customizer.php:176
 msgid "Header text"
 msgstr "ヘッダーテキスト"
 
-#: admin/options.php:651
+#: admin/options.php:661
 msgid "About text"
 msgstr "About テキスト"
 
-#: admin/options.php:652
+#: admin/options.php:662
 msgid "About widget text"
 msgstr "「About」ウィジェットのテキスト"
 
-#: admin/options.php:659 inc/customizer.php:165
+#: admin/options.php:669 inc/customizer.php:189
 msgid "Copyright"
 msgstr "コピーライト"
 
-#: admin/options.php:669
+#: admin/options.php:679
 msgid "Color Settings"
 msgstr ""
 
-#: admin/options.php:675 inc/customizer.php:226
+#: admin/options.php:685 inc/customizer.php:250
 msgid "Header color settings"
 msgstr "ヘッダーカラー設定"
 
-#: admin/options.php:680 inc/customizer.php:238
+#: admin/options.php:690 inc/customizer.php:262
 msgid "Header background color"
 msgstr "ヘッダー背景色"
 
-#: admin/options.php:689 inc/customizer.php:252
+#: admin/options.php:699 inc/customizer.php:276
 msgid "Header text color"
 msgstr "ヘッダーテキスト色"
 
-#: admin/options.php:698 inc/customizer.php:266
+#: admin/options.php:708 inc/customizer.php:290
 msgid "Header anchor color"
 msgstr "ヘッダーリンク色"
 
-#: admin/options.php:707 inc/customizer.php:280
+#: admin/options.php:717 inc/customizer.php:304
 msgid "Header border color"
 msgstr "ヘッダーボーダー色"
 
-#: admin/options.php:716 inc/customizer.php:294
+#: admin/options.php:726 inc/customizer.php:318
 msgid "Header widget background color"
 msgstr "ヘッダーウィジェット背景色"
 
-#: admin/options.php:725 inc/customizer.php:308
+#: admin/options.php:735 inc/customizer.php:332
 msgid "Header widget text color"
 msgstr "ヘッダーウィジェットテキスト色"
 
-#: admin/options.php:734 inc/customizer.php:322
+#: admin/options.php:744 inc/customizer.php:346
 msgid "Header widget anchor color"
 msgstr "ヘッダーウィジェットリンク色"
 
-#: admin/options.php:743 inc/customizer.php:332
+#: admin/options.php:753 inc/customizer.php:356
 msgid "Main color settings"
 msgstr "メインカラー設定"
 
-#: admin/options.php:748 inc/customizer.php:344
+#: admin/options.php:758
+msgid "Body background color"
+msgstr "Body背景色"
+
+#: admin/options.php:767 inc/customizer.php:368
 msgid "Main background color"
 msgstr "メイン背景色"
 
-#: admin/options.php:757 inc/customizer.php:358
+#: admin/options.php:776 inc/customizer.php:382
 msgid "Main text color"
 msgstr "メインテキスト色"
 
-#: admin/options.php:766 inc/customizer.php:372
+#: admin/options.php:785 inc/customizer.php:396
 msgid "Main anchor color"
 msgstr "メインリンク色"
 
-#: admin/options.php:775 inc/customizer.php:386
+#: admin/options.php:794 inc/customizer.php:410
 msgid "Main border color"
 msgstr "メインボーダー色"
 
-#: admin/options.php:784
+#: admin/options.php:803
 msgid "Image hover settings"
 msgstr "画像マウスオーバー設定"
 
-#: admin/options.php:789 inc/customizer.php:400
+#: admin/options.php:808 inc/customizer.php:424
 msgid "Image hover color"
 msgstr "画像マウスオーバー色"
 
-#: admin/options.php:798 inc/customizer.php:413
+#: admin/options.php:817 inc/customizer.php:437
 msgid "Image hover opacity"
 msgstr "透明度"
 
-#: admin/options.php:818 inc/customizer.php:439
+#: admin/options.php:837 inc/customizer.php:463
 msgid "Widget color settings"
 msgstr "ウィジェットカラー設定"
 
-#: admin/options.php:823 inc/customizer.php:451
+#: admin/options.php:842 inc/customizer.php:475
 msgid "Widget background color"
 msgstr "ウィジェット背景色"
 
-#: admin/options.php:832 inc/customizer.php:465
+#: admin/options.php:851 inc/customizer.php:489
 msgid "Widgte title color"
 msgstr "ウィジェットタイトル色"
 
-#: admin/options.php:841 inc/customizer.php:479
+#: admin/options.php:860 inc/customizer.php:503
 msgid "Widget text color"
 msgstr "ウィジェットテキスト色"
 
-#: admin/options.php:850 inc/customizer.php:493
+#: admin/options.php:869 inc/customizer.php:517
 msgid "Widget anchor color"
 msgstr "ウィジェットリンク色"
 
-#: admin/options.php:859 inc/customizer.php:507
+#: admin/options.php:878 inc/customizer.php:531
 msgid "Widget border color"
 msgstr "ウィジェットボーダー色"
 
-#: admin/options.php:868 inc/customizer.php:517
+#: admin/options.php:887 inc/customizer.php:541
 msgid "Footer color settings"
 msgstr "フッターカラー設定"
 
-#: admin/options.php:873 inc/customizer.php:529
+#: admin/options.php:892 inc/customizer.php:553
 msgid "Footer background color"
 msgstr "フッター背景色"
 
-#: admin/options.php:882 inc/customizer.php:543
+#: admin/options.php:901 inc/customizer.php:567
 msgid "Footer title color"
 msgstr "フッタータイトル色"
 
-#: admin/options.php:891 inc/customizer.php:557
+#: admin/options.php:910 inc/customizer.php:581
 msgid "Footer text color"
 msgstr "フッターテキスト色"
 
-#: admin/options.php:900 inc/customizer.php:571
+#: admin/options.php:919 inc/customizer.php:595
 msgid "Footer anchor color"
 msgstr "フッターリンク色"
 
-#: admin/options.php:909 inc/customizer.php:585
+#: admin/options.php:928 inc/customizer.php:609
 msgid "Footer border color"
 msgstr "フッターボーダー色"
 
-#: admin/options.php:918 inc/customizer.php:599
+#: admin/options.php:937 inc/customizer.php:623
 msgid "All categories background color"
 msgstr "全カテゴリーエリア背景色"
 
-#: admin/options.php:927 inc/customizer.php:613
+#: admin/options.php:946 inc/customizer.php:637
 msgid "All categories title color"
 msgstr "全カテゴリーエリアタイトル色"
 
-#: admin/options.php:936 inc/customizer.php:627
-msgid "All categories text color"
-msgstr "全カテゴリーエリアテキスト色"
-
-#: admin/options.php:945 inc/customizer.php:641
+#: admin/options.php:966 inc/customizer.php:667
 msgid "All categories anchor color"
 msgstr "全カテゴリーエリアリンク色"
 
-#: admin/options.php:954 inc/customizer.php:655
+#: admin/options.php:975 inc/customizer.php:681
 msgid "All categories border color"
 msgstr "全カテゴリーエリアボーダー色"
 
-#: admin/options.php:963 inc/customizer.php:669
+#: admin/options.php:984 inc/customizer.php:695
 msgid "Copyright background color"
 msgstr "コピーライト背景色"
 
-#: admin/options.php:972 inc/customizer.php:683
+#: admin/options.php:993 inc/customizer.php:709
 msgid "Copyright text color"
 msgstr "コピーライトテキスト色"
 
-#: admin/options.php:983
+#: admin/options.php:1004
 msgid "Layout Settings"
 msgstr ""
 
-#: admin/options.php:989
+#: admin/options.php:1010
 msgid "Responsive"
 msgstr "レスポンシブ"
 
-#: admin/options.php:998
+#: admin/options.php:1019
 msgid "Home Layout"
 msgstr "HOMEレイアウト"
 
-#: admin/options.php:999
+#: admin/options.php:1020
 msgid "All Blog Layout"
 msgstr "ブログレイアウト"
 
-#: admin/options.php:1000
+#: admin/options.php:1021
 msgid "All Portfolio Layout"
 msgstr "ポートフォリオレイアウト"
 
-#: admin/options.php:1001
+#: admin/options.php:1022
 msgid "Archive and Search result"
 msgstr "アーカイブ・検索結果"
 
-#: admin/options.php:1002
+#: admin/options.php:1023
 msgid "Pages Layout"
 msgstr "固定ページレイアウト"
 
-#: admin/options.php:1003
+#: admin/options.php:1024
 msgid "Contact Layout"
 msgstr "コンタクトページレイアウト"
 
-#: admin/options.php:1019 admin/options.php:1102 admin/options.php:1222
-#: admin/options.php:1286 admin/options.php:1312
+#: admin/options.php:1040 admin/options.php:1132 admin/options.php:1252
+#: admin/options.php:1316 admin/options.php:1342
 msgid "Select layout"
 msgstr "レイアウトを選択"
 
-#: admin/options.php:1032
+#: admin/options.php:1053
 msgid "Blog area"
 msgstr "ブログエリア"
 
-#: admin/options.php:1038 admin/options.php:1066 admin/options.php:1187
-#: admin/options.php:1235
+#: admin/options.php:1059 admin/options.php:1096 admin/options.php:1217
+#: admin/options.php:1265
 msgid "Number to display"
 msgstr "表示数"
 
-#: admin/options.php:1045 admin/options.php:1073 admin/options.php:1194
-#: admin/options.php:1417
+#: admin/options.php:1066 admin/options.php:1103 admin/options.php:1224
+#: admin/options.php:1463
 msgid "Title"
 msgstr "タイトル"
 
-#: admin/options.php:1047
+#: admin/options.php:1068
 msgid "Blog"
 msgstr "Blog"
 
-#: admin/options.php:1051 admin/options.php:1079 admin/options.php:1200
-#: admin/options.php:1248 admin/options.php:1264 admin/options.php:1432
+#: admin/options.php:1072 admin/options.php:1109 admin/options.php:1230
+#: admin/options.php:1278 admin/options.php:1294 admin/options.php:1364
+#: admin/options.php:1478
 msgid "Icon"
 msgstr "アイコン"
 
-#: admin/options.php:1060
+#: admin/options.php:1081
 msgid "Portfolio area"
 msgstr "ポートフォリオエリア"
 
-#: admin/options.php:1075 admin/options.php:1196 front-page.php:59
+#: admin/options.php:1087 admin/options.php:1185
+msgid "Select Column Number"
+msgstr "カラム数"
+
+#: admin/options.php:1105 admin/options.php:1226 content-portfolio.php:7
+#: front-page.php:59 inc/extras.php:162 inc/extras.php:177
 #: taxonomy-post_format-post-format-gallery.php:12
 msgid "Portfolio"
 msgstr "ポートフォリオ"
 
-#: admin/options.php:1116
+#: admin/options.php:1146
 msgid "Select text location"
 msgstr "テキストの位置"
 
-#: admin/options.php:1142
+#: admin/options.php:1172
 msgid "Select archive layout"
 msgstr "アーカイブレイアウト"
 
-#: admin/options.php:1155
-msgid "Select Column Number"
-msgstr "カラム数"
-
-#: admin/options.php:1164 admin/options.php:1176
+#: admin/options.php:1194 admin/options.php:1206
 msgid "Select display pattern"
 msgstr "表示パターン"
 
-#: admin/options.php:1181
+#: admin/options.php:1211
 msgid "Only image"
 msgstr "イメージのみ"
 
-#: admin/options.php:1182
+#: admin/options.php:1212
 msgid "Image with title"
 msgstr "イメージとタイトル"
 
-#: admin/options.php:1183
+#: admin/options.php:1213
 msgid "Image with title and text"
 msgstr "イメージとタイトルと抜粋"
 
-#: admin/options.php:1242
+#: admin/options.php:1272
 msgid "Archive title"
 msgstr "アーカイブタイトル"
 
-#: admin/options.php:1244 archive.php:11 index.php:15
+#: admin/options.php:1274 archive.php:11 index.php:15
 msgid "Blog Archive"
 msgstr "ブログアーカイブ"
 
-#: admin/options.php:1257
+#: admin/options.php:1287
 msgid "Search Result title"
 msgstr "検索結果タイトル"
 
-#: admin/options.php:1259
+#: admin/options.php:1289
 msgid "%s : Search keywords."
 msgstr "%s : 検索キーワード。"
 
-#: admin/options.php:1260 search.php:9
+#: admin/options.php:1290 search.php:9
 msgid "Search Results for: %s"
 msgstr "検索結果: %s"
 
-#: admin/options.php:1313
+#: admin/options.php:1343
 msgid "A = page content area."
 msgstr "A = 固定ページ本文エリア."
 
-#: admin/options.php:1341
+#: admin/options.php:1357
+msgid "Page Title"
+msgstr "ページのタイトル"
+
+#: admin/options.php:1387
 msgid "Area B"
 msgstr "エリアB"
 
-#: admin/options.php:1347
+#: admin/options.php:1393
 msgid "Area B Title"
 msgstr "エリアBタイトル"
 
-#: admin/options.php:1353
+#: admin/options.php:1399
 msgid "Area B conents"
 msgstr "エリアB本文"
 
-#: admin/options.php:1360
+#: admin/options.php:1406
 msgid "Area C"
 msgstr "エリアC"
 
-#: admin/options.php:1366
+#: admin/options.php:1412
 msgid "Area C Title"
 msgstr "エリアCタイトル"
 
-#: admin/options.php:1372
+#: admin/options.php:1418
 msgid "Area C conents"
 msgstr "エリアC本文"
 
-#: admin/options.php:1388
+#: admin/options.php:1434
 msgid "Merit Box Settings"
 msgstr ""
 
-#: admin/options.php:1393
+#: admin/options.php:1439
 msgid "Number of box to show "
 msgstr "表示数"
 
-#: admin/options.php:1394
+#: admin/options.php:1440
 msgid "Default:1, Min:1, Max:4."
 msgstr "初期値:1、最小値:1、最大値:4"
 
-#: admin/options.php:1411
+#: admin/options.php:1457
 msgid "Merit box %s"
 msgstr "メリットボックス %s"
 
-#: admin/options.php:1424
+#: admin/options.php:1470
 msgid "Textarea"
 msgstr "テキストエリア"
 
-#: admin/options.php:1441
+#: admin/options.php:1487
 msgid "Image"
 msgstr "イメージ"
 
-#: admin/options.php:1442
+#: admin/options.php:1488
 msgid "Image will override any icon."
 msgstr "イメージはアイコンの設定を上書きします。"
 
-#: admin/options.php:1448
+#: admin/options.php:1494
 msgid "URL"
 msgstr "URL"
 
-#: admin/options.php:1459
+#: admin/options.php:1505
 msgid "Social Settings"
 msgstr ""
 
-#: admin/options.php:1464
+#: admin/options.php:1510
 msgid "Social Icon setting"
 msgstr "SNSアイコン設定"
 
-#: admin/options.php:1471
+#: admin/options.php:1517
 msgid "Frame"
 msgstr "フレーム"
 
-#: admin/options.php:1478
+#: admin/options.php:1524
 msgid "Header icon color"
 msgstr "ヘッダーアイコン色"
 
-#: admin/options.php:1485
+#: admin/options.php:1531
 msgid "Footer icon color"
 msgstr "フッターアイコン色"
 
-#: admin/options.php:1492
+#: admin/options.php:1538
 msgid "Display location"
 msgstr "表示位置"
 
-#: admin/options.php:1499
+#: admin/options.php:1545
 msgid "Header"
 msgstr "ヘッダー"
 
-#: admin/options.php:1506
+#: admin/options.php:1552
 msgid "Footer"
 msgstr "フッタ"
 
-#: admin/options.php:1513
-msgid "You're SNS address"
+#: admin/options.php:1559
+msgid "Your SNS address"
 msgstr "あなたのSNSのアドレス"
 
-#: admin/options.php:1520
+#: admin/options.php:1566
 msgid "E-mail"
 msgstr "E-mail"
 
-#: admin/options.php:1521
-msgid "You're E-mail address."
+#: admin/options.php:1567
+msgid "Your E-mail address."
 msgstr "あなたのE-mailアドレス"
 
-#: admin/options.php:1531
-msgid "You're %s address."
+#: admin/options.php:1577
+msgid "Your %s address."
 msgstr "あなたの%sアドレス"
 
 #: archive.php:24
@@ -2923,7 +2935,7 @@ msgstr "Y"
 msgid "Post format: %s"
 msgstr "投稿フォーマット: %s"
 
-#: archive.php:54 sidebar.php:19
+#: archive.php:54
 msgid "Archives"
 msgstr "アーカイブ"
 
@@ -2946,9 +2958,9 @@ msgstr "コメントは受け付けていません。"
 msgid "Send"
 msgstr "送信"
 
-#: content-gallery.php:40 content-page.php:27 content-single.php:29
-#: content-typeA.php:35 content-typeB.php:35 content.php:37
-#: inc/template-tags.php:153 inc/template-tags.php:175
+#: content-gallery.php:42 content-page.php:27 content-portfolio.php:60
+#: content-single.php:30 content-typeA.php:37 content-typeB.php:37
+#: content.php:39 inc/template-tags.php:153 inc/template-tags.php:175
 msgid "Edit"
 msgstr "編集"
 
@@ -2977,12 +2989,12 @@ msgid ""
 "searching can help."
 msgstr "お探しのコンテンツが見つかりません。検索をお試しください。"
 
-#: content-page.php:21 content-single.php:40
+#: content-page.php:21 content-portfolio.php:71 content-single.php:41
 msgid "Pages:"
 msgstr "ページ:"
 
 #. translators: used between list items, there is a space after the comma
-#: content-single.php:23
+#: content-portfolio.php:54 content-single.php:24
 msgid ", "
 msgstr ", "
 
@@ -3019,29 +3031,23 @@ msgstr "フッターエリア3"
 msgid "Footer 4"
 msgstr "フッターエリア4"
 
-#: header.php:43
+#: header.php:49
 msgid "Social"
 msgstr "ソーシャル"
 
-#: header.php:62
+#: header.php:68
 msgid "Menu"
 msgstr "メニュー"
 
-#: header.php:63
+#: header.php:69
 msgid "Skip to content"
 msgstr "コンテンツへスキップ"
 
-#: header.php:70 searchform.php:13
+#: header.php:76 searchform.php:13
 msgid "Search"
 msgstr "検索"
 
-#: inc/customizer.php:55
-msgid ""
-"Eeh what's that when it's at ooam big girl's blouse ah'll learn thi ey up. "
-"<a href=\"#\">Click here.</a>"
-msgstr ""
-
-#: inc/customizer.php:175
+#: inc/customizer.php:199
 msgid "Logo settings"
 msgstr "ロゴ設定"
 
@@ -3106,45 +3112,43 @@ msgstr "About Us"
 msgid "Sample text."
 msgstr "サンプルテキスト"
 
-#: inc/widgets.php:92
+#: inc/widgets.php:93
 msgid "Contact (Tidy)"
 msgstr "コンタクト (Tidy)"
 
-#: inc/widgets.php:94
+#: inc/widgets.php:95
 msgid "E-mail and SNS acounts."
 msgstr "E-mail と SNS アカウント"
 
-#. #-#-#-#-#  tidy.pot (Tidy 0.2)  #-#-#-#-#
-#. Template Name of the plugin/theme
-#: inc/widgets.php:110
+#: inc/widgets.php:111
 msgid "Contact"
 msgstr "コンタクト"
 
-#: inc/widgets.php:143 inc/widgets.php:277
+#: inc/widgets.php:144 inc/widgets.php:278
 msgid "Title:"
 msgstr "タイトル:"
 
-#: inc/widgets.php:147
+#: inc/widgets.php:148
 msgid "E-mail:"
 msgstr ""
 
-#: inc/widgets.php:184
+#: inc/widgets.php:185
 msgid "Recent Posts (Tidy)"
 msgstr "最近の投稿 (Tidy)"
 
-#: inc/widgets.php:186
+#: inc/widgets.php:187
 msgid "The most recent posts on your site"
 msgstr "サイトの最新の投稿"
 
-#: inc/widgets.php:220
+#: inc/widgets.php:221
 msgid "Recent Posts"
 msgstr "最近の投稿"
 
-#: inc/widgets.php:281
+#: inc/widgets.php:282
 msgid "Number of posts to show:"
 msgstr "表示する投稿数:"
 
-#: inc/widgets.php:286
+#: inc/widgets.php:287
 msgid "Show post title?"
 msgstr "投稿タイトルを表示"
 
@@ -3158,15 +3162,23 @@ msgctxt "placeholder"
 msgid "Type and hit enter &hellip;"
 msgstr "入力後Enterキーを押してください &hellip;"
 
-#: sidebar.php:26
+#: sidebar.php:19
+msgid "Category"
+msgstr "カテゴリー"
+
+#: sidebar.php:30
 msgid "Meta"
 msgstr "メタ"
 
-#. #-#-#-#-#  tidy.pot (Tidy 0.2)  #-#-#-#-#
+#. #-#-#-#-#  tidy.pot (Tidy 0.3.1)  #-#-#-#-#
+#. Template Name of the plugin/theme
 #. Theme Name of the plugin/theme
 msgid "Tidy"
 msgstr ""
 
+#. #-#-#-#-#  tidy.pot (Tidy 0.3.1)  #-#-#-#-#
+#. Theme URI of the plugin/theme
+#. #-#-#-#-#  tidy.pot (Tidy 0.3.1)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://www.gmo.jp/"
 msgstr ""
