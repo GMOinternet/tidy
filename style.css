@@ -1576,10 +1576,6 @@ li.depth-1 {
   font-size: 14px;
   position: relative;
   text-indent: 100px;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
 }
 .comment-form input[type="text"]:focus,
 .comment-form input[type="email"]:focus,
