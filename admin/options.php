@@ -645,7 +645,7 @@ function optionsframework_options() {
 		'name' => __( 'Show Header text', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_text_toggle',
-		'std' => '1',
+		'std' => '0',
 		'type' => 'toggle');
 
 	// Text Input for Header text
