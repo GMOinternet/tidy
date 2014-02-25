@@ -1593,7 +1593,7 @@ li.depth-1 {
   width: 100%;
   max-width: 100%;
   min-width: 100%;
-  min-height: 3em;
+  min-height: 12em;
 }
 .comment-form .comment-form-author,
 .comment-form .comment-form-email,
@@ -1650,8 +1650,8 @@ li.depth-1 {
 .comment-form .form-submit {
   margin-bottom: 0;
   position: absolute;
-  bottom: 2px;
-  right: 2px;
+  bottom: 10px;
+  right: 10px;
   z-index: 100;
 }
 
