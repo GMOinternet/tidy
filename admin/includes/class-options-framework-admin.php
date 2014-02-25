@@ -65,7 +65,6 @@ class Options_Framework_Admin {
 
 		// Displays notice after options save
 		add_action( 'optionsframework_after_validate', array( $this, 'save_options_notice' ) );
-
 	}
 
 	/*
@@ -92,8 +91,8 @@ class Options_Framework_Admin {
 			'menu_title'  => __( 'Theme Options', 'tidy' ),
 			'capability'  => 'edit_theme_options',
 			'menu_slug'   => 'tidy-options',
-			'banner'      => get_template_directory_uri() . '/admin/images/admin-banner.png',
-			'banner_link' => 'http://wpshop.com/'
+			'banner'      => get_template_directory_uri() . '/admin/images/300x100_10816.gif',
+			'banner_link' => 'http://www.conoha.jp/lp/20131201wp/?banner_id=vn_dq_20140317'
 		);
 
 		return apply_filters( 'optionsframework_menu', $menu );
@@ -221,29 +220,29 @@ class Options_Framework_Admin {
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<div id="optionsframework-header">
-			<h2>
-				<span class="optionsframework-title"><?php echo esc_html( $menu['page_title'] ); ?></span>
-				<span class="optionsframework-share"><a href="https://twitter.com/<?php echo esc_attr( $sns['twitter'] ); ?>" class="twitter-follow-button" data-show-count="false">Follow @<?php echo esc_html( $sns['twitter'] ); ?></a>
-				<div class="fb-like" data-href="<?php echo esc_attr( $sns['shareurl'] ); ?>" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-				</span>
-			</h2>
+			<div class="optionsframework-title">
+				<h2><?php echo esc_html( $menu['page_title'] ); ?></h2>
+				<div class="optionsframework-share">
+					<a href="https://twitter.com/<?php echo esc_attr( $sns['twitter'] ); ?>" class="twitter-follow-button" data-show-count="false">Follow @<?php echo esc_html( $sns['twitter'] ); ?></a>
+					<div class="fb-like" data-href="<?php echo esc_attr( $sns['shareurl'] ); ?>" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+				</div>
+			</div>
+			<?php if ( $menu['banner'] ) : ?>
+				<?php
+					$banner = '<img src="' . esc_attr( $menu['banner'] ) . '" alt="*">';
+					$banner = ( $menu['banner_link'] ) ? '<a href="' . esc_url( $menu['banner_link']) . '" target="_blank">' . $banner . '</a>' : $banner;
+				?>
+			<div id="optionsframework-banner"><?php echo $banner; ?></div>
+			<?php endif; ?>
 		</div>
 
 		<?php // save options message here. ?>
-		<?php if ( $menu['banner'] ) : ?>
-			<?php
-				$banner = '<img src="' . esc_attr( $menu['banner'] ) . '" alt="*">';
-				$banner = ( $menu['banner_link'] ) ? '<a href="' . esc_url( $menu['banner_link']) . '" target="_blank">' . $banner . '</a>' : $banner;
-			?>
-		<div id="optionsframework-banner"><?php echo $banner; ?></div>
-		<?php endif; ?>
+		<?php settings_errors( 'options-framework' ); ?>
 
 		<div id="optionsframework-tabs">
 			<ul class="nav-tab-wrapper">
 				<?php echo Options_Framework_Interface::optionsframework_tabs(); ?>
 			</ul>
-
-			<?php settings_errors( 'options-framework' ); ?>
 	
 			<div id="optionsframework-metabox" class="metabox-holder">
 				<div id="optionsframework" class="postbox">
@@ -286,7 +285,7 @@ class Options_Framework_Admin {
 		 */
 
 		if ( isset( $_POST['reset'] ) ) {
-			add_settings_error( 'options-framework', 'restore_defaults', __( 'Default options restored.', 'tidy' ), 'updated fade' );
+			add_settings_error( 'options-framework', 'restore_defaults', __( 'Default options restored.', 'tidy' ), 'below-h2 updated fade' );
 			return $this->get_default_values();
 		}
 
@@ -339,8 +338,9 @@ class Options_Framework_Admin {
 	 */
 
 	function save_options_notice() {
-		add_settings_error( 'options-framework', 'save_options', __( 'Options saved.', 'tidy' ), 'updated fade' );
+		add_settings_error( 'options-framework', 'save_options', __( 'Options saved.', 'tidy' ), 'below-h2 updated fade' );
 	}
+
 
 	/**
 	 * Get the default values for all the theme options

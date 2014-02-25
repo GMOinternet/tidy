@@ -1,21 +1,20 @@
 /* =Header
 ----------------------------------------------- */
-#optionsframework-header h2 {
+#optionsframework-header {
   overflow: hidden;
   *zoom: 1;
 }
 #optionsframework-header .optionsframework-title {
   float: left;
-}
-#optionsframework-header .optionsframework-share {
-  float: right;
+  width: 300px;
 }
 
 /* =Banner
 ----------------------------------------------- */
 #optionsframework-banner {
-  clear: both;
-  margin: 15px 0;
+  float: right;
+  width: 300px;
+  margin-left: 50px;
 }
 
 /* =Tabs
