@@ -27,6 +27,10 @@ get_header(); ?>
 		<?php do_action( 'tidy_before_primary' ); ?>
 		<main id="main" class="site-main" role="main">
 
+			<?php
+				$home_blog_num = (int)of_get_option( 'home_blog_num', $posts_per_page );
+				if ( $home_blog_num > 0 ) :
+			 ?>
 			<section id="blog-area" class="front-section">
 				<?php
 					$blogicon  = of_get_option( 'home_blog_icon', 'pencil' );
@@ -53,13 +57,16 @@ get_header(); ?>
 				<?php endif; ?>
 
 			</section><!-- #blog-area -->
+			<?php endif; // if ( $home_blog_num > 0 ) ?>
 
 			<?php
 			$galleryicon   = of_get_option( 'home_port_icon', 'notebook' );
 			$gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
-			$home_port_num = of_get_option( 'home_port_num', $posts_per_page );
+			$home_port_num = (int)of_get_option( 'home_port_num', $posts_per_page );
 			$port_cont_c   = of_get_option( 'homeport_cont_c', '3' );
 			$port_d = of_get_option( 'port_d', 'normal' );
+
+			if ( $home_port_num > 0 ) :
 			$args = array(
 				'posts_per_page' => $home_port_num,
 				'tax_query'      => array(
@@ -89,6 +96,8 @@ get_header(); ?>
 			</section>
 			<?php endif; ?>
 			<?php wp_reset_postdata(); ?>
+			<?php endif; // if ( $home_port_num > 0 ) ?>
+
 		</main><!-- #main -->
 		<?php do_action( 'tidy_after_primary' ); ?>
 	</div><!-- #primary -->
