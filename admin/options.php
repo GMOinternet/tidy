@@ -1556,7 +1556,7 @@ function optionsframework_options() {
 		'type' => 'toggle');
 
 	$options[] = array(
-		'name' => __('You\'re SNS address', 'tidy'),
+		'name' => __('Your SNS address', 'tidy'),
 		'desc' => '',
 		'id' => 'sns-addr',
 		'std' => '',
@@ -1564,7 +1564,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __('E-mail', 'tidy'),
-		'desc' => __('You\'re E-mail address.', 'tidy'),
+		'desc' => __('Your E-mail address.', 'tidy'),
 		'id' => 'email',
 		'std' => 'info@example.com',
 		'type' => 'email');
@@ -1574,7 +1574,7 @@ function optionsframework_options() {
 		foreach( $sns_array as $key=>$val ) {
 			$options[] = array(
 				'name' => $key,
-				'desc' => sprintf( __('You\'re %s address.', 'tidy'), $key ),
+				'desc' => sprintf( __('Your %s address.', 'tidy'), $key ),
 				'id' => $val[0],
 				'account' => $val[1],
 				'toggle' => 0,
