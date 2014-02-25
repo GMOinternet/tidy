@@ -787,12 +787,14 @@ function tidy_customize_style() {
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['header_widget_bg_color'] ) ) : ?>
-		.site-header-widget-area {
+		.site-header-widget-area,
+		.header-widget-toggle-btn {
 			background-color: <?php echo esc_attr( $options['header_widget_bg_color'] ); ?>;
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['header_widget_text_color'] ) ) : ?>
-		.site-header-widget-area {
+		.site-header-widget-area,
+		.header-widget-toggle-btn {
 			color: <?php echo esc_attr( $options['header_widget_text_color'] ); ?>;
 		}
 		<?php endif; ?>
