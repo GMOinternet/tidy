@@ -14,7 +14,7 @@ global $merit_box, $i;
 	}
 	
 	if ( ( of_get_option( 'merit-box-' . $i . '-url') === false ) or ( of_get_option( 'merit-box-' . $i . '-url') == '' ) ) {
-		$url = '#';
+		$url = '';
 	} else {
 		$url = of_get_option( 'merit-box-' . $i . '-url');
 	}
@@ -43,10 +43,16 @@ global $merit_box, $i;
 		$img = '<span class="iconmoon icon-' . $icon . '"></span>';
 	}
 ?>
-	<div class="merit-box-thumbnail <?php echo $type; ?>"><a href="<?php echo esc_url($url); ?>"><?php echo $img; ?></a></div>
+	<div class="merit-box-thumbnail <?php echo $type; ?>">
+		<?php if ( $url != '' ) : ?>
+			<a href="<?php echo esc_url($url); ?>" class="iconbox"><?php echo $img; ?></a>
+		<?php else: ?>
+			<span class="iconbox"><?php echo $img; ?></span>
+		<?php endif; ?>
+	</div>
 	<div class="merit-box-title"><?php echo esc_html( $title ); ?></div>
 	<div class="merit-box-caption"><?php echo wpautop( $description ); ?></div>
-	<?php if ( $url != "#" ) : ?>
+	<?php if ( $url != '' ) : ?>
 	<div class="more-link"><a rel="bookmark" href="<?php echo esc_url($url); ?>" class="read-more"><span class="genericon genericon-rightarrow"></span><?php _e( 'Read More', 'tidy' ) ?></a></div>
 	<?php endif; ?>
 </aside>
