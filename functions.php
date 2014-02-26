@@ -183,7 +183,7 @@ function tidy_scripts() {
 	wp_enqueue_style(
 		'tidy-style',
 		get_stylesheet_uri(),
-		array( 'google-fonts', 'tidy-genericons', 'iconmoon-tidy' ),
+		array( 'google-fonts', 'gmo-genericons', 'gmo-iconmoon' ),
 		$tidy_version
 	);
 
