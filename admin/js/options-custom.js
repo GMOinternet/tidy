@@ -113,6 +113,19 @@ jQuery(document).ready(function($) {
 	});
 
 	// icon
+	function format(state) {
+		var originalOption = state.element;
+		return "<span class='icon-" + state.id + "'></span> " + state.text;
+	}
+	$( '.mnicon .controls select' ).select2({
+		width: "200",
+		formatResult: format,
+		formatSelection: format,
+		escapeMarkup: function(m) { return m; }
+	});
+	//$( '.mnicon .controls select' ).select2();
+
+
 	$( '.mnicon .controls' ).each(function(index) {
 		var icond = $(this).children().children( "option:selected" ).val();
 		$(this).append('<div class="type-icon"><a href="#"><span class="icon-' + icond + '"></span></a></div>') ;

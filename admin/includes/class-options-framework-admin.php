@@ -169,6 +169,7 @@ class Options_Framework_Admin {
 
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_style( 'gmo-iconmoon', get_template_directory_uri() . '/iconmoon-tidy/style.min.css', array(), Options_Framework::VERSION );
+		wp_enqueue_style( 'select2', TIDY_ADMIN_DIRECTORY_URI . 'css/select2.css', array(), Options_Framework::VERSION );
 		wp_enqueue_style( 'optionsframework', TIDY_ADMIN_DIRECTORY_URI . 'css/optionsframework.min.css', array(), Options_Framework::VERSION );
 	}
 
@@ -183,6 +184,7 @@ class Options_Framework_Admin {
 			return;
 
 		// Enqueue custom option panel JS
+		wp_enqueue_script( 'options-select2', TIDY_ADMIN_DIRECTORY_URI . 'js/select2.min.js', array( 'jquery' ), Options_Framework::VERSION );
 		wp_enqueue_script( 'options-custom', TIDY_ADMIN_DIRECTORY_URI . 'js/options-custom.js', array( 'jquery', 'wp-color-picker' ), Options_Framework::VERSION );
 
 		// Inline scripts from options-interface.php
