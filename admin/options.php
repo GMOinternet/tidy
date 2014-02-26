@@ -1480,6 +1480,20 @@ function optionsframework_options() {
 			'std' => 'merit-box-' . $i . '-description',
 			'class' => 'merit-box-' . $i,
 			'type' => 'textarea');
+
+		$options[] = array(
+			'name' => __('Textarea align', 'tidy'),
+			'desc' => '',
+			'id' => 'merit-box-' . $i . '-align',
+			'std' => 'center',
+			'class' => 'merit-box-' . $i,
+			'type' => 'radio',
+			'options' => array(
+				'left' => __('Left', 'tidy'),
+				'center' => __('Center', 'tidy'),
+				'right' => __('Right', 'tidy')
+				)
+			);
 	
 		$options[] = array(
 			'name' => __('Icon', 'tidy'),

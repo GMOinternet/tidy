@@ -933,6 +933,15 @@ body.single .entry-title, body.page .entry-title {
 .merit-box-area-conteiner .more-link {
   display: none;
 }
+.merit-box-area-conteiner .text-left {
+  text-align: left;
+}
+.merit-box-area-conteiner .text-center {
+  text-align: center;
+}
+.merit-box-area-conteiner .text-right {
+  text-align: right;
+}
 
 .merit-box-thumbnail {
   margin: 0 auto 20px auto;
@@ -1024,6 +1033,17 @@ body.single .entry-title, body.page .entry-title {
   width: 100%;
   float: none;
   text-align: left;
+  /*
+  	.text-left {
+  		text-align: left;
+  	}
+  	.text-center {
+  		text-align: center;
+  	}
+  	.text-right {
+  		text-align: right;
+  	}
+  */
 }
 .merit-box-1 .merit-box-thumbnail {
   float: left;
@@ -1037,6 +1057,11 @@ body.single .entry-title, body.page .entry-title {
 .merit-box-1 .more-link {
   margin-top: 1em;
   display: block;
+}
+.merit-box-1 .text-left,
+.merit-box-1 .text-center,
+.merit-box-1 .text-right {
+  text-align: left;
 }
 
 .merit-box-2 {

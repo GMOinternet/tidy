@@ -13,35 +13,23 @@ global $merit_box, $i;
 		$type = 'type-image';
 	}
 	
-	if ( ( of_get_option( 'merit-box-' . $i . '-url') === false ) or ( of_get_option( 'merit-box-' . $i . '-url') == '' ) ) {
-		$url = '';
-	} else {
-		$url = of_get_option( 'merit-box-' . $i . '-url');
-	}
+	$url = of_get_option( 'merit-box-' . $i . '-url', '' );
 
-	if ( of_get_option( 'merit-box-' . $i . '-icon') === false ) {
-		$icon = 'copy';
-	} else {
-		$icon = of_get_option( 'merit-box-' . $i . '-icon');
-	}
+	$icon = of_get_option( 'merit-box-' . $i . '-icon', 'copy' );
 
-	if ( of_get_option( 'merit-box-' . $i . '-title') === false ) {
-		$title = 'merit-box-' . $i . '-title';
-	} else {
-		$title = of_get_option( 'merit-box-' . $i . '-title');
-	}
+	$title = of_get_option( 'merit-box-' . $i . '-title', 'merit-box-' . $i . '-title' );
 
-	if ( of_get_option( 'merit-box-' . $i . '-description') === false ) {
-		$description = 'merit-box-' . $i . '-description';
-	} else {
-		$description = of_get_option( 'merit-box-' . $i . '-description');
-	}
+	$description = of_get_option( 'merit-box-' . $i . '-description', 'merit-box-' . $i . '-description' );
+
+	$textalign = of_get_option( 'merit-box-' . $i . '-align', 'center' );
 
 	if ( $type == 'type-image' ) {
 		$img = '<img src="' . of_get_option( 'merit-box-' . $i . '-image') . '" alt="' . esc_attr( $title ) . '">';
 	} else {
 		$img = '<span class="iconmoon icon-' . $icon . '"></span>';
 	}
+	
+
 ?>
 	<div class="merit-box-thumbnail">
 		<div class="<?php echo $type; ?>"><div class="merit-box-thumbnail-inner">
@@ -53,7 +41,7 @@ global $merit_box, $i;
 		</div></div>
 	</div>
 	<div class="merit-box-title"><?php echo esc_html( $title ); ?></div>
-	<div class="merit-box-caption"><?php echo wpautop( $description ); ?></div>
+	<div class="merit-box-caption <?php echo "text-" . esc_attr($textalign); ?>"><?php echo wpautop( $description ); ?></div>
 	<?php if ( $url != '' ) : ?>
 	<div class="more-link"><a rel="bookmark" href="<?php echo esc_url($url); ?>" class="read-more"><span class="genericon genericon-rightarrow"></span><?php _e( 'Read More', 'tidy' ) ?></a></div>
 	<?php endif; ?>
