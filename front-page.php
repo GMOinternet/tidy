@@ -13,15 +13,19 @@
 $layout = of_get_option( 'home_c', 'cont_s2' );
 get_header(); ?>
 
+	<?php // merit-box-area
+		$merit_box_toggle = of_get_option( 'meritbox_toggle', 0 );
+		if ( $merit_box_toggle > 0) :
+	?>
 	<div id="merit-box-area" class="front-section"><div class="front-section-content merit-section-content">
 		<?php
-			$merit_box = of_get_option( 'merit-box-num' );
-			$merit_box = ( of_get_option( 'merit-box-num' ) === false ) ? 1 : of_get_option( 'merit-box-num' );
+			$merit_box = of_get_option( 'merit-box-num', 4 );
 			for ( $i = 1; $i <= $merit_box; $i++ ) {
 				get_template_part( 'meritbox' );
 			}
 		?>
 	</div></div><!-- #merit-box-area -->
+	<?php endif; ?>
 
 	<div id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
 		<?php do_action( 'tidy_before_primary' ); ?>

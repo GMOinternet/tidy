@@ -1012,7 +1012,7 @@ function optionsframework_options() {
 		'id' => 'responsive_style',
 		'std' => '1',
 		'type' => 'toggle');
-		
+
 	
 	// tab head
 	$layouttabs = array(
@@ -1436,8 +1436,15 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
+		'name' => __( 'Display Merit Box', 'tidy' ),
+		'desc' => '',
+		'id' => 'meritbox_toggle',
+		'std' => '0',
+		'type' => 'toggle');
+
+	$options[] = array(
 		'name' => __('Number of box to show ', 'tidy'),
-		'desc' => __('Default:1, Min:1, Max:4.', 'tidy'),
+		'desc' => __('Default:4, Min:1, Max:4.', 'tidy'),
 		'id' => 'merit-box-num',
 		'std' => 4,
 		'type' => 'select',
