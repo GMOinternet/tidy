@@ -137,10 +137,7 @@
   *zoom: 1;
 }
 #optionsframework h3 {
-  cursor: default;
-  font-size: 18px;
-  background-color: #f1f1f1;
-  border-bottom: 1px solid #ddd;
+  display: none;
 }
 #optionsframework .section {
   overflow: hidden;
