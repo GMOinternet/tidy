@@ -43,12 +43,14 @@ global $merit_box, $i;
 		$img = '<span class="iconmoon icon-' . $icon . '"></span>';
 	}
 ?>
-	<div class="merit-box-thumbnail <?php echo $type; ?>">
+	<div class="merit-box-thumbnail">
+		<div class="<?php echo $type; ?>"><div class="merit-box-thumbnail-inner">
 		<?php if ( $url != '' ) : ?>
 			<a href="<?php echo esc_url($url); ?>" class="iconbox"><?php echo $img; ?></a>
 		<?php else: ?>
 			<span class="iconbox"><?php echo $img; ?></span>
 		<?php endif; ?>
+		</div></div>
 	</div>
 	<div class="merit-box-title"><?php echo esc_html( $title ); ?></div>
 	<div class="merit-box-caption"><?php echo wpautop( $description ); ?></div>

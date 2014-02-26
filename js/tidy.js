@@ -78,6 +78,9 @@
 		return false;
 	} );
 
+	// Merit Box
+	$("#merit-box-area .merit-box-thumbnail").flatHeights();
+
 	// Blog
 	$(".blog-section-content > article").flatHeights();
 	$("div.tidy-thumb-blog").each(function(i){
@@ -164,9 +167,9 @@
 		});
 	}
 
-//IE使用バージョン取得
 })(jQuery);
 
+// IE ver
 function ie() {
 	var undef, v = 3, div = document.createElement('div');
 	while (
