@@ -223,8 +223,8 @@ class Options_Framework_Admin {
 			<div class="optionsframework-title">
 				<h2><?php echo esc_html( $menu['page_title'] ); ?></h2>
 				<div class="optionsframework-share">
-					<a href="https://twitter.com/<?php echo esc_attr( $sns['twitter'] ); ?>" class="twitter-follow-button" data-show-count="false">Follow @<?php echo esc_html( $sns['twitter'] ); ?></a>
-					<div class="fb-like" data-href="<?php echo esc_attr( $sns['shareurl'] ); ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+					<div class="sns"><a href="https://twitter.com/<?php echo esc_attr( $sns['twitter'] ); ?>" class="twitter-follow-button" data-show-count="false">Follow @<?php echo esc_html( $sns['twitter'] ); ?></a></div>
+					<div class="sns"><div class="fb-like" data-href="<?php echo esc_attr( $sns['shareurl'] ); ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></div>
 				</div>
 			</div>
 			<?php if ( $menu['banner'] ) : ?>

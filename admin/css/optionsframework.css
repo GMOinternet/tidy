@@ -11,6 +11,10 @@
 #optionsframework-header .optionsframework-share {
   margin-top: 20px;
 }
+#optionsframework-header .optionsframework-share .sns {
+  display: inline-block;
+  vertical-align: top;
+}
 
 /* =Banner
 ----------------------------------------------- */
