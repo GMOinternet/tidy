@@ -138,7 +138,7 @@ function tidy_scripts() {
 	$tidy_version = $tidy_info->get( 'Version' );
 
 	wp_enqueue_style(
-		'google-fonts',
+		'gmo-google-fonts',
 		'http://fonts.googleapis.com/css?family=Open+Sans',
 		array(),
 		$tidy_version
@@ -183,7 +183,7 @@ function tidy_scripts() {
 	wp_enqueue_style(
 		'tidy-style',
 		get_stylesheet_uri(),
-		array( 'google-fonts', 'tidy-genericons', 'iconmoon-tidy' ),
+		array( 'gmo-google-fonts', 'gmo-genericons', 'gmo-iconmoon' ),
 		$tidy_version
 	);
 
