@@ -13,8 +13,16 @@ function tidy_themeoption_header_style() {
 	$sns_icon_border = of_get_option( 'sns-icon-frame', '1' );
 	$sns_icon_color_header = of_get_option( 'sns-icon-color-header', '#0058AE' );
 	$sns_icon_color_footer = of_get_option( 'sns-icon-color-footer', '#ffffff' );
+
 	?>
 	<style type="text/css">
+	<?php 
+	for ($i = 1; $i <= 4; $i++) {		
+		echo '#merit-box-' .$i .' .merit-box-thumbnail .type-icon .merit-box-thumbnail-inner {
+			background-color: ' . of_get_option( 'merit-box-' . $i . '-icon-color', '#0058AE' ). ';
+		}';
+	}
+	 ?>
 		.sns-icons a {
 			color: <?php echo $sns_icon_color_header; ?> !important;
 			border-color: <?php echo $sns_icon_color_header; ?>;

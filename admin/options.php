@@ -1504,6 +1504,16 @@ function optionsframework_options() {
 			'class' => 'mnicon mini merit-box-' . $i,
 			'options' => $icon_array);
 	
+		// = Color Picker for image hover color.
+		$options[] = array(
+			'name' => __('Icon bg color', 'tidy'),
+			'desc' => '',
+			'id' => 'merit-box-' . $i . '-icon-color',
+			'std' => '#0058AE',
+			'class' => 'merit-box-icon-bg-color merit-box-' . $i,
+			'type' => 'color'
+		);
+
 		$options[] = array(
 			'name' => __('Image', 'tidy'),
 			'desc' => __('Image will override any icon.', 'tidy'),

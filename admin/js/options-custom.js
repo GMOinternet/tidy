@@ -112,7 +112,7 @@ jQuery(document).ready(function($) {
 		options_merit_box(cnt);
 	});
 
-	// icon
+	// icon image in select
 	function format(state) {
 		var originalOption = state.element;
 		return "<span class='icon-" + state.id + "'></span> " + state.text;
@@ -123,14 +123,13 @@ jQuery(document).ready(function($) {
 		formatSelection: format,
 		escapeMarkup: function(m) { return m; }
 	});
-	//$( '.mnicon .controls select' ).select2();
-
 
 	$( '.mnicon .controls' ).each(function(index) {
 		var icond = $(this).children().children( "option:selected" ).val();
 		$(this).append('<div class="type-icon"><a href="#"><span class="icon-' + icond + '"></span></a></div>') ;
 	});
 
+	// icon image preview
 	$( ".mnicon select" ).change(function () {
 		var icon = $(this).val();
 		var className = $(this).next().children().children().attr('class');
@@ -139,6 +138,32 @@ jQuery(document).ready(function($) {
 		$(this).next().children().children().addClass(icon);
 	});
 
+	// icon bgcolor preview
+	$('.merit-box-icon-bg-color .of-color').each(function(){
+		var id = $(this).attr( 'id' ).replace(/-icon-color/gi, " .type-icon");
+		var mc = $(this).attr( 'data-set-color' );
+		$("."+id).css( 'background', mc );
+	});
+	$('.merit-box-1 .of-color').iris({
+		change: function(event, ui) {
+			$(".merit-box-1 .type-icon").css( 'background', ui.color.toString());
+		}
+	});
+	$('.merit-box-2 .of-color').iris({
+		change: function(event, ui) {
+			$(".merit-box-2 .type-icon").css( 'background', ui.color.toString());
+		}
+	});
+	$('.merit-box-3 .of-color').iris({
+		change: function(event, ui) {
+			$(".merit-box-3 .type-icon").css( 'background', ui.color.toString());
+		}
+	});
+	$('.merit-box-4 .of-color').iris({
+		change: function(event, ui) {
+			$(".merit-box-4 .type-icon").css( 'background', ui.color.toString());
+		}
+	});
 
 	// Loads tabbed sections if they exist
 	function options_framework_tabs() {
