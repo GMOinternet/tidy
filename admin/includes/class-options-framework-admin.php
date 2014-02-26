@@ -168,7 +168,7 @@ class Options_Framework_Admin {
 			return;
 
 		wp_enqueue_style( 'wp-color-picker' );
-		wp_enqueue_style( 'iconmoon-tidy', get_template_directory_uri() . '/iconmoon-tidy/style.min.css', array(), Options_Framework::VERSION );
+		wp_enqueue_style( 'gmo-iconmoon', get_template_directory_uri() . '/iconmoon-tidy/style.min.css', array(), Options_Framework::VERSION );
 		wp_enqueue_style( 'optionsframework', TIDY_ADMIN_DIRECTORY_URI . 'css/optionsframework.min.css', array(), Options_Framework::VERSION );
 	}
 

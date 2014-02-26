@@ -145,13 +145,13 @@ function tidy_scripts() {
 	);
 
 	wp_enqueue_style(
-		'tidy-genericons',
+		'gmo-genericons',
 		get_template_directory_uri() . '/genericons/genericons.min.css',
 		array(),
 		'3.0.2'
 	);
 	wp_enqueue_style(
-		'iconmoon-tidy',
+		'gmo-iconmoon',
 		get_template_directory_uri() . '/iconmoon-tidy/style.min.css',
 		array(),
 		$tidy_version
