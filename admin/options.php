@@ -1058,7 +1058,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __( 'Number to display', 'tidy' ),
 		'id' => 'home_blog_num',
-		'std' => $posts_per_page,
+		'std' => 6,
 		'class' => 'mini',
 		'type' => 'text');
 
@@ -1095,7 +1095,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __( 'Number to display', 'tidy' ),
 		'id' => 'home_port_num',
-		'std' => $posts_per_page,
+		'std' => 3,
 		'class' => 'mini',
 		'type' => 'text');
 

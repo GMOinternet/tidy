@@ -81,7 +81,7 @@ function tidy_modify_main_query( $query ) {
 	$posts_per_page = get_option( 'posts_per_page' );
 
 	// is_front_page
-	$home_blog_num = of_get_option( 'home_blog_num', $posts_per_page );
+	$home_blog_num = of_get_option( 'home_blog_num', 6 );
 	if ( $query->is_front_page() ) {
 		$query->set( 'posts_per_page', $home_blog_num );
 		$query->set( 'tax_query', array(

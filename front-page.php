@@ -28,7 +28,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
-				$home_blog_num = (int)of_get_option( 'home_blog_num', $posts_per_page );
+				$home_blog_num = (int)of_get_option( 'home_blog_num', 6 );
 				if ( $home_blog_num > 0 ) :
 			 ?>
 			<section id="blog-area" class="front-section">
@@ -62,7 +62,7 @@ get_header(); ?>
 			<?php
 			$galleryicon   = of_get_option( 'home_port_icon', 'notebook' );
 			$gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
-			$home_port_num = (int)of_get_option( 'home_port_num', $posts_per_page );
+			$home_port_num = (int)of_get_option( 'home_port_num', 3 );
 			$port_cont_c   = of_get_option( 'homeport_cont_c', '3' );
 			$port_d = of_get_option( 'port_d', 'normal' );
 
