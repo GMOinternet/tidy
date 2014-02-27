@@ -4,7 +4,7 @@ Theme URI: http://www.gmo.jp/
 Author: GMO
 Author URI: http://www.gmo.jp/
 Description: GMO theme
-Version: 0.4
+Version: 0.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tidy
@@ -457,14 +457,14 @@ a:hover, a:focus, a:active {
 }
 
 /* Clearing */
-.clear, .contact-area, .sns-icons, .main-navigation, .hentry, .front-section-content, .merit-box-area-conteiner, .blog-section-content .hentry, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny,
+.clear, .contact-area, .sns-icons, .main-navigation, .hentry, .front-section-content, .merit-box-area-conteiner, .blog-section-content, .blog-section-content .hentry, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny,
 .entry-content,
 .comment-content,
 .site-content,
 .inner {
   *zoom: 1;
 }
-.clear:after, .contact-area:after, .sns-icons:after, .main-navigation:after, .hentry:after, .front-section-content:after, .merit-box-area-conteiner:after, .blog-section-content .hentry:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after,
+.clear:after, .contact-area:after, .sns-icons:after, .main-navigation:after, .hentry:after, .front-section-content:after, .merit-box-area-conteiner:after, .blog-section-content:after, .blog-section-content .hentry:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after,
 .entry-content:after,
 .comment-content:after,
 .site-content:after,
@@ -964,6 +964,15 @@ body.single .entry-title, body.page .entry-title {
 .merit-box-thumbnail .merit-box-thumbnail-inner {
   height: 100%;
 }
+.merit-box-thumbnail .iconbox {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.merit-box-thumbnail .iconbox:hover {
+  transform: scale(1.1);
+}
 .merit-box-thumbnail .type-image {
   height: 100%;
 }
@@ -1017,14 +1026,6 @@ body.single .entry-title, body.page .entry-title {
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-.merit-box-thumbnail .type-icon .merit-box-thumbnail-inner:hover {
-  width: 160px;
-  height: 160px;
-}
-.merit-box-thumbnail .type-icon .merit-box-thumbnail-inner:hover .iconmoon {
-  font-size: 70px;
-  margin-top: 35px;
-}
 .merit-box-thumbnail .type-icon .iconbox {
   color: white;
   text-decoration: none;
@@ -1050,18 +1051,6 @@ body.single .entry-title, body.page .entry-title {
 .merit-box-1 {
   width: 100%;
   float: none;
-  text-align: left;
-  /*
-  	.text-left {
-  		text-align: left;
-  	}
-  	.text-center {
-  		text-align: center;
-  	}
-  	.text-right {
-  		text-align: right;
-  	}
-  */
 }
 .merit-box-1 .merit-box-thumbnail {
   float: left;
@@ -1069,17 +1058,20 @@ body.single .entry-title, body.page .entry-title {
   margin-bottom: 0;
   max-width: 370px;
 }
-.merit-box-1 .type-icon {
-  text-align: center;
+.merit-box-1 .merit-box-thumbnail .type-icon:before {
+  margin-right: 0;
+}
+.merit-box-1 .merit-box-title {
+  text-align: left;
+  height: auto;
+  min-height: 1.4em;
+  max-height: 2.8em;
 }
 .merit-box-1 .more-link {
   margin-top: 1em;
   display: block;
-}
-.merit-box-1 .text-left,
-.merit-box-1 .text-center,
-.merit-box-1 .text-right {
-  text-align: left;
+  overflow: hidden;
+  text-align: right;
 }
 
 .merit-box-2 {
