@@ -1172,6 +1172,13 @@ body.single .entry-title, body.page .entry-title {
 
 .gallery-section-content {
   margin-left: -40px;
+  /*
+  	.entry-title,
+  	.entry-summary p {
+  		@include ellipsis;
+  		margin-bottom: 0;
+  	}
+  */
 }
 .gallery-section-content .hentry {
   clear: none;
@@ -1186,6 +1193,19 @@ body.single .entry-title, body.page .entry-title {
 }
 .gallery-section-content .tidy_post_thumbnail a:hover img {
   opacity: 1;
+}
+.gallery-section-content .entry-header {
+  height: 2.8em;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+.gallery-section-content .entry-summary {
+  height: 4.2em;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+.gallery-section-content .entry-meta {
+  margin-bottom: 0;
 }
 .gallery-section-content .entry-box {
   position: relative;
@@ -1226,6 +1246,18 @@ body.single .entry-title, body.page .entry-title {
   color: white;
   border-color: white;
 }
+.gallery-section-content .entry-conteiner-child .entry-title,
+.gallery-section-content .entry-conteiner-child .entry-summary p {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+.gallery-section-content .entry-conteiner-child .entry-title {
+  margin-bottom: 1em;
+}
 .gallery-section-content .entry-conteiner-child .entry-meta {
   position: absolute;
   left: 0;
@@ -1239,23 +1271,6 @@ body.single .entry-title, body.page .entry-title {
 }
 .gallery-section-content .entry-conteiner-child .entry-meta .gmo-shares .social {
   margin-right: 3px;
-  margin-bottom: 0;
-}
-.gallery-section-content .entry-title,
-.gallery-section-content .entry-summary p {
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  margin-bottom: 0;
-}
-.gallery-section-content .entry-header,
-.gallery-section-content .entry-summary {
-  height: 1.4em;
-  margin-bottom: 1em;
-}
-.gallery-section-content .entry-meta {
   margin-bottom: 0;
 }
 
