@@ -976,12 +976,12 @@ body.single .entry-title, body.page .entry-title {
   font-size: 1.42857em;
   margin-bottom: 10px;
   overflow: hidden;
-  height: 3em;
+  height: 2.8em;
 }
 
 .merit-box-caption {
   overflow: hidden;
-  max-height: 4.5em;
+  max-height: 4.2em;
 }
 
 .merit-box-thumbnail .merit-box-thumbnail-inner {
@@ -1121,13 +1121,13 @@ body.single .entry-title, body.page .entry-title {
   max-height: 180px;
 }
 .blog-section-content .entry-title {
-  height: 3em;
+  height: 2.8em;
   overflow: hidden;
   position: relative;
 }
 .blog-section-content .entry-summary {
   margin-bottom: 20px;
-  height: 4.5em;
+  height: 4.2em;
   overflow: hidden;
   position: relative;
 }
@@ -1197,12 +1197,12 @@ body.single .entry-title, body.page .entry-title {
   opacity: 1;
 }
 .gallery-section-content .entry-header {
-  height: 3em;
+  height: 2.8em;
   margin-bottom: 1em;
   overflow: hidden;
 }
 .gallery-section-content .entry-summary {
-  height: 4.5em;
+  height: 4.2em;
   margin-bottom: 1em;
   overflow: hidden;
 }
@@ -1256,7 +1256,7 @@ body.single .entry-title, body.page .entry-title {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   margin-bottom: 0;
-  height: 1.5em;
+  height: 1.4em;
 }
 .gallery-section-content .entry-conteiner-child .entry-title {
   margin-top: 30px;
@@ -1272,6 +1272,7 @@ body.single .entry-title, body.page .entry-title {
 .gallery-section-content .entry-conteiner-child .entry-meta .gmo-shares {
   margin: 0;
   text-align: center;
+  overflow: hidden;
 }
 .gallery-section-content .entry-conteiner-child .entry-meta .gmo-shares .social {
   margin-right: 3px;
@@ -1285,24 +1286,24 @@ body.single .entry-title, body.page .entry-title {
 .gallery-2 .hentry {
   width: 50%;
 }
-.gallery-2 .tidy_post_thumbnail,
-.gallery-2 .thumbnail_img,
-.gallery-2 .entry-conteiner-child {
+.cont_c1 .gallery-2 .tidy_post_thumbnail,
+.cont_c1 .gallery-2 .thumbnail_img,
+.cont_c1 .gallery-2 .entry-conteiner-child {
   max-height: 580px;
 }
-.gallery-2 .entry-conteiner {
+.cont_c1 .gallery-2 .entry-conteiner {
   height: 580px;
 }
 
 .gallery-3 .hentry {
   width: 33%;
 }
-.gallery-3 .tidy_post_thumbnail,
-.gallery-3 .thumbnail_img,
-.gallery-3 .entry-conteiner-child {
+.cont_c1 .gallery-3 .tidy_post_thumbnail,
+.cont_c1 .gallery-3 .thumbnail_img,
+.cont_c1 .gallery-3 .entry-conteiner-child {
   max-height: 369px;
 }
-.gallery-3 .entry-conteiner {
+.cont_c1 .gallery-3 .entry-conteiner {
   height: 369px;
 }
 
