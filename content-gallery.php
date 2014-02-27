@@ -15,11 +15,11 @@ $port_content = of_get_option( 'port_content', 'type1' );
 			<?php endif; ?>
 		</span></a></div>
 
-		<div class="entry-conteiner">
+		<div class="entry-conteiner"><div class="entry-conteiner-child">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><div class="entry-title"><?php the_title(); ?></div>
 			<div class="entry-summary"><?php the_excerpt(); ?></div></a>
 			<div class="entry-meta"><?php do_action( 'tidy_after_entry_meta' ); ?></div>
-		</div>
+		</div></div>
 	</div>
 
 	<?php if ( $port_content != "type1") : ?>

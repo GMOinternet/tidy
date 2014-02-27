@@ -86,12 +86,9 @@
 
 	// Portfolio
 	$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
-/*
-	$(".entry-box").each(function(i){
-		var w = $(this).children('.tidy-thumb-portfolio').children('a').children('img').width();
-		var h = $(this).children('.tidy-thumb-portfolio').children('a').children('img').height();
-		$(this).width(w);
-		$(this).children('.entry-conteiner').height(h);
+	$(".gallery-section-content .entry-box").each(function(i){
+		var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
+		$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
 	});
 
 	$( '.entry-box').hover(function(){
@@ -108,7 +105,6 @@
 		}, 'slow');
 		
 	});
-*/
 
 	// comment-form
 	$( 'p[class^="comment-form"] input, p[class^="comment-form"] textarea' ).focus( function(){

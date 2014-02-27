@@ -789,9 +789,22 @@ function tidy_customize_style() {
 			color: <?php echo esc_attr( $options['header_widget_anchor_color'] ); ?>;
 		}
 		<?php endif; ?>
-		<?php if ( !empty( $options['image_hover_color'] ) ) : ?>
+		<?php if ( !empty( $options['image_hover_color'] ) ) :
+		
+		$red = substr($options['image_hover_color'], 1, 2);
+		$green = substr($options['image_hover_color'], 3, 2);
+		$blue = substr($options['image_hover_color'], 5, 2);
+		$red = hexdec($red);
+		$green = hexdec($green);
+		$blue = hexdec($blue);
+		$op = ( !empty( $options['image_hover_opacity'] ) ) ? 1-$options['image_hover_opacity'] : 0.6;
+		$gallerybg = "rgba($red, $green, $blue, $op)";
+		?>
 		.tidy_post_thumbnail .thumbnail_img {
 			background-color: <?php echo esc_attr( $options['image_hover_color'] ); ?>;
+		}
+		.gallery-section-content .entry-conteiner-child {
+			background-color: <?php echo $gallerybg; ?>;
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['image_hover_opacity'] ) ) : ?>
