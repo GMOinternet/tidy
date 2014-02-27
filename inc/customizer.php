@@ -640,22 +640,6 @@ function tidy_customize_setup( $wp_customize ) {
 		'settings'   => get_tiry_option_name( 'footer_category_title_color' )	,
 	)));
 
-	// = Color Picker for footer all categories text color.
-/*
-	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_text_color' ) , array(
-		'default'           => $tidy_default['footer_category_text_color'],
-		'sanitize_callback' => 'sanitize_hex_color',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-	));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_text_color' ), array(
-		'label'      => __('All categories text color', 'tidy'),
-		'section'    => 'tidy_color_settings_footer',
-		'priority'   => 23,
-		'settings'   => get_tiry_option_name( 'footer_category_text_color' )	,
-	)));
-*/
-
 	// = Color Picker for footer all categories anchor color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_anchor_color' ) , array(
 		'default'           => $tidy_default['footer_category_anchor_color'],
@@ -806,12 +790,14 @@ function tidy_customize_style() {
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['image_hover_color'] ) ) : ?>
-			.tidy_post_thumbnail a {
+			.tidy_post_thumbnail a,
+			.merit-box-thumbnail .type-image .thumbnail_img {
 				background-color: <?php echo esc_attr( $options['image_hover_color'] ); ?>;
 			}
 		<?php endif; ?>
 		<?php if ( !empty( $options['image_hover_opacity'] ) ) : ?>
-			.tidy_post_thumbnail a:hover img {
+			.tidy_post_thumbnail a:hover img,
+			.merit-box-thumbnail .type-image a:hover img {
 				opacity: <?php echo esc_attr( $options['image_hover_opacity'] ); ?>;
 			}
 		<?php endif; ?>

@@ -24,6 +24,8 @@ function tidy_customizer_array() {
 		'main_text_color',
 		'main_anchor_color',
 		'main_border_color',
+		'image_hover_color',
+		'image_hover_opacity',
 		'widget_bg_color',
 		'widget_title_color',
 		'widget_text_color',

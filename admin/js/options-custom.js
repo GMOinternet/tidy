@@ -288,7 +288,7 @@ jQuery(document).ready(function($) {
 	$('input[name="update"]').click(function() {
 		var header_text_toggle = $('#header_text_toggle_toggle_on:checked').val();
 		var header_text = $('#header_text').val();
-		if (header_text_toggle == 1 && header_text == "") {
+		if (header_text_toggle == 1 && header_text === "") {
 			alert('Input \'Header text\'');
 			return false;
 		}
