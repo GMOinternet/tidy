@@ -27,13 +27,12 @@ function tidy_themeoption_header_style() {
 			color: <?php echo $sns_icon_color_header; ?> !important;
 			border-color: <?php echo $sns_icon_color_header; ?>;
 		}
-		.tidy_contact_sns_icons .sns-icons a {
+		.site-footer .sns-icons a {
 			color: <?php echo $sns_icon_color_footer; ?> !important;
 			border-color: <?php echo $sns_icon_color_footer; ?>;
 		}
 		<?php if ( $sns_icon_border == 0 ) : ?>
 		.sns-icons a,
-		.tidy_contact_sns_icons .sns-icons a,
 		.tidy_contact_sns_icons .sns-icons a,
 		.gallery-section-content .entry-conteiner a,
 		.gmo-shares a {

@@ -457,14 +457,14 @@ a:hover, a:focus, a:active {
 }
 
 /* Clearing */
-.clear, .contact-area, .sns-icons, .main-navigation, .hentry, .front-section-content, .merit-box-area-conteiner, .blog-section-content, .blog-section-content .hentry, .gallery-section-content, .gallery-section-content .hentry, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny,
+.clear, .contact-area, .sns-icons, .main-navigation, .hentry, .front-section-content, .merit-box-area-conteiner, .blog-section-content, .blog-section-content .hentry, .gallery-section-content, .gallery-section-content .hentry, .comment-body .comment-meta, .widget_tidy_recent_posts li.tidy-thumb-tiny, .site-footer-widget-area,
 .entry-content,
 .comment-content,
 .site-content,
 .inner {
   *zoom: 1;
 }
-.clear:after, .contact-area:after, .sns-icons:after, .main-navigation:after, .hentry:after, .front-section-content:after, .merit-box-area-conteiner:after, .blog-section-content:after, .blog-section-content .hentry:after, .gallery-section-content:after, .gallery-section-content .hentry:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after,
+.clear:after, .contact-area:after, .sns-icons:after, .main-navigation:after, .hentry:after, .front-section-content:after, .merit-box-area-conteiner:after, .blog-section-content:after, .blog-section-content .hentry:after, .gallery-section-content:after, .gallery-section-content .hentry:after, .comment-body .comment-meta:after, .widget_tidy_recent_posts li.tidy-thumb-tiny:after, .site-footer-widget-area:after,
 .entry-content:after,
 .comment-content:after,
 .site-content:after,
@@ -1887,7 +1887,8 @@ li.depth-1 {
   margin: 0 0 10px 10px;
   float: left;
 }
-.tidy_contact_sns_icons .sns-icons a {
+
+.site-footer-widget-area .tidy_contact_sns_icons a {
   border-color: white;
 }
 
@@ -1970,7 +1971,7 @@ li.depth-1 {
   font-size: 0.85714em;
   color: #fff;
   background-color: #0058ae;
-  padding: 60px 0;
+  padding: 60px 0 10px 0;
 }
 .site-footer-widget-area a {
   color: #fff;
@@ -1984,6 +1985,14 @@ li.depth-1 {
   width: 25%;
   padding-left: 40px;
   float: left;
+}
+
+.site-footer-social-area {
+  clear: both;
+  padding-bottom: 60px;
+}
+.site-footer-social-area .sns-icons li {
+  margin-bottom: 0;
 }
 
 .site-info {

@@ -21,36 +21,35 @@
 		
 		<?php do_action( 'tidy_before_footer' ); ?>
 
-		<div class="site-footer-widget-area"><div class="inner"><div class="site-footer-widget-area-box">
+		<div class="site-footer-widget-area"><div class="inner">
+			<div class="site-footer-widget-area-box">
 
-		<div class="site-footer-widget-area-conteiner">
-		<?php if ( ! dynamic_sidebar( 'footer-1' ) ) : ?>
-			<?php the_widget( 'Tidy_Widget_About_Us' ); ?>
-		<?php endif; // end footer-1 widget area ?>
-		</div>
+				<div class="site-footer-widget-area-conteiner">
+					<?php dynamic_sidebar( 'footer-1' ); ?>
+				</div>
+		
+				<div class="site-footer-widget-area-conteiner">
+					<?php dynamic_sidebar( 'footer-2' ); ?>
+				</div>
+		
+				<div class="site-footer-widget-area-conteiner">
+					<?php dynamic_sidebar( 'footer-3' ); ?>
+				</div>
+		
+				<div class="site-footer-widget-area-conteiner">
+					<?php dynamic_sidebar( 'footer-4' ); ?>
+				</div>
 
-		<div class="site-footer-widget-area-conteiner">
-		<?php if ( ! dynamic_sidebar( 'footer-2' ) ) : ?>
-			<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-		<?php endif; // end footer-2 widget area ?>
-		</div>
+			</div><!-- .site-footer-widget-area-box -->
 
-		<div class="site-footer-widget-area-conteiner">
-		<?php if ( ! dynamic_sidebar( 'footer-3' ) ) : ?>
-			<?php the_widget( 'Tidy_Widget_Recent_Posts' ); ?>
-		<?php endif; // end footer-3 widget area ?>
-		</div>
-
-		<div class="site-footer-widget-area-conteiner">
-		<?php if ( ! dynamic_sidebar( 'footer-4' ) ) : ?>
-			<?php $view_sns_footer = of_get_option('sns-location-footer'); ?>
-			<?php if ( ( $view_sns_footer === FALSE ) or ( $view_sns_footer != 0 ) ) : ?>
-				<?php the_widget( 'Tidy_Widget_Contact' ); ?>
+			<?php $view_sns_footer = of_get_option('sns-location-footer', 1); ?>
+			<?php if ( $view_sns_footer > 0 ) : ?>
+			<div id="site-footer-social" class="site-footer-social-area">
+				<?php tidy_sns_lists(); ?>
+			</div>
 			<?php endif; ?>
-		<?php endif; // end footer-4 widget area ?>
-		</div>
-
-		</div></div></div>
+	
+		</div></div>
 
 		<div class="site-info"><div class="inner">
 			<?php
