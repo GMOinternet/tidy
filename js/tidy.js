@@ -103,6 +103,7 @@
 			$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
 			$(".gallery-section-content .entry-box").each(function(i){
 				var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
+				console.log(h);
 				$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
 			});
 		});
