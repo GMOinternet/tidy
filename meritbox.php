@@ -22,7 +22,7 @@ $description = of_get_option( 'merit-box-' . $i . '-description', 'merit-box-' .
 $textalign = of_get_option( 'merit-box-' . $i . '-align', 'center' );
 
 if ( $type == 'type-image' ) {
-	$img = '<img src="' . of_get_option( 'merit-box-' . $i . '-image') . '" alt="' . esc_attr( $title ) . '">';
+	$img = '<span class="thumbnail_img"><img src="' . of_get_option( 'merit-box-' . $i . '-image') . '" alt="' . esc_attr( $title ) . '"></span>';
 } else {
 	$img = '<span class="iconmoon icon-' . $icon . '"></span>';
 }
@@ -32,7 +32,7 @@ if ( $type == 'type-image' ) {
 	<div class="merit-box-thumbnail">
 		<div class="<?php echo $type; ?>"><div class="merit-box-thumbnail-inner tidy_post_thumbnail">
 		<?php if ( $url != '' ) : ?>
-			<a href="<?php echo esc_url($url); ?>" class="iconbox"><span class="thumbnail_img"><?php echo $img; ?></span></a>
+			<a href="<?php echo esc_url($url); ?>" class="iconbox"><?php echo $img; ?></a>
 		<?php else: ?>
 			<span class="iconbox"><?php echo $img; ?></span>
 		<?php endif; ?>
