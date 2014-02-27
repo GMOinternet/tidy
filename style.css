@@ -1442,6 +1442,10 @@ body.single .entry-title, body.page .entry-title {
   border-top: solid 1px #e3e6ea;
 }
 
+.gallery-section-content [class*="navigation"] {
+  margin-left: 40px;
+}
+
 .post-navigation .genericon {
   color: #0058ae;
   font-size: 10px;
