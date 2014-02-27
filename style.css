@@ -478,6 +478,7 @@ a:hover, a:focus, a:active {
 ----------------------------------------------- */
 .inner,
 .site-content {
+  word-wrap: break-word;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -966,6 +967,7 @@ body.single .entry-title, body.page .entry-title {
 
 .merit-box-thumbnail {
   margin: 0 auto 20px auto;
+  min-height: 120px;
   max-height: 270px;
   overflow: hidden;
 }
@@ -1229,7 +1231,7 @@ body.single .entry-title, body.page .entry-title {
   vertical-align: middle;
   text-align: center;
   display: inline-block;
-  padding: 30px 12px;
+  padding: 0 12px;
   width: 100%;
   height: 100%;
   max-height: 270px;
@@ -1256,6 +1258,7 @@ body.single .entry-title, body.page .entry-title {
   margin-bottom: 0;
 }
 .gallery-section-content .entry-conteiner-child .entry-title {
+  margin-top: 30px;
   margin-bottom: 1em;
 }
 .gallery-section-content .entry-conteiner-child .entry-meta {
@@ -1295,6 +1298,9 @@ body.single .entry-title, body.page .entry-title {
 
 .archive-link {
   text-align: right;
+}
+.archive-link .read-more .genericon {
+  top: 6px;
 }
 
 /* archive */
@@ -1387,8 +1393,8 @@ body.single .entry-title, body.page .entry-title {
   font-size: 8px;
   width: 8px;
   height: 8px;
-  vertical-align: middle;
-  margin-top: 1px;
+  position: relative;
+  top: 5px;
 }
 
 .page-links {
@@ -1650,9 +1656,6 @@ li.depth-1 {
 .comment-body .comment-content {
   clear: both;
   margin-bottom: 10px;
-}
-.comment-body .comment-content a {
-  word-wrap: break-word;
 }
 .comment-body .comment-content > *:last-child {
   margin-bottom: 0;

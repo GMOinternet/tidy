@@ -78,18 +78,35 @@
 		return false;
 	} );
 
-	// Merit Box
-	$("#merit-box-area .merit-box-thumbnail").flatHeights();
-
-	// Home Blog
-	$(".blog-section-content .tidy-thumb-blog").flatHeights();
-
-	// Portfolio
-	$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
-	$(".gallery-section-content .entry-box").each(function(i){
-		var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
-		$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
-	});
+	// flatHeights
+	var _UA = navigator.userAgent.toLowerCase();
+	if(parseInt(_UA.indexOf('applewebkit')) > -1){
+		$(window).load(function(){
+			// Merit Box
+			$("#merit-box-area .merit-box-thumbnail").flatHeights();
+			// Home Blog
+			$(".blog-section-content .tidy-thumb-blog").flatHeights();
+			// Portfolio
+			$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
+			$(".gallery-section-content .entry-box").each(function(i){
+				var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
+				$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
+			});
+		});
+	} else {
+		$(function(){
+			// Merit Box
+			$("#merit-box-area .merit-box-thumbnail").flatHeights();
+			// Home Blog
+			$(".blog-section-content .tidy-thumb-blog").flatHeights();
+			// Portfolio
+			$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
+			$(".gallery-section-content .entry-box").each(function(i){
+				var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
+				$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
+			});
+		});
+	}
 
 	$( '.entry-box').hover(function(){
 		var w = $(this).width();
@@ -99,7 +116,7 @@
 		}, 'slow');
 		
 	}, function(){
-		var w = $(this).width();
+		var w = $(this).width() + 40;
 		$(this).children( '.entry-conteiner' ).animate({
 			left: w
 		}, 'slow');
