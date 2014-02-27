@@ -1135,13 +1135,16 @@ body.single .entry-title, body.page .entry-title {
   right: 0;
   z-index: 1;
   background-color: white;
-  padding-left: 5px;
+  padding-left: 15px;
 }
 .blog-section-content .entry-meta {
   margin-bottom: 0;
 }
 .blog-section-content .typeA {
   width: 33%;
+}
+.blog-section-content .typeA:nth-child(3n+1) {
+  clear: both;
 }
 .blog-section-content .typeB {
   width: 50%;
