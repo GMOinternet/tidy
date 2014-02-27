@@ -721,7 +721,7 @@ function tidy_customize_style() {
 		.site-content a, .entry-meta, .post-navigation .genericon, .search-form .search-submit, .entry-title a:hover {
 			color: <?php echo esc_attr( $options['main_anchor_color'] ); ?>;
 		}
-		.search-form input[type="search"] {
+		.search-form input[type="search"], .gmo-shares a {
 			border-color: <?php echo esc_attr( $options['main_anchor_color'] ); ?>;
 		}
 		ul.page-numbers li a:hover, ul.page-numbers li a:focus, ul.page-numbers li a:active {
