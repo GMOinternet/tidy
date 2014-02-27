@@ -85,7 +85,8 @@
 	$(".blog-section-content .tidy-thumb-blog").flatHeights();
 
 	// Portfolio
-	$(".normal > article").flatHeights();
+	$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
+/*
 	$(".entry-box").each(function(i){
 		var w = $(this).children('.tidy-thumb-portfolio').children('a').children('img').width();
 		var h = $(this).children('.tidy-thumb-portfolio').children('a').children('img').height();
@@ -107,6 +108,7 @@
 		}, 'slow');
 		
 	});
+*/
 
 	// comment-form
 	$( 'p[class^="comment-form"] input, p[class^="comment-form"] textarea' ).focus( function(){
