@@ -365,7 +365,6 @@
 ----------------------------------------------- */
 .content-tab-wrapper {
   border-bottom: solid 1px #cccccc;
-  text-align: center;
 }
 .content-tab-wrapper li {
   display: inline-block;
