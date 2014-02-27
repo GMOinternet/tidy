@@ -146,21 +146,25 @@ jQuery(document).ready(function($) {
 	});
 	$('.merit-box-1 .of-color').iris({
 		change: function(event, ui) {
+			$(".merit-box-1 .wp-color-result").css( 'background', ui.color.toString());
 			$(".merit-box-1 .type-icon").css( 'background', ui.color.toString());
 		}
 	});
 	$('.merit-box-2 .of-color').iris({
 		change: function(event, ui) {
+			$(".merit-box-2 .wp-color-result").css( 'background', ui.color.toString());
 			$(".merit-box-2 .type-icon").css( 'background', ui.color.toString());
 		}
 	});
 	$('.merit-box-3 .of-color').iris({
 		change: function(event, ui) {
+			$(".merit-box-3 .wp-color-result").css( 'background', ui.color.toString());
 			$(".merit-box-3 .type-icon").css( 'background', ui.color.toString());
 		}
 	});
 	$('.merit-box-4 .of-color').iris({
 		change: function(event, ui) {
+			$(".merit-box-4 .wp-color-result").css( 'background', ui.color.toString());
 			$(".merit-box-4 .type-icon").css( 'background', ui.color.toString());
 		}
 	});
