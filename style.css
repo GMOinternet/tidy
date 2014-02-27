@@ -1881,9 +1881,11 @@ li.depth-1 {
 }
 .tidy_contact_sns_icons .sns-icons {
   text-align: left;
+  margin-left: -10px;
 }
 .tidy_contact_sns_icons .sns-icons li {
-  margin: 0 5px 8px 0;
+  margin: 0 0 10px 10px;
+  float: left;
 }
 .tidy_contact_sns_icons .sns-icons a {
   border-color: white;
