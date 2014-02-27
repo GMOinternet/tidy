@@ -4,33 +4,31 @@
  */
 
 global $merit_box, $i;
+
+if ( ( of_get_option( 'merit-box-' . $i . '-image') === false ) or ( of_get_option( 'merit-box-' . $i . '-image' ) == '' ) ) {
+	$type = 'type-icon';
+} else {
+	$type = 'type-image';
+}
+
+$url = of_get_option( 'merit-box-' . $i . '-url', '' );
+
+$icon = of_get_option( 'merit-box-' . $i . '-icon', 'copy' );
+
+$title = of_get_option( 'merit-box-' . $i . '-title', 'merit-box-' . $i . '-title' );
+
+$description = of_get_option( 'merit-box-' . $i . '-description', 'merit-box-' . $i . '-description' );
+
+$textalign = of_get_option( 'merit-box-' . $i . '-align', 'center' );
+
+if ( $type == 'type-image' ) {
+	$img = '<img src="' . of_get_option( 'merit-box-' . $i . '-image') . '" alt="' . esc_attr( $title ) . '">';
+} else {
+	$img = '<span class="iconmoon icon-' . $icon . '"></span>';
+}
 ?>
-<aside id="merit-box-<?php echo $i; ?>" class="merit-box-area-conteiner merit-box-<?php echo $merit_box ?>">
-<?php
-	if ( ( of_get_option( 'merit-box-' . $i . '-image') === false ) or ( of_get_option( 'merit-box-' . $i . '-image' ) == '' ) ) {
-		$type = 'type-icon';
-	} else {
-		$type = 'type-image';
-	}
-	
-	$url = of_get_option( 'merit-box-' . $i . '-url', '' );
 
-	$icon = of_get_option( 'merit-box-' . $i . '-icon', 'copy' );
-
-	$title = of_get_option( 'merit-box-' . $i . '-title', 'merit-box-' . $i . '-title' );
-
-	$description = of_get_option( 'merit-box-' . $i . '-description', 'merit-box-' . $i . '-description' );
-
-	$textalign = of_get_option( 'merit-box-' . $i . '-align', 'center' );
-
-	if ( $type == 'type-image' ) {
-		$img = '<img src="' . of_get_option( 'merit-box-' . $i . '-image') . '" alt="' . esc_attr( $title ) . '">';
-	} else {
-		$img = '<span class="iconmoon icon-' . $icon . '"></span>';
-	}
-	
-
-?>
+<aside id="merit-box-<?php echo $i; ?>" class="merit-box-area-conteiner merit-box-<?php echo $merit_box ?> merit-box-<?php echo $merit_box; ?>-<?php echo $type ?>">
 	<div class="merit-box-thumbnail">
 		<div class="<?php echo $type; ?>"><div class="merit-box-thumbnail-inner">
 		<?php if ( $url != '' ) : ?>

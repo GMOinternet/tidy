@@ -4,7 +4,7 @@ Theme URI: http://www.gmo.jp/
 Author: GMO
 Author URI: http://www.gmo.jp/
 Description: GMO theme
-Version: 0.4
+Version: 0.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tidy
@@ -1050,36 +1050,6 @@ body.single .entry-title, body.page .entry-title {
 .merit-box-1 {
   width: 100%;
   float: none;
-  text-align: left;
-  /*
-  	.text-left {
-  		text-align: left;
-  	}
-  	.text-center {
-  		text-align: center;
-  	}
-  	.text-right {
-  		text-align: right;
-  	}
-  */
-}
-.merit-box-1 .merit-box-thumbnail {
-  float: left;
-  margin-right: 45px;
-  margin-bottom: 0;
-  max-width: 370px;
-}
-.merit-box-1 .type-icon {
-  text-align: center;
-}
-.merit-box-1 .more-link {
-  margin-top: 1em;
-  display: block;
-}
-.merit-box-1 .text-left,
-.merit-box-1 .text-center,
-.merit-box-1 .text-right {
-  text-align: left;
 }
 
 .merit-box-2 {
@@ -1088,6 +1058,25 @@ body.single .entry-title, body.page .entry-title {
 
 .merit-box-3 {
   width: 33.3%;
+}
+
+.merit-box-1-type-image .merit-box-thumbnail {
+  float: left;
+  margin-right: 45px;
+  margin-bottom: 0;
+  max-width: 370px;
+}
+.merit-box-1-type-image .merit-box-title {
+  text-align: left;
+  height: auto;
+  min-height: 1.4em;
+  max-height: 2.8em;
+}
+.merit-box-1-type-image .more-link {
+  margin-top: 1em;
+  display: block;
+  overflow: hidden;
+  text-align: right;
 }
 
 /* blog-area */
