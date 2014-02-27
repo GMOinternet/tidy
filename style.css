@@ -1226,6 +1226,12 @@ body.single .entry-title, body.page .entry-title {
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+.gallery-section-content .entry-header,
+.gallery-section-content .entry-summary {
+  height: 1.4em;
+  margin-bottom: 1em;
 }
 .gallery-section-content .entry-meta {
   margin-bottom: 0;
