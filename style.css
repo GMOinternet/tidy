@@ -1273,6 +1273,7 @@ body.single .entry-title, body.page .entry-title {
   margin: 0;
   text-align: center;
   overflow: hidden;
+  white-space: nowrap;
 }
 .gallery-section-content .entry-conteiner-child .entry-meta .gmo-shares .social {
   margin-right: 3px;
