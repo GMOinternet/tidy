@@ -6,13 +6,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'typeB' ); ?>>
 
-	<div class="tidy_post_thumbnail tidy-thumb-blog"><a href="<?php the_permalink(); ?>" rel="bookmark">
+	<div class="tidy_post_thumbnail tidy-thumb-blog"><a href="<?php the_permalink(); ?>" rel="bookmark"><span class="thumbnail_img">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'tidy-thumb-blog' ); ?>
 		<?php else: ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/images/tidy-thumb-blog.png" alt="*">
 		<?php endif; ?>
-	</a></div>
+	</span></a></div>
 
 	<div class="entry-conteiner">
 

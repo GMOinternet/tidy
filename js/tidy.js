@@ -81,12 +81,8 @@
 	// Merit Box
 	$("#merit-box-area .merit-box-thumbnail").flatHeights();
 
-	// Blog
-	$(".blog-section-content > article").flatHeights();
-	$("div.tidy-thumb-blog").each(function(i){
-		var w = $(this).children('a').children('img').width();
-		$(this).width(w);
-	});
+	// Home Blog
+	$(".blog-section-content .tidy-thumb-blog").flatHeights();
 
 	// Portfolio
 	$(".normal > article").flatHeights();

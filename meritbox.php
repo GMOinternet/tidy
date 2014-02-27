@@ -30,7 +30,7 @@ if ( $type == 'type-image' ) {
 
 <aside id="merit-box-<?php echo $i; ?>" class="merit-box-area-conteiner merit-box-<?php echo $merit_box ?> merit-box-<?php echo $merit_box; ?>-<?php echo $type ?>">
 	<div class="merit-box-thumbnail">
-		<div class="<?php echo $type; ?>"><div class="merit-box-thumbnail-inner">
+		<div class="<?php echo $type; ?>"><div class="merit-box-thumbnail-inner tidy_post_thumbnail">
 		<?php if ( $url != '' ) : ?>
 			<a href="<?php echo esc_url($url); ?>" class="iconbox"><span class="thumbnail_img"><?php echo $img; ?></span></a>
 		<?php else: ?>

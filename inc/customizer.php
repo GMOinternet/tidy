@@ -790,16 +790,14 @@ function tidy_customize_style() {
 		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['image_hover_color'] ) ) : ?>
-			.tidy_post_thumbnail a,
-			.merit-box-thumbnail .type-image .thumbnail_img {
-				background-color: <?php echo esc_attr( $options['image_hover_color'] ); ?>;
-			}
+		.tidy_post_thumbnail .thumbnail_img {
+			background-color: <?php echo esc_attr( $options['image_hover_color'] ); ?>;
+		}
 		<?php endif; ?>
 		<?php if ( !empty( $options['image_hover_opacity'] ) ) : ?>
-			.tidy_post_thumbnail a:hover img,
-			.merit-box-thumbnail .type-image a:hover img {
-				opacity: <?php echo esc_attr( $options['image_hover_opacity'] ); ?>;
-			}
+		.tidy_post_thumbnail a:hover img {
+			opacity: <?php echo esc_attr( $options['image_hover_opacity'] ); ?>;
+		}
 		<?php endif; ?>
 		<?php /* if ( !empty( $options['image_hover_text'] ) ) : ?>
 			.tidy_post_thumbnail a {
