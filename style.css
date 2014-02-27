@@ -1115,13 +1115,13 @@ body.single .entry-title, body.page .entry-title {
   overflow: hidden;
 }
 .blog-section-content .entry-title {
-  max-height: 2.8em;
+  height: 2.8em;
   overflow: hidden;
   position: relative;
 }
 .blog-section-content .entry-summary {
   margin-bottom: 20px;
-  max-height: 4.2em;
+  height: 4.2em;
   overflow: hidden;
   position: relative;
 }
