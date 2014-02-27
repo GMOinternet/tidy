@@ -971,6 +971,9 @@ body.single .entry-title, body.page .entry-title {
   transition-duration: 0.5s;
 }
 .merit-box-thumbnail .iconbox:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
   transform: scale(1.1);
 }
 .merit-box-thumbnail .type-image {
