@@ -1106,6 +1106,9 @@ body.single .entry-title, body.page .entry-title {
 .blog-section-content {
   margin-left: -40px;
 }
+.blog-section-content .gmo-shares {
+  overflow: hidden;
+}
 .blog-section-content .hentry {
   clear: none;
   padding-left: 40px;
@@ -1265,15 +1268,12 @@ body.single .entry-title, body.page .entry-title {
 .gallery-section-content .entry-conteiner-child .entry-meta {
   position: absolute;
   left: 0;
-  bottom: 0;
-  padding: 15px;
+  bottom: 15px;
   width: 100%;
 }
 .gallery-section-content .entry-conteiner-child .entry-meta .gmo-shares {
   margin: 0;
   text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .gallery-section-content .entry-conteiner-child .entry-meta .gmo-shares .social {
   margin-right: 3px;
