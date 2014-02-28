@@ -938,11 +938,7 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 }
 .front-section-content .entry-ac {
   height: 1.5em;
-  white-space: nowrap;
   overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
 }
 .front-section-content .edit-link {
   margin-top: 10px;
