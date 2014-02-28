@@ -2,6 +2,7 @@
 /**
  * @package Tidy
  */
+ global $port_d;
 $port_content = of_get_option( 'port_content', 'type1' );
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $port_content ); ?>>
