@@ -937,7 +937,7 @@ body.single .entry-title, body.page .entry-title {
 .front-section-content {
   margin-left: -40px;
 }
-.front-section-content .entry-meta {
+.front-section-content footer.entry-meta .entry_category {
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;

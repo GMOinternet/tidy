@@ -41,7 +41,6 @@ $port_content = of_get_option( 'port_content', 'type1' );
 			<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
 		<?php endif; // End if 'post' == get_post_type() ?>
 		<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
-
 	</footer><!-- .entry-meta -->
 
 </article><!-- #post-## -->
