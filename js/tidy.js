@@ -78,37 +78,38 @@
 		return false;
 	} );
 
+	// flatHeights and gallery grid
 	// flatHeights
 	var _UA = navigator.userAgent.toLowerCase();
-	if(parseInt(_UA.indexOf('applewebkit')) > -1){
-		$(window).load(function(){
-			// Merit Box
-			$("#merit-box-area .merit-box-thumbnail").flatHeights();
-			// Home Blog
-			$(".blog-section-content .tidy-thumb-blog").flatHeights();
-			// Portfolio
-			$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
-			$(".gallery-section-content .entry-box").each(function(i){
-				var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
-				$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
-			});
+	// gallery grid(masonry)
+	var $container = $( '.gallery-section-content-inner' );
+	function tidy_gallerycontent() {
+
+		// Merit Box
+		$("#merit-box-area .merit-box-thumbnail").flatHeights();
+		// Home Blog
+		$(".blog-section-content .tidy-thumb-blog").flatHeights();
+		// Portfolio
+		$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
+		$(".gallery-section-content .entry-box").each(function(i){
+			var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
+			$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
 		});
-	} else {
-		$(function(){
-			// Merit Box
-			$("#merit-box-area .merit-box-thumbnail").flatHeights();
-			// Home Blog
-			$(".blog-section-content .tidy-thumb-blog").flatHeights();
-			// Portfolio
-			$(".gallery-section-content .tidy-thumb-portfolio").flatHeights();
-			$(".gallery-section-content .entry-box").each(function(i){
-				var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
-				console.log(h);
-				$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
-			});
+		// masonry initialize
+		$container.masonry({
+			itemSelector: '.hentry'
 		});
 	}
+	
+	if(parseInt(_UA.indexOf('applewebkit')) > -1){
+		$(window).load(function(){
+			tidy_gallerycontent();
+		});
+	} else {
+		tidy_gallerycontent();
+	}
 
+	// gallery hover
 	$( '.entry-box').hover(function(){
 		var w = $(this).width();
 		$(this).children( '.entry-conteiner' ).css({left:-w});
@@ -123,6 +124,7 @@
 		}, 'slow');
 		
 	});
+
 
 	// comment-form
 	$( 'p[class^="comment-form"] input, p[class^="comment-form"] textarea' ).focus( function(){

@@ -1180,13 +1180,6 @@ body.single .entry-title, body.page .entry-title {
 
 .gallery-section-content {
   margin-left: -40px;
-  /*
-  	.entry-title,
-  	.entry-summary p {
-  		@include ellipsis;
-  		margin-bottom: 0;
-  	}
-  */
 }
 .gallery-section-content .hentry {
   clear: none;
@@ -1201,16 +1194,6 @@ body.single .entry-title, body.page .entry-title {
 }
 .gallery-section-content .tidy_post_thumbnail a:hover img {
   opacity: 1;
-}
-.gallery-section-content .entry-title {
-  height: 2.8em;
-  margin-bottom: 1em;
-  overflow: hidden;
-}
-.gallery-section-content .entry-summary {
-  height: 4.2em;
-  margin-bottom: 1em;
-  overflow: hidden;
 }
 .gallery-section-content .entry-meta {
   margin-bottom: 0;
@@ -1262,7 +1245,7 @@ body.single .entry-title, body.page .entry-title {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   margin-bottom: 0;
-  height: 1.4em;
+  height: 1.4em !important;
 }
 .gallery-section-content .entry-conteiner-child .entry-title {
   margin-top: 30px;
@@ -1282,6 +1265,24 @@ body.single .entry-title, body.page .entry-title {
 .gallery-section-content .entry-conteiner-child .entry-meta .gmo-shares .social {
   margin-right: 3px;
   margin-bottom: 0;
+}
+.gallery-section-content .entry-title,
+.gallery-section-content .entry-summary {
+  margin-bottom: 1em;
+}
+.gallery-section-content.normal .entry-title {
+  height: 2.8em;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+.gallery-section-content.normal .entry-summary {
+  height: 4.2em;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.gallery-section-content-inner {
+  padding-bottom: 30px;
 }
 
 .gallery-1 .hentry {
@@ -1443,6 +1444,7 @@ body.single .entry-title, body.page .entry-title {
 }
 
 .gallery-section-content [class*="navigation"] {
+  clear: both;
   margin-left: 40px;
 }
 

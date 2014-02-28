@@ -20,13 +20,15 @@ get_header(); ?>
 		<header class="archive-header"><h1 class="archive-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php echo  esc_html( $title ); ?></h1></header>
 		<div class="front-section-content gallery-section-content gallery-<?php echo esc_attr( $cont_c ); ?> <?php echo esc_attr( $port_d ); ?>">
 		<?php if ( have_posts() ) : ?>
-
+			 
 			<?php /* Start the Loop */ ?>
+			<div class="gallery-section-content-inner clearfix">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', get_post_format() ); ?>
 
 			<?php endwhile; ?>
+			</div>
 
 			<?php tidy_paging_nav(); ?>
 

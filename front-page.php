@@ -67,7 +67,8 @@ get_header(); ?>
 			$gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
 			$home_port_num = (int)of_get_option( 'home_port_num', 3 );
 			$port_cont_c   = of_get_option( 'homeport_cont_c', '3' );
-			$port_d = of_get_option( 'port_d', 'normal' );
+			// $port_d = of_get_option( 'port_d', 'normal' );
+			$port_d = 'normal';
 
 			if ( $home_port_num > 0 ) :
 			$args = array(
