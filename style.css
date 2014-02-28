@@ -4,7 +4,7 @@ Theme URI: http://www.gmo.jp/
 Author: GMO
 Author URI: http://www.gmo.jp/
 Description: GMO theme
-Version: 0.4.2
+Version: 0.4.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tidy
@@ -884,15 +884,14 @@ body.single .entry-title, body.page .entry-title {
   vertical-align: top;
   margin-left: 1px;
 }
-.entry-meta .posted-on {
+body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-post-format-gallery .entry-meta .posted-on {
   display: block;
 }
 .entry-meta .posted-on,
 .entry-meta .byline,
 .entry-meta .entry_category,
 .entry-meta .entry_tags,
-.entry-meta .comments-link,
-.entry-meta .edit-link {
+.entry-meta .comments-link {
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -937,12 +936,15 @@ body.single .entry-title, body.page .entry-title {
 .front-section-content {
   margin-left: -40px;
 }
-.front-section-content footer.entry-meta .entry_category {
+.front-section-content .entry-ac {
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+}
+.front-section-content .edit-link {
+  margin-top: 10px;
 }
 
 /* merit-box-area */
@@ -1386,9 +1388,14 @@ body.single .entry-title, body.page .entry-title {
 }
 
 .archive-content .tidy_post_thumbnail {
+  overflow: hidden;
   width: 100px;
+  height: 80px;
   padding-right: 20px;
   float: left;
+}
+.archive-content .tidy_post_thumbnail .thumbnail_img {
+  max-height: 80px;
 }
 .archive-content .entry-conteiner {
   overflow: hidden;

@@ -6,13 +6,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'archive-content' ); ?>>
 
-	<div class="tidy_post_thumbnail tidy-thumb-tiny"><a href="<?php the_permalink(); ?>" rel="bookmark">
+	<div class="tidy_post_thumbnail tidy-thumb-tiny"><a href="<?php the_permalink(); ?>" rel="bookmark"><span class="thumbnail_img">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'tidy-thumb-tiny' ); ?>
 		<?php else: ?>
 			<img src="<?php echo get_template_directory_uri(); ?>/images/tidy-thumb-tiny.png" alt="*">
 		<?php endif; ?>
-	</a></div>
+	</span></a></div>
 
 	<div class="entry-conteiner">
 
@@ -34,7 +34,8 @@
 	<footer class="entry-meta">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php tidy_posted_on(); ?>
-			<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
+			<?php tidy_posted_author(); ?>
+			<?php tidy_posted_category(); ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 		<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
 

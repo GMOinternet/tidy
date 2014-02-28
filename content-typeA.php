@@ -31,10 +31,13 @@
 
 		<footer class="entry-meta">
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-				<?php tidy_posted_on(); ?>
-				<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
+			<?php tidy_posted_on(); ?>
+			<div class="entry-ac">
+			<?php tidy_posted_author(); ?>
+			<?php tidy_posted_category(); ?>
+			</div>
 			<?php endif; // End if 'post' == get_post_type() ?>
-			<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'tidy' ), '<div class="edit-link"><span class="icon-pencil"></span> ', '</div>' ); ?>
 			<?php do_action( 'tidy_after_entry_meta' ); ?>
 		</footer><!-- .entry-meta -->
 	</div>

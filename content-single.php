@@ -18,7 +18,9 @@ $blog_type = ( $blog_type == 'typeB' ) ? 'medium' : 'full';
 			<?php endif; ?>
 			<div class="tidy_posted_on">
 				<?php tidy_posted_on(); ?>
-				<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
+				<span class="entry-ac">
+				<?php tidy_posted_author(); ?>
+				<?php tidy_posted_category(); ?>
 				<?php
 					/* translators: used between list items, there is a space after the comma */
 					$tag_list = get_the_tag_list( '', __( ', ', 'tidy' ) );
@@ -28,6 +30,7 @@ $blog_type = ( $blog_type == 'typeB' ) ? 'medium' : 'full';
 					}
 				?>
 				<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
+				</span>
 			</div>
 		</div><!-- .entry-meta -->
 		<?php do_action( 'tidy_after_entry_header' ); ?>
