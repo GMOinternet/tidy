@@ -1518,7 +1518,7 @@ function optionsframework_options() {
 
 		$options[] = array(
 			'name' => __('Image', 'tidy'),
-			'desc' => __('Image will override any icon.', 'tidy'),
+			'desc' => __('Image will override any icon. Minimum width : 580px', 'tidy'),
 			'id' => 'merit-box-' . $i . '-image',
 			'class' => 'merit-box-' . $i,
 			'type' => 'upload');
