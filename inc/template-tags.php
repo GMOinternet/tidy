@@ -290,3 +290,13 @@ function tidy_category_transient_flusher() {
 }
 add_action( 'edit_category', 'tidy_category_transient_flusher' );
 add_action( 'save_post',     'tidy_category_transient_flusher' );
+
+/**
+ * Flush out the transients used in tidy_categorized_blog
+ */
+function tidy_ellipsis($text, $max=100, $append='&hellip;') {
+	if (strlen($text) <= $max) return $text;
+	$out = substr($text,0,$max);
+	if (strpos($text,' ') === FALSE) return $out.$append;
+	return preg_replace('/\w+$/','',$out).$append;
+}

@@ -51,7 +51,7 @@ get_header(); ?>
 					<div class="front-section-content blog-section-content">
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'content', $blog_type ); ?>
+						<?php get_template_part( 'content', 'blog' ); ?>
 					<?php endwhile; ?>
 					</div>
 					<?php //tidy_paging_nav(); ?>

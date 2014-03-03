@@ -2,8 +2,11 @@
 /**
  * @package Tidy
  */
- global $port_d;
+global $port_d;
 $port_content = of_get_option( 'port_content', 'type1' );
+
+$title_trm = apply_filters( 'tidy_portfolio_title_trm_word', 58);
+$excerpt_trm = apply_filters( 'tidy_portfolio_excerpt_trm_word', 130);
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $port_content ); ?>>
 
@@ -25,13 +28,13 @@ $port_content = of_get_option( 'port_content', 'type1' );
 
 	<?php if ( $port_content != "type1") : ?>
 	<header class="entry-header show">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h1 class="entry-title"><?php echo tidy_ellipsis( the_title('', '', false), $title_trm ); ?></h1>
 	</header><!-- .entry-header -->
 	<?php endif; ?>
 
 	<?php if ( $port_content == "type3") : ?>
 	<div class="entry-summary show">
-		<?php the_excerpt(); ?>
+		<p><?php echo tidy_ellipsis( get_the_excerpt(), $excerpt_trm ); ?></p>
 	</div><!-- .entry-summary -->
 	<?php endif; ?>
 

@@ -248,6 +248,13 @@
     margin-left: auto;
   }
 
+  .gallery-section-content {
+    /*
+    		.entry-meta {
+    			text-align: center;
+    		}
+    */
+  }
   .gallery-section-content .hentry, .gallery-section-content .contact-area {
     width: 100%;
     padding-left: 0;
@@ -255,9 +262,6 @@
   }
   .gallery-section-content .entry-box {
     margin: 0 auto;
-  }
-  .gallery-section-content .entry-meta {
-    text-align: center;
   }
 
   .gallery-1 .hentry, .gallery-1 .contact-area {

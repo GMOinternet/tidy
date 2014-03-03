@@ -1127,21 +1127,22 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 }
 .blog-section-content .entry-summary {
   margin-bottom: 20px;
-  height: 4.2em;
-  overflow: hidden;
-  position: relative;
 }
 .blog-section-content .entry-summary > p {
+  overflow: hidden;
+  height: 4.2em;
   white-space: normal;
 }
-.blog-section-content .ellipsis,
-.blog-section-content .more-link {
+.blog-section-content .ellipsis {
   position: absolute;
   bottom: 0;
   right: 0;
   z-index: 1;
   background-color: white;
   padding-left: 15px;
+}
+.blog-section-content .more-link {
+  text-align: right;
 }
 .blog-section-content .entry-meta {
   margin-bottom: 0;
@@ -1164,6 +1165,7 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
   width: 50%;
 }
 .blog-section-content .typeB .entry-conteiner {
+  margin-top: 0;
   overflow: hidden;
 }
 
@@ -1258,6 +1260,9 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 .gallery-section-content .entry-summary {
   margin-bottom: 1em;
 }
+.gallery-section-content .entry-header {
+  margin-top: 20px;
+}
 .gallery-section-content.normal .entry-conteiner {
   height: 270px;
 }
@@ -1323,9 +1328,11 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 
 .archive-link {
   text-align: right;
-}
-.archive-link .read-more .genericon {
-  top: 6px;
+  /*
+  	.read-more .genericon {
+  		top: 6px;
+  	}
+  */
 }
 
 /* archive */
@@ -1408,11 +1415,13 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
   margin-bottom: 0;
   width: 100%;
   word-wrap: normal;
+  padding-right: 80px;
 }
 .archive-content .entry-summary .more-link {
   text-align: right;
   float: right;
   white-space: nowrap;
+  position: relative;
 }
 .archive-content .entry-meta {
   white-space: nowrap;
@@ -1425,11 +1434,15 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 }
 
 .read-more .genericon {
-  font-size: 8px;
-  width: 8px;
-  height: 8px;
-  position: relative;
-  top: 5px;
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  line-height: 11px;
+  /*
+  		position: relative;
+  		top: 5px;
+  */
 }
 
 .page-links {
