@@ -1156,6 +1156,13 @@ function optionsframework_options() {
 		)
 	);
 
+	$options[] = array(
+		'name' => __( 'Number to display', 'tidy' ),
+		'id' => 'all_blog_num',
+		'std' => $posts_per_page,
+		'class' => 'mini',
+		'type' => 'text');
+
 
 	$options[] = array(
 		'id' => 'ltab-1',
@@ -1635,6 +1642,8 @@ function optionsframework_after_validate_overwride( $clean ) {
 			update_option( 'blogname', $v );
 		} elseif ( $k == 'general-header-site-tagline' ) {
 			update_option( 'blogdescription', $v );
+		} elseif ( $k == 'all_blog_num' ) {
+			update_option( 'posts_per_page', $v );
 		} elseif ( in_array( $k, $customizer_key ) ) {
 			set_theme_mod( $k, $v );
 		}
@@ -1655,6 +1664,8 @@ function tidy_optionsframework_std( $option_name, $value, $val , $restore) {
 		$val = get_bloginfo( 'name' );
 	} elseif ( $value['id'] == 'general-header-site-tagline' ) {
 		$val = get_bloginfo( 'description' );
+	} elseif ( $value['id'] == 'all_blog_num' ) {
+		$val = get_bloginfo( 'posts_per_page' );
 	} elseif ( in_array( $value['id'], $customizer_key ) ) {
 		$d = get_theme_mods();
 		if ( $restore === true ) {
