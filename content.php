@@ -23,10 +23,10 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
+			<?php the_excerpt(); ?>
 			<div class="more-link">
 				<a class="read-more" href="<?php the_permalink(); ?>" rel="bookmark"><span class="genericon genericon-rightarrow"></span><?php _e( 'Read More', 'tidy' ) ?></a>
 			</div>
-			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-meta">

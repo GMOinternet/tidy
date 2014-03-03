@@ -1455,6 +1455,7 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 }
 .archive-content .entry-summary {
   margin-bottom: 15px;
+  position: relative;
 }
 .archive-content .entry-summary > p {
   white-space: nowrap;
@@ -1469,9 +1470,10 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 }
 .archive-content .entry-summary .more-link {
   text-align: right;
-  float: right;
   white-space: nowrap;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .archive-content .entry-meta {
   white-space: nowrap;
