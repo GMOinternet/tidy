@@ -1257,41 +1257,30 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
   margin-bottom: 0;
 }
 .gallery-section-content .entry-box img {
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   transform: scale(1);
 }
 .gallery-section-content .entry-box .entry-conteiner-child {
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   opacity: 0;
 }
 .gallery-section-content .entry-box .entry-conteiner-child .entry-title,
 .gallery-section-content .entry-box .entry-conteiner-child .entry-summary,
 .gallery-section-content .entry-box .entry-conteiner-child .entry-meta {
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  -webkit-transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   -webkit-transition-delay: 0.1s;
-  -moz-transition-delay: 0.1s;
-  -o-transition-delay: 0.1s;
-  transition-delay: 0.1s;
+  -moz-transition: all 0.2s ease-in-out 0.1s;
+  -o-transition: all 0.2s ease-in-out 0.1s;
+  transition: all 0.2s ease-in-out 0.1s;
   -ms-transform: scale(0);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
