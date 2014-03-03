@@ -29,22 +29,22 @@
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 
+		<footer class="entry-meta">
+			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+				<?php tidy_posted_on(); ?>
+				<?php tidy_posted_author(); ?>
+				<?php tidy_posted_category(); ?>
+			<?php endif; // End if 'post' == get_post_type() ?>
+			<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
+	
+			<?php /*
+	if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+			<span class="comments-link"><span class="genericon genericon-chat"></span> <?php comments_popup_link( __( 'Leave a comment', 'tidy' ), __( '1 Comment', 'tidy' ), __( '% Comments', 'tidy' ) ); ?></span>
+			<?php endif;
+	*/ ?>
+	
+		</footer><!-- .entry-meta -->
+
 	</div>
-
-	<footer class="entry-meta">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php tidy_posted_on(); ?>
-			<?php tidy_posted_author(); ?>
-			<?php tidy_posted_category(); ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
-		<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
-
-		<?php /*
-if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><span class="genericon genericon-chat"></span> <?php comments_popup_link( __( 'Leave a comment', 'tidy' ), __( '1 Comment', 'tidy' ), __( '% Comments', 'tidy' ) ); ?></span>
-		<?php endif;
-*/ ?>
-
-	</footer><!-- .entry-meta -->
 
 </article><!-- #post-## -->

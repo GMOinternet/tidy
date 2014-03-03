@@ -93,7 +93,10 @@
 		$(".gallery-section-content.normal .tidy-thumb-portfolio").flatHeights();
 		$(".gallery-section-content .entry-box").each(function(i){
 			var h = $(this).children('.tidy-thumb-portfolio').children('a').children('.thumbnail_img').height();
+			var bh = $(this).children('.tidy-thumb-portfolio').height();
 			$(this).children('.entry-conteiner').children('.entry-conteiner-child').height(h);
+			$(this).children('.entry-conteiner').children('.entry-conteiner-child').css({'top':(bh-h)/2});
+
 		});
 		// masonry initialize
 		$container.masonry({
