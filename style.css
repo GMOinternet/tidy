@@ -1232,6 +1232,7 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
   text-overflow: ellipsis;
   margin-bottom: 0;
   height: 1.4em !important;
+  width: 100%;
 }
 .gallery-section-content .entry-conteiner-child .entry-title {
   margin-top: 30px;
@@ -1403,6 +1404,7 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   margin-bottom: 0;
+  width: 100%;
 }
 .archive-content .entry-summary .more-link {
   text-align: right;
@@ -1415,6 +1417,7 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  width: 100%;
 }
 
 .read-more .genericon {
