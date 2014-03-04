@@ -1031,17 +1031,17 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
   border: solid 2px white;
   width: 100%;
   height: 100%;
+}
+.merit-box-thumbnail .type-icon .iconbox .iconmoon {
   -webkit-transition-duration: 1s;
   -moz-transition-duration: 1s;
   -o-transition-duration: 1s;
   transition-duration: 1s;
+  font-size: 50px;
+  line-height: 110px;
 }
 .merit-box-thumbnail .type-icon .iconbox:hover .iconmoon {
   font-size: 70px;
-}
-.merit-box-thumbnail .type-icon .iconmoon {
-  font-size: 50px;
-  line-height: 100px;
 }
 
 .merit-box-1 {

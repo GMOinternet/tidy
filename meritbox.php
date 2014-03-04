@@ -24,7 +24,7 @@ $textalign = of_get_option( 'merit-box-' . $i . '-align', 'center' );
 if ( $type == 'type-image' ) {
 	$img = '<span class="thumbnail_img"><img src="' . of_get_option( 'merit-box-' . $i . '-image') . '" alt="' . esc_attr( $title ) . '"></span>';
 } else {
-	$img = '<span class="iconmoon icon-' . $icon . '"></span>';
+	$img = '<span class="iconmoon"><span class="icon-' . $icon . '"></span></span>';
 }
 ?>
 
