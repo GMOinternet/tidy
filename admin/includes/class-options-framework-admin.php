@@ -83,15 +83,13 @@ class Options_Framework_Admin {
 	 */
 	static function menu_settings() {
 		
-		$tidy_info = wp_get_theme();
-		$tidy_name = $tidy_info->get( 'Name' );
-		$tidy_version = $tidy_info->get( 'Version' );
-			$menu = array(
-			'page_title'  => $tidy_name . ' ' . $tidy_version,
+		$menu = array(
+			'page_title'  => THEMENAME . ' ' . VERSION,
 			'menu_title'  => __( 'Theme Options', 'tidy' ),
 			'capability'  => 'edit_theme_options',
 			'menu_slug'   => 'tidy-options',
-			'banner'      => get_template_directory_uri() . '/admin/images/300x100_10816.gif',
+			'banner'      => get_template_directory_uri() . '/admin/images/450x100.gif',
+			'banner_name' => 'ConoHa by GMO',
 			'banner_link' => 'http://www.conoha.jp/lp/20131201wp/?banner_id=vn_dq_20140317'
 		);
 
@@ -168,9 +166,9 @@ class Options_Framework_Admin {
 			return;
 
 		wp_enqueue_style( 'wp-color-picker' );
-		wp_enqueue_style( 'gmo-iconmoon', get_template_directory_uri() . '/iconmoon-tidy/style.min.css', array(), Options_Framework::VERSION );
-		wp_enqueue_style( 'select2', TIDY_ADMIN_DIRECTORY_URI . 'css/select2.css', array(), Options_Framework::VERSION );
-		wp_enqueue_style( 'optionsframework', TIDY_ADMIN_DIRECTORY_URI . 'css/optionsframework.min.css', array(), Options_Framework::VERSION );
+		wp_enqueue_style( 'gmo-iconmoon', get_template_directory_uri() . '/iconmoon-tidy/style.min.css', array(), VERSION );
+		wp_enqueue_style( 'select2', TIDY_ADMIN_DIRECTORY_URI . 'css/select2.css', array(), VERSION );
+		wp_enqueue_style( 'optionsframework', TIDY_ADMIN_DIRECTORY_URI . 'css/optionsframework.min.css', array(), VERSION );
 	}
 
 	/**
@@ -184,8 +182,8 @@ class Options_Framework_Admin {
 			return;
 
 		// Enqueue custom option panel JS
-		wp_enqueue_script( 'options-select2', TIDY_ADMIN_DIRECTORY_URI . 'js/select2.min.js', array( 'jquery' ), Options_Framework::VERSION );
-		wp_enqueue_script( 'options-custom', TIDY_ADMIN_DIRECTORY_URI . 'js/options-custom.js', array( 'jquery', 'wp-color-picker' ), Options_Framework::VERSION );
+		wp_enqueue_script( 'options-select2', TIDY_ADMIN_DIRECTORY_URI . 'js/select2.min.js', array( 'jquery' ), VERSION );
+		wp_enqueue_script( 'options-custom', TIDY_ADMIN_DIRECTORY_URI . 'js/options-custom.js', array( 'jquery', 'wp-color-picker' ), VERSION );
 
 		// Inline scripts from options-interface.php
 		add_action( 'admin_head', array( $this, 'of_admin_head' ) );
@@ -231,7 +229,7 @@ class Options_Framework_Admin {
 			</div>
 			<?php if ( $menu['banner'] ) : ?>
 				<?php
-					$banner = '<img src="' . esc_attr( $menu['banner'] ) . '" alt="*">';
+					$banner = '<img src="' . esc_url( $menu['banner'] ) . '" alt="' . esc_attr( $menu['banner_name'] ) . '">';
 					$banner = ( $menu['banner_link'] ) ? '<a href="' . esc_url( $menu['banner_link']) . '" target="_blank">' . $banner . '</a>' : $banner;
 				?>
 			<div id="optionsframework-banner"><?php echo $banner; ?></div>

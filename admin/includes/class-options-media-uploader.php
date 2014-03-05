@@ -108,12 +108,12 @@ class Options_Framework_Media_Uploader {
 		$menu = Options_Framework_Admin::menu_settings();
 
 		if ( 'appearance_page_' . $menu['menu_slug'] != $hook )
-	        return;
+			return;
 
 		if ( function_exists( 'wp_enqueue_media' ) )
 			wp_enqueue_media();
 
-		wp_register_script( 'of-media-uploader', TIDY_ADMIN_DIRECTORY_URI .'js/media-uploader.js', array( 'jquery' ), Options_Framework::VERSION );
+		wp_register_script( 'of-media-uploader', TIDY_ADMIN_DIRECTORY_URI .'js/media-uploader.js', array( 'jquery' ), VERSION );
 		wp_enqueue_script( 'of-media-uploader' );
 		wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
 			'upload' => __( 'Upload', 'tidy' ),

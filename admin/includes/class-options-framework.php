@@ -15,7 +15,10 @@ class Options_Framework {
 	 * @since 1.7.0
 	 * @type string
 	 */
-	const VERSION = '0.4.1';
+/*
+	const VERSION = '0.4.2';
+	const THEMENAME = 'Tidy';
+*/
 
 	/**
 	 * Initialize the plugin.

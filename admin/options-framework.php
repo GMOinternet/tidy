@@ -19,6 +19,11 @@ if ( ! defined( 'WPINC' ) ) {
 // Don't load if tidy_themeoptions_init is already defined
 if ( ! function_exists( 'tidy_themeoptions_init' ) ) :
 
+$get_theme_info = wp_get_theme();
+
+define( 'THEMENAME', $get_theme_info->get( 'Name' ) );
+define( 'VERSION',  $get_theme_info->get( 'Version' ) );
+
 function tidy_themeoptions_init() {
 
 	//  If user can't edit theme options, exit
