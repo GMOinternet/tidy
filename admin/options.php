@@ -43,7 +43,8 @@ function tidy_customizer_array() {
 		'footer_category_border_color',
 		'copyright_bg_color',
 		'copyright_text_color',
-		'copyright_anchor_color'
+		'copyright_anchor_color',
+		'all_blog_num'
 	);
 	return $customizer_key;
 }
@@ -1022,6 +1023,7 @@ function optionsframework_options() {
 		__( 'All Blog', 'tidy' ),
 		__( 'All Portfolio', 'tidy' ),
 		__( 'Archive and Search result', 'tidy' ),
+		__( 'Posts', 'tidy' ),
 		__( 'Pages', 'tidy' ),
 		__( 'Contact', 'tidy' )
 	);
@@ -1143,10 +1145,19 @@ function optionsframework_options() {
 		)
 	);
 
+	$options[] = array(
+		'name' => __('Select Column Number', 'tidy'),
+		'desc' => '',
+		'id' => 'all_blog_cont_c',
+		'std' => '1',
+		'type' => 'select',
+		'class' => 'mini',
+		'options' => $column_array
+	);
 
 	$options[] = array(
 		'name' => __( 'Select text location', 'tidy' ),
-		'desc' => '',
+		'desc' => __( 'Right text location is 1colum only.', 'tidy' ),
 		'id' => "blog_type",
 		'std' => "typeA",
 		'type' => "images",
@@ -1163,6 +1174,20 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'type' => 'text');
 
+	$options[] = array(
+		'name' => __('Archive title', 'tidy'),
+		'id' => 'all_blog_title',
+		'std' => __( 'Blog Archive', 'tidy' ),
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Icon', 'tidy'),
+		'desc' => '',
+		'id' => 'all_blog_icon',
+		'std' => 'pencil',
+		'type' => 'select',
+		'class' => 'mnicon mini arc_icon',
+		'options' => $icon_array);
 
 	$options[] = array(
 		'id' => 'ltab-1',
@@ -1314,9 +1339,47 @@ function optionsframework_options() {
 		'type' => 'tabcontent'
 	);
 
-	// Posts and Pages Layout (info)
+	// Posts Layout (info)
 	$options[] = array(
 		'id' => 'ltab-4',
+		'class' => "start",
+		'type' => 'tabcontent'
+	);
+
+	$options[] = array(
+		'name' => __( 'Select layout', 'tidy' ),
+		'desc' => '',
+		'id' => "single_c",
+		'std' => "cont_s2",
+		'type' => "images",
+		'options' => array(
+			'cont_c1' => $imagepath . '1col.png',
+			'cont_s1' => $imagepath . '2cl.png',
+			'cont_s2' => $imagepath . '2cr.png'
+		)
+	);
+
+	$options[] = array(
+		'name' => __( 'Select text location', 'tidy' ),
+		'desc' => '',
+		'id' => "single_type",
+		'std' => "typeA",
+		'type' => "images",
+		'options' => array(
+			'typeA' => $imagepath . 'typeA.png',
+			'typeB' => $imagepath . 'typeB.png',
+		)
+	);
+
+	$options[] = array(
+		'id' => 'ltab-4',
+		'class' => "end",
+		'type' => 'tabcontent'
+	);
+
+	// Pages Layout (info)
+	$options[] = array(
+		'id' => 'ltab-5',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
@@ -1335,14 +1398,14 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'id' => 'ltab-4',
+		'id' => 'ltab-5',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
 	// Contact Layout (info)
 	$options[] = array(
-		'id' => 'ltab-5',
+		'id' => 'ltab-6',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
@@ -1431,7 +1494,7 @@ function optionsframework_options() {
 		'settings' => $wp_editor_settings );
 
 	$options[] = array(
-		'id' => 'ltab-5',
+		'id' => 'ltab-6',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
@@ -1665,7 +1728,7 @@ function tidy_optionsframework_std( $option_name, $value, $val , $restore) {
 	} elseif ( $value['id'] == 'general-header-site-tagline' ) {
 		$val = get_bloginfo( 'description' );
 	} elseif ( $value['id'] == 'all_blog_num' ) {
-		$val = get_bloginfo( 'posts_per_page' );
+		$val = get_option( 'posts_per_page' );
 	} elseif ( in_array( $value['id'], $customizer_key ) ) {
 		$d = get_theme_mods();
 		if ( $restore === true ) {

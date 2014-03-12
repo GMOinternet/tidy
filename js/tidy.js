@@ -112,6 +112,12 @@
 		tidy_gallerycontent();
 	}
 
+	// home(not front page)
+	var $blogcontainer = $( '.all-blog' );
+	$blogcontainer.masonry({
+		itemSelector: '.hentry'
+	});
+
 	// gallery hover
 /*
 	$( '.entry-box').hover(function(){

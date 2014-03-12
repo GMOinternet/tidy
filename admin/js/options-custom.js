@@ -45,6 +45,30 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	// All blog
+	var bd = $("#section-blog_c .of-radio-img-selected").attr('src');
+	var bdp = bd.split('/');
+	var bdf = bdp.pop();
+	bdf = bdf.replace(/\.png/g,'');
+
+	if (bdf !== '1col') {
+		$("#all_blog_cont_c option[value='4']").attr('disabled', 'disabled');
+	} else {
+		$("#all_blog_cont_c option[value='4']").removeAttr('disabled');
+	}
+	
+	$("#section-blog_c .of-radio-img-img").click(function(){
+		var val = $(this).attr('src');
+		var path = val.split('/');
+		var file_name = path.pop();
+		file_name = file_name.replace(/\.png/g,'');
+		if (file_name !== '1col') {
+			$("#all_blog_cont_c option[value='4']").attr('disabled', 'disabled');
+		} else {
+			$("#all_blog_cont_c option[value='4']").removeAttr('disabled');
+		}
+	});
+
 
 	// Portfolio archive
 	var pd = $("#section-port_c .of-radio-img-selected").attr('src');

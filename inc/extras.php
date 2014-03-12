@@ -80,21 +80,6 @@ function tidy_modify_main_query( $query ) {
 
 	$posts_per_page = get_option( 'posts_per_page' );
 
-	// is_front_page
-	$home_blog_num = of_get_option( 'home_blog_num', 6 );
-	if ( $query->is_front_page() ) {
-		$query->set( 'posts_per_page', $home_blog_num );
-		$query->set( 'tax_query', array(
-			array(
-				'taxonomy' => 'post_format',
-				'field'    => 'slug',
-				'terms'    => 'post-format-gallery',
-				'operator' => 'NOT IN'
-			)
-		) );
-		return;
-	}
-
 	// post_type = post_format=gallery
 	$port_num = of_get_option( 'port_num', $posts_per_page );
 	if ( $query->is_tax( 'post_format' ) ) {
@@ -116,6 +101,7 @@ function tidy_modify_main_query( $query ) {
 
 }
 
+/*
 add_action('pre_get_posts', 'tidy_query_format_standard');
 function tidy_query_format_standard($query) {
 	if (isset($query->query_vars['post_format']) && $query->query_vars['post_format'] == 'post-format-standard') {
@@ -141,6 +127,7 @@ function tidy_query_format_standard($query) {
 		}
 	}
 }
+*/
 
 /**
  * add action showtime.
