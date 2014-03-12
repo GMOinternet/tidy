@@ -32,10 +32,12 @@ $excerpt_trm = apply_filters( 'tidy_portfolio_excerpt_trm_word', 130);
 	</header><!-- .entry-header -->
 	<?php endif; ?>
 
+	<?php if ( ! is_front_page() ) : ?>
 	<?php if ( $port_content == "type3") : ?>
 	<div class="entry-summary show">
 		<p><?php echo tidy_ellipsis( get_the_excerpt(), $excerpt_trm ); ?></p>
 	</div><!-- .entry-summary -->
+	<?php endif; ?>
 	<?php endif; ?>
 
 	<footer class="entry-meta">
