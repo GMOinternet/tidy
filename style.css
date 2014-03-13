@@ -1377,6 +1377,7 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 }
 .all-blog .entry-title {
   font-size: 2.57143em;
+  margin-bottom: 30px;
 }
 .all-blog .entry-summary {
   margin-bottom: 20px;
