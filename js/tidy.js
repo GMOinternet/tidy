@@ -83,6 +83,8 @@
 	var _UA = navigator.userAgent.toLowerCase();
 	// gallery grid(masonry)
 	var $container = $( '.gallery-section-content-inner' );
+	// home(not front page) masonry
+	var $blogcontainer = $( '.all-blog' );
 	function tidy_gallerycontent() {
 
 		// Merit Box
@@ -102,6 +104,9 @@
 		$container.masonry({
 			itemSelector: '.hentry'
 		});
+		$blogcontainer.masonry({
+			itemSelector: '.hentry'
+		});
 	}
 	
 	if(parseInt(_UA.indexOf('applewebkit')) > -1){
@@ -112,11 +117,6 @@
 		tidy_gallerycontent();
 	}
 
-	// home(not front page)
-	var $blogcontainer = $( '.all-blog' );
-	$blogcontainer.masonry({
-		itemSelector: '.hentry'
-	});
 
 	// gallery hover
 /*
