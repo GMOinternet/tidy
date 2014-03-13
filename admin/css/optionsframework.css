@@ -559,6 +559,9 @@ p.shop_link {
   font-size: 20px !important;
   margin-top: 0;
 }
+#optionsframework .layoutsettings .arc_icon {
+  margin-bottom: 10px;
+}
 
 /* =SNS settings
 ----------------------------------------------- */

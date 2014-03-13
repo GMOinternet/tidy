@@ -5,6 +5,10 @@
 
 $galleryicon   = of_get_option( 'home_port_icon', 'notebook' );
 $gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
+$meta_date     = of_get_option( 'port_meta_date', 1 );
+$meta_author   = of_get_option( 'port_meta_author', 1 );
+$meta_cat      = of_get_option( 'port_meta_cat', 1 );
+$meta_tab      = of_get_option( 'port_meta_tag', 1  );
 ?>
 
 <div class="section-header">
@@ -47,17 +51,22 @@ $gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
 
 		<div class="entry-meta">
 			<div class="tidy_posted_on">
-				<?php tidy_posted_on(); ?>
-				<span class="entry_category"><span class="icon-folder-open"></span> <?php the_category( ', ' ); ?></span>
+				<?php if ( $meta_date > 0 ) tidy_posted_on(); ?>
+				<span class="entry-ac">
+				<?php if ( $meta_author > 0 ) tidy_posted_author(); ?>
+				<?php if ( $meta_cat > 0 ) tidy_posted_category(); ?>
 				<?php
-					/* translators: used between list items, there is a space after the comma */
-					$tag_list = get_the_tag_list( '', __( ', ', 'tidy' ) );
-
-					if ( '' != $tag_list ) {
-						echo '<span class="entry_tags"><span class="icon-tag"></span> ' . $tag_list . '</span>';
+					if ( $meta_tab > 0 ) {
+						/* translators: used between list items, there is a space after the comma */
+						$tag_list = get_the_tag_list( '', __( ', ', 'tidy' ) );
+	
+						if ( '' != $tag_list ) {
+							echo '<span class="entry_tags"><span class="icon-tag"></span> ' . $tag_list . '</span>';
+						}
 					}
 				?>
 				<?php edit_post_link( __( 'Edit', 'tidy' ), '<span class="edit-link"><span class="icon-pencil"></span> ', '</span>' ); ?>
+				</span>
 			</div>
 		</div><!-- .entry-meta -->
 		<?php do_action( 'tidy_after_entry_header' ); ?>

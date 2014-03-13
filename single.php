@@ -7,12 +7,12 @@
 
 $post_id = $wp_query->get_queried_object_id();
 $post_format = get_post_format( $post_id );
-if ( $post_format == "gallery") {
-	$layout = of_get_option( 'port_c', 'cont_s2' );
+if ( $post_format == "gallery" ) {
 	$type = 'portfolio';
+	$layout = of_get_option( 'port_c', 'cont_s2' );
 } else {
-	$layout = of_get_option( 'blog_c', 'cont_s2' );
 	$type = 'single';
+	$layout = of_get_option( 'single_c', 'cont_s2' );
 }
 get_header(); ?>
 

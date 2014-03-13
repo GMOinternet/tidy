@@ -82,7 +82,7 @@
 	// flatHeights
 	var _UA = navigator.userAgent.toLowerCase();
 	// gallery grid(masonry)
-	var $container = $( '.gallery-section-content-inner' );
+	var $container = $( '.grid .gallery-section-content-inner' );
 	// home(not front page) masonry
 	var $blogcontainer = $( '.all-blog' );
 	function tidy_gallerycontent() {

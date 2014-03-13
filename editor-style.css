@@ -537,7 +537,7 @@ a:hover, a:focus, a:active {
 }
 
 .wp-caption {
-  border-style: solid;
+  border-style: none;
   border-color: #cccccc;
   border-width: 1px;
   margin-bottom: 30px;
