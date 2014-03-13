@@ -22,7 +22,9 @@ $excerpt_trm = apply_filters( 'tidy_portfolio_excerpt_trm_word', 130);
 		<div class="entry-conteiner"><div class="entry-conteiner-child">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><div class="entry-title"><?php the_title(); ?></div>
 			<div class="entry-summary"><?php the_excerpt(); ?></div></a>
+			<?php if ( is_front_page() ) : ?>
 			<div class="entry-meta"><?php do_action( 'tidy_after_entry_meta' ); ?></div>
+			<?php endif; ?>
 		</div></div>
 	</div>
 
@@ -55,7 +57,9 @@ $excerpt_trm = apply_filters( 'tidy_portfolio_excerpt_trm_word', 130);
 			</div>
 		<?php endif; // End if 'post' == get_post_type() ?>
 		<?php edit_post_link( __( 'Edit', 'tidy' ), '<div class="edit-link"><span class="icon-pencil"></span> ', '</div>' ); ?>
-			<?php // do_action( 'tidy_after_entry_meta' ); ?>
+		<?php if ( ! is_front_page() ) : ?>
+			<?php do_action( 'tidy_after_entry_meta' ); ?>
+		<?php endif; ?>
 	</footer><!-- .entry-meta -->
 
 </article><!-- #post-## -->

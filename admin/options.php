@@ -1226,7 +1226,12 @@ function optionsframework_options() {
 		'std' => '3',
 		'type' => 'select',
 		'class' => 'mini',
-		'options' => $column_array);
+		'options' => array(
+			2 => 2,
+			3 => 3,
+			4 => 4
+		)
+	);
 
 	$options[] = array(
 		'name' => __( 'Select display pattern', 'tidy' ),

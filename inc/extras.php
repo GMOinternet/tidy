@@ -191,15 +191,3 @@ function tidy_remove_ad() {
 add_action( 'template_redirect', 'tidy_remove_ad' );
 endif; //class_exists( 'GMO_Ads_Master' )
 
-/**
- * Remove filters GMO_Share_Connection in contact pages.
- */
-if ( class_exists( 'GMO_Share_Connection' ) ) :
-function tidy_remove_share_connection() {
-//	if ( is_singular( array( 'page','attachment' ) ) ) {
-		global $gmoshareconnection;
-		remove_filter( 'wp_head', array($gmoshareconnection, 'the_content') );
-//	}
-}
-add_action( 'template_redirect', 'tidy_remove_share_connection' );
-endif; //class_exists( 'GMO_Share_Connection' )
