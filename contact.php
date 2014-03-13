@@ -36,7 +36,7 @@ get_header(); ?>
 					<?php if ( of_get_option( 'cont_c_title' ) ) : ?>
 						<h2><?php echo esc_html( of_get_option( 'cont_c_title' ) ); ?></h2>
 					<?php endif; ?>
-					<?php echo apply_filters('the_content', of_get_option( 'cont_c_text' )); ?>
+					<?php echo apply_filters( 'the_content', of_get_option( 'cont_c_text' )); ?>
 					</div>
 				<?php endif; ?>
 

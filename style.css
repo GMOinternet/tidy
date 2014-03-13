@@ -858,6 +858,12 @@ body.single .entry-title, body.page .type-page .entry-title {
   margin-bottom: 30px;
   border-bottom: solid 1px #e3e6ea;
 }
+body.page-template-contact-php .type-page .entry-title {
+  font-size: 2.14286em;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  border-bottom: none;
+}
 
 .portfolio {
   margin-bottom: 80px;
@@ -1537,6 +1543,10 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 .page-links {
   clear: both;
   margin: 0 0 30px;
+}
+
+.contact-area .gmo-shares {
+  display: none;
 }
 
 /* =Asides

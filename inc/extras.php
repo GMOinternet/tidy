@@ -67,78 +67,6 @@ function tidy_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'tidy_wp_title', 10, 2 );
 
-
-/**
- * Filters pre_get_posts.
- * @param string $query Default query.
- * @return Void.
-*/
-add_action( 'pre_get_posts', 'tidy_modify_main_query' );
-function tidy_modify_main_query( $query ) {
-	if ( is_admin() || ! $query->is_main_query() )
-		return;
-
-	$posts_per_page = get_option( 'posts_per_page' );
-
-	// post_type = post_format=gallery
-	$port_num = of_get_option( 'port_num', $posts_per_page );
-	if ( $query->is_tax( 'post_format' ) ) {
-		if ( $query->is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$query->set( 'posts_per_page', $port_num );
-		} else {
-			$query->set( 'posts_per_page', $port_num );
-		}
-		return;
-	}
-
-	// is_archive or is_search
-	$arc_num = of_get_option( 'arc_num', $posts_per_page );
-	if ( $query->is_archive() or $query->is_search() ) {
-		$query->set( 'posts_per_page', $arc_num );
-		return;
-	}
-
-
-}
-
-/*
-add_action('pre_get_posts', 'tidy_query_format_standard');
-function tidy_query_format_standard($query) {
-	if (isset($query->query_vars['post_format']) && $query->query_vars['post_format'] == 'post-format-standard') {
-		if (($post_formats = get_theme_support('post-formats')) && is_array($post_formats[0]) && count($post_formats[0])) {
-			$terms = array();
-			foreach ($post_formats[0] as $format) {
-				$terms[] = 'post-format-'.$format;
-			}
-			$query->is_tax = null;
-			unset($query->query_vars['post_format']);
-			unset($query->query_vars['taxonomy']);
-			unset($query->query_vars['term']);
-			unset($query->query['post_format']);
-			$query->set('tax_query', array(
-				'relation' => 'AND',
-				array(
-				'taxonomy' => 'post_format',
-				'terms' => $terms,
-				'field' => 'slug',
-				'operator' => 'NOT IN'
-				)
-			));
-		}
-	}
-}
-*/
-
-/**
- * add action showtime.
- * @param none.
- * @return Void.
-*/
-add_action( 'tidy_before_content', 'tidy_showtime' );
-function tidy_showtime() {
-	if ( function_exists( 'showtime' ) ) showtime();
-}
-
 /**
  * Filters post-format name.
  * @param string $query Default query.
@@ -168,3 +96,100 @@ function tidy_live_rename_formats() {
 <?php }
 }
 add_action('admin_head', 'tidy_live_rename_formats');
+
+/**
+ * Filters pre_get_posts.
+ * @param string $query Default query.
+ * @return Void.
+*/
+function tidy_modify_main_query( $query ) {
+	if ( is_admin() || ! $query->is_main_query() )
+		return;
+
+	$posts_per_page = get_option( 'posts_per_page' );
+
+	// post_type = post_format=gallery
+	$port_num = of_get_option( 'port_num', $posts_per_page );
+	if ( $query->is_tax( 'post_format' ) ) {
+		if ( $query->is_tax( 'post_format', 'post-format-gallery' ) ) {
+			$query->set( 'posts_per_page', $port_num );
+		} else {
+			$query->set( 'posts_per_page', $port_num );
+		}
+		return;
+	}
+
+	// is_archive or is_search
+	$arc_num = of_get_option( 'arc_num', $posts_per_page );
+	if ( $query->is_archive() or $query->is_search() ) {
+		$query->set( 'posts_per_page', $arc_num );
+		return;
+	}
+
+
+}
+add_action( 'pre_get_posts', 'tidy_modify_main_query' );
+
+/*
+function tidy_query_format_standard($query) {
+	if (isset($query->query_vars['post_format']) && $query->query_vars['post_format'] == 'post-format-standard') {
+		if (($post_formats = get_theme_support('post-formats')) && is_array($post_formats[0]) && count($post_formats[0])) {
+			$terms = array();
+			foreach ($post_formats[0] as $format) {
+				$terms[] = 'post-format-'.$format;
+			}
+			$query->is_tax = null;
+			unset($query->query_vars['post_format']);
+			unset($query->query_vars['taxonomy']);
+			unset($query->query_vars['term']);
+			unset($query->query['post_format']);
+			$query->set('tax_query', array(
+				'relation' => 'AND',
+				array(
+				'taxonomy' => 'post_format',
+				'terms' => $terms,
+				'field' => 'slug',
+				'operator' => 'NOT IN'
+				)
+			));
+		}
+	}
+}
+add_action('pre_get_posts', 'tidy_query_format_standard');
+*/
+
+/**
+ * add action showtime.
+ * @param none.
+ * @return Void.
+*/
+function tidy_showtime() {
+	if ( function_exists( 'showtime' ) ) showtime();
+}
+add_action( 'tidy_before_content', 'tidy_showtime' );
+
+/**
+ * Remove filters GMO_Ads_Master in pages and attachment.
+ */
+if ( class_exists( 'GMO_Ads_Master' ) ) :
+function tidy_remove_ad() {
+	if ( is_singular( array( 'page','attachment' ) ) ) {
+		global $gmoadsmaster;
+		remove_filter( 'the_content', array($gmoadsmaster, 'the_content') );
+	}
+}
+add_action( 'template_redirect', 'tidy_remove_ad' );
+endif; //class_exists( 'GMO_Ads_Master' )
+
+/**
+ * Remove filters GMO_Share_Connection in contact pages.
+ */
+if ( class_exists( 'GMO_Share_Connection' ) ) :
+function tidy_remove_share_connection() {
+//	if ( is_singular( array( 'page','attachment' ) ) ) {
+		global $gmoshareconnection;
+		remove_filter( 'wp_head', array($gmoshareconnection, 'the_content') );
+//	}
+}
+add_action( 'template_redirect', 'tidy_remove_share_connection' );
+endif; //class_exists( 'GMO_Share_Connection' )
