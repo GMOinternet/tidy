@@ -1337,6 +1337,7 @@ body.archive .gallery-section-content .entry-title {
 }
 body.archive .gallery-section-content .gmo-shares {
   margin-top: 20px;
+  text-align: left;
 }
 
 .gallery-section-content-inner {
