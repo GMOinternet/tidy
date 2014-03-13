@@ -5,7 +5,7 @@
 global $port_d;
 $port_content = of_get_option( 'port_content', 'type1' );
 
-$title_trm = apply_filters( 'tidy_portfolio_title_trm_word', 58);
+$title_trm = apply_filters( 'tidy_portfolio_title_trm_word', 85);
 $excerpt_trm = apply_filters( 'tidy_portfolio_excerpt_trm_word', 130);
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( $port_content ); ?>>
@@ -28,7 +28,13 @@ $excerpt_trm = apply_filters( 'tidy_portfolio_excerpt_trm_word', 130);
 
 	<?php if ( $port_content != "type1") : ?>
 	<header class="entry-header show">
-		<h1 class="entry-title"><?php echo tidy_ellipsis( the_title('', '', false), $title_trm ); ?></h1>
+		<h1 class="entry-title"><?php
+			if ( is_front_page() ) {
+				echo tidy_ellipsis( the_title('', '', false), $title_trm );
+			} else {
+				the_title();
+			}
+		?></h1>
 	</header><!-- .entry-header -->
 	<?php endif; ?>
 

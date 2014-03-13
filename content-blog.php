@@ -4,13 +4,8 @@
  */
 global $blog_type;
 
-if ( $blog_type == 'typeB' ) {
-	$title_trm = 54;
-} else {
-	$title_trm = 58;
-}
-$title_trm = apply_filters( 'tidy_blog_title_trm_word', $title_trm);
-$excerpt_trm = apply_filters( 'tidy_blog_excerpt_trm_word', 130);
+$title_trm = apply_filters( 'tidy_blog_title_trm_word', 85 );
+$excerpt_trm = apply_filters( 'tidy_blog_excerpt_trm_word', 130 );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $blog_type ); ?>>
