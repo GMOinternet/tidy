@@ -1152,7 +1152,11 @@ function optionsframework_options() {
 		'std' => '1',
 		'type' => 'select',
 		'class' => 'mini',
-		'options' => $column_array
+		'options' => array(
+			1 => 1,
+			2 => 2,
+			3 => 3
+		)
 	);
 
 	$options[] = array(

@@ -1392,6 +1392,9 @@ body.home .entry-meta .posted-on, body.blog .entry-meta .posted-on, body.term-po
 .all-blog .gmo-shares {
   text-align: left;
 }
+body.blog .all-blog .entry-meta .posted-on {
+  display: inline;
+}
 .all-blog .entry-meta .gmo-shares .social {
   margin-bottom: 0;
 }

@@ -10,7 +10,7 @@ $layout = of_get_option( 'blog_c', 'cont_s2' );
 $icon   = of_get_option( 'all_blog_icon', 'pencil' );
 $title  = of_get_option( 'all_blog_title',  __( 'Blog Archive', 'tidy' ) );
 $cont_c = of_get_option( 'all_blog_cont_c', '1' );
-$blog_type  = ($cont_c == 1 ) ? of_get_option( 'blog_type', 'typeA' ) : 'typeA';
+$blog_type  = ($cont_c == 1 && $layout == 'cont_c1') ? of_get_option( 'blog_type', 'typeA' ) : 'typeA';
 
 get_header(); ?>
 

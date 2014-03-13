@@ -68,6 +68,16 @@ function tidy_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'tidy_wp_title', 10, 2 );
 
 /**
+ * Filters excerpt_more.
+ * @param string $more.
+ * @return string.
+*/
+function tidy_excerpt_more( $more ) {
+	return ' &hellip;';
+}
+add_filter( 'excerpt_more', 'tidy_excerpt_more' );
+
+/**
  * Filters post-format name.
  * @param string $query Default query.
  * @return array.
