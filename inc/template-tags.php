@@ -38,7 +38,7 @@ function tidy_paging_nav( $range = 2, $omission = "&#x02026;" ) {
 	<?php
 
 	// Link to first page
-	if( $paged > 1 && $paged > $range+1 && $showitems < $max )
+	if( $paged > 1 )
 		echo '<li class="pagination-first pagination-icon"><a href="' . get_pagenum_link(1) . '"><span class="genericon genericon-skip-back"></span></a></li>' . "\n";
 
 	// Previous Post Link
@@ -65,7 +65,7 @@ function tidy_paging_nav( $range = 2, $omission = "&#x02026;" ) {
 		printf( '<li class="pagination-next pagination-icon">%s</li>' . "\n", get_next_posts_link( '<span class="screen-reader-text">' . __( 'Next Page', 'tidy' ) . '</span><span class="genericon genericon-rightarrow"></span>' ) );
 
 	// Link to last page
-	if ( $paged < $max-1 && $paged+$range-1 < $max && $showitems < $max )
+	if ( $paged < $max )
 		echo '<li class="pagination-last pagination-icon"><a href="' . get_pagenum_link($max) . '"><span class="genericon genericon-skip-ahead"></span></a></li>' . "\n";
 
 	?>

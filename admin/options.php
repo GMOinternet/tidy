@@ -1371,6 +1371,28 @@ function optionsframework_options() {
 		'options' => $icon_array);
 
 	$options[] = array(
+		'name' => __('Description background color', 'tidy'),
+		'desc' => '',
+		'id' => 'arc_desc_bg_color',
+		'std' => $tidy_default['header_bg_color'],
+		'type' => 'color' );
+
+	$options[] = array(
+		'name' => __('Description text color', 'tidy'),
+		'desc' => '',
+		'id' => 'arc_desc_text_color',
+		'std' => $tidy_default['main_text_color'],
+		'type' => 'color' );
+	
+	$options[] = array(
+		'name' => __('Description anchor color', 'tidy'),
+		'desc' => '',
+		'id' => 'arc_desc_anchor_color',
+		'std' => $tidy_default['main_anchor_color'],
+		'class' => 'customcolor',
+		'type' => 'color' );
+
+	$options[] = array(
 		'id' => 'ltab-3',
 		'class' => "end",
 		'type' => 'tabcontent'

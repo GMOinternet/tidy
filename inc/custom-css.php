@@ -10,9 +10,14 @@ add_action( 'wp_head', 'tidy_themeoption_header_style' );
 
 if ( ! function_exists( 'tidy_themeoption_header_style' ) ) :
 function tidy_themeoption_header_style() {
+	// sns
 	$sns_icon_border = of_get_option( 'sns-icon-frame', '1' );
 	$sns_icon_color_header = of_get_option( 'sns-icon-color-header', '#0058AE' );
 	$sns_icon_color_footer = of_get_option( 'sns-icon-color-footer', '#ffffff' );
+	// Archive Description
+	$arc_desc_bg_color     = of_get_option( 'arc_desc_bg_color', '#E3E6EA' );
+	$arc_desc_text_color   = of_get_option( 'arc_desc_text_color', '#1C1C1C' );
+	$arc_desc_anchor_color = of_get_option( 'arc_desc_anchor_color', '#0058AE' );
 
 	?>
 	<style type="text/css">
@@ -38,6 +43,22 @@ function tidy_themeoption_header_style() {
 		.gmo-shares a {
 			border-style: none;
 			border-width: 0px;
+		}
+		<?php endif; ?>
+		<?php if ( $arc_desc_bg_color != '#E3E6EA' ) : ?>
+		.page-header {
+			background-color:  <?php echo $arc_desc_bg_color; ?>;
+		}
+		<?php endif; ?>
+		<?php if ( $arc_desc_text_color != '#1C1C1C' ) : ?>
+		.page-header {
+			color:  <?php echo $arc_desc_text_color; ?>;
+		}
+		<?php endif; ?>
+		<?php if ( $arc_desc_anchor_color != '#0058AE' ) : ?>
+		.page-header a,
+		.page-header span {
+			color:  <?php echo $arc_desc_anchor_color; ?>;
 		}
 		<?php endif; ?>
 	</style>

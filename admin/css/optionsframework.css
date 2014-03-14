@@ -509,7 +509,10 @@ p.shop_link {
 ----------------------------------------------- */
 #optionsframework .layoutsettings h5 {
   white-space: nowrap;
-  width: 11em;
+  width: 15em;
+}
+#optionsframework .layoutsettings .section-color h5 {
+  margin-top: 0.75em;
 }
 #optionsframework .layoutsettings .section-images .controls {
   display: block;
