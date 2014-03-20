@@ -191,3 +191,7 @@ function tidy_remove_ad() {
 add_action( 'template_redirect', 'tidy_remove_ad' );
 endif; //class_exists( 'GMO_Ads_Master' )
 
+function tidy_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'tidy_excerpt_length', 999 );
