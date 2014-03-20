@@ -1421,6 +1421,7 @@ body.archive .gallery-4.normal .hentry:nth-child(4n+1) {
   margin-bottom: 0;
 }
 .all-blog .more-link {
+  margin-top: 0.5em;
   text-align: right;
 }
 .all-blog .gmo-shares {
