@@ -46,7 +46,7 @@ function tidy_paging_nav( $range = 2, $omission = "&#x02026;" ) {
 		printf( '<li class="pagination-previous pagination-icon">%s</li>' . "\n", get_previous_posts_link( '<span class="genericon genericon-leftarrow"></span><span class="screen-reader-text">' . __( 'Previous Page', 'tidy' ) . '</span>' ) );
 
 	// Link to current page, plus 2 pages in either direction if necessary
-	if ( $paged > $range ) echo $omission;
+	if ( $paged > $range+1 ) echo $omission;
 
 	for ( $i = 1; $i <= $max; $i++ ) {
 		if ( 1 != $max && ( !( $i >= $paged+$range+1 || $i <= $paged-$range-1 ) || $max <= $showitems ) ) {
