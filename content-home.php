@@ -3,6 +3,11 @@
  * @package Tidy
  */
 global $blog_type;
+
+$meta_date     = of_get_option( 'all_blog_meta_date', 1 );
+$meta_author   = of_get_option( 'all_blog_meta_author', 1 );
+$meta_cat      = of_get_option( 'all_blog_meta_cat', 1 );
+//$meta_tag      = of_get_option( 'all_blog_meta_tag', 1  );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $blog_type ); ?>>
@@ -31,11 +36,9 @@ global $blog_type;
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-meta">
-			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php tidy_posted_on(); ?>
-			<?php tidy_posted_author(); ?>
-			<?php tidy_posted_category(); ?>
-			<?php endif; // End if 'post' == get_post_type() ?>
+			<?php if ( $meta_date > 0 ) tidy_posted_on(); ?>
+			<?php if ( $meta_author > 0 ) tidy_posted_author(); ?>
+			<?php if ( $meta_cat > 0 ) tidy_posted_category(); ?>
 			<?php edit_post_link( __( 'Edit', 'tidy' ), '<div class="edit-link"><span class="icon-pencil"></span> ', '</div>' ); ?>
 			<?php do_action( 'tidy_after_entry_meta' ); ?>
 		</footer><!-- .entry-meta -->

@@ -1194,6 +1194,36 @@ function optionsframework_options() {
 		'options' => $icon_array);
 
 	$options[] = array(
+		'name' => __( 'Display date', 'tidy' ),
+		'desc' => '',
+		'id' => 'all_blog_meta_date',
+		'std' => '1',
+		'type' => 'toggle');
+
+	$options[] = array(
+		'name' => __( 'Display author', 'tidy' ),
+		'desc' => '',
+		'id' => 'all_blog_meta_author',
+		'std' => '1',
+		'type' => 'toggle');
+
+	$options[] = array(
+		'name' => __( 'Display category', 'tidy' ),
+		'desc' => '',
+		'id' => 'all_blog_meta_cat',
+		'std' => '1',
+		'type' => 'toggle');
+
+/*
+	$options[] = array(
+		'name' => __( 'Display tag', 'tidy' ),
+		'desc' => '',
+		'id' => 'all_blog_meta_tag',
+		'std' => '1',
+		'type' => 'toggle');
+*/
+
+	$options[] = array(
 		'id' => 'ltab-1',
 		'class' => "end",
 		'type' => 'tabcontent'

@@ -10,7 +10,7 @@ $icon   = of_get_option( 'single_icon', 'pencil' );
 $meta_date     = of_get_option( 'single_meta_date', 1 );
 $meta_author   = of_get_option( 'single_meta_author', 1 );
 $meta_cat      = of_get_option( 'single_meta_cat', 1 );
-$meta_tab      = of_get_option( 'single_meta_tag', 1  );
+$meta_tag      = of_get_option( 'single_meta_tag', 1  );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($single_type); ?>>
@@ -27,7 +27,7 @@ $meta_tab      = of_get_option( 'single_meta_tag', 1  );
 				<?php if ( $meta_author > 0 ) tidy_posted_author(); ?>
 				<?php if ( $meta_cat > 0 ) tidy_posted_category(); ?>
 				<?php
-					if ( $meta_tab > 0 ) {
+					if ( $meta_tag > 0 ) {
 						/* translators: used between list items, there is a space after the comma */
 						$tag_list = get_the_tag_list( '', __( ', ', 'tidy' ) );
 	
