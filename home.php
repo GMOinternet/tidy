@@ -12,9 +12,13 @@ $title  = of_get_option( 'all_blog_title',  __( 'Blog Archive', 'tidy' ) );
 $cont_c = of_get_option( 'all_blog_cont_c', '1' );
 
 $blog_type = of_get_option( 'blog_type', 'typeA' );
-
-// $blog_type  = ($cont_c == 1 && $layout == 'cont_c1') ? of_get_option( 'blog_type', 'typeA' ) : 'typeA';
-
+if ( $layout != 'cont_c1') {
+	$blog_type = 'typeA';
+} else {
+	if ( $cont_c == 3 ) {
+		$blog_type = 'typeA';
+	}
+}
 get_header(); ?>
 
 	<section id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">

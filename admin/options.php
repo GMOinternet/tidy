@@ -1214,14 +1214,12 @@ function optionsframework_options() {
 		'std' => '1',
 		'type' => 'toggle');
 
-/*
 	$options[] = array(
 		'name' => __( 'Display tag', 'tidy' ),
 		'desc' => '',
 		'id' => 'all_blog_meta_tag',
 		'std' => '1',
 		'type' => 'toggle');
-*/
 
 	$options[] = array(
 		'id' => 'ltab-1',
