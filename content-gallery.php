@@ -20,10 +20,16 @@ $excerpt_trm = apply_filters( 'tidy_portfolio_excerpt_trm_word', 130);
 		</span></a></div>
 
 		<div class="entry-conteiner"><div class="entry-conteiner-child">
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><div class="entry-title"><?php the_title(); ?></div>
-			<div class="entry-summary"><?php the_excerpt(); ?></div></a>
 			<?php if ( is_front_page() ) : ?>
-			<div class="entry-meta"><?php do_action( 'tidy_after_entry_meta' ); ?></div>
+				<div class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></div>
+				<div class="entry-summary"><?php the_excerpt(); ?></div>
+				<div class="entry-meta"><?php do_action( 'tidy_after_entry_meta' ); ?></div>
+			<?php else: ?>
+				<a href="<?php the_permalink(); ?>" rel="bookmark" class="entry-conteiner-child-anker">
+					<?php if ( $port_content == 'type1') : ?>
+						<div class="entry-title"><?php the_title(); ?></div>
+					<?php endif; ?>
+				</a>
 			<?php endif; ?>
 		</div></div>
 	</div>

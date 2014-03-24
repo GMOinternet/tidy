@@ -1254,6 +1254,14 @@ body.page-template-contact-php .type-page .entry-title {
   color: white;
   border-color: white;
 }
+.gallery-section-content .entry-conteiner-child a:hover, .gallery-section-content .entry-conteiner-child a:active, .gallery-section-content .entry-conteiner-child a:focus {
+  color: white;
+  border-color: white;
+}
+.gallery-section-content .entry-conteiner-child .entry-conteiner-child-anker {
+  display: block;
+  height: 100%;
+}
 .gallery-section-content .entry-conteiner-child .entry-title,
 .gallery-section-content .entry-conteiner-child .entry-summary p {
   white-space: nowrap;
@@ -1326,7 +1334,9 @@ body.page-template-contact-php .type-page .entry-title {
   max-height: 100%;
 }
 body.archive .gallery-section-content .entry-title {
-  height: auto;
+  height: auto !important;
+  white-space: normal;
+  word-wrap: break-word;
 }
 .gallery-section-content .show.entry-summary p {
   white-space: nowrap;
