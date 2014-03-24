@@ -15,17 +15,14 @@
 		pagerCustom: '#bx-pager'
 	});
 
-/*
-	slider = $('#port_bxslider').bxSlider();
-	var slideQty = slider.getSlideCount();
-	alert('Slide count: ' + slideQty);
-*/
-	$('#port_bxslider').bxSlider({
+	$('#portfolio_posts_slider').bxSlider({
 		infiniteLoop: false,
-		slideWidth: 200,
+		slideWidth: 145,
 		minSlides: 1,
-		maxSlides: 4,
+		maxSlides: 5,
 		slideMargin: 20,
-		startSlide:0
+		startSlide:0,
+		prevText: '<span class="genericon genericon-leftarrow"></span>',
+		nextText: '<span class="genericon genericon-rightarrow"></span>'
 	});
 })(jQuery);

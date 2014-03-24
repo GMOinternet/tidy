@@ -309,3 +309,43 @@ function tidy_ellipsis($text, $max=100, $append='&hellip;') {
 	if (strpos($text,' ') === FALSE) return $out.$append;
 	return preg_replace('/\w+$/','',$out).$append;
 }
+
+/**
+ * portfolio_posts_slider
+ */
+function tidy_portfolio_posts_slider( $nid = "", $port_nav = "bottom" ) {
+	if ( ! is_single() )
+		return ;
+
+	global $post;
+	$now = $nid;
+	$args = array(
+		'posts_per_page' => -1,
+		'tax_query'      => array(
+				array(
+					'taxonomy' => 'post_format',
+					'field'    => 'slug',
+					'terms'    => 'post-format-gallery'
+				)
+			)
+		);
+	$tidy_gallery_posts = get_posts( $args );
+	if ( !empty( $tidy_gallery_posts ) ) : ?>
+		<div class="navigation gallery-navigation" id="portfolio_posts_slider_<?php echo $port_nav ?>"><ul id="portfolio_posts_slider" class="bxslider">
+		<?php foreach ( $tidy_gallery_posts as $post ) :
+		setup_postdata( $post ); 
+		$active = ($now == get_the_id()) ? 'active' : '';
+		?>
+			<li class="tidy_post_thumbnail tidy-thumb-portfolio <?php echo $active; ?>"><a href="<?php the_permalink() ?>">
+			<?php if ( has_post_thumbnail() ) : ?>
+				<?php the_post_thumbnail( 'thumbnail' ); ?>
+			<?php else: ?>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/tidy-thumb-portfolio.png" alt="*">
+			<?php endif; ?>
+			</a></li>
+		<?php
+		endforeach; ?>
+		</ul></div>
+	<?php endif;
+	wp_reset_postdata();
+}

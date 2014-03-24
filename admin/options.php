@@ -1337,6 +1337,17 @@ function optionsframework_options() {
 		'type' => 'toggle');
 
 	$options[] = array(
+		'name' => __('Single posts navigation', 'tidy'),
+		'id' => 'port_nav',
+		'std' => 'bottom',
+		'type' => 'radio',
+		'options' => array(
+			'top' => __('Top', 'tidy'),
+			'bottom' => __('Bottom', 'tidy'),
+		)
+	);
+
+	$options[] = array(
 		'id' => 'ltab-2',
 		'class' => "end",
 		'type' => 'tabcontent'

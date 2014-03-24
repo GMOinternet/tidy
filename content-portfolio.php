@@ -3,17 +3,11 @@
  * @package Tidy
  */
 
-$galleryicon   = of_get_option( 'home_port_icon', 'notebook' );
-$gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
 $meta_date     = of_get_option( 'port_meta_date', 1 );
 $meta_author   = of_get_option( 'port_meta_author', 1 );
 $meta_cat      = of_get_option( 'port_meta_cat', 1 );
 $meta_tab      = of_get_option( 'port_meta_tag', 1  );
 ?>
-
-<div class="section-header">
-	<h1 class="section-title"><a href="<?php echo get_post_format_link( 'gallery' ); ?>"><span class="icon-<?php echo esc_attr( $galleryicon ); ?>"></span><?php echo esc_html( $gallerytitle ); ?></a></h1>
-</div>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php do_action( 'tidy_before_entry_header' ); ?>

@@ -7,9 +7,13 @@
 
 $post_id = $wp_query->get_queried_object_id();
 $post_format = get_post_format( $post_id );
+$port_nav = "";
 if ( $post_format == "gallery" ) {
 	$type = 'portfolio';
 	$layout = of_get_option( 'port_c', 'cont_s2' );
+	$port_nav = of_get_option( 'port_nav', 'bottom' );
+	$galleryicon   = of_get_option( 'home_port_icon', 'notebook' );
+	$gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
 } else {
 	$type = 'single';
 	$layout = of_get_option( 'single_c', 'cont_s2' );
@@ -22,42 +26,25 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
+			<div class="section-header">
+				<h1 class="section-title"><a href="<?php echo get_post_format_link( 'gallery' ); ?>"><span class="icon-<?php echo esc_attr( $galleryicon ); ?>"></span><?php echo esc_html( $gallerytitle ); ?></a></h1>
+			</div>
+			
+			<?php
+				if ( $post_format == "gallery") {
+					if ($port_nav == 'top') {
+						tidy_portfolio_posts_slider(get_the_ID(), $port_nav);
+					}
+				}
+			?>
+
 			<?php get_template_part( 'content', $type ); ?>
 
 			<?php
 				if ( $post_format == "gallery") {
-					$now = get_the_id();
-					$args = array(
-						'posts_per_page' => -1,
-						'tax_query'      => array(
-								array(
-									'taxonomy' => 'post_format',
-									'field'    => 'slug',
-									'terms'    => 'post-format-gallery'
-								)
-							)
-						);
-					$tidy_gallery_posts = get_posts( $args );
-					if ( !empty( $tidy_gallery_posts ) ) : ?>
-						<div class="navigation gallery-navigation"><ul id="port_bxslider" class="bxslider">
-						<?php foreach ( $tidy_gallery_posts as $post ) :
-						setup_postdata( $post ); 
-						$active = ($now == get_the_id()) ? 'active' : '';
-						?>
-							<li class="tidy_post_thumbnail tidy-thumb-portfolio <?php echo $active; ?>"><a href="<?php the_permalink() ?>">
-							<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail( 'tidy-thumb-portfolio' ); ?>
-							<?php else: ?>
-								<img src="<?php echo get_template_directory_uri(); ?>/images/tidy-thumb-portfolio.png" alt="*">
-							<?php endif; ?>
-							</a></li>
-						<?php
-						endforeach; ?>
-						</ul></div>
-					<?php endif;
-					wp_reset_postdata();
-
-
+					if ($port_nav == 'bottom') {
+						tidy_portfolio_posts_slider(get_the_ID(), $port_nav);
+					}
 				} else {
 					tidy_post_nav();
 				}
