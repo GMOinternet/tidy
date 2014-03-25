@@ -1004,17 +1004,21 @@ body.page-template-contact-php .type-page .entry-title {
 }
 
 .merit-box-thumbnail {
-  display: table-cell;
-  vertical-align: middle;
+  display: table;
 }
 .merit-box-thumbnail .merit-box-thumbnail-inner {
   height: 100%;
+  display: inline-block;
 }
 .merit-box-thumbnail .tidy_post_thumbnail img {
   -webkit-transition-duration: 0.4s;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
+}
+.merit-box-thumbnail .type-image {
+  vertical-align: middle;
+  display: table-cell;
 }
 .merit-box-thumbnail .type-image .iconbox {
   height: 100%;
@@ -1030,8 +1034,11 @@ body.page-template-contact-php .type-page .entry-title {
   -moz-transform: scale(2);
   transform: scale(2);
 }
+.merit-box-thumbnail .type-icon {
+  vertical-align: middle;
+  display: table-cell;
+}
 .merit-box-thumbnail .type-icon .merit-box-thumbnail-inner {
-  display: inline-block;
   position: relative;
   width: 120px;
   height: 120px;
@@ -1099,21 +1106,21 @@ body.page-template-contact-php .type-page .entry-title {
   width: 50%;
 }
 .merit-box-2 .merit-box-thumbnail {
-  width: 50%;
+  width: 100%;
 }
 
 .merit-box-3 {
   width: 33.3%;
 }
 .merit-box-3 .merit-box-thumbnail {
-  width: 33.3%;
+  width: 100%;
 }
 
 .merit-box-4 {
   width: 25%;
 }
 .merit-box-4 .merit-box-thumbnail {
-  width: 25%;
+  width: 100%;
 }
 
 /* blog-area */
