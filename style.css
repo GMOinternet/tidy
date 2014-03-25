@@ -4,7 +4,7 @@ Theme URI: http://www.gmo.jp/
 Author: GMO
 Author URI: http://www.gmo.jp/
 Description: GMO theme
-Version: 0.5
+Version: 0.5.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tidy
@@ -581,7 +581,7 @@ a:hover, a:focus, a:active {
 
 .site-header-widget-area {
   background-color: #cdd0d4;
-  padding: 10px 0;
+  padding: 5px 0;
   display: none;
 }
 .site-header-widget-area .inner {
@@ -599,18 +599,27 @@ a:hover, a:focus, a:active {
 .header-widget-toggle-btn {
   display: block;
   float: right;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   font-size: 10px;
   text-align: center;
   background-color: #cdd0d4;
   cursor: pointer;
 }
-.header-widget-toggle-btn .genericon-uparrow {
-  margin-top: 3px;
+.header-widget-toggle-btn .genericon-close {
+  margin-top: 5px;
 }
 .header-widget-toggle-btn .genericon-downarrow {
   margin-top: 10px;
+}
+
+.open_header_widget .inner {
+  position: relative;
+}
+.open_header_widget .inner .header-widget-toggle-btn {
+  position: absolute;
+  top: -25px;
+  right: 0;
 }
 
 .site-header-social-area {

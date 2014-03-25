@@ -55,7 +55,7 @@ function tidy_default_array() {
 		'logo_image' => '',
 		// 'header_text' => __( 'Eeh what\'s that when it\'s at ooam big girl\'s blouse ah\'ll learn thi ey up. <a href="#">Click here.</a>', 'tidy' ),
 		'header_text' => '',
-		'copyright' => '&copy; ' . get_bloginfo( 'name', 'display' ) . '. All Rights Reserved.',
+		'copyright' => '',
 		
 		'header_bg_color'     => '#E3E6EA',
 		'header_text_color'   => '#1C1C1C',

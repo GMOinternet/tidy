@@ -64,34 +64,39 @@
 
 
 	// site-header-widget-area
-	var headerWidgetToggle = $.cookie( 'tidy-header-widget-toggle' );
-	var headerWidgetOpen   = '#site-header-widget';
-	var headerWidgetBtn    = '.header-widget-toggle-btn';
+	var headerWidgetToggle   = $.cookie( 'tidy-header-widget-toggle' );
+	var headerWidgetOpen     = '#site-header-widget';
+	var headerWidgetBtn      = '.header-widget-toggle-btn';
+	var headerWidgetDuration = '400';
 
 	if ( headerWidgetToggle ) {
 		$( headerWidgetOpen ).hide();
-		$('.header-widget-toggle-btn .genericon').removeClass('genericon-uparrow');
+		$('.header-widget-toggle-btn .genericon').removeClass('genericon-close');
 		$('.header-widget-toggle-btn .genericon').addClass('genericon-downarrow');
+		$('.header-widget-toggle').removeClass('open_header_widget');
 	} else {
 		$( headerWidgetOpen ).show();
 		$('.header-widget-toggle-btn .genericon').removeClass('genericon-downarrow');
-		$('.header-widget-toggle-btn .genericon').addClass('genericon-uparrow');
+		$('.header-widget-toggle-btn .genericon').addClass('genericon-close');
+		$('.header-widget-toggle').addClass('open_header_widget');
 	}
 
 	$( headerWidgetBtn ).click( function(){
 		headerWidgetToggle = $.cookie( 'tidy-header-widget-toggle' );
 		if ( headerWidgetToggle ) {
-			$( headerWidgetOpen ).slideDown();
 			$.removeCookie("tidy-header-widget-toggle");
-			$('.header-widget-toggle-btn .genericon').removeClass('genericon-downarrow');
-			$('.header-widget-toggle-btn .genericon').addClass('genericon-uparrow');
-		} else {
-			$( headerWidgetOpen ).slideUp();
-			$.cookie( 'tidy-header-widget-toggle' , 'hide', {
-				path: "/"
+			$( headerWidgetOpen ).slideDown(headerWidgetDuration, function() {
+				$('.header-widget-toggle-btn .genericon').removeClass('genericon-downarrow');
+				$('.header-widget-toggle-btn .genericon').addClass('genericon-close');
+				$('.header-widget-toggle').addClass('open_header_widget');
 			});
-			$('.header-widget-toggle-btn .genericon').removeClass('genericon-uparrow');
-			$('.header-widget-toggle-btn .genericon').addClass('genericon-downarrow');
+		} else {
+			$.cookie( 'tidy-header-widget-toggle' , 'hide' );
+			$( headerWidgetOpen ).slideUp(headerWidgetDuration, function() {
+				$('.header-widget-toggle-btn .genericon').removeClass('genericon-close');
+				$('.header-widget-toggle-btn .genericon').addClass('genericon-downarrow');
+				$('.header-widget-toggle').removeClass('open_header_widget');
+			});
 		}
 		return false;
 	} );
