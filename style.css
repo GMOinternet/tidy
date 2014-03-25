@@ -4,7 +4,7 @@ Theme URI: http://www.gmo.jp/
 Author: GMO
 Author URI: http://www.gmo.jp/
 Description: GMO theme
-Version: 0.5.1
+Version: 0.5.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tidy
@@ -1278,7 +1278,6 @@ body.page-template-contact-php .type-page .entry-title {
   display: block;
   height: 100%;
 }
-.gallery-section-content .entry-conteiner-child .entry-title,
 .gallery-section-content .entry-conteiner-child .entry-summary p {
   white-space: nowrap;
   overflow: hidden;
@@ -1292,7 +1291,6 @@ body.page-template-contact-php .type-page .entry-title {
 }
 .gallery-section-content .entry-conteiner-child .entry-title {
   margin-top: 30px;
-  margin-bottom: 1em;
 }
 .gallery-section-content .entry-conteiner-child .entry-meta {
   position: absolute;
@@ -1332,11 +1330,6 @@ body.page-template-contact-php .type-page .entry-title {
 .gallery-section-content.normal .entry-conteiner-child {
   max-height: 270px;
 }
-.gallery-section-content.normal .entry-title {
-  height: 4.2em;
-  margin-bottom: 1em;
-  overflow: hidden;
-}
 .gallery-section-content.normal .entry-summary {
   height: 4.2em;
   margin-bottom: 1em;
@@ -1350,7 +1343,6 @@ body.page-template-contact-php .type-page .entry-title {
   max-height: 100%;
 }
 body.archive .gallery-section-content .entry-title {
-  height: auto !important;
   white-space: normal;
   word-wrap: break-word;
 }
