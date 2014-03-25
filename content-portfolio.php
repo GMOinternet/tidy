@@ -12,12 +12,12 @@ $meta_tab      = of_get_option( 'port_meta_tag', 1  );
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php do_action( 'tidy_before_entry_header' ); ?>
 
-	<div class="portfolio">
+	
 	<?php // attachment_gallery
 		$args = array( 'post_type' => 'attachment', 'posts_per_page' => -1, 'post_status' =>'any', 'post_parent' => $post->ID ); 
 		$attachments = get_posts( $args );
 		if ( $attachments ) {
-			echo '<ul id="portfolio_slider"" class="bxslider">' . "\n";
+			echo '<div class="portfolio"><ul id="portfolio_slider"" class="bxslider">' . "\n";
 			foreach ( $attachments as $attachment ) {
 				echo "<li>";
 				the_attachment_link( $attachment->ID , true, false, false );
@@ -31,14 +31,15 @@ $meta_tab      = of_get_option( 'port_meta_tag', 1  );
 				echo'<a data-slide-index="' . $cnt . '" href="#">' . '<img src="' . $image_attributes[0] . '" alt="*">' . '</a>';
 				$cnt ++;
 			}
-			echo '</div>' . "\n";;
+			echo '</div></div>' . "\n";;
 		} else {
 			if ( has_post_thumbnail() ) {
+				echo '<div class="portfolio">' . "\n";
 				the_post_thumbnail( 'tidy-thumb-full' );
+				echo '</div>' . "\n";;
 			}
 		}
 	?>
-	</div>
 
 	<header class="entry-header">
 		<h2 class="entry-title"><?php the_title(); ?></h2>

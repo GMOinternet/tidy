@@ -25,13 +25,14 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
+			<?php if ( $post_format == "gallery") : ?>
 			<div class="section-header">
 				<h1 class="section-title"><a href="<?php echo get_post_format_link( 'gallery' ); ?>"><span class="icon-<?php echo esc_attr( $galleryicon ); ?>"></span><?php echo esc_html( $gallerytitle ); ?></a></h1>
 			</div>
-			
+			<?php endif; ?>
+
 			<?php
-				if ( $post_format == "gallery") {
+				if ( $post_format == "gallery" ) {
 					if ($port_nav == 'top') {
 						tidy_portfolio_posts_slider(get_the_ID(), $port_nav);
 					}
