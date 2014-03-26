@@ -85,18 +85,16 @@
 		headerWidgetToggle = $.cookie( 'tidy-header-widget-toggle' );
 		if ( headerWidgetToggle ) {
 			$.removeCookie("tidy-header-widget-toggle");
-			$( headerWidgetOpen ).slideDown(headerWidgetDuration, function() {
-				$('.header-widget-toggle-btn .genericon').removeClass('genericon-downarrow');
-				$('.header-widget-toggle-btn .genericon').addClass('genericon-close');
-				$('.header-widget-toggle').addClass('open_header_widget');
-			});
+			$( headerWidgetOpen ).slideDown(headerWidgetDuration);
+			$('.header-widget-toggle-btn .genericon').removeClass('genericon-downarrow');
+			$('.header-widget-toggle-btn .genericon').addClass('genericon-close');
+			$('.header-widget-toggle').addClass('open_header_widget');
 		} else {
 			$.cookie( 'tidy-header-widget-toggle' , 'hide' );
-			$( headerWidgetOpen ).slideUp(headerWidgetDuration, function() {
-				$('.header-widget-toggle-btn .genericon').removeClass('genericon-close');
-				$('.header-widget-toggle-btn .genericon').addClass('genericon-downarrow');
-				$('.header-widget-toggle').removeClass('open_header_widget');
-			});
+			$( headerWidgetOpen ).slideUp(headerWidgetDuration);
+			$('.header-widget-toggle-btn .genericon').removeClass('genericon-close');
+			$('.header-widget-toggle-btn .genericon').addClass('genericon-downarrow');
+			$('.header-widget-toggle').removeClass('open_header_widget');
 		}
 		return false;
 	} );
