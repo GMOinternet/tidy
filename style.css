@@ -4,7 +4,7 @@ Theme URI: http://www.gmo.jp/
 Author: GMO
 Author URI: http://www.gmo.jp/
 Description: GMO theme
-Version: 0.5.2
+Version: 0.5.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tidy
@@ -2245,14 +2245,15 @@ li.depth-1 {
   text-align: center;
 }
 #bx-pager a {
-  width: 80px;
-  height: 80px;
+  line-height: 1;
+  width: 10%;
   display: inline-block;
-  margin: 10px 15px;
   background-color: black;
+  margin: 10px;
 }
 #bx-pager img {
   opacity: 0.4;
+  vertical-align: top;
 }
 #bx-pager a.active img,
 #bx-pager a:hover img, #bx-pager a:active img, #bx-pager a:focus img {
@@ -2300,15 +2301,6 @@ li.depth-1 {
   }
 
   #bx-pager a {
-    width: 20px;
-    height: 20px;
     margin: 5px;
-    background-color: black;
-  }
-  #bx-pager a.active {
-    background-color: #666666;
-  }
-  #bx-pager img {
-    display: none;
   }
 }
