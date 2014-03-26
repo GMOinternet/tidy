@@ -5,3 +5,5 @@ Gruntfile.js
 package.json
 languages/Makefile
 languages/LINGUAS
+languages/ja.po
+languages/ja.mo
