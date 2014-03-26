@@ -50,13 +50,34 @@ jQuery(document).ready(function($) {
 	var bdp = bd.split('/');
 	var bdf = bdp.pop();
 	bdf = bdf.replace(/\.png/g,'');
+	var bc = $("#all_blog_cont_c option").val();
 
 	if (bdf == '1col') {
 		$("#all_blog_cont_c option[value='2']").attr('disabled', 'disabled');
 		$("#all_blog_cont_c option[value='3']").removeAttr('disabled');
+		$("#blog_type_typeB").next().next('.of-radio-img-img').hide();
+		$("#all_blog_cont_c option[value='1']:selected").each(function () {
+			$("#blog_type_typeB").next().next('.of-radio-img-img').show();
+		});
+
+		$("#all_blog_cont_c").change(function () {
+			$("#blog_type_typeB").next().next('.of-radio-img-img').hide();
+			$("#blog_type_typeB").next().next('.of-radio-img-img').removeClass('of-radio-img-selected');
+			$("#blog_type_typeB").removeAttr('checked');
+			$("#blog_type_typeA").next().next('.of-radio-img-img').addClass('of-radio-img-selected');
+			$("#blog_type_typeA").attr('checked', 'checked');
+			$("#all_blog_cont_c option[value='1']:selected").each(function () {
+				$("#blog_type_typeB").next().next('.of-radio-img-img').show();
+			});
+		});
 	} else {
 		$("#all_blog_cont_c option[value='3']").attr('disabled', 'disabled');
 		$("#all_blog_cont_c option[value='2']").removeAttr('disabled');
+		$("#blog_type_typeB").next().next('.of-radio-img-img').hide();
+		$("#blog_type_typeB").next().next('.of-radio-img-img').removeClass('of-radio-img-selected');
+		$("#blog_type_typeB").removeAttr('checked');
+		$("#blog_type_typeA").next().next('.of-radio-img-img').addClass('of-radio-img-selected');
+		$("#blog_type_typeA").attr('checked', 'checked');
 	}
 	
 	$("#section-blog_c .of-radio-img-img").click(function(){
@@ -67,9 +88,29 @@ jQuery(document).ready(function($) {
 		if (file_name == '1col') {
 			$("#all_blog_cont_c option[value='2']").attr('disabled', 'disabled');
 			$("#all_blog_cont_c option[value='3']").removeAttr('disabled');
+			$("#blog_type_typeB").next().next('.of-radio-img-img').hide();
+			$("#all_blog_cont_c option[value='1']:selected").each(function () {
+				$("#blog_type_typeB").next().next('.of-radio-img-img').show();
+			});
+	
+			$("#all_blog_cont_c").change(function () {
+				$("#blog_type_typeB").next().next('.of-radio-img-img').hide();
+				$("#blog_type_typeB").next().next('.of-radio-img-img').removeClass('of-radio-img-selected');
+				$("#blog_type_typeB").removeAttr('checked');
+				$("#blog_type_typeA").next().next('.of-radio-img-img').addClass('of-radio-img-selected');
+				$("#blog_type_typeA").attr('checked', 'checked');
+				$("#all_blog_cont_c option[value='1']:selected").each(function () {
+					$("#blog_type_typeB").next().next('.of-radio-img-img').show();
+				});
+			});
 		} else {
 			$("#all_blog_cont_c option[value='3']").attr('disabled', 'disabled');
 			$("#all_blog_cont_c option[value='2']").removeAttr('disabled');
+			$("#blog_type_typeB").next().next('.of-radio-img-img').hide();
+			$("#blog_type_typeB").next().next('.of-radio-img-img').removeClass('of-radio-img-selected');
+			$("#blog_type_typeB").removeAttr('checked');
+			$("#blog_type_typeA").next().next('.of-radio-img-img').addClass('of-radio-img-selected');
+			$("#blog_type_typeA").attr('checked', 'checked');
 		}
 	});
 
