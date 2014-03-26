@@ -307,6 +307,26 @@
     clear: both;
   }
 
+  .all-blog .hentry, .all-blog .contact-area {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+  .all-blog .tidy_post_thumbnail {
+    margin-bottom: 20px !important;
+  }
+  .all-blog .entry-title {
+    font-size: 1.14286em;
+    margin-bottom: 14px !important;
+  }
+  .all-blog .entry-summary {
+    margin-bottom: 20px !important;
+  }
+  .all-blog .typeB .tidy_post_thumbnail {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+
   ul.nav-links {
     text-align: center;
   }
