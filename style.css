@@ -4,7 +4,7 @@ Theme URI: http://www.gmo.jp/
 Author: GMO
 Author URI: http://www.gmo.jp/
 Description: GMO theme
-Version: 0.5.8
+Version: 0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tidy
@@ -1485,6 +1485,16 @@ body.blog .all-blog .entry-meta .posted-on {
 .blog-2 .tidy_post_thumbnail .thumbnail_img {
   max-height: 270px;
 }
+.blog-2 .typeA .tidy_post_thumbnail {
+  margin-bottom: 30px;
+}
+.blog-2 .typeA .entry-title {
+  font-size: 1.71429em;
+  margin-bottom: 20px;
+}
+.blog-2 .typeA .entry-summary {
+  margin-bottom: 30px;
+}
 
 .blog-3 .hentry {
   width: 33.3%;
@@ -1492,15 +1502,17 @@ body.blog .all-blog .entry-meta .posted-on {
 .blog-3 .tidy_post_thumbnail .thumbnail_img {
   max-height: 270px;
 }
-
-.blog-4 .hentry {
-  width: 25%;
+.blog-3 .typeA .tidy_post_thumbnail {
+  margin-bottom: 30px;
 }
-.blog-4 .tidy_post_thumbnail .thumbnail_img {
-  max-height: 180px;
+.blog-3 .typeA .entry-title {
+  font-size: 1.71429em;
+  margin-bottom: 20px;
+}
+.blog-3 .typeA .entry-summary {
+  margin-bottom: 30px;
 }
 
-/* single*/
 /* archive */
 .archive-title,
 .section-title {
