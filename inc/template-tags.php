@@ -92,11 +92,12 @@ function tidy_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
+						
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'tidy' ); ?></h1>
 		<div class="nav-links">
 
-			<?php previous_post_link( '<div class="nav-previous"><span class="genericon genericon-leftarrow"></span> %link</div>', '%title', true, '', 'post_format' ); ?>
-			<?php next_post_link(     '<div class="nav-next">%link <span class="genericon genericon-rightarrow"></span></div>',    '%title', true, '', 'post_format' ); ?>
+			<?php previous_post_link( '<div class="nav-previous"><span class="genericon genericon-leftarrow"></span> %link</div>', '%title' ); ?>
+			<?php next_post_link(     '<div class="nav-next">%link <span class="genericon genericon-rightarrow"></span></div>',    '%title' ); ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
