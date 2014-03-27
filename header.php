@@ -30,10 +30,9 @@
 		$tidy_default = tidy_default_array();
 		$header_text = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : $tidy_default['header_text'];
 
-		$site_header_widget_toggle = get_theme_mod( 'header_text_toggle' );
-		$site_header_widget_toggle = ( ( $site_header_widget_toggle === false ) or ( $site_header_widget_toggle == 1 ) ) ? 1 : 0 ;
+		$site_header_widget_toggle = get_theme_mod( 'header_text_toggle', 0 );
 
-		if ( $site_header_widget_toggle == 1 ) :
+		if ( $site_header_widget_toggle > 0 ) :
 		?>
 		<div class="site-header-widget-toggle">
 			<div id="site-header-widget" class="site-header-widget-area"><div class="inner">
