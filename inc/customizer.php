@@ -200,7 +200,7 @@ function tidy_customize_setup( $wp_customize ) {
 
 	// = header toggle.
 	$wp_customize->add_setting( get_tiry_option_name( 'logo_toggle' ), array(
-		'default'    => '1',
+		'default'    => '0',
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	));

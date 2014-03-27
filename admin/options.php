@@ -608,7 +608,7 @@ function optionsframework_options() {
 		'name' => __( 'Show Header logo', 'tidy' ),
 		'desc' => '',
 		'id' => 'logo_toggle',
-		'std' => '1',
+		'std' => '0',
 		'type' => 'toggle');
 
 	// Header logo image

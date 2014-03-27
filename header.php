@@ -27,8 +27,7 @@
 		<?php do_action( 'tidy_before_header' ); ?>
 
 		<?php
-		$tidy_default = tidy_default_array();
-		$header_text = ( get_theme_mod( 'header_text' ) ) ? get_theme_mod( 'header_text' ) : $tidy_default['header_text'];
+		$header_text = get_theme_mod( 'header_text', '' );
 
 		$site_header_widget_toggle = get_theme_mod( 'header_text_toggle', 0 );
 
@@ -54,10 +53,9 @@
 	
 			<div class="site-branding">
 				<?php
-					$view_header_logo = get_theme_mod( 'logo_toggle' );
-					$view_header_logo = ( ( $view_header_logo === false ) or ( $view_header_logo == 1 ) ) ? 1 : 0 ;
-					$header_logo_img  = ( get_theme_mod( 'logo_image' ) === false ) ? $tidy_default['logo_image'] : get_theme_mod( 'logo_image' ) ;
-					$logo_image = ( !empty($header_logo_img) && ( $view_header_logo == 1 ) ) ? '<img src="' . esc_url( $header_logo_img ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' : esc_html( get_bloginfo( 'name', 'display' ) );
+					$view_header_logo = get_theme_mod( 'logo_toggle', 0 );
+					$header_logo_img  = ( $view_header_logo > 0 ) ? get_theme_mod( 'logo_image', '' ) : '' ;
+					$logo_image = ( !empty( $header_logo_img ) ) ? '<img src="' . esc_url( $header_logo_img ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' : esc_html( get_bloginfo( 'name', 'display' ) );
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $logo_image ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
