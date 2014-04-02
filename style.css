@@ -2131,9 +2131,11 @@ li.depth-1 {
   display: inline;
   float: left;
   width: 50%;
-}
-.widget_tidy_recent_posts li.tidy-thumb-small:nth-child(2n+1) {
-  clear: both;
+  /*
+  		&:nth-child(2n+1) {
+  			clear: both;
+  		}
+  */
 }
 .widget_tidy_recent_posts li.tidy-thumb-tiny {
   margin-bottom: 10px;
