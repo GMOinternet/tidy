@@ -115,6 +115,7 @@
 	});
 
 	$( '.menu-toggle' ).click( function(){
+		$( '.main-navigation' ).css('height',$(window).height());
 		$( '.main-navigation-box' ).slideToggle( 'normal', function(){
 			$( '.menu-toggle .genericon' ).toggleClass( 'genericon-menu' );
 			$( '.menu-toggle .genericon' ).toggleClass( 'genericon-close-alt' );

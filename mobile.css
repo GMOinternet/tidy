@@ -118,6 +118,9 @@
     top: -20px;
     right: -25px;
     z-index: 99999;
+    min-height: 58px;
+    min-width: 63px;
+    overflow: auto;
   }
 
   .main-navigation-box {
@@ -159,6 +162,7 @@
   .main-navigation li {
     display: block;
     margin-left: 0;
+    margin-bottom: 0;
   }
   .main-navigation a {
     padding: 15px 0px;
