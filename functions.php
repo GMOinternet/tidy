@@ -226,13 +226,7 @@ function tidy_scripts() {
 		true
 	);
 
-	wp_enqueue_script(
-		'masonry',
-		get_template_directory_uri() . '/js/masonry.pkgd.min.js',
-		array() ,
-		'3.1.4',
-		true
-	);
+	wp_enqueue_script('jquery-masonry');
 
 	wp_enqueue_script(
 		'tidy-script',
