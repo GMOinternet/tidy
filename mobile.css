@@ -285,20 +285,19 @@
     margin-bottom: 20px;
   }
   .archive-content .entry-title {
-    max-height: 2.8em;
     white-space: normal;
-    position: relative;
+    overflow: visible;
   }
   .archive-content .entry-summary {
     margin-bottom: 0;
-    max-height: 2.8em;
-    position: relative;
   }
   .archive-content .entry-summary > p {
     white-space: normal;
+    padding-right: 0;
   }
   .archive-content .entry-summary .more-link {
-    display: none;
+    position: relative;
+    top: 0.5em;
   }
   .archive-content .ellipsis {
     position: absolute;
@@ -309,7 +308,15 @@
     padding-left: 5px;
   }
   .archive-content .entry-meta {
-    clear: both;
+    white-space: normal;
+  }
+  .archive-content .entry-meta .tidy_posted_on .posted-on,
+  .archive-content .entry-meta .tidy_posted_on .byline,
+  .archive-content .entry-meta .tidy_posted_on .entry_post-format,
+  .archive-content .entry-meta .tidy_posted_on .entry_category {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
 
   .all-blog .hentry, .all-blog .contact-area {
