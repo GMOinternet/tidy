@@ -1454,7 +1454,7 @@ body.archive .gallery-4.normal .hentry:nth-child(4n+1) {
 .all-blog .gmo-shares .social {
   margin-bottom: 0;
 }
-body.blog .all-blog .entry-meta .posted-on {
+.all-blog .entry-meta .posted-on {
   display: inline;
 }
 .all-blog .typeA .tidy_post_thumbnail {

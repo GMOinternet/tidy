@@ -320,8 +320,11 @@
   }
 
   .all-blog .hentry, .all-blog .contact-area {
+    clear: both;
     padding-left: 0;
+    float: none;
     margin-bottom: 30px;
+    width: 100% !important;
   }
   .all-blog .tidy_post_thumbnail {
     margin-bottom: 20px !important;
@@ -337,6 +340,13 @@
     float: none;
     margin-right: 0;
     width: 100%;
+  }
+  .all-blog .entry-meta .posted-on,
+  .all-blog .entry-meta .byline,
+  .all-blog .entry-meta .entry_post-format,
+  .all-blog .entry-meta .entry_category,
+  .all-blog .entry-meta .entry_tags {
+    display: inline-block;
   }
 
   ul.nav-links {
