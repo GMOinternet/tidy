@@ -2120,14 +2120,17 @@ li.depth-1 {
 }
 
 /* Tidy Recent posts widget */
+.widget_tidy_recent_posts ul {
+  margin-left: -20px;
+}
+.widget_tidy_recent_posts li {
+  padding-left: 20px;
+}
 .widget_tidy_recent_posts li.tidy-thumb-small {
   line-height: 1;
   display: inline;
   float: left;
-  margin-right: 20px;
-}
-.widget_tidy_recent_posts li.tidy-thumb-small:nth-child(2n) {
-  margin-right: 0;
+  width: 50%;
 }
 .widget_tidy_recent_posts li.tidy-thumb-small:nth-child(2n+1) {
   clear: both;
