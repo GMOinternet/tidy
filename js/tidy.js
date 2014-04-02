@@ -122,6 +122,12 @@
 		} );
 		return false;
 	} );
+	$(window).resize(function() {
+		if ($(window).width() < 601) {
+			$( '.main-navigation' ).css('height',$(window).height());
+		}
+	});
+
 
 	// Search toggle.
 	$( '.search-toggle' ).click( function(){
