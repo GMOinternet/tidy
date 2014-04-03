@@ -8,6 +8,14 @@
 
 (function($){
 
+	var w = $(window).width();
+	var ms = 5;
+	var sw = 145;
+	if ( w > 500 && w < 801 ) {
+		sw = 100;
+		ms = 4;
+	}
+
 	$('#portfolio_slider').bxSlider({
 		infiniteLoop: false,
 		hideControlOnEnd: true,
@@ -18,9 +26,9 @@
 
 	$('#portfolio_posts_slider').bxSlider({
 		infiniteLoop: false,
-		slideWidth: 145,
+		slideWidth: sw,
 		minSlides: 3,
-		maxSlides: 5,
+		maxSlides: ms,
 		slideMargin: 20,
 		startSlide: 0,
 		moveSlides: 1,
