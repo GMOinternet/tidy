@@ -12,7 +12,6 @@ $meta_tab      = of_get_option( 'port_meta_tag', 1  );
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php do_action( 'tidy_before_entry_header' ); ?>
 
-	
 	<?php // attachment_gallery
 		$args = array( 'post_type' => 'attachment', 'posts_per_page' => -1, 'post_status' =>'any', 'post_parent' => $post->ID ); 
 		$attachments = get_posts( $args );

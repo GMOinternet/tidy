@@ -7,6 +7,7 @@
  */
 
 (function($){
+
 	$('#portfolio_slider').bxSlider({
 		infiniteLoop: false,
 		hideControlOnEnd: true,
@@ -18,10 +19,11 @@
 	$('#portfolio_posts_slider').bxSlider({
 		infiniteLoop: false,
 		slideWidth: 145,
-		minSlides: 1,
+		minSlides: 3,
 		maxSlides: 5,
 		slideMargin: 20,
-		startSlide:0,
+		startSlide: 0,
+		moveSlides: 1,
 		prevText: '<span class="genericon genericon-leftarrow"></span>',
 		nextText: '<span class="genericon genericon-rightarrow"></span>'
 	});

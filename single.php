@@ -34,7 +34,7 @@ get_header(); ?>
 			<?php
 				if ( $post_format == "gallery" ) {
 					if ($port_nav == 'top') {
-						tidy_portfolio_posts_slider(get_the_ID(), $port_nav);
+						tidy_portfolio_posts_slider( get_the_ID(), $port_nav );
 					}
 				}
 			?>
@@ -44,7 +44,7 @@ get_header(); ?>
 			<?php
 				if ( $post_format == "gallery") {
 					if ($port_nav == 'bottom') {
-						tidy_portfolio_posts_slider(get_the_ID(), $port_nav);
+						tidy_portfolio_posts_slider( get_the_ID(), $port_nav );
 					}
 				} else {
 					tidy_post_nav();
