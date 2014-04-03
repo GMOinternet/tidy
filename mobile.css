@@ -6,6 +6,15 @@
 /* =Mobile
 ----------------------------------------------- */
 @media screen and (max-width: 600px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  textarea {
+    -webkit-appearance: none;
+  }
+
   .inner,
   .site-content {
     margin: 0 25px;
