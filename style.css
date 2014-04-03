@@ -361,6 +361,15 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
+  -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
   color: #1c1c1c;
   border-color: #e3e6ea;
   border-style: solid;
