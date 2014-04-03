@@ -65,7 +65,11 @@
 
   .site-header-widget-area {
     font-size: 0.85714em;
-    padding: 15px 0;
+    padding: 10px 0;
+  }
+
+  .header-widget-toggle-btn .genericon-close {
+    margin-top: 0;
   }
 
   .site-header-social-area .inner {
