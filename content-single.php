@@ -16,7 +16,7 @@ $meta_tag      = of_get_option( 'single_meta_tag', 1  );
 <article id="post-<?php the_ID(); ?>" <?php post_class($single_type); ?>>
 	<header class="entry-header">
 		<?php do_action( 'tidy_before_entry_header' ); ?>
-		<h1 class="entry-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span><?php the_title(); ?></h1>
+		<h1 class="entry-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php the_title(); ?></h1>
 
 		<div class="entry-meta">
 			<?php if ( has_post_thumbnail() ) : ?>

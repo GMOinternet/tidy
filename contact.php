@@ -6,8 +6,6 @@
  * @package Tidy
  */
 $layout = of_get_option( 'cont_l', 'cont_c1' );
-$ctitle = of_get_option( 'cont_a_title', 'About' );
-$icon = of_get_option( 'cont_a_icon', 'quill' );
 get_header(); ?>
 
 	<div id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
@@ -16,10 +14,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<div class="section-header">
-					<h1 class="section-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span><?php echo esc_html( $ctitle ); ?></h1>
-				</div>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 

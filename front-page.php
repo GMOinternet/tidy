@@ -101,7 +101,7 @@ get_header(); ?>
 				<?php if ( !empty( $tidy_gallery_posts ) ) : ?>
 				<section id="gallery-area" class="front-section">
 					<header class="section-header">
-						<h1 class="section-title"><a href="<?php echo get_post_format_link( 'gallery' ); ?>"><span class="icon-<?php echo esc_attr( $galleryicon ); ?>"></span><?php echo esc_html( $gallerytitle ); ?></a></h1>
+						<h1 class="section-title"><a href="<?php echo get_post_format_link( 'gallery' ); ?>"><span class="icon-<?php echo esc_attr( $galleryicon ); ?>"></span> <?php echo esc_html( $gallerytitle ); ?></a></h1>
 					</header>
 					<div class="front-section-content gallery-section-content gallery-<?php echo esc_attr( $port_cont_c ); ?> <?php echo esc_attr( $port_d ); ?>">
 					<?php foreach ( $tidy_gallery_posts as $post ) : setup_postdata( $post ); ?>

@@ -12,7 +12,7 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="archive-header">
-					<h1 class="archive-title"><span class="icon-warning"></span><?php _e( '404 - File or directory not found.', 'tidy' ); ?></h1>
+					<h1 class="archive-title"><span class="icon-warning"></span> <?php _e( '404 - File or directory not found.', 'tidy' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
