@@ -103,8 +103,9 @@
   }
 
   .site-branding {
-    padding-right: 75px;
     float: none;
+    padding-right: 75px;
+    width: 100%;
   }
 
   .site-title {
