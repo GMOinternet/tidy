@@ -25,7 +25,6 @@
 	var $blogcontainer = $( '.all-blog' );
 	function tidy_content_fix() {
 		if ($(window).width() > 600) {
-
 			// Merit Box
 			$("#merit-box-area .merit-box-thumbnail").flatHeights();
 			// Home Blog

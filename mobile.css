@@ -257,30 +257,47 @@
     display: none;
   }
 
+  .blog-section-content {
+    margin-left: 0;
+  }
   .blog-section-content .hentry, .blog-section-content .contact-area {
     width: 100%;
     padding-left: 0;
     float: none;
   }
-  .blog-section-content .hentry .tidy_post_thumbnail, .blog-section-content .contact-area .tidy_post_thumbnail {
+  .blog-section-content .tidy_post_thumbnail {
     margin-right: auto;
     margin-left: auto;
   }
+  .blog-section-content .entry-title {
+    height: auto;
+  }
+  .blog-section-content .entry-summary > p {
+    height: auto;
+  }
+  .blog-section-content .typeA {
+    width: 100%;
+  }
+  .blog-section-content .typeB {
+    width: 100%;
+  }
+  .blog-section-content .typeB .tidy_post_thumbnail {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+  .blog-section-content .typeB .entry-conteiner {
+    margin-top: 20px;
+    overflow: visible;
+  }
 
   .gallery-section-content {
-    /*
-    		.entry-meta {
-    			text-align: center;
-    		}
-    */
+    margin-left: 0;
   }
   .gallery-section-content .hentry, .gallery-section-content .contact-area {
     width: 100%;
     padding-left: 0;
     float: none;
-  }
-  .gallery-section-content .entry-box {
-    margin: 0 auto;
   }
 
   .gallery-1 .hentry, .gallery-1 .contact-area {
@@ -290,8 +307,28 @@
   .gallery-2 .hentry, .gallery-2 .contact-area {
     width: 100%;
   }
+  .cont_c1 .gallery-2 .tidy_post_thumbnail,
+  .cont_c1 .gallery-2 .thumbnail_img,
+  .cont_c1 .gallery-2 .entry-conteiner-child {
+    max-height: 270px;
+  }
+  .cont_c1 .gallery-2 .entry-conteiner {
+    height: 270px;
+  }
 
   .gallery-3 .hentry, .gallery-3 .contact-area {
+    width: 100%;
+  }
+  .cont_c1 .gallery-3 .tidy_post_thumbnail,
+  .cont_c1 .gallery-3 .thumbnail_img,
+  .cont_c1 .gallery-3 .entry-conteiner-child {
+    max-height: 270px;
+  }
+  .cont_c1 .gallery-3 .entry-conteiner {
+    height: 270px;
+  }
+
+  .gallery-4 .hentry, .gallery-4 .contact-area {
     width: 100%;
   }
 
