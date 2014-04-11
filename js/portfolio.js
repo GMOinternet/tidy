@@ -1,9 +1,9 @@
 /**
- * Tidy portfolio.js - v0.1.0
+ * Tidy portfolio.js - v1.0
  *
- * http://www.gmo.jp/
+ * https://github.com/GMOinternet/tidy
  *
- * Copyright 2013, GMO (http://www.gmo.jp/)
+ * Copyright 2014, WP Shop byGMO (http://www.wpshop.com)
  */
 
 (function($){
