@@ -293,7 +293,7 @@ function of_recognized_background_position() {
 		'center right'  => __( 'Middle Right', 'tidy' ),
 		'bottom left'   => __( 'Bottom Left', 'tidy' ),
 		'bottom center' => __( 'Bottom Center', 'tidy' ),
-		'bottom right'  => __( 'Bottom Right', 'tidy')
+		'bottom right'  => __( 'Bottom Right', 'tidy' )
 		);
 	return apply_filters( 'of_recognized_background_position', $default );
 }
@@ -307,7 +307,7 @@ function of_recognized_background_position() {
 function of_recognized_background_attachment() {
 	$default = array(
 		'scroll' => __( 'Scroll Normally', 'tidy' ),
-		'fixed'  => __( 'Fixed in Place', 'tidy')
+		'fixed'  => __( 'Fixed in Place', 'tidy' )
 		);
 	return apply_filters( 'of_recognized_background_attachment', $default );
 }

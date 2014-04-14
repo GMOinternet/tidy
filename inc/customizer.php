@@ -153,7 +153,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, get_tiry_option_name( 'header_text_toggle' ), array(
-		'label'      => __( 'Show Header text', 'tidy' ),
+		'label'      => __( 'Show Header Text', 'tidy' ),
 		'section'    => 'title_tagline',
 		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'header_text_toggle' ),
@@ -164,14 +164,14 @@ function tidy_customize_setup( $wp_customize ) {
 		),
 	) ) );
 
-	// = Text Input for Header text
+	// = Text Input for Header Text
 	$wp_customize->add_setting( get_tiry_option_name( 'header_text' ), array(
 		'default'    => $tidy_default['header_text'],
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( get_tiry_option_name( 'header_text' ), array(
-		'label'      => __( 'Header text', 'tidy' ),
+		'label'      => __( 'Header Text', 'tidy' ),
 		'section'    => 'title_tagline',
 		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'header_text' ),
@@ -205,7 +205,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, get_tiry_option_name( 'logo_toggle' ), array(
-		'label'      => __( 'Show Header logo', 'tidy' ),
+		'label'      => __( 'Show Header Logo', 'tidy' ),
 		'section'    => 'tidy_logo_settings',
 		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'logo_toggle' ),
@@ -223,7 +223,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, get_tiry_option_name( 'logo_image' ), array(
-		'label'      => __( 'Header logo image', 'tidy' ),
+		'label'      => __( 'Header Logo Image', 'tidy' ),
 		'section'    => 'tidy_logo_settings',
 		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'logo_image' ),
@@ -242,14 +242,14 @@ function tidy_customize_setup( $wp_customize ) {
 	)));
 
 	/**
-	 * section for Header color Settings.
+	 * section for Header Color Settings.
 	 */
 	$wp_customize->add_section( 'tidy_color_settings_header', array(
-		'title'      => __( 'Header color settings', 'tidy' ),
+		'title'      => __( 'Header Color Settings', 'tidy' ),
 		'priority'   => 200,
 	));
 
-	// = Color Picker for header background color.
+	// = Color Picker for Header Background Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'header_bg_color' ), array(
 		'default'           => $tidy_default['header_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -257,13 +257,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_bg_color' ), array(
-		'label'      => __( 'Header background color', 'tidy' ),
+		'label'      => __( 'Header Background Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
 		'priority'   => 10,
 		'settings'   => get_tiry_option_name( 'header_bg_color' ),
 	)));
 
-	// = Color Picker for header text color.
+	// = Color Picker for header Text Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'header_text_color' ), array(
 		'default'           => $tidy_default['header_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -271,13 +271,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_text_color' ), array(
-		'label'      => __( 'Header text color', 'tidy' ),
+		'label'      => __( 'Header Text Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
 		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'header_text_color' ),
 	)));
 
-	// = Color Picker for header anchor color.
+	// = Color Picker for header Anchor Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'header_anchor_color' ), array(
 		'default'           => $tidy_default['header_anchor_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -285,13 +285,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_anchor_color' ), array(
-		'label'      => __( 'Header anchor color', 'tidy' ),
+		'label'      => __( 'Header Anchor Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
 		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'header_anchor_color' ),
 	)));
 
-	// = Color Picker for header border color.
+	// = Color Picker for header Border Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'header_border_color' ), array(
 		'default'           => $tidy_default['header_border_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -299,13 +299,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_border_color' ), array(
-		'label'      => __( 'Header border color', 'tidy' ),
+		'label'      => __( 'Header Border Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
 		'priority'   => 13,
 		'settings'   => get_tiry_option_name( 'header_border_color' ),
 	)));
 
-	// = Color Picker for header widget background color.
+	// = Color Picker for header widget Background Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'header_widget_bg_color' ), array(
 		'default'           => $tidy_default['header_widget_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -313,13 +313,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_widget_bg_color' ), array(
-		'label'      => __( 'Header widget background color', 'tidy' ),
+		'label'      => __( 'Header Widget Background Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
 		'priority'   => 14,
 		'settings'   => get_tiry_option_name( 'header_widget_bg_color' ),
 	)));
 
-	// = Color Picker for header widget text color.
+	// = Color Picker for header widget Text Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'header_widget_text_color' ), array(
 		'default'           => $tidy_default['header_widget_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -327,13 +327,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_widget_text_color' ), array(
-		'label'      => __( 'Header widget text color', 'tidy' ),
+		'label'      => __( 'Header Widget Text Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
 		'priority'   => 15,
 		'settings'   => get_tiry_option_name( 'header_widget_text_color' ),
 	)));
 
-	// = Color Picker for header widget anchor color.
+	// = Color Picker for header widget Anchor Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'header_widget_anchor_color' ), array(
 		'default'           => $tidy_default['header_widget_anchor_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -341,7 +341,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'header_widget_anchor_color' ), array(
-		'label'      => __('Header widget anchor color', 'tidy'),
+		'label'      => __( 'Header Widget Anchor Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_header',
 		'priority'   => 16,
 		'settings'   => get_tiry_option_name( 'header_widget_anchor_color' ),
@@ -351,11 +351,11 @@ function tidy_customize_setup( $wp_customize ) {
 	 * section for Main color Settings.
 	 */
 	$wp_customize->add_section( 'tidy_color_settings_main', array(
-		'title'      => __( 'Main color settings', 'tidy' ),
+		'title'      => __( 'Main Color Settings', 'tidy' ),
 		'priority'   => 300,
 	));
 
-	// = Color Picker for main background color.
+	// = Color Picker for main Background Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'main_bg_color' ), array(
 		'default'           => $tidy_default['main_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -363,13 +363,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'main_bg_color' ), array(
-		'label'      => __( 'Main background color', 'tidy' ),
+		'label'      => __( 'Main Background Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_main',
 		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'main_bg_color' ),
 	)));
 
-	// = Color Picker for main text color.
+	// = Color Picker for main Text Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'main_text_color' ), array(
 		'default'           => $tidy_default['main_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -377,13 +377,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'main_text_color' ), array(
-		'label'      => __('Main text color', 'tidy'),
+		'label'      => __( 'Main Text Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_main',
 		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'main_text_color' ),
 	)));
 
-	// = Color Picker for main anchor color.
+	// = Color Picker for main Anchor Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'main_anchor_color' ), array(
 		'default'           => $tidy_default['main_anchor_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -391,13 +391,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'main_anchor_color' ), array(
-		'label'      => __('Main anchor color', 'tidy'),
+		'label'      => __( 'Main Anchor Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_main',
 		'priority'   => 13,
 		'settings'   => get_tiry_option_name( 'main_anchor_color' ),
 	)));
 
-	// = Color Picker for main border color.
+	// = Color Picker for main Border Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'main_border_color' ), array(
 		'default'           => $tidy_default['main_border_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -405,7 +405,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'main_border_color' ), array(
-		'label'      => __('Main border color', 'tidy'),
+		'label'      => __( 'Main Border Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_main',
 		'settings'   => get_tiry_option_name( 'main_border_color' ),
 		'priority'   => 14,
@@ -419,20 +419,20 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'image_hover_color' ), array(
-		'label'      => __('Image hover color', 'tidy'),
+		'label'      => __( 'Image Hover Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_main',
 		'settings'   => get_tiry_option_name( 'image_hover_color' ),
 		'priority'   => 21,
 	)));
 
-	// = Image hover opacity.
+	// = Image Hover Opacity.
 	$wp_customize->add_setting( get_tiry_option_name( 'image_hover_opacity' ), array(
 		'default'    => $tidy_default['image_hover_opacity'],
 		'type'       => 'option',
 		'capability' => 'edit_theme_options',
 	));
 	$wp_customize->add_control( get_tiry_option_name( 'image_hover_opacity' ), array(
-		'label'      => __('Image hover opacity', 'tidy'),
+		'label'      => __( 'Image Hover Opacity', 'tidy' ),
 		'section'    => 'tidy_color_settings_main',
 		'priority'   => 22,
 		'settings'   => get_tiry_option_name( 'image_hover_opacity' ),
@@ -447,7 +447,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'image_hover_text' ), array(
-		'label'      => __('Image hover text color', 'tidy'),
+		'label'      => __( 'Image hover Text Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_main',
 		'settings'   => get_tiry_option_name( 'image_hover_text' ),
 		'priority'   => 23,
@@ -458,11 +458,11 @@ function tidy_customize_setup( $wp_customize ) {
 	 * section for Widget color Settings.
 	 */
 	$wp_customize->add_section( 'tidy_color_settings_widget', array(
-		'title'      => __( 'Widget color settings', 'tidy' ),
+		'title'      => __( 'Widget Color Settings', 'tidy' ),
 		'priority'   => 400,
 	));
 
-	// = Color Picker for widget background color.
+	// = Color Picker for widget Background Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'widget_bg_color' ), array(
 		'default'           => $tidy_default['widget_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -470,13 +470,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_bg_color' ), array(
-		'label'      => __( 'Widget background color', 'tidy' ),
+		'label'      => __( 'Widget Background Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_widget',
 		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'widget_bg_color' ),
 	)));
 
-	// = Color Picker for widget title color.
+	// = Color Picker for widget Title Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'widget_title_color' ), array(
 		'default'           => $tidy_default['widget_title_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -484,13 +484,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_title_color' ), array(
-		'label'      => __('Widgte title color', 'tidy'),
+		'label'      => __( 'Widgte Title Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_widget',
 		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'widget_title_color' ),
 	)));
 
-	// = Color Picker for widget text color.
+	// = Color Picker for widget Text Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'widget_text_color' ), array(
 		'default'           => $tidy_default['widget_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -498,13 +498,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_text_color' ), array(
-		'label'      => __('Widget text color', 'tidy'),
+		'label'      => __( 'Widget Text Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_widget',
 		'priority'   => 13,
 		'settings'   => get_tiry_option_name( 'widget_text_color' ),
 	)));
 
-	// = Color Picker for widget anchor color.
+	// = Color Picker for widget Anchor Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'widget_anchor_color' ), array(
 		'default'           => $tidy_default['widget_anchor_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -512,13 +512,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_anchor_color' ), array(
-		'label'      => __('Widget anchor color', 'tidy'),
+		'label'      => __( 'Widget Anchor Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_widget',
 		'priority'   => 14,
 		'settings'   => get_tiry_option_name( 'widget_anchor_color' ),
 	)));
 
-	// = Color Picker for widget border color.
+	// = Color Picker for widget Border Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'widget_border_color' ), array(
 		'default'           => $tidy_default['widget_border_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -526,7 +526,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_border_color' ), array(
-		'label'      => __('Widget border color', 'tidy'),
+		'label'      => __( 'Widget Border Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_widget',
 		'priority'   => 15,
 		'settings'   => get_tiry_option_name( 'widget_border_color' ),
@@ -536,11 +536,11 @@ function tidy_customize_setup( $wp_customize ) {
 	 * section for Footer color Settings.
 	 */
 	$wp_customize->add_section( 'tidy_color_settings_footer', array(
-		'title'      => __( 'Footer color settings', 'tidy' ),
+		'title'      => __( 'Footer Color Settings', 'tidy' ),
 		'priority'   => 500,
 	));
 
-	// = Color Picker for footer background color.
+	// = Color Picker for footer Background Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_bg_color' ), array(
 		'default'           => $tidy_default['footer_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -548,13 +548,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_bg_color' ), array(
-		'label'      => __('Footer background color', 'tidy'),
+		'label'      => __( 'Footer Background Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 11,
 		'settings'   => get_tiry_option_name( 'footer_bg_color' ),
 	)));
 
-	// = Color Picker for footer title color.
+	// = Color Picker for footer Title Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_title_color' ) , array(
 		'default'           => $tidy_default['footer_title_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -562,13 +562,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_title_color' ), array(
-		'label'      => __('Footer title color', 'tidy'),
+		'label'      => __( 'Footer Title Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'footer_title_color' )	,
 	)));
 
-	// = Color Picker for footer text color.
+	// = Color Picker for footer Text Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_text_color' ) , array(
 		'default'           => $tidy_default['footer_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -576,13 +576,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_text_color' ), array(
-		'label'      => __('Footer text color', 'tidy'),
+		'label'      => __( 'Footer Text Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 13,
 		'settings'   => get_tiry_option_name( 'footer_text_color' )	,
 	)));
 
-	// = Color Picker for footer anchor color.
+	// = Color Picker for footer Anchor Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_anchor_color' ) , array(
 		'default'           => $tidy_default['footer_anchor_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -590,13 +590,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_anchor_color' ), array(
-		'label'      => __('Footer anchor color', 'tidy'),
+		'label'      => __( 'Footer Anchor Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 14,
 		'settings'   => get_tiry_option_name( 'footer_anchor_color' )	,
 	)));
 
-	// = Color Picker for footer border color.
+	// = Color Picker for footer Border Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_border_color' ), array(
 		'default'           => $tidy_default['footer_border_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -604,13 +604,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_border_color' ), array(
-		'label'      => __('Footer border color', 'tidy'),
+		'label'      => __( 'Footer Border Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 15,
 		'settings'   => get_tiry_option_name( 'footer_border_color' ),
 	)));
 
-	// = Color Picker for footer all categories background color.
+	// = Color Picker for footer all categories Background Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_bg_color' ), array(
 		'default'           => $tidy_default['footer_category_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -618,13 +618,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_bg_color' ), array(
-		'label'      => __('All categories background color', 'tidy'),
+		'label'      => __( 'All categories Background Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 21,
 		'settings'   => get_tiry_option_name( 'footer_category_bg_color' ),
 	)));
 
-	// = Color Picker for footer all categories title color.
+	// = Color Picker for footer all categories Title Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_title_color' ) , array(
 		'default'           => $tidy_default['footer_category_title_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -632,13 +632,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_title_color' ), array(
-		'label'      => __('All categories title color', 'tidy'),
+		'label'      => __( 'All categories Title Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 22,
 		'settings'   => get_tiry_option_name( 'footer_category_title_color' )	,
 	)));
 
-	// = Color Picker for footer all categories anchor color.
+	// = Color Picker for footer all categories Anchor Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_anchor_color' ) , array(
 		'default'           => $tidy_default['footer_category_anchor_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -646,13 +646,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_anchor_color' ), array(
-		'label'      => __('All categories anchor color', 'tidy'),
+		'label'      => __( 'All categories Anchor Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 24,
 		'settings'   => get_tiry_option_name( 'footer_category_anchor_color' )	,
 	)));
 
-	// = Color Picker for footer all categories border color.
+	// = Color Picker for footer all categories Border Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_border_color' ), array(
 		'default'           => $tidy_default['footer_category_border_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -660,13 +660,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_border_color' ), array(
-		'label'      => __('All categories border color', 'tidy'),
+		'label'      => __( 'All categories Border Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 25,
 		'settings'   => get_tiry_option_name( 'footer_category_border_color' ),
 	)));
 
-	// = Color Picker for copyright background color.
+	// = Color Picker for copyright Background Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'copyright_bg_color' ), array(
 		'default'           => $tidy_default['copyright_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -674,13 +674,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'copyright_bg_color' ), array(
-		'label'      => __('Copyright background color', 'tidy'),
+		'label'      => __( 'Copyright Background Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 31,
 		'settings'   => get_tiry_option_name( 'copyright_bg_color' ),
 	)));
 
-	// = Color Picker for copyright text color.
+	// = Color Picker for copyright Text Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'copyright_text_color' ) , array(
 		'default'           => $tidy_default['copyright_text_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -688,7 +688,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'copyright_text_color' ), array(
-		'label'      => __('Copyright text color', 'tidy'),
+		'label'      => __( 'Copyright Text Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 33,
 		'settings'   => get_tiry_option_name( 'copyright_text_color' )	,

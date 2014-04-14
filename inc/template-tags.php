@@ -253,7 +253,7 @@ function tidy_posted_category() {
 	if ( !is_front_page() && ! is_tax( 'post_format', 'post-format-gallery' ) && ! is_singular() ) {
 		echo '<span class="entry_post-format">';
 		if ( get_post_format() == 'gallery' ) {
-			echo '<a href="' . esc_url( get_post_format_link( 'gallery' ) ) . '"><span class="icon-images"></span> ' . __('Portfolio', 'tidy') . '</a>';
+			echo '<a href="' . esc_url( get_post_format_link( 'gallery' ) ) . '"><span class="icon-images"></span> ' . __( 'Portfolio', 'tidy' ) . '</a>';
 		} else {
 			echo '<span class="icon-pencil"></span> Blog';
 		}

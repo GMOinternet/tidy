@@ -509,7 +509,7 @@ p.shop_link {
 ----------------------------------------------- */
 #optionsframework .layoutsettings h5 {
   white-space: nowrap;
-  width: 15em;
+  width: 18em;
 }
 #optionsframework .layoutsettings .section-color h5 {
   margin-top: 0.75em;
@@ -564,6 +564,13 @@ p.shop_link {
 }
 #optionsframework .layoutsettings .arc_icon {
   margin-bottom: 10px;
+}
+
+/* =Merit Box Settings
+----------------------------------------------- */
+#optionsframework .meritboxsettings h5 {
+  white-space: nowrap;
+  width: 13em;
 }
 
 /* =SNS settings
