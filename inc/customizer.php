@@ -484,7 +484,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'widget_title_color' ), array(
-		'label'      => __( 'Widgte Title Color', 'tidy' ),
+		'label'      => __( 'Widget Title Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_widget',
 		'priority'   => 12,
 		'settings'   => get_tiry_option_name( 'widget_title_color' ),
@@ -610,7 +610,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'settings'   => get_tiry_option_name( 'footer_border_color' ),
 	)));
 
-	// = Color Picker for footer all categories Background Color.
+	// = Color Picker for footer All Categories Background Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_bg_color' ), array(
 		'default'           => $tidy_default['footer_category_bg_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -618,13 +618,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_bg_color' ), array(
-		'label'      => __( 'All categories Background Color', 'tidy' ),
+		'label'      => __( 'All Categories Background Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 21,
 		'settings'   => get_tiry_option_name( 'footer_category_bg_color' ),
 	)));
 
-	// = Color Picker for footer all categories Title Color.
+	// = Color Picker for footer All Categories Title Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_title_color' ) , array(
 		'default'           => $tidy_default['footer_category_title_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -632,13 +632,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_title_color' ), array(
-		'label'      => __( 'All categories Title Color', 'tidy' ),
+		'label'      => __( 'All Categories Title Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 22,
 		'settings'   => get_tiry_option_name( 'footer_category_title_color' )	,
 	)));
 
-	// = Color Picker for footer all categories Anchor Color.
+	// = Color Picker for footer All Categories Anchor Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_anchor_color' ) , array(
 		'default'           => $tidy_default['footer_category_anchor_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -646,13 +646,13 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_anchor_color' ), array(
-		'label'      => __( 'All categories Anchor Color', 'tidy' ),
+		'label'      => __( 'All Categories Anchor Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 24,
 		'settings'   => get_tiry_option_name( 'footer_category_anchor_color' )	,
 	)));
 
-	// = Color Picker for footer all categories Border Color.
+	// = Color Picker for footer All Categories Border Color.
 	$wp_customize->add_setting( get_tiry_option_name( 'footer_category_border_color' ), array(
 		'default'           => $tidy_default['footer_category_border_color'],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -660,7 +660,7 @@ function tidy_customize_setup( $wp_customize ) {
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, get_tiry_option_name( 'footer_category_border_color' ), array(
-		'label'      => __( 'All categories Border Color', 'tidy' ),
+		'label'      => __( 'All Categories Border Color', 'tidy' ),
 		'section'    => 'tidy_color_settings_footer',
 		'priority'   => 25,
 		'settings'   => get_tiry_option_name( 'footer_category_border_color' ),

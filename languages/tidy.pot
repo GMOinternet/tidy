@@ -1,10 +1,10 @@
-# Copyright (C) 2014 GMO
+# Copyright (C) 2014 WP Shop byGMO
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tidy 0.5.3\n"
+"Project-Id-Version: Tidy 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/tidy\n"
-"POT-Creation-Date: 2014-03-26 03:42:49+00:00\n"
+"POT-Creation-Date: 2014-04-16 03:09:36+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2435,15 +2435,15 @@ msgstr ""
 #: admin/options.php:566
 msgid ""
 "<p>This is a highly customizable, clean, modern, and responsive WordPress "
-"theme. originally developed plugin is included and it enables higher "
-"usability and easier production of stylish site and customization. It can be "
-"used in wide variation from private to business use. Give it a try and enjoy "
-"our beautiful theme.</p><p><strong>Features</strong></p><ul><li>Responsive</"
-"li><li>Social setting</li><li>Easy web advertisement setting</"
-"li><li>Portfolio</li><li>Icon menu</li><li>Easy tracking code &amp; Web "
-"mastertool setting</li><li>Color customization</li><li>Web fonts &amp; icon "
-"fonts</li><li>Wide variety of theme layouts</li><li>Stylish slider &quot;"
-"Classic Slider&quot;</li></ul>"
+"theme. Originally developed plugins are included enabling higher usability "
+"and easier production of stylish site and customization. This theme can be "
+"used for wide variation from private to business use.</"
+"p><p><strong>Features</strong></p><ul><li>Responsive</li><li>Easy web "
+"advertisement settings</li><li>Portfolio</li><li>Icon menu</li><li>Easy "
+"tracking code &amp; Web mastertool settings</li><li>Color customization</"
+"li><li>Web fonts &amp; icon fonts</li><li>Wide variety of theme layouts</"
+"li><li>Social settings</li><li>Stylish slider &quot;GMO Showtime&quot; "
+"Plugin</li></ul>"
 msgstr ""
 
 #: admin/options.php:573
@@ -2452,16 +2452,13 @@ msgstr ""
 
 #: admin/options.php:574
 msgid ""
-"<p class=\"about-photo\"><img src=\"%1$s\" alt=\"*\"></p><p>WP Shop is a "
-"social marketplace for buying and selling WordPress themes, while providing "
-"a platform to showcase and share Asian design.</p><p>We connect buyers and "
-"sellers of digital contents for WordPress by offering more than just a "
-"marketplace.</p><p>WP Shop only offers safe and high quality themes produced "
-"according to the guidelines issued by wordpress.org and tested based on "
-"_s(underscores) provided by Automattic Inc. or default themes as a standard."
-"</p><p class=\"shop_link\"><a href=\"https://wpshop.com/signup\" target="
-"\"_blank\" class=\"shop_btn\"><span class=\"shop_name\">Join WP Shop</"
-"span><span class=\"shop_dec\">Starting from $0 / theme</span></a></p>"
+"<p class=\"about-photo\"><img src=\"%1$s\" alt=\"*\"></p><p>A whole new "
+"social marketplace for trading high quality WordPress themes, while "
+"providing a platform to showcase and share beautiful designs that are "
+"originated in Asia</p><p class=\"shop_link\"><a href=\"https://wpshop.com/"
+"signup\" target=\"_blank\" class=\"shop_btn\"><span class=\"shop_name\">Join "
+"WP Shop</span><span class=\"shop_dec\">Starting from $0 / theme</span></a></"
+"p>"
 msgstr ""
 
 #: admin/options.php:581
@@ -2477,19 +2474,15 @@ msgid "General Settings"
 msgstr ""
 
 #: admin/options.php:608 inc/customizer.php:208
-msgid "Show Header logo"
+msgid "Show Header Logo"
 msgstr ""
 
 #: admin/options.php:616 inc/customizer.php:226
-msgid "Header logo image"
+msgid "Header Logo Image"
 msgstr ""
 
 #: admin/options.php:624 inc/customizer.php:238
 msgid "Favicon"
-msgstr ""
-
-#: admin/options.php:625
-msgid "Please upload .ico image."
 msgstr ""
 
 #: admin/options.php:632
@@ -2501,19 +2494,19 @@ msgid "Tagline"
 msgstr ""
 
 #: admin/options.php:648 inc/customizer.php:156
-msgid "Show Header text"
+msgid "Show Header Text"
 msgstr ""
 
 #: admin/options.php:656 inc/customizer.php:174
-msgid "Header text"
+msgid "Header Text"
 msgstr ""
 
 #: admin/options.php:664
-msgid "About text"
+msgid "About Us Text"
 msgstr ""
 
 #: admin/options.php:665
-msgid "About widget text"
+msgid "About Us Widget Text"
 msgstr ""
 
 #: admin/options.php:672 inc/customizer.php:187
@@ -2525,143 +2518,143 @@ msgid "Color Settings"
 msgstr ""
 
 #: admin/options.php:688 inc/customizer.php:248
-msgid "Header color settings"
+msgid "Header Color Settings"
 msgstr ""
 
 #: admin/options.php:693 inc/customizer.php:260
-msgid "Header background color"
+msgid "Header Background Color"
 msgstr ""
 
 #: admin/options.php:702 inc/customizer.php:274
-msgid "Header text color"
+msgid "Header Text Color"
 msgstr ""
 
 #: admin/options.php:711 inc/customizer.php:288
-msgid "Header anchor color"
+msgid "Header Anchor Color"
 msgstr ""
 
 #: admin/options.php:720 inc/customizer.php:302
-msgid "Header border color"
+msgid "Header Border Color"
 msgstr ""
 
 #: admin/options.php:729 inc/customizer.php:316
-msgid "Header widget background color"
+msgid "Header Widget Background Color"
 msgstr ""
 
 #: admin/options.php:738 inc/customizer.php:330
-msgid "Header widget text color"
+msgid "Header Widget Text Color"
 msgstr ""
 
 #: admin/options.php:747 inc/customizer.php:344
-msgid "Header widget anchor color"
+msgid "Header Widget Anchor Color"
 msgstr ""
 
 #: admin/options.php:756 inc/customizer.php:354
-msgid "Main color settings"
+msgid "Main Color Settings"
 msgstr ""
 
 #: admin/options.php:761
-msgid "Body background color"
+msgid "Body Background Color"
 msgstr ""
 
 #: admin/options.php:770 inc/customizer.php:366
-msgid "Main background color"
+msgid "Main Background Color"
 msgstr ""
 
 #: admin/options.php:779 inc/customizer.php:380
-msgid "Main text color"
+msgid "Main Text Color"
 msgstr ""
 
 #: admin/options.php:788 inc/customizer.php:394
-msgid "Main anchor color"
+msgid "Main Anchor Color"
 msgstr ""
 
 #: admin/options.php:797 inc/customizer.php:408
-msgid "Main border color"
+msgid "Main Border Color"
 msgstr ""
 
 #: admin/options.php:806
-msgid "Image hover settings"
+msgid "Image Hover Settings"
 msgstr ""
 
 #: admin/options.php:811 inc/customizer.php:422
-msgid "Image hover color"
+msgid "Image Hover Color"
 msgstr ""
 
 #: admin/options.php:820 inc/customizer.php:435
-msgid "Image hover opacity"
+msgid "Image Hover Opacity"
 msgstr ""
 
 #: admin/options.php:840 inc/customizer.php:461
-msgid "Widget color settings"
+msgid "Widget Color Settings"
 msgstr ""
 
 #: admin/options.php:845 inc/customizer.php:473
-msgid "Widget background color"
+msgid "Widget Background Color"
 msgstr ""
 
 #: admin/options.php:854 inc/customizer.php:487
-msgid "Widgte title color"
+msgid "Widget Title Color"
 msgstr ""
 
 #: admin/options.php:863 inc/customizer.php:501
-msgid "Widget text color"
+msgid "Widget Text Color"
 msgstr ""
 
 #: admin/options.php:872 inc/customizer.php:515
-msgid "Widget anchor color"
+msgid "Widget Anchor Color"
 msgstr ""
 
 #: admin/options.php:881 inc/customizer.php:529
-msgid "Widget border color"
+msgid "Widget Border Color"
 msgstr ""
 
 #: admin/options.php:890 inc/customizer.php:539
-msgid "Footer color settings"
+msgid "Footer Color Settings"
 msgstr ""
 
 #: admin/options.php:895 inc/customizer.php:551
-msgid "Footer background color"
+msgid "Footer Background Color"
 msgstr ""
 
 #: admin/options.php:904 inc/customizer.php:565
-msgid "Footer title color"
+msgid "Footer Title Color"
 msgstr ""
 
 #: admin/options.php:913 inc/customizer.php:579
-msgid "Footer text color"
+msgid "Footer Text Color"
 msgstr ""
 
 #: admin/options.php:922 inc/customizer.php:593
-msgid "Footer anchor color"
+msgid "Footer Anchor Color"
 msgstr ""
 
 #: admin/options.php:931 inc/customizer.php:607
-msgid "Footer border color"
+msgid "Footer Border Color"
 msgstr ""
 
 #: admin/options.php:940 inc/customizer.php:621
-msgid "All categories background color"
+msgid "All Categories Background Color"
 msgstr ""
 
 #: admin/options.php:949 inc/customizer.php:635
-msgid "All categories title color"
+msgid "All Categories Title Color"
 msgstr ""
 
 #: admin/options.php:969 inc/customizer.php:649
-msgid "All categories anchor color"
+msgid "All Categories Anchor Color"
 msgstr ""
 
 #: admin/options.php:978 inc/customizer.php:663
-msgid "All categories border color"
+msgid "All Categories Border Color"
 msgstr ""
 
 #: admin/options.php:987 inc/customizer.php:677
-msgid "Copyright background color"
+msgid "Copyright Background Color"
 msgstr ""
 
 #: admin/options.php:996 inc/customizer.php:691
-msgid "Copyright text color"
+msgid "Copyright Text Color"
 msgstr ""
 
 #: admin/options.php:1007
@@ -2685,10 +2678,11 @@ msgid "All Portfolio"
 msgstr ""
 
 #: admin/options.php:1025
-msgid "Archive and Search result"
+msgid "Archive and Search Results"
 msgstr ""
 
-#: admin/options.php:1026
+#: admin/options.php:1026 admin/options.php:1177 admin/options.php:1291
+#: admin/options.php:1379
 msgid "Posts"
 msgstr ""
 
@@ -2696,28 +2690,25 @@ msgstr ""
 msgid "Pages"
 msgstr ""
 
-#. #-#-#-#-#  tidy.pot (Tidy 0.5.3)  #-#-#-#-#
-#. Template Name of the plugin/theme
 #: admin/options.php:1028 inc/widgets.php:111
 msgid "Contact"
 msgstr ""
 
-#: admin/options.php:1044 admin/options.php:1136 admin/options.php:1362
-#: admin/options.php:1448 admin/options.php:1523 admin/options.php:1549
-msgid "Select layout"
+#: admin/options.php:1044 admin/options.php:1136 admin/options.php:1364
+#: admin/options.php:1451 admin/options.php:1526 admin/options.php:1552
+msgid "Select Layout"
 msgstr ""
 
 #: admin/options.php:1057
-msgid "Blog area"
+msgid "Blog Area"
 msgstr ""
 
-#: admin/options.php:1063 admin/options.php:1100 admin/options.php:1175
-#: admin/options.php:1288 admin/options.php:1375
-msgid "Number to display"
+#: admin/options.php:1063
+msgid "Number of Blog Posts on Home Page"
 msgstr ""
 
-#: admin/options.php:1070 admin/options.php:1107 admin/options.php:1295
-#: admin/options.php:1677
+#: admin/options.php:1070 admin/options.php:1107 admin/options.php:1297
+#: admin/options.php:1603 admin/options.php:1622 admin/options.php:1680
 msgid "Title"
 msgstr ""
 
@@ -2725,249 +2716,253 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: admin/options.php:1076 admin/options.php:1113 admin/options.php:1188
-#: admin/options.php:1301 admin/options.php:1388 admin/options.php:1404
-#: admin/options.php:1473 admin/options.php:1571 admin/options.php:1706
+#: admin/options.php:1076 admin/options.php:1113 admin/options.php:1189
+#: admin/options.php:1303 admin/options.php:1391 admin/options.php:1407
+#: admin/options.php:1476 admin/options.php:1574 admin/options.php:1709
 msgid "Icon"
 msgstr ""
 
 #: admin/options.php:1085
-msgid "Portfolio area"
+msgid "Portfolio Area"
 msgstr ""
 
-#: admin/options.php:1091 admin/options.php:1149 admin/options.php:1251
-msgid "Select Column Number"
+#: admin/options.php:1091 admin/options.php:1149 admin/options.php:1252
+msgid "Columns"
 msgstr ""
 
-#: admin/options.php:1109 admin/options.php:1297 front-page.php:86
-#: inc/extras.php:87 inc/extras.php:102 inc/template-tags.php:255
+#: admin/options.php:1100
+msgid "Number of Portfolios on Home Page"
+msgstr ""
+
+#: admin/options.php:1109 admin/options.php:1299 front-page.php:86
+#: inc/extras.php:97 inc/extras.php:112 inc/template-tags.php:256
 #: single.php:16 taxonomy-post_format-post-format-gallery.php:12
 msgid "Portfolio"
 msgstr ""
 
-#: admin/options.php:1163 admin/options.php:1461
-msgid "Select text location"
+#: admin/options.php:1163 admin/options.php:1464
+msgid "Text Location"
 msgstr ""
 
 #: admin/options.php:1164
 msgid "Right text location is 1colum only."
 msgstr ""
 
-#: admin/options.php:1182 admin/options.php:1382
-msgid "Archive title"
+#: admin/options.php:1175 admin/options.php:1377
+msgid "Blog Pages Show at Most"
 msgstr ""
 
-#: admin/options.php:1184 admin/options.php:1384 archive.php:11 home.php:11
+#: admin/options.php:1183 admin/options.php:1385
+msgid "Archive Title"
+msgstr ""
+
+#: admin/options.php:1185 admin/options.php:1387 archive.php:11 home.php:11
 #: index.php:15
 msgid "Blog Archive"
 msgstr ""
 
-#: admin/options.php:1197 admin/options.php:1310 admin/options.php:1482
-msgid "Display date"
+#: admin/options.php:1198 admin/options.php:1312 admin/options.php:1485
+msgid "Show Date"
 msgstr ""
 
-#: admin/options.php:1204 admin/options.php:1317 admin/options.php:1489
-msgid "Display author"
+#: admin/options.php:1205 admin/options.php:1319 admin/options.php:1492
+msgid "Show Author"
 msgstr ""
 
-#: admin/options.php:1211 admin/options.php:1324 admin/options.php:1496
-msgid "Display category"
+#: admin/options.php:1212 admin/options.php:1326 admin/options.php:1499
+msgid "Show Categories"
 msgstr ""
 
-#: admin/options.php:1218 admin/options.php:1331 admin/options.php:1503
-msgid "Display tag"
+#: admin/options.php:1219 admin/options.php:1333 admin/options.php:1506
+msgid "Show Tags"
 msgstr ""
 
-#: admin/options.php:1238
-msgid "Select archive layout"
+#: admin/options.php:1239
+msgid "Archive Layout"
 msgstr ""
 
-#: admin/options.php:1265 admin/options.php:1277
-msgid "Select display pattern"
+#: admin/options.php:1266
+msgid "Select a Pattern"
 msgstr ""
 
-#: admin/options.php:1282
-msgid "Only image"
+#: admin/options.php:1278
+msgid "Advanced Settings"
 msgstr ""
 
 #: admin/options.php:1283
-msgid "Image with title"
+msgid "Only image"
 msgstr ""
 
 #: admin/options.php:1284
+msgid "Image with title"
+msgstr ""
+
+#: admin/options.php:1285
 msgid "Image with title and text"
 msgstr ""
 
-#: admin/options.php:1338
-msgid "Single posts navigation"
+#: admin/options.php:1289
+msgid "Portfolio Pages Show at Most"
 msgstr ""
 
-#: admin/options.php:1343
+#: admin/options.php:1340
+msgid "Single Posts Navigation"
+msgstr ""
+
+#: admin/options.php:1345
 msgid "Top"
 msgstr ""
 
-#: admin/options.php:1344
+#: admin/options.php:1346
 msgid "Bottom"
 msgstr ""
 
-#: admin/options.php:1397
-msgid "Search Result title"
+#: admin/options.php:1400
+msgid "Search Result Title"
 msgstr ""
 
-#: admin/options.php:1399
+#: admin/options.php:1402
 msgid "%s : Search keywords."
 msgstr ""
 
-#: admin/options.php:1400 search.php:9
+#: admin/options.php:1403 search.php:9
 msgid "Search Results for: %s"
 msgstr ""
 
-#: admin/options.php:1413
-msgid "Description background color"
+#: admin/options.php:1416
+msgid "Description Background Color"
 msgstr ""
 
-#: admin/options.php:1420
-msgid "Description text color"
+#: admin/options.php:1423
+msgid "Description Text Color"
 msgstr ""
 
-#: admin/options.php:1427
-msgid "Description anchor color"
+#: admin/options.php:1430
+msgid "Description Anchor Color"
 msgstr ""
 
-#: admin/options.php:1550
-msgid "A = page content area."
+#: admin/options.php:1553
+msgid "A = Page Content Area"
 msgstr ""
 
-#: admin/options.php:1564
+#: admin/options.php:1567
 msgid "Page Title"
 msgstr ""
 
-#: admin/options.php:1594
+#: admin/options.php:1597
 msgid "Area B"
 msgstr ""
 
-#: admin/options.php:1600
-msgid "Area B Title"
+#: admin/options.php:1609 admin/options.php:1628
+msgid "Body"
 msgstr ""
 
-#: admin/options.php:1606
-msgid "Area B conents"
-msgstr ""
-
-#: admin/options.php:1613
+#: admin/options.php:1616
 msgid "Area C"
 msgstr ""
 
-#: admin/options.php:1619
-msgid "Area C Title"
-msgstr ""
-
-#: admin/options.php:1625
-msgid "Area C conents"
-msgstr ""
-
-#: admin/options.php:1641
+#: admin/options.php:1644
 msgid "Merit Box Settings"
 msgstr ""
 
-#: admin/options.php:1646
-msgid "Display Merit Box"
+#: admin/options.php:1649
+msgid "Show Merit Box"
 msgstr ""
 
-#: admin/options.php:1653
-msgid "Number of box to show "
+#: admin/options.php:1656
+msgid "Number of Boxes to Show"
 msgstr ""
 
-#: admin/options.php:1654
+#: admin/options.php:1657
 msgid "Default:4, Min:1, Max:4."
 msgstr ""
 
-#: admin/options.php:1671
-msgid "Merit box %s"
+#: admin/options.php:1674
+msgid "Merit Box %s"
 msgstr ""
 
-#: admin/options.php:1684
-msgid "Textarea"
+#: admin/options.php:1687
+msgid "Text"
 msgstr ""
 
-#: admin/options.php:1692
-msgid "Textarea align"
+#: admin/options.php:1695
+msgid "Text Alignment"
 msgstr ""
 
-#: admin/options.php:1699
+#: admin/options.php:1702
 msgid "Left"
 msgstr ""
 
-#: admin/options.php:1700
+#: admin/options.php:1703
 msgid "Center"
 msgstr ""
 
-#: admin/options.php:1701
+#: admin/options.php:1704
 msgid "Right"
 msgstr ""
 
-#: admin/options.php:1716
-msgid "Icon bg color"
+#: admin/options.php:1719
+msgid "Icon Color"
 msgstr ""
 
-#: admin/options.php:1725
+#: admin/options.php:1728
 msgid "Image"
 msgstr ""
 
-#: admin/options.php:1726
-msgid "Image will override any icon. Minimum width : 580px"
+#: admin/options.php:1729
+msgid "Image will override the icons. Minimum width: 580px"
 msgstr ""
 
-#: admin/options.php:1732
+#: admin/options.php:1735
 msgid "URL"
 msgstr ""
 
-#: admin/options.php:1743
+#: admin/options.php:1746
 msgid "Social Settings"
 msgstr ""
 
-#: admin/options.php:1748
-msgid "Social Icon setting"
+#: admin/options.php:1751
+msgid "Social Icon Settings"
 msgstr ""
 
-#: admin/options.php:1755
-msgid "Frame"
+#: admin/options.php:1758
+msgid "Frames"
 msgstr ""
 
-#: admin/options.php:1762
-msgid "Header icon color"
+#: admin/options.php:1765
+msgid "Header Icon Color"
 msgstr ""
 
-#: admin/options.php:1769
-msgid "Footer icon color"
+#: admin/options.php:1772
+msgid "Footer Icon Color"
 msgstr ""
 
-#: admin/options.php:1776
-msgid "Display location"
+#: admin/options.php:1779
+msgid "Show Icons"
 msgstr ""
 
-#: admin/options.php:1783
+#: admin/options.php:1786
 msgid "Header"
 msgstr ""
 
-#: admin/options.php:1790
+#: admin/options.php:1793
 msgid "Footer"
 msgstr ""
 
-#: admin/options.php:1797
-msgid "Your SNS address"
+#: admin/options.php:1800
+msgid "Social Media Accounts and Email Address"
 msgstr ""
 
-#: admin/options.php:1804
+#: admin/options.php:1807
 msgid "E-mail"
 msgstr ""
 
-#: admin/options.php:1805
+#: admin/options.php:1808
 msgid "Your E-mail address."
 msgstr ""
 
-#: admin/options.php:1815
-msgid "Your %s address."
+#: admin/options.php:1818
+msgid "%s URL"
 msgstr ""
 
 #: archive.php:24
@@ -3036,13 +3031,13 @@ msgid "Read More"
 msgstr ""
 
 #: content-blog.php:44 content-gallery.php:59 content-home.php:52
-#: content-page.php:27 content-portfolio.php:63 content-single.php:39
-#: content.php:39 inc/template-tags.php:153 inc/template-tags.php:175
+#: content-page.php:35 content-portfolio.php:62 content-single.php:39
+#: content.php:39 inc/template-tags.php:154 inc/template-tags.php:176
 msgid "Edit"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: content-home.php:45 content-portfolio.php:56 content-single.php:32
+#: content-home.php:45 content-portfolio.php:55 content-single.php:32
 msgid ", "
 msgstr ""
 
@@ -3067,7 +3062,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:21 content-portfolio.php:75 content-single.php:50
+#: content-page.php:29 content-portfolio.php:74 content-single.php:50
 msgid "Pages:"
 msgstr ""
 
@@ -3100,19 +3095,19 @@ msgstr ""
 msgid "Footer 4"
 msgstr ""
 
-#: header.php:49
+#: header.php:47
 msgid "Social"
 msgstr ""
 
-#: header.php:68
+#: header.php:65
 msgid "Menu"
 msgstr ""
 
-#: header.php:69
+#: header.php:66
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:76 searchform.php:13
+#: header.php:73 searchform.php:13
 msgid "Search"
 msgstr ""
 
@@ -3136,36 +3131,36 @@ msgstr ""
 msgid "Next Page"
 msgstr ""
 
-#: inc/template-tags.php:95
+#: inc/template-tags.php:96
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:123
 msgid "Comment navigation"
 msgstr ""
 
-#: inc/template-tags.php:126
+#: inc/template-tags.php:127
 msgid "Older Comments"
 msgstr ""
 
-#: inc/template-tags.php:127
+#: inc/template-tags.php:128
 msgid "Newer Comments"
 msgstr ""
 
-#: inc/template-tags.php:153
+#: inc/template-tags.php:154
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:172
+#: inc/template-tags.php:173
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/template-tags.php:182
+#: inc/template-tags.php:183
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:193
+#: inc/template-tags.php:194
 msgid "Reply"
 msgstr ""
 
@@ -3235,21 +3230,26 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
+#. #-#-#-#-#  tidy.pot (Tidy 1.0)  #-#-#-#-#
 #. Theme Name of the plugin/theme
 msgid "Tidy"
 msgstr ""
 
-#. #-#-#-#-#  tidy.pot (Tidy 0.5.3)  #-#-#-#-#
-#. Theme URI of the plugin/theme
-#. #-#-#-#-#  tidy.pot (Tidy 0.5.3)  #-#-#-#-#
-#. Author URI of the plugin/theme
-msgid "http://www.gmo.jp/"
-msgstr ""
-
 #. Description of the plugin/theme
-msgid "GMO theme"
+msgid ""
+"The multi-purpose WordPress theme with ultimate simplicity. The theme is "
+"fully customizable, responsive and flexible with full of revolutionary "
+"functions. Contents can turned on and off as desired, and a wide variety of "
+"layout options to help you build a satisfactory website. The theme comes "
+"standard with the original slider, social media integration, Google "
+"advertisement & stats plugins along with the web font support with full "
+"color customization for enhanced flexibility."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "GMO"
+msgid "WP Shop byGMO"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.wpshop.com"
 msgstr ""

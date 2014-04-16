@@ -571,7 +571,7 @@ function optionsframework_options() {
 	// About WP Shop
 	$options[] = array(
 		'name' => __( 'About WP Shop', 'tidy' ),
-		'desc' => sprintf( __( '<p class="about-photo"><img src="%1$s" alt="*"></p><p>A whole new social marketplace for trading high quality WordPress themes, while providing a platform to showcase and share beautiful designs that are originated in Asia</p><p>WP Shop only offers safe and high quality themes produced according to the guidelines issued by wordpress.org and tested based on _s(underscores) provided by Automattic Inc. or default themes as a standard.</p><p class="shop_link"><a href="https://wpshop.com/signup" target="_blank" class="shop_btn"><span class="shop_name">Join WP Shop</span><span class="shop_dec">Starting from $0 / theme</span></a></p>', 'tidy' ), $imagepath . 'about-image.jpg' ),
+		'desc' => sprintf( __( '<p class="about-photo"><img src="%1$s" alt="*"></p><p>A whole new social marketplace for trading high quality WordPress themes, while providing a platform to showcase and share beautiful designs that are originated in Asia</p><p class="shop_link"><a href="https://wpshop.com/signup" target="_blank" class="shop_btn"><span class="shop_name">Join WP Shop</span><span class="shop_dec">Starting from $0 / theme</span></a></p>', 'tidy' ), $imagepath . 'about-image.jpg' ),
 		'id' => 'about-wp-shop',
 		'class' => 'about-wp-shop',
 		'type' => 'info');
@@ -851,7 +851,7 @@ function optionsframework_options() {
 
 	// = Color Picker for widget Title Color.
 	$options[] = array(
-		'name' => __( 'Widgte Title Color', 'tidy' ),
+		'name' => __( 'Widget Title Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'widget_title_color',
 		'std' => $tidy_default['widget_title_color'],
@@ -935,28 +935,28 @@ function optionsframework_options() {
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// = Color Picker for footer all categories Background Color.
+	// = Color Picker for footer All Categories Background Color.
 	$options[] = array(
-		'name' => __( 'All categories Background Color', 'tidy' ),
+		'name' => __( 'All Categories Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_bg_color',
 		'std' => $tidy_default['footer_category_bg_color'],
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// = Color Picker for footer all categories Title Color.
+	// = Color Picker for footer All Categories Title Color.
 	$options[] = array(
-		'name' => __( 'All categories Title Color', 'tidy' ),
+		'name' => __( 'All Categories Title Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_title_color',
 		'std' => $tidy_default['footer_category_title_color'],
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// = Color Picker for footer all categories Text Color.
+	// = Color Picker for footer All Categories Text Color.
 /*
 	$options[] = array(
-		'name' => __( 'All categories Text Color', 'tidy' ),
+		'name' => __( 'All Categories Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_text_color',
 		'std' => $tidy_default['footer_category_text_color'],
@@ -964,18 +964,18 @@ function optionsframework_options() {
 		'type' => 'color' );
 */
 
-	// = Color Picker for footer all categories Anchor Color.
+	// = Color Picker for footer All Categories Anchor Color.
 	$options[] = array(
-		'name' => __( 'All categories Anchor Color', 'tidy' ),
+		'name' => __( 'All Categories Anchor Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_anchor_color',
 		'std' => $tidy_default['footer_category_anchor_color'],
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// = Color Picker for footer all categories Border Color.
+	// = Color Picker for footer All Categories Border Color.
 	$options[] = array(
-		'name' => __( 'All categories Border Color', 'tidy' ),
+		'name' => __( 'All Categories Border Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_border_color',
 		'std' => $tidy_default['footer_category_border_color'],
@@ -1172,7 +1172,7 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => __( 'Blog pages show at most', 'tidy' ),
+		'name' => __( 'Blog Pages Show at Most', 'tidy' ),
 		'id' => 'all_blog_num',
 		'desc' => __( 'Posts', 'tidy' ),
 		'std' => $posts_per_page,
@@ -1374,7 +1374,7 @@ function optionsframework_options() {
 	);
 	
 	$options[] = array(
-		'name' => __( 'Blog pages show at most', 'tidy' ),
+		'name' => __( 'Blog Pages Show at Most', 'tidy' ),
 		'id' => 'arc_num',
 		'desc' => __( 'Posts', 'tidy' ),
 		'std' => $posts_per_page,
