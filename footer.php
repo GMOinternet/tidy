@@ -62,8 +62,8 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
-
 <?php do_action( 'tidy_after_body' ); ?>
+
+<?php wp_footer(); ?>
 </body>
 </html>
