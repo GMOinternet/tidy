@@ -35,7 +35,7 @@
 		?>
 		<div class="site-header-widget-toggle">
 			<div id="site-header-widget" class="site-header-widget-area"><div class="inner">
-				<div class="site-header-widget-area-content"><?php echo $header_text; ?></div>
+				<div class="site-header-widget-area-content"><?php echo wpautop($header_text); ?></div>
 			</div></div>
 			<div class="header-widget-toggle"><div class="inner"><span class="header-widget-toggle-btn"><span class="genericon"></span></span></div></div>
 		</div>
