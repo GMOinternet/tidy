@@ -1,20 +1,20 @@
 <?php
 /**
- * @package   Options_Framework
+ * @package   Tidy_Options_Framework
  * @author    Devin Price <devin@wptheming.com>
  * @license   GPL-2.0+
  * @link      http://wptheming.com
  * @copyright 2013 WP Theming
  */
 
-class Options_Framework_Interface {
+class Tidy_Options_Framework_Interface {
 
 	/**
 	 * Generates the tabs that are used in the options menu
 	 */
 	static function optionsframework_tabs() {
 		$counter = 0;
-		$options = & Options_Framework::_optionsframework_options();
+		$options = & Tidy_Options_Framework::_tidy_optionsframework_options();
 		$menu = '';
 
 		foreach ( $options as $value ) {
@@ -24,8 +24,8 @@ class Options_Framework_Interface {
 				$class = '';
 				$class = ! empty( $value['id'] ) ? $value['id'] : $value['name'];
 				$class = preg_replace( '/[^a-zA-Z0-9._\-]/', '', strtolower($class) ) . '-tab';
-				$icon = ! empty( $value['icon'] ) ? $value['icon'] : 'admin-generic';
-				$menu .= '<li><a id="options-group-'.  $counter . '-tab" class="nav-tab ' . $class .'" title="' . esc_attr( $value['name'] ) . '" href="' . esc_attr( '#options-group-'.  $counter ) . '"><span class="dashicons dashicons-' . esc_attr( $icon ) . '"></span> ' . esc_html( $value['name'] ) . '</a></li>';
+				$tidy_icon = ! empty( $value['icon'] ) ? $value['icon'] : 'admin-generic';
+				$menu .= '<li><a id="options-group-'.  $counter . '-tab" class="nav-tab ' . $class .'" title="' . esc_attr( $value['name'] ) . '" href="' . esc_attr( '#options-group-'.  $counter ) . '"><span class="dashicons dashicons-' . esc_attr( $tidy_icon ) . '"></span> ' . esc_html( $value['name'] ) . '</a></li>';
 			}
 		}
 
@@ -38,18 +38,18 @@ class Options_Framework_Interface {
 	static function optionsframework_fields() {
 
 		global $allowedtags;
-		$optionsframework_settings = get_option( 'optionsframework' );
+		$tidy_optionsframework_settings = get_option( 'tidy_optionsframework' );
 
 		// Gets the unique option id
-		if ( isset( $optionsframework_settings['id'] ) ) {
-			$option_name = $optionsframework_settings['id'];
+		if ( isset( $tidy_optionsframework_settings['id'] ) ) {
+			$option_name = $tidy_optionsframework_settings['id'];
 		}
 		else {
-			$option_name = 'optionsframework';
+			$option_name = 'tidy_optionsframework';
 		};
 
 		$settings = get_option($option_name);
-		$options = & Options_Framework::_optionsframework_options();
+		$options = & Tidy_Options_Framework::_tidy_optionsframework_options();
 
 		$counter = 0;
 		$menu = '';
@@ -225,7 +225,7 @@ class Options_Framework_Interface {
 
 			// Uploader
 			case "upload":
-				$output .= Options_Framework_Media_Uploader::optionsframework_uploader( $value['id'], $val, null );
+				$output .= Tidy_Options_Framework_Media_Uploader::optionsframework_uploader( $value['id'], $val, null );
 
 				break;
 
@@ -244,9 +244,9 @@ class Options_Framework_Interface {
 				$typography_stored = wp_parse_args( $val, $typography_defaults );
 
 				$typography_options = array(
-					'sizes' => of_recognized_font_sizes(),
-					'faces' => of_recognized_font_faces(),
-					'styles' => of_recognized_font_styles(),
+					'sizes' => tidy_of_recognized_font_sizes(),
+					'faces' => tidy_of_recognized_font_faces(),
+					'styles' => tidy_of_recognized_font_styles(),
 					'color' => true
 				);
 
@@ -297,7 +297,7 @@ class Options_Framework_Interface {
 
 				// Allow modification/injection of typography fields
 				$typography_fields = compact( 'font_size', 'font_face', 'font_style', 'font_color' );
-				$typography_fields = apply_filters( 'of_typography_fields', $typography_fields, $typography_stored, $option_name, $value );
+				$typography_fields = apply_filters( 'tidy_of_typography_fields', $typography_fields, $typography_stored, $option_name, $value );
 				$output .= implode( '', $typography_fields );
 
 				break;
@@ -320,7 +320,7 @@ class Options_Framework_Interface {
 					$background['image'] = '';
 				}
 
-				$output .= Options_Framework_Media_Uploader::optionsframework_uploader( $value['id'], $background['image'], null, esc_attr( $option_name . '[' . $value['id'] . '][image]' ) );
+				$output .= Tidy_Options_Framework_Media_Uploader::optionsframework_uploader( $value['id'], $background['image'], null, esc_attr( $option_name . '[' . $value['id'] . '][image]' ) );
 
 				$class = 'of-background-properties';
 				if ( '' == $background['image'] ) {
@@ -330,7 +330,7 @@ class Options_Framework_Interface {
 
 				// Background Repeat
 				$output .= '<select class="of-background of-background-repeat" name="' . esc_attr( $option_name . '[' . $value['id'] . '][repeat]'  ) . '" id="' . esc_attr( $value['id'] . '_repeat' ) . '">';
-				$repeats = of_recognized_background_repeat();
+				$repeats = tidy_of_recognized_background_repeat();
 
 				foreach ($repeats as $key => $repeat) {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $background['repeat'], $key, false ) . '>'. esc_html( $repeat ) . '</option>';
@@ -339,7 +339,7 @@ class Options_Framework_Interface {
 
 				// Background Position
 				$output .= '<select class="of-background of-background-position" name="' . esc_attr( $option_name . '[' . $value['id'] . '][position]' ) . '" id="' . esc_attr( $value['id'] . '_position' ) . '">';
-				$positions = of_recognized_background_position();
+				$positions = tidy_of_recognized_background_position();
 
 				foreach ($positions as $key=>$position) {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $background['position'], $key, false ) . '>'. esc_html( $position ) . '</option>';
@@ -348,9 +348,9 @@ class Options_Framework_Interface {
 
 				// Background Attachment
 				$output .= '<select class="of-background of-background-attachment" name="' . esc_attr( $option_name . '[' . $value['id'] . '][attachment]' ) . '" id="' . esc_attr( $value['id'] . '_attachment' ) . '">';
-				$attachments = of_recognized_background_attachment();
+				$tidy_attachments = tidy_of_recognized_background_attachment();
 
-				foreach ($attachments as $key => $attachment) {
+				foreach ($tidy_attachments as $key => $attachment) {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $background['attachment'], $key, false ) . '>' . esc_html( $attachment ) . '</option>';
 				}
 				$output .= '</select>';
@@ -425,7 +425,7 @@ class Options_Framework_Interface {
 						$i++;
 					}
 					$tabs .= '</ul>' . "\n";;
-					$output .= apply_filters('of_sanitize_tabhead', $tabs ) . "\n";
+					$output .= apply_filters('tidy_of_sanitize_tabhead', $tabs ) . "\n";
 				}
 				$output .= '</div>' . "\n";
 				break;
@@ -466,7 +466,7 @@ class Options_Framework_Interface {
 					$output .= '<h4 class="heading">' . esc_html( $value['name'] ) . '</h4>' . "\n";
 				}
 				if ( isset( $value['desc'] ) ) {
-					$output .= apply_filters('of_sanitize_info', $value['desc'] ) . "\n";
+					$output .= apply_filters('tidy_of_sanitize_info', $value['desc'] ) . "\n";
 				}
 				$output .= '</div>' . "\n";
 				break;
@@ -490,7 +490,7 @@ class Options_Framework_Interface {
 					$output .= '<h4 class="heading">' . esc_html( $value['name'] ) . '</h4>' . "\n";
 				}
 				if ( isset( $value['desc'] ) ) {
-					$output .= apply_filters('of_sanitize_info', $value['desc'] ) . "\n";
+					$output .= apply_filters('tidy_of_sanitize_info', $value['desc'] ) . "\n";
 				}
 
 				$rss = fetch_feed( esc_url( $value['url'] ) );
@@ -556,7 +556,7 @@ class Options_Framework_Interface {
 		}
 
 		// Outputs closing div if there tabs
-		if ( Options_Framework_Interface::optionsframework_tabs() != '' ) {
+		if ( Tidy_Options_Framework_Interface::optionsframework_tabs() != '' ) {
 			echo '</div>';
 		}
 	}

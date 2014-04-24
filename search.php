@@ -4,12 +4,12 @@
  *
  * @package Tidy
  */
-$layout = of_get_option( 'arc_c', 'cont_s2' );
-$icon   = of_get_option( 'ser_icon', 'search' );
-$title  = of_get_option( 'ser_title', __( 'Search Results for: %s', 'tidy' ) );
+$tidy_layout = tidy_of_get_option( 'arc_c', 'cont_s2' );
+$tidy_icon   = tidy_of_get_option( 'ser_icon', 'search' );
+$tidy_ser_title  = tidy_of_get_option( 'ser_title', __( 'Search Results for: %s', 'tidy' ) );
 get_header(); ?>
 
-	<section id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
+	<section id="primary" class="content-area <?php echo esc_attr( $tidy_layout ); ?>">
 		<?php do_action( 'tidy_before_primary' ); ?>
 		<main id="main" class="site-main" role="main">
 
@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<header class="archive-header">
 				<?php do_action( 'tidy_before_page_header' ); ?>
-				<h1 class="archive-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php printf( $title, get_search_query() ); ?></h1>
+				<h1 class="archive-title"><span class="icon-<?php echo esc_attr( $tidy_icon ); ?>"></span> <?php printf( $tidy_ser_title, get_search_query() ); ?></h1>
 				<?php do_action( 'tidy_after_page_header' ); ?>
 			</header><!-- .archive-header -->
 
@@ -41,8 +41,8 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
-		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+	if ( $tidy_layout == 'cont_s1' or $tidy_layout == 'cont_s2' ) {
+		$tidy_side = ( $tidy_layout == 'cont_s1' ) ? 'left' : 'right';
 		get_sidebar();
 	}
 ?>

@@ -4,10 +4,10 @@
  *
  * @package Tidy
  */
-$layout = of_get_option( 'post_c', 'cont_s2' );
+$tidy_layout = tidy_of_get_option( 'post_c', 'cont_s2' );
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
+	<div id="primary" class="content-area <?php echo esc_attr( $tidy_layout ); ?>">
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
@@ -25,8 +25,8 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
-		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+	if ( $tidy_layout == 'cont_s1' or $tidy_layout == 'cont_s2' ) {
+		$tidy_side = ( $tidy_layout == 'cont_s1' ) ? 'left' : 'right';
 		get_sidebar();
 	}
 ?>

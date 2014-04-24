@@ -27,22 +27,22 @@
 		<?php do_action( 'tidy_before_header' ); ?>
 
 		<?php
-		$header_text = get_theme_mod( 'header_text', '' );
+		$tidy_header_text = get_theme_mod( 'header_text', '' );
 
-		$site_header_widget_toggle = get_theme_mod( 'header_text_toggle', 0 );
+		$tidy_site_header_widget_toggle = get_theme_mod( 'header_text_toggle', 0 );
 
-		if ( $site_header_widget_toggle > 0 ) :
+		if ( $tidy_site_header_widget_toggle > 0 ) :
 		?>
 		<div class="site-header-widget-toggle">
 			<div id="site-header-widget" class="site-header-widget-area"><div class="inner">
-				<div class="site-header-widget-area-content"><?php echo wpautop($header_text); ?></div>
+				<div class="site-header-widget-area-content"><?php echo wpautop( $tidy_header_text ); ?></div>
 			</div></div>
 			<div class="header-widget-toggle"><div class="inner"><span class="header-widget-toggle-btn"><span class="genericon"></span></span></div></div>
 		</div>
 		<?php endif; ?>
 
-		<?php $view_sns_header = of_get_option('sns-location-header', 1); ?>
-		<?php if ( $view_sns_header > 0 ) : ?>
+		<?php $tidy_view_sns_header = tidy_of_get_option('sns-location-header', 1); ?>
+		<?php if ( $tidy_view_sns_header > 0 ) : ?>
 		<div id="site-header-social" class="site-header-social-area"><div class="inner">
 			<h1 class="sns-toggle"><?php _e( 'Social', 'tidy' ); ?><span class="genericon genericon-downarrow"></span></h1>
 			<?php tidy_sns_lists(); ?>
@@ -53,11 +53,11 @@
 	
 			<div class="site-branding">
 				<?php
-					$view_header_logo = get_theme_mod( 'logo_toggle', 0 );
-					$header_logo_img  = ( $view_header_logo > 0 ) ? get_theme_mod( 'logo_image', '' ) : '' ;
-					$logo_image = ( !empty( $header_logo_img ) ) ? '<img src="' . esc_url( $header_logo_img ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' : esc_html( get_bloginfo( 'name', 'display' ) );
+					$tidy_view_header_logo = get_theme_mod( 'logo_toggle', 0 );
+					$tidy_header_logo_img  = ( $tidy_view_header_logo > 0 ) ? get_theme_mod( 'logo_image', '' ) : '' ;
+					$tidy_logo_image = ( !empty( $tidy_header_logo_img ) ) ? '<img src="' . esc_url( $tidy_header_logo_img ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' : esc_html( get_bloginfo( 'name', 'display' ) );
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $logo_image ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $tidy_logo_image ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 	

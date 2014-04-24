@@ -6,15 +6,15 @@
  *
  * @package Tidy
  */
-$layout = of_get_option( 'arc_c', 'cont_s2' );
-$icon   = of_get_option( 'arc_icon', 'pencil' );
-$title  = of_get_option( 'arc_title',  __( 'Blog Archive', 'tidy' ) );
+$tidy_layout = tidy_of_get_option( 'arc_c', 'cont_s2' );
+$tidy_icon   = tidy_of_get_option( 'arc_icon', 'pencil' );
+$tidy_arc_title  = tidy_of_get_option( 'arc_title',  __( 'Blog Archive', 'tidy' ) );
 get_header(); ?>
 
-	<section id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
+	<section id="primary" class="content-area <?php echo esc_attr( $tidy_layout ); ?>">
 		<main id="main" class="site-main" role="main">
 
-		<div class="archive-header"><h1 class="archive-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php echo esc_html( $title ); ?></h1></div>
+		<div class="archive-header"><h1 class="archive-title"><span class="icon-<?php echo esc_attr( $tidy_icon ); ?>"></span> <?php echo esc_html( $tidy_arc_title ); ?></h1></div>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -58,9 +58,9 @@ get_header(); ?>
 				</h1>
 				<?php
 					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
+					$tidy_term_description = term_description();
+					if ( ! empty( $tidy_term_description ) ) :
+						printf( '<div class="taxonomy-description">%s</div>', $tidy_term_description );
 					endif;
 				?>
 			</header><!-- .page-header -->
@@ -84,8 +84,8 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
-		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+	if ( $tidy_layout == 'cont_s1' or $tidy_layout == 'cont_s2' ) {
+		$tidy_side = ( $tidy_layout == 'cont_s1' ) ? 'left' : 'right';
 		get_sidebar();
 	}
 ?>

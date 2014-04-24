@@ -40,11 +40,11 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php
-		$comments_args = array(
+		$tidy_comments_args = array(
 			// change the title of send button 
 			'label_submit' => __( 'Send', 'tidy' ),
 		);
-		comment_form($comments_args);
+		comment_form($tidy_comments_args);
 	?>
 
 	<?php // You can start editing here -- including this comment! ?>

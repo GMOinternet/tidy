@@ -189,8 +189,8 @@ function tidy_scripts() {
 		$tidy_version
 	);
 
-	$responsive_style = of_get_option('responsive_style');
-	if ( ( $responsive_style === FALSE ) or ( $responsive_style != 0 ) ) {
+	$tidy_responsive_style = tidy_of_get_option('responsive_style');
+	if ( ( $tidy_responsive_style === FALSE ) or ( $tidy_responsive_style != 0 ) ) {
 		wp_enqueue_style(
 			'tidy-mobile',
 			get_template_directory_uri() . '/mobile.css',

@@ -11,10 +11,10 @@
 		<?php do_action( 'tidy_before_entry_header' ); ?>
 		<?php if ( is_page_template( 'contact.php' ) ) : ?>
 		<?php 
-			$ctitle = of_get_option( 'cont_a_title', 'About' );
-			$icon = of_get_option( 'cont_a_icon', 'quill' );
+			$tidy_cont_a_title = tidy_of_get_option( 'cont_a_title', 'About' );
+			$tidy_icon = tidy_of_get_option( 'cont_a_icon', 'quill' );
 		?>
-			<h1 class="entry-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php echo esc_html( $ctitle ); ?></h1>
+			<h1 class="entry-title"><span class="icon-<?php echo esc_attr( $tidy_icon ); ?>"></span> <?php echo esc_html( $tidy_cont_a_title ); ?></h1>
 		<?php else : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php endif; ?>

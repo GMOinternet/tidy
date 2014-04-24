@@ -6,28 +6,28 @@
  *
  * @package Tidy
  */
-$layout = of_get_option( 'blog_c', 'cont_s2' );
-$icon   = of_get_option( 'all_blog_icon', 'pencil' );
-$title  = of_get_option( 'all_blog_title',  __( 'Blog Archive', 'tidy' ) );
-$cont_c = of_get_option( 'all_blog_cont_c', '1' );
+$tidy_layout = tidy_of_get_option( 'blog_c', 'cont_s2' );
+$tidy_icon   = tidy_of_get_option( 'all_blog_icon', 'pencil' );
+$tidy_all_blog_title  = tidy_of_get_option( 'all_blog_title',  __( 'Blog Archive', 'tidy' ) );
+$tidy_cont_c = tidy_of_get_option( 'all_blog_cont_c', '1' );
 
-$blog_type = of_get_option( 'blog_type', 'typeA' );
-if ( $layout != 'cont_c1') {
-	$blog_type = 'typeA';
+$tidy_blog_type = tidy_of_get_option( 'blog_type', 'typeA' );
+if ( $tidy_layout != 'cont_c1') {
+	$tidy_blog_type = 'typeA';
 } else {
-	if ( $cont_c == 3 ) {
-		$blog_type = 'typeA';
+	if ( $tidy_cont_c == 3 ) {
+		$tidy_blog_type = 'typeA';
 	}
 }
 get_header(); ?>
 
-	<section id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
+	<section id="primary" class="content-area <?php echo esc_attr( $tidy_layout ); ?>">
 		<main id="main" class="site-main" role="main">
 
-		<div class="archive-header"><h1 class="archive-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php echo esc_html( $title ); ?></h1></div>
+		<div class="archive-header"><h1 class="archive-title"><span class="icon-<?php echo esc_attr( $tidy_icon ); ?>"></span> <?php echo esc_html( $tidy_all_blog_title ); ?></h1></div>
 		<?php if ( have_posts() ) : ?>
 
-			<div class="front-section-content all-blog blog-<?php echo esc_attr( $cont_c ); ?> <?php //echo esc_attr( $port_d ); ?>">
+			<div class="front-section-content all-blog blog-<?php echo esc_attr( $tidy_cont_c ); ?> <?php //echo esc_attr( $tidy_port_d ); ?>">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -48,8 +48,8 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
-		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+	if ( $tidy_layout == 'cont_s1' or $tidy_layout == 'cont_s2' ) {
+		$tidy_side = ( $tidy_layout == 'cont_s1' ) ? 'left' : 'right';
 		get_sidebar();
 	}
 ?>

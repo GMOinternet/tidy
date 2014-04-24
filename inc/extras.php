@@ -126,7 +126,7 @@ function tidy_modify_main_query( $query ) {
 	if ( is_admin() || ! $query->is_main_query() )
 		return;
 
-	$posts_per_page = get_option( 'posts_per_page' );
+	$tidy_posts_per_page = get_option( 'posts_per_page' );
 
 	// is_home
 	if ( $query->is_home() ) {
@@ -143,18 +143,18 @@ function tidy_modify_main_query( $query ) {
 
 
 	// post_type = post_format=gallery
-	$port_num = of_get_option( 'port_num', $posts_per_page );
+	$tidy_port_num = tidy_of_get_option( 'port_num', $tidy_posts_per_page );
 	if ( $query->is_tax( 'post_format' ) ) {
 		if ( $query->is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$query->set( 'posts_per_page', $port_num );
+			$query->set( 'posts_per_page', $tidy_port_num );
 		} else {
-			$query->set( 'posts_per_page', $port_num );
+			$query->set( 'posts_per_page', $tidy_port_num );
 		}
 		return;
 	}
 
 	// is_archive or is_search
-	$arc_num = of_get_option( 'arc_num', $posts_per_page );
+	$arc_num = tidy_of_get_option( 'arc_num', $tidy_posts_per_page );
 	if ( $query->is_archive() or $query->is_search() ) {
 		$query->set( 'posts_per_page', $arc_num );
 		return;

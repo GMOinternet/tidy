@@ -92,7 +92,7 @@ function tidy_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-						
+
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'tidy' ); ?></h1>
 		<div class="nav-links">
 
@@ -314,13 +314,13 @@ function tidy_ellipsis($text, $max=100, $append='&hellip;') {
 /**
  * portfolio_posts_slider
  */
-function tidy_portfolio_posts_slider( $nid = "", $port_nav = "bottom" ) {
+function tidy_portfolio_posts_slider( $nid = "", $tidy_port_nav = "bottom" ) {
 	if ( ! is_single() )
 		return ;
 
 	global $post;
 	$now = $nid;
-	$args = array(
+	$tidy_gallery_posts_args = array(
 		'posts_per_page' => -1,
 		'tax_query'      => array(
 				array(
@@ -330,9 +330,9 @@ function tidy_portfolio_posts_slider( $nid = "", $port_nav = "bottom" ) {
 				)
 			)
 		);
-	$tidy_gallery_posts = get_posts( $args );
+	$tidy_gallery_posts = get_posts( $tidy_gallery_posts_args );
 	if ( !empty( $tidy_gallery_posts ) ) : ?>
-		<div class="navigation gallery-navigation" id="portfolio_posts_slider_<?php echo $port_nav ?>"><ul id="portfolio_posts_slider" class="bxslider">
+		<div class="navigation gallery-navigation" id="portfolio_posts_slider_<?php echo $tidy_port_nav ?>"><ul id="portfolio_posts_slider" class="bxslider">
 		<?php foreach ( $tidy_gallery_posts as $post ) :
 		setup_postdata( $post ); 
 		$active = ($now == get_the_id()) ? 'active' : '';

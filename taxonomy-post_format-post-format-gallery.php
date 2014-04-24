@@ -7,18 +7,18 @@
  * @package Tidy
  */
 
-$layout = of_get_option( 'port_c', 'cont_s2' );
-$icon   = of_get_option( 'port_icon', 'notebook' );
-$title  = of_get_option( 'port_title',  __( 'Portfolio', 'tidy' ) );
-$cont_c = of_get_option( 'port_cont_c', '3' );
-$port_d = of_get_option( 'port_d', 'normal' );
+$tidy_layout = tidy_of_get_option( 'port_c', 'cont_s2' );
+$tidy_icon   = tidy_of_get_option( 'port_icon', 'notebook' );
+$tidy_port_title  = tidy_of_get_option( 'port_title',  __( 'Portfolio', 'tidy' ) );
+$tidy_cont_c = tidy_of_get_option( 'port_cont_c', '3' );
+$tidy_port_d = tidy_of_get_option( 'port_d', 'normal' );
 get_header(); ?>
 
-	<section id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
+	<section id="primary" class="content-area <?php echo esc_attr( $tidy_layout ); ?>">
 		<main id="main" class="site-main" role="main">
 		
-		<header class="archive-header"><h1 class="archive-title"><span class="icon-<?php echo esc_attr( $icon ); ?>"></span> <?php echo  esc_html( $title ); ?></h1></header>
-		<div class="front-section-content gallery-section-content gallery-<?php echo esc_attr( $cont_c ); ?> <?php echo esc_attr( $port_d ); ?>">
+		<header class="archive-header"><h1 class="archive-title"><span class="icon-<?php echo esc_attr( $tidy_icon ); ?>"></span> <?php echo  esc_html( $tidy_port_title ); ?></h1></header>
+		<div class="front-section-content gallery-section-content gallery-<?php echo esc_attr( $tidy_cont_c ); ?> <?php echo esc_attr( $tidy_port_d ); ?>">
 		<?php if ( have_posts() ) : ?>
 			 
 			<?php /* Start the Loop */ ?>
@@ -42,8 +42,8 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
-		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+	if ( $tidy_layout == 'cont_s1' or $tidy_layout == 'cont_s2' ) {
+		$tidy_side = ( $tidy_layout == 'cont_s1' ) ? 'left' : 'right';
 		get_sidebar();
 	}
 ?>

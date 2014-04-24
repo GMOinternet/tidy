@@ -1,13 +1,13 @@
 <?php
 /**
- * @package   Options_Framework
+ * @package   Tidy_Options_Framework
  * @author    Devin Price <devin@wptheming.com>
  * @license   GPL-2.0+
  * @link      http://wptheming.com
  * @copyright 2013 WP Theming
  */
 
-class Options_Framework_Admin {
+class Tidy_Options_Framework_Admin {
 
 	/**
      * Page hook for the options screen
@@ -25,7 +25,7 @@ class Options_Framework_Admin {
     public function init() {
 
 		// Gets options to load
-    	$options = & Options_Framework::_optionsframework_options();
+    	$options = & Tidy_Options_Framework::_tidy_optionsframework_options();
 
 		// Checks if options are available
     	if ( $options ) {
@@ -57,11 +57,11 @@ class Options_Framework_Admin {
      */
 	function settings_init() {
 
-		// Load Options Framework Settings
-		$optionsframework_settings = get_option( 'optionsframework' );
+		// Load Tidy Options Framework Settings
+		$tidy_optionsframework_settings = get_option( 'tidy_optionsframework' );
 
 		// Registers the settings fields and callback
-		register_setting( 'optionsframework', $optionsframework_settings['id'],  array ( $this, 'validate_options' ) );
+		register_setting( 'tidy_optionsframework', $tidy_optionsframework_settings['id'],  array ( $this, 'validate_options' ) );
 
 		// Displays notice after options save
 		add_action( 'optionsframework_after_validate', array( $this, 'save_options_notice' ) );
@@ -168,7 +168,7 @@ class Options_Framework_Admin {
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_style( 'gmo-iconmoon', get_template_directory_uri() . '/iconmoon-tidy/style.css', array(), VERSION );
 		wp_enqueue_style( 'select2', TIDY_ADMIN_DIRECTORY_URI . 'css/select2.css', array(), VERSION );
-		wp_enqueue_style( 'optionsframework', TIDY_ADMIN_DIRECTORY_URI . 'css/optionsframework.css', array(), VERSION );
+		wp_enqueue_style( 'tidy_optionsframework', TIDY_ADMIN_DIRECTORY_URI . 'css/optionsframework.css', array(), VERSION );
 	}
 
 	/**
@@ -186,10 +186,10 @@ class Options_Framework_Admin {
 		wp_enqueue_script( 'options-custom', TIDY_ADMIN_DIRECTORY_URI . 'js/options-custom.js', array( 'jquery', 'wp-color-picker' ), VERSION );
 
 		// Inline scripts from options-interface.php
-		add_action( 'admin_head', array( $this, 'of_admin_head' ) );
+		add_action( 'admin_head', array( $this, 'tidy_of_admin_head' ) );
 	}
 
-	function of_admin_head() {
+	function tidy_of_admin_head() {
 		// Hook to add custom scripts
 		do_action( 'optionsframework_custom_scripts' );
 	}
@@ -241,14 +241,14 @@ class Options_Framework_Admin {
 
 		<div id="optionsframework-tabs">
 			<ul class="nav-tab-wrapper">
-				<?php echo Options_Framework_Interface::optionsframework_tabs(); ?>
+				<?php echo Tidy_Options_Framework_Interface::optionsframework_tabs(); ?>
 			</ul>
 	
 			<div id="optionsframework-metabox" class="metabox-holder">
 				<div id="optionsframework" class="postbox">
 					<form action="options.php" method="post">
-					<?php settings_fields( 'optionsframework' ); ?>
-					<?php Options_Framework_Interface::optionsframework_fields(); /* Settings */ ?>
+					<?php settings_fields( 'tidy_optionsframework' ); ?>
+					<?php Tidy_Options_Framework_Interface::optionsframework_fields(); /* Settings */ ?>
 					<div id="optionsframework-submit">
 						<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Changes', 'tidy' ); ?>" />
 						<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults', 'tidy' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'tidy' ) ); ?>' );" />
@@ -297,7 +297,7 @@ class Options_Framework_Admin {
 		 */
 
 		$clean = array();
-		$options = & Options_Framework::_optionsframework_options();
+		$options = & Tidy_Options_Framework::_tidy_optionsframework_options();
 		foreach ( $options as $option ) {
 
 			if ( ! isset( $option['id'] ) ) {
@@ -322,8 +322,8 @@ class Options_Framework_Admin {
 			}
 
 			// For a value to be submitted to database it must pass through a sanitization filter
-			if ( has_filter( 'of_sanitize_' . $option['type'] ) ) {
-				$clean[$id] = apply_filters( 'of_sanitize_' . $option['type'], $input[$id], $option );
+			if ( has_filter( 'tidy_of_sanitize_' . $option['type'] ) ) {
+				$clean[$id] = apply_filters( 'tidy_of_sanitize_' . $option['type'], $input[$id], $option );
 			}
 		}
 
@@ -357,7 +357,7 @@ class Options_Framework_Admin {
 
 	function get_default_values() {
 		$output = array();
-		$config = & Options_Framework::_optionsframework_options();
+		$config = & Tidy_Options_Framework::_tidy_optionsframework_options();
 		foreach ( (array) $config as $option ) {
 			if ( ! isset( $option['id'] ) ) {
 				continue;
@@ -368,8 +368,8 @@ class Options_Framework_Admin {
 			if ( ! isset( $option['type'] ) ) {
 				continue;
 			}
-			if ( has_filter( 'of_sanitize_' . $option['type'] ) ) {
-				$output[$option['id']] = apply_filters( 'of_sanitize_' . $option['type'], $option['std'], $option );
+			if ( has_filter( 'tidy_of_sanitize_' . $option['type'] ) ) {
+				$output[$option['id']] = apply_filters( 'tidy_of_sanitize_' . $option['type'], $option['std'], $option );
 			}
 		}
 		return $output;
@@ -406,7 +406,7 @@ class Options_Framework_Admin {
 
 		$wp_admin_bar->add_menu( array(
 			'parent' => 'appearance',
-			'id' => 'of_theme_options',
+			'id' => 'tidy_of_theme_options',
 			'title' => __( 'Theme Options', 'tidy' ),
 			'href' => admin_url( 'themes.php?page=' . $menu['menu_slug'] )
 		) );

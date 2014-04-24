@@ -5,10 +5,10 @@
  *
  * @package Tidy
  */
-$layout = of_get_option( 'cont_l', 'cont_c1' );
+$tidy_layout = tidy_of_get_option( 'cont_l', 'cont_c1' );
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
+	<div id="primary" class="content-area <?php echo esc_attr( $tidy_layout ); ?>">
 		<?php do_action( 'tidy_before_primary' ); ?>
 		
 		<main id="main" class="site-main" role="main">
@@ -17,20 +17,20 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
-				<?php if ( of_get_option( 'cont_b_text' ) ) : ?>
+				<?php if ( tidy_of_get_option( 'cont_b_text' ) ) : ?>
 					<div class="contact-area cont_b_text">
-					<?php if ( of_get_option( 'cont_b_title' ) ) : ?>
-						<h2><?php echo esc_html( of_get_option( 'cont_b_title' ) ); ?></h2>
+					<?php if ( tidy_of_get_option( 'cont_b_title' ) ) : ?>
+						<h2><?php echo esc_html( tidy_of_get_option( 'cont_b_title' ) ); ?></h2>
 					<?php endif; ?>
-					<?php echo apply_filters( 'the_content', of_get_option( 'cont_b_text' )); ?>
+					<?php echo apply_filters( 'the_content', tidy_of_get_option( 'cont_b_text' )); ?>
 					</div>
 				<?php endif; ?>
-				<?php if ( of_get_option( 'cont_c_text' ) ) : ?>
+				<?php if ( tidy_of_get_option( 'cont_c_text' ) ) : ?>
 					<div class="contact-area cont_c_text">
-					<?php if ( of_get_option( 'cont_c_title' ) ) : ?>
-						<h2><?php echo esc_html( of_get_option( 'cont_c_title' ) ); ?></h2>
+					<?php if ( tidy_of_get_option( 'cont_c_title' ) ) : ?>
+						<h2><?php echo esc_html( tidy_of_get_option( 'cont_c_title' ) ); ?></h2>
 					<?php endif; ?>
-					<?php echo apply_filters( 'the_content', of_get_option( 'cont_c_text' )); ?>
+					<?php echo apply_filters( 'the_content', tidy_of_get_option( 'cont_c_text' )); ?>
 					</div>
 				<?php endif; ?>
 
@@ -49,8 +49,8 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
-		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+	if ( $tidy_layout == 'cont_s1' or $tidy_layout == 'cont_s2' ) {
+		$tidy_side = ( $tidy_layout == 'cont_s1' ) ? 'left' : 'right';
 		get_sidebar();
 	}
 ?>

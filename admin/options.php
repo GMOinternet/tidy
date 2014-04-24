@@ -1,11 +1,11 @@
 <?php
 /**
- * tidy_sns_array
+ * tidy_customizer_array
  * @param   none
  * @return  Array
  */
 function tidy_customizer_array() {
-	$customizer_key = array(
+	$tidy_customizer_key = array(
 		'logo_toggle',
 		'logo_image',
 		'header_text_toggle',
@@ -46,7 +46,7 @@ function tidy_customizer_array() {
 		'copyright_anchor_color',
 		'all_blog_num'
 	);
-	return $customizer_key;
+	return $tidy_customizer_key;
 }
 
 /**
@@ -55,15 +55,15 @@ function tidy_customizer_array() {
  * If the identifier changes, it'll appear as if the options have been reset.
  */
 
-function optionsframework_option_name() {
+function tidy_optionsframework_option_name() {
 
 	// This gets the theme name from the stylesheet
-	$themename = wp_get_theme();
-	$themename = preg_replace("/\W/", "_", strtolower($themename) );
+	$tidy_themename = wp_get_theme();
+	$tidy_themename = preg_replace("/\W/", "_", strtolower($tidy_themename) );
 
-	$optionsframework_settings = get_option( 'optionsframework' );
-	$optionsframework_settings['id'] = $themename;
-	update_option( 'optionsframework', $optionsframework_settings );
+	$tidy_optionsframework_settings = get_option( 'tidy_optionsframework' );
+	$tidy_optionsframework_settings['id'] = $tidy_themename;
+	update_option( 'tidy_optionsframework', $tidy_optionsframework_settings );
 }
 
 /**
@@ -75,20 +75,19 @@ function optionsframework_option_name() {
  * http://codex.wordpress.org/Function_Reference/load_theme_textdomain
  */
 
-function optionsframework_options() {
+function tidy_optionsframework_options() {
 
 	// tidy_default_array
 	$tidy_default = tidy_default_array();
 
 	// Icon array
-	$icon_array = array(
+	$tidy_icon_array = array(
 		'home' => _x( 'Home', 'Icon name', 'tidy' ),
 		'home2' => _x( 'Home2', 'Icon name', 'tidy' ),
 		'home3' => _x( 'Home3', 'Icon name', 'tidy' ),
 		'office' => _x( 'Office', 'Icon name', 'tidy' ),
 		'newspaper' => _x( 'Newspaper', 'Icon name', 'tidy' ),
 		'pencil' => _x( 'Pencil', 'Icon name', 'tidy' ),
-		'pencil2' => _x( 'Pencil2', 'Icon name', 'tidy' ),
 		'quill' => _x( 'Quill', 'Icon name', 'tidy' ),
 		'pen' => _x( 'Pen', 'Icon name', 'tidy' ),
 		'blog' => _x( 'Blog', 'Icon name', 'tidy' ),
@@ -536,10 +535,10 @@ function optionsframework_options() {
 	);
 
 	// posts_per_page
-	$posts_per_page = get_option( 'posts_per_page' );
+	$tidy_posts_per_page = get_option( 'posts_per_page' );
 
 	// Columns
-	$column_array = array(
+	$tidy_column_array = array(
 		1 => 1,
 		2 => 2,
 		3 => 3,
@@ -547,21 +546,21 @@ function optionsframework_options() {
 	);
 
 	// If using image radio buttons, define a directory path
-	$imagepath = get_template_directory_uri() . '/admin/images/';
+	$tidy_imagepath = get_template_directory_uri() . '/admin/images/';
 
-	$options = array();
+	$tidy_options = array();
 
 	/**
 	 * section for About.
 	 */
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'About', 'tidy' ),
 		'icon' => 'info',
 		'type' => 'heading'
 	);
 
 	// About this Theme
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'About this Theme', 'tidy' ),
 		'desc' => __( '<p>This is a highly customizable, clean, modern, and responsive WordPress theme. Originally developed plugins are included enabling higher usability and easier production of stylish site and customization. This theme can be used for wide variation from private to business use.</p><p><strong>Features</strong></p><ul><li>Responsive</li><li>Easy web advertisement settings</li><li>Portfolio</li><li>Icon menu</li><li>Easy tracking code &amp; Web mastertool settings</li><li>Color customization</li><li>Web fonts &amp; icon fonts</li><li>Wide variety of theme layouts</li><li>Social settings</li><li>Stylish slider &quot;GMO Showtime&quot; Plugin</li></ul>', 'tidy' ),
 		'id' => 'about-this-theme',
@@ -569,15 +568,15 @@ function optionsframework_options() {
 		'type' => 'info');
 
 	// About WP Shop
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'About WP Shop', 'tidy' ),
-		'desc' => sprintf( __( '<p class="about-photo"><img src="%1$s" alt="*"></p><p>A whole new social marketplace for trading high quality WordPress themes, while providing a platform to showcase and share beautiful designs that are originated in Asia</p><p class="shop_link"><a href="https://wpshop.com/signup" target="_blank" class="shop_btn"><span class="shop_name">Join WP Shop</span><span class="shop_dec">Starting from $0 / theme</span></a></p>', 'tidy' ), $imagepath . 'about-image.jpg' ),
+		'desc' => sprintf( __( '<p class="about-photo"><img src="%1$s" alt="*"></p><p>A whole new social marketplace for trading high quality WordPress themes, while providing a platform to showcase and share beautiful designs that are originated in Asia</p><p class="shop_link"><a href="https://wpshop.com/signup" target="_blank" class="shop_btn"><span class="shop_name">Join WP Shop</span><span class="shop_dec">Starting from $0 / theme</span></a></p>', 'tidy' ), $tidy_imagepath . 'about-image.jpg' ),
 		'id' => 'about-wp-shop',
 		'class' => 'about-wp-shop',
 		'type' => 'info');
 
 	// WP Shop Headline News
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'WP Shop Headline News', 'tidy' ),
 		'desc' => '',
 		'url' => 'http://news.wpshop.com/?feed=rss2',
@@ -586,7 +585,7 @@ function optionsframework_options() {
 		'class' => 'wp-shop-news',
 		'type' => 'feed');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'What\'s happennig at WordPress?', 'tidy' ),
 		'desc' => '',
 		'url' => 'http://wp.wpshop.com/?feed=rss2',
@@ -598,13 +597,13 @@ function optionsframework_options() {
 	/**
 	 * General Settings.
 	 */
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'General Settings', 'tidy' ),
 		'icon' => 'admin-generic',
 		'type' => 'heading');
 
 	// Header logo toggle
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Header Logo', 'tidy' ),
 		'desc' => '',
 		'id' => 'logo_toggle',
@@ -612,7 +611,7 @@ function optionsframework_options() {
 		'type' => 'toggle');
 
 	// Header Logo Image
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Logo Image', 'tidy' ),
 		'desc' => '',
 		'id' => 'logo_image',
@@ -620,7 +619,7 @@ function optionsframework_options() {
 		'type' => 'upload');
 
 	// Favicon
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Favicon', 'tidy' ),
 		//'desc' => __( 'Please upload .ico image.', 'tidy' ),
 		'id' => 'favicon',
@@ -628,7 +627,7 @@ function optionsframework_options() {
 		'type' => 'upload');
 
 	// Site title
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Site Title', 'tidy' ),
 		'desc' => '',
 		'id' => 'general-header-site-title',
@@ -636,7 +635,7 @@ function optionsframework_options() {
 		'type' => 'text');
 
 	// Tagline
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Tagline', 'tidy' ),
 		'desc' => '',
 		'id' => 'general-header-site-tagline',
@@ -644,7 +643,7 @@ function optionsframework_options() {
 		'type' => 'text');
 
 	// Header text toggle
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Header Text', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_text_toggle',
@@ -652,7 +651,7 @@ function optionsframework_options() {
 		'type' => 'toggle');
 
 	// Text Input for Header Text
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Text', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_text',
@@ -660,7 +659,7 @@ function optionsframework_options() {
 		'type' => 'textarea');
 
 	// Text Input for About Us Text
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'About Us Text', 'tidy' ),
 		'desc' => __( 'About Us Widget Text', 'tidy' ),
 		'id' => 'about_text',
@@ -668,7 +667,7 @@ function optionsframework_options() {
 		'type' => 'textarea');
 
 	// Copyright
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Copyright', 'tidy' ),
 		'desc' => '',
 		'id' => 'copyright',
@@ -678,18 +677,18 @@ function optionsframework_options() {
 	/**
 	 * Color Settings.
 	 */
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Color Settings', 'tidy' ),
 		'icon' => 'admin-appearance',
 		'type' => 'heading');
 
 	// Header Color Settings (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Color Settings', 'tidy' ),
 		'type' => 'info');
 
 	// = Color Picker for Header Background Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_bg_color',
@@ -698,7 +697,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for header Text Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_text_color',
@@ -707,7 +706,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for header Anchor Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Anchor Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_anchor_color',
@@ -716,7 +715,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for header Border Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Border Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_border_color',
@@ -725,7 +724,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for header widget Background Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Widget Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_widget_bg_color',
@@ -734,7 +733,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for header widget Text Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Widget Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_widget_text_color',
@@ -743,7 +742,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for header widget Anchor Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Widget Anchor Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'header_widget_anchor_color',
@@ -752,12 +751,12 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// Main color Settings (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Main Color Settings', 'tidy' ),
 		'type' => 'info');
 
 	// = Color Picker for body Background Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Body Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'background_color',
@@ -766,7 +765,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for main Background Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Main Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'main_bg_color',
@@ -775,7 +774,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for main Text Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Main Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'main_text_color',
@@ -784,7 +783,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for main Anchor Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Main Anchor Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'main_anchor_color',
@@ -793,7 +792,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for main Border Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Main Border Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'main_border_color',
@@ -802,12 +801,12 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// Image hover Settings (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Image Hover Settings', 'tidy' ),
 		'type' => 'info');
 
 	// = Color Picker for image hover color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Image Hover Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'image_hover_color',
@@ -816,7 +815,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Image Hover Opacity.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Image Hover Opacity', 'tidy' ),
 		'desc' => '',
 		'id' => 'image_hover_opacity',
@@ -826,7 +825,7 @@ function optionsframework_options() {
 
 /*
 	// = Color Picker for image hover text.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Image hover Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'image_hover_text',
@@ -836,12 +835,12 @@ function optionsframework_options() {
 */
 
 	// Widget color Settings (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Widget Color Settings', 'tidy' ),
 		'type' => 'info');
 
 	// = Color Picker for widget Background Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Widget Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'widget_bg_color',
@@ -850,7 +849,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for widget Title Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Widget Title Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'widget_title_color',
@@ -859,7 +858,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for widget Text Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Widget Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'widget_text_color',
@@ -868,7 +867,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for widget Anchor Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Widget Anchor Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'widget_anchor_color',
@@ -877,7 +876,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for widget Border Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Widget Border Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'widget_border_color',
@@ -886,12 +885,12 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// Footer color Settings (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Footer Color Settings', 'tidy' ),
 		'type' => 'info');
 
 	// = Color Picker for footer Background Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Footer Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_bg_color',
@@ -900,7 +899,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for footer Title Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Footer Title Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_title_color',
@@ -909,7 +908,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for footer Text Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Footer Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_text_color',
@@ -918,7 +917,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for footer Anchor Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Footer Anchor Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_anchor_color',
@@ -927,7 +926,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for footer Border Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Footer Border Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_border_color',
@@ -936,7 +935,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for footer All Categories Background Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'All Categories Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_bg_color',
@@ -945,7 +944,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for footer All Categories Title Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'All Categories Title Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_title_color',
@@ -953,19 +952,8 @@ function optionsframework_options() {
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	// = Color Picker for footer All Categories Text Color.
-/*
-	$options[] = array(
-		'name' => __( 'All Categories Text Color', 'tidy' ),
-		'desc' => '',
-		'id' => 'footer_category_text_color',
-		'std' => $tidy_default['footer_category_text_color'],
-		'class' => 'customcolor',
-		'type' => 'color' );
-*/
-
 	// = Color Picker for footer All Categories Anchor Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'All Categories Anchor Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_anchor_color',
@@ -974,7 +962,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for footer All Categories Border Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'All Categories Border Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'footer_category_border_color',
@@ -983,7 +971,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for copyright Background Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Copyright Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'copyright_bg_color',
@@ -992,7 +980,7 @@ function optionsframework_options() {
 		'type' => 'color' );
 
 	// = Color Picker for copyright Text Color.
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Copyright Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'copyright_text_color',
@@ -1003,13 +991,13 @@ function optionsframework_options() {
 	/**
 	 * Layout Settings.
 	 */
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Layout Settings', 'tidy' ),
 		'icon' => 'welcome-widgets-menus',
 		'type' => 'heading');
 
 	// Responsive
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Responsive', 'tidy' ),
 		'desc' => '',
 		'id' => 'responsive_style',
@@ -1018,7 +1006,7 @@ function optionsframework_options() {
 
 	
 	// tab head
-	$layouttabs = array(
+	$tidy_layouttabs = array(
 		__( 'Home', 'tidy' ),
 		__( 'All Blog', 'tidy' ),
 		__( 'All Portfolio', 'tidy' ),
@@ -1027,98 +1015,98 @@ function optionsframework_options() {
 		__( 'Pages', 'tidy' ),
 		__( 'Contact', 'tidy' )
 	);
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'layout-tab-head',
-		'tab' => $layouttabs,
+		'tab' => $tidy_layouttabs,
 		'type' => 'tabhead'
 	);
 
 	// Home Layout (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-0',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Select Layout', 'tidy' ),
 		'desc' => '',
 		'id' => "home_c",
 		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'cont_c1' => $imagepath . '1col.png',
-			'cont_s1' => $imagepath . '2cl.png',
-			'cont_s2' => $imagepath . '2cr.png'
+			'cont_c1' => $tidy_imagepath . '1col.png',
+			'cont_s1' => $tidy_imagepath . '2cl.png',
+			'cont_s2' => $tidy_imagepath . '2cr.png'
 		)
 	);
 	
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Blog Area', 'tidy' ),
 		'desc' => '',
 		'type' => 'info'
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Number of Blog Posts on Home Page', 'tidy' ),
 		'id' => 'home_blog_num',
 		'std' => 6,
 		'class' => 'mini',
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Title', 'tidy' ),
 		'id' => 'home_blog_title',
 		'std' => __( 'Blog', 'tidy' ),
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Icon', 'tidy' ),
 		'desc' => '',
 		'id' => 'home_blog_icon',
 		'std' => 'pencil',
 		'type' => 'select',
 		'class' => 'mnicon mini arc_icon',
-		'options' => $icon_array);
+		'options' => $tidy_icon_array);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Portfolio Area', 'tidy' ),
 		'desc' => '',
 		'type' => 'info'
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Columns', 'tidy' ),
 		'desc' => '',
 		'id' => 'homeport_cont_c',
 		'std' => '3',
 		'type' => 'select',
 		'class' => 'mini',
-		'options' => $column_array);
+		'options' => $tidy_column_array);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Number of Portfolios on Home Page', 'tidy' ),
 		'id' => 'home_port_num',
 		'std' => 3,
 		'class' => 'mini',
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Title', 'tidy' ),
 		'id' => 'home_port_title',
 		'std' => __( 'Portfolio', 'tidy' ),
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Icon', 'tidy' ),
 		'desc' => '',
 		'id' => 'home_port_icon',
 		'std' => 'notebook',
 		'type' => 'select',
 		'class' => 'mnicon mini arc_icon',
-		'options' => $icon_array);
+		'options' => $tidy_icon_array);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-0',
 		'class' => "end",
 		'type' => 'tabcontent'
@@ -1126,26 +1114,26 @@ function optionsframework_options() {
 
 
 	// Blog Archive Layout (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-1',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Select Layout', 'tidy' ),
 		'desc' => '',
 		'id' => "blog_c",
 		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'cont_c1' => $imagepath . '1col.png',
-			'cont_s1' => $imagepath . '2cl.png',
-			'cont_s2' => $imagepath . '2cr.png'
+			'cont_c1' => $tidy_imagepath . '1col.png',
+			'cont_s1' => $tidy_imagepath . '2cl.png',
+			'cont_s2' => $tidy_imagepath . '2cr.png'
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Columns', 'tidy' ),
 		'desc' => '',
 		'id' => 'all_blog_cont_c',
@@ -1159,96 +1147,96 @@ function optionsframework_options() {
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Text Location', 'tidy' ),
 		'desc' => __( 'Right text location is 1colum only.', 'tidy' ),
 		'id' => "blog_type",
 		'std' => "typeA",
 		'type' => "images",
 		'options' => array(
-			'typeA' => $imagepath . 'typeA.png',
-			'typeB' => $imagepath . 'typeB.png',
+			'typeA' => $tidy_imagepath . 'typeA.png',
+			'typeB' => $tidy_imagepath . 'typeB.png',
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Blog Pages Show at Most', 'tidy' ),
 		'id' => 'all_blog_num',
 		'desc' => __( 'Posts', 'tidy' ),
-		'std' => $posts_per_page,
+		'std' => $tidy_posts_per_page,
 		'class' => 'mini',
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Archive Title', 'tidy' ),
 		'id' => 'all_blog_title',
 		'std' => __( 'Blog Archive', 'tidy' ),
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Icon', 'tidy' ),
 		'desc' => '',
 		'id' => 'all_blog_icon',
 		'std' => 'pencil',
 		'type' => 'select',
 		'class' => 'mnicon mini arc_icon',
-		'options' => $icon_array);
+		'options' => $tidy_icon_array);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Date', 'tidy' ),
 		'desc' => '',
 		'id' => 'all_blog_meta_date',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Author', 'tidy' ),
 		'desc' => '',
 		'id' => 'all_blog_meta_author',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Categories', 'tidy' ),
 		'desc' => '',
 		'id' => 'all_blog_meta_cat',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Tags', 'tidy' ),
 		'desc' => '',
 		'id' => 'all_blog_meta_tag',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-1',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
 	// All Portfolio Layout (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-2',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
 	
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Archive Layout', 'tidy' ),
 		'desc' => '',
 		'id' => "port_c",
 		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'cont_c1' => $imagepath . '1col.png',
-			'cont_s1' => $imagepath . '2cl.png',
-			'cont_s2' => $imagepath . '2cr.png'
+			'cont_c1' => $tidy_imagepath . '1col.png',
+			'cont_s1' => $tidy_imagepath . '2cl.png',
+			'cont_s2' => $tidy_imagepath . '2cr.png'
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Columns', 'tidy' ),
 		'desc' => '',
 		'id' => 'port_cont_c',
@@ -1262,19 +1250,19 @@ function optionsframework_options() {
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Select a Pattern', 'tidy' ),
 		'desc' => '',
 		'id' => "port_d",
 		'std' => "normal",
 		'type' => "images",
 		'options' => array(
-			'normal' => $imagepath . 'normal.png',
-			'grid' => $imagepath . 'grid.png'
+			'normal' => $tidy_imagepath . 'normal.png',
+			'grid' => $tidy_imagepath . 'grid.png'
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Advanced Settings', 'tidy' ),
 		'id' => 'port_content',
 		'std' => 'type1',
@@ -1285,58 +1273,58 @@ function optionsframework_options() {
 			'type3' => __( 'Image with title and text', 'tidy' )
 		)
 	);
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Portfolio Pages Show at Most', 'tidy' ),
 		'id' => 'port_num',
 		'desc' => __( 'Posts', 'tidy' ),
-		'std' => $posts_per_page,
+		'std' => $tidy_posts_per_page,
 		'class' => 'mini',
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Title', 'tidy' ),
 		'id' => 'port_title',
 		'std' => __( 'Portfolio', 'tidy' ),
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Icon', 'tidy' ),
 		'desc' => '',
 		'id' => 'port_icon',
 		'std' => 'notebook',
 		'type' => 'select',
 		'class' => 'mnicon mini arc_icon',
-		'options' => $icon_array);
+		'options' => $tidy_icon_array);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Date', 'tidy' ),
 		'desc' => '',
 		'id' => 'port_meta_date',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Author', 'tidy' ),
 		'desc' => '',
 		'id' => 'port_meta_author',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Categories', 'tidy' ),
 		'desc' => '',
 		'id' => 'port_meta_cat',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Tags', 'tidy' ),
 		'desc' => '',
 		'id' => 'port_meta_tag',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Single Posts Navigation', 'tidy' ),
 		'id' => 'port_nav',
 		'std' => 'bottom',
@@ -1347,86 +1335,86 @@ function optionsframework_options() {
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-2',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
 	// Archive and Search Results Layout (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-3',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Select Layout', 'tidy' ),
 		'desc' => '',
 		'id' => "arc_c",
 		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'cont_c1' => $imagepath . '1col.png',
-			'cont_s1' => $imagepath . '2cl.png',
-			'cont_s2' => $imagepath . '2cr.png'
+			'cont_c1' => $tidy_imagepath . '1col.png',
+			'cont_s1' => $tidy_imagepath . '2cl.png',
+			'cont_s2' => $tidy_imagepath . '2cr.png'
 		)
 	);
 	
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Blog Pages Show at Most', 'tidy' ),
 		'id' => 'arc_num',
 		'desc' => __( 'Posts', 'tidy' ),
-		'std' => $posts_per_page,
+		'std' => $tidy_posts_per_page,
 		'class' => 'mini',
 		'type' => 'text');
 	
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Archive Title', 'tidy' ),
 		'id' => 'arc_title',
 		'std' => __( 'Blog Archive', 'tidy' ),
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Icon', 'tidy' ),
 		'desc' => '',
 		'id' => 'arc_icon',
 		'std' => 'pencil',
 		'type' => 'select',
 		'class' => 'mnicon mini arc_icon',
-		'options' => $icon_array);
+		'options' => $tidy_icon_array);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Search Result Title', 'tidy' ),
 		'id' => 'ser_title',
 		'desc' => __( '%s : Search keywords.', 'tidy' ),
 		'std' => __( 'Search Results for: %s', 'tidy' ),
 		'type' => 'text');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Icon', 'tidy' ),
 		'desc' => '',
 		'id' => 'ser_icon',
 		'std' => 'search',
 		'type' => 'select',
 		'class' => 'mnicon mini arc_icon',
-		'options' => $icon_array);
+		'options' => $tidy_icon_array);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Description Background Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'arc_desc_bg_color',
 		'std' => $tidy_default['header_bg_color'],
 		'type' => 'color' );
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Description Text Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'arc_desc_text_color',
 		'std' => $tidy_default['main_text_color'],
 		'type' => 'color' );
 	
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Description Anchor Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'arc_desc_anchor_color',
@@ -1434,150 +1422,150 @@ function optionsframework_options() {
 		'class' => 'customcolor',
 		'type' => 'color' );
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-3',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
 	// Posts Layout (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-4',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Select Layout', 'tidy' ),
 		'desc' => '',
 		'id' => "single_c",
 		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'cont_c1' => $imagepath . '1col.png',
-			'cont_s1' => $imagepath . '2cl.png',
-			'cont_s2' => $imagepath . '2cr.png'
+			'cont_c1' => $tidy_imagepath . '1col.png',
+			'cont_s1' => $tidy_imagepath . '2cl.png',
+			'cont_s2' => $tidy_imagepath . '2cr.png'
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Text Location', 'tidy' ),
 		'desc' => '',
 		'id' => "single_type",
 		'std' => "typeA",
 		'type' => "images",
 		'options' => array(
-			'typeA' => $imagepath . 'typeA.png',
-			'typeB' => $imagepath . 'typeB.png',
+			'typeA' => $tidy_imagepath . 'typeA.png',
+			'typeB' => $tidy_imagepath . 'typeB.png',
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Icon', 'tidy' ),
 		'desc' => '',
 		'id' => 'single_icon',
 		'std' => 'pencil',
 		'type' => 'select',
 		'class' => 'mnicon mini arc_icon',
-		'options' => $icon_array);
+		'options' => $tidy_icon_array);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Date', 'tidy' ),
 		'desc' => '',
 		'id' => 'single_meta_date',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Author', 'tidy' ),
 		'desc' => '',
 		'id' => 'single_meta_author',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Categories', 'tidy' ),
 		'desc' => '',
 		'id' => 'single_meta_cat',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Tags', 'tidy' ),
 		'desc' => '',
 		'id' => 'single_meta_tag',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-4',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
 	// Pages Layout (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-5',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Select Layout', 'tidy' ),
 		'desc' => '',
 		'id' => "post_c",
 		'std' => "cont_s2",
 		'type' => "images",
 		'options' => array(
-			'cont_c1' => $imagepath . '1col.png',
-			'cont_s1' => $imagepath . '2cl.png',
-			'cont_s2' => $imagepath . '2cr.png'
+			'cont_c1' => $tidy_imagepath . '1col.png',
+			'cont_s1' => $tidy_imagepath . '2cl.png',
+			'cont_s2' => $tidy_imagepath . '2cr.png'
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-5',
 		'class' => "end",
 		'type' => 'tabcontent'
 	);
 
 	// Contact Layout (info)
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-6',
 		'class' => "start",
 		'type' => 'tabcontent'
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Select Layout', 'tidy' ),
 		'desc' => __( 'A = Page Content Area', 'tidy' ),
 		'id' => "cont_l",
 		'std' => "cont_c1",
 		'type' => "images",
 		'options' => array(
-			'cont_c1' => $imagepath . 'cont_c1.png',
-			'cont_c2' => $imagepath . 'cont_c2.png',
-			'cont_c3' => $imagepath . 'cont_c3.png',
-			'cont_s1' => $imagepath . 'cont_s1.png',
-			'cont_s2' => $imagepath . 'cont_s2.png'
+			'cont_c1' => $tidy_imagepath . 'cont_c1.png',
+			'cont_c2' => $tidy_imagepath . 'cont_c2.png',
+			'cont_c3' => $tidy_imagepath . 'cont_c3.png',
+			'cont_s1' => $tidy_imagepath . 'cont_s1.png',
+			'cont_s2' => $tidy_imagepath . 'cont_s2.png'
 		)
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Page Title', 'tidy' ),
 		'desc' => '',
 		'std' => 'About',
 		'id' => 'cont_a_title',
 		'type' => 'text'
 	);
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Icon', 'tidy' ),
 		'desc' => '',
 		'id' => 'cont_a_icon',
 		'std' => 'quill',
 		'type' => 'select',
 		'class' => 'mnicon mini arc_icon',
-		'options' => $icon_array);
+		'options' => $tidy_icon_array);
 
 	/**
 	 * For $settings options see:
@@ -1593,45 +1581,45 @@ function optionsframework_options() {
 		'tinymce' => array( 'plugins' => 'wordpress' )
 	);
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Area B', 'tidy' ),
 		'desc' => '',
 		'id' => 'cont_b',
 		'type' => 'info'
 	);
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Title', 'tidy' ),
 		'std' => 'Area B Title',
 		'id' => 'cont_b_title',
 		'type' => 'text'
 	);
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Body', 'tidy' ),
 		'std' => 'Area B conents',
 		'id' => 'cont_b_text',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Area C', 'tidy' ),
 		'desc' => '',
 		'id' => 'cont_c',
 		'type' => 'info'
 	);
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Title', 'tidy' ),
 		'std' => 'Area C Title',
 		'id' => 'cont_c_title',
 		'type' => 'text'
 	);
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Body', 'tidy' ),
 		'std' => 'Area C conents',
 		'id' => 'cont_c_text',
 		'type' => 'editor',
 		'settings' => $wp_editor_settings );
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'id' => 'ltab-6',
 		'class' => "end",
 		'type' => 'tabcontent'
@@ -1640,19 +1628,19 @@ function optionsframework_options() {
 	/**
 	 * Merit Box Settings.
 	 */
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Merit Box Settings', 'tidy' ),
 		'icon' => 'images-alt2',
 		'type' => 'heading');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Merit Box', 'tidy' ),
 		'desc' => '',
 		'id' => 'meritbox_toggle',
 		'std' => '0',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Number of Boxes to Show', 'tidy' ),
 		'desc' => __( 'Default:4, Min:1, Max:4.', 'tidy' ),
 		'id' => 'merit-box-num',
@@ -1670,20 +1658,20 @@ function optionsframework_options() {
 	// Merit box %s
 	for ($i = 1; $i <= 4; $i++) {
 
-		$options[] = array(
+		$tidy_options[] = array(
 			'name' => sprintf( __( 'Merit Box %s', 'tidy' ) , $i),
 			'id' => 'merit-box-' . $i . '-head',
 			'class' => 'merit-box-' . $i,
 			'type' => 'info');
 
-		$options[] = array(
+		$tidy_options[] = array(
 			'name' => __( 'Title', 'tidy' ),
 			'id' => 'merit-box-' . $i . '-title',
 			'std' => 'merit-box-' . $i . '-title',
 			'class' => 'merit-box-' . $i,
 			'type' => 'text');
 
-		$options[] = array(
+		$tidy_options[] = array(
 			'name' => __( 'Text', 'tidy' ),
 			'desc' => '',
 			'id' => 'merit-box-' . $i . '-description',
@@ -1691,7 +1679,7 @@ function optionsframework_options() {
 			'class' => 'merit-box-' . $i,
 			'type' => 'textarea');
 
-		$options[] = array(
+		$tidy_options[] = array(
 			'name' => __( 'Text Alignment', 'tidy' ),
 			'desc' => '',
 			'id' => 'merit-box-' . $i . '-align',
@@ -1705,17 +1693,17 @@ function optionsframework_options() {
 				)
 			);
 	
-		$options[] = array(
+		$tidy_options[] = array(
 			'name' => __( 'Icon', 'tidy' ),
 			'desc' => '',
 			'id' => 'merit-box-' . $i . '-icon',
 			'std' => 'copy',
 			'type' => 'select',
 			'class' => 'mnicon mini merit-box-' . $i,
-			'options' => $icon_array);
+			'options' => $tidy_icon_array);
 	
 		// = Color Picker for image hover color.
-		$options[] = array(
+		$tidy_options[] = array(
 			'name' => __( 'Icon Color', 'tidy' ),
 			'desc' => '',
 			'id' => 'merit-box-' . $i . '-icon-color',
@@ -1724,14 +1712,14 @@ function optionsframework_options() {
 			'type' => 'color'
 		);
 
-		$options[] = array(
+		$tidy_options[] = array(
 			'name' => __( 'Image', 'tidy' ),
 			'desc' => __( 'Image will override the icons. Minimum width: 580px', 'tidy' ),
 			'id' => 'merit-box-' . $i . '-image',
 			'class' => 'merit-box-' . $i,
 			'type' => 'upload');
 
-		$options[] = array(
+		$tidy_options[] = array(
 			'name' => __( 'URL', 'tidy' ),
 			'id' => 'merit-box-' . $i . '-url',
 			'std' => '',
@@ -1742,78 +1730,78 @@ function optionsframework_options() {
 	/**
 	 * Social Settings.
 	 */
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Social Settings', 'tidy' ),
 		'icon' => 'share',
 		'type' => 'heading');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Social Icon Settings', 'tidy' ),
 		'desc' => '',
 		'id' => 'sns-icon',
 		'std' => '',
 		'type' => 'info');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Frames', 'tidy' ),
 		'desc' => '',
 		'id' => 'sns-icon-frame',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header Icon Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'sns-icon-color-header',
 		'std' => '#0058AE',
 		'type' => 'color' );
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Footer Icon Color', 'tidy' ),
 		'desc' => '',
 		'id' => 'sns-icon-color-footer',
 		'std' => '#ffffff',
 		'type' => 'color' );
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Show Icons', 'tidy' ),
 		'desc' => '',
 		'id' => 'sns-location',
 		'std' => '',
 		'type' => 'info');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Header', 'tidy' ),
 		'desc' => '',
 		'id' => 'sns-location-header',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Footer', 'tidy' ),
 		'desc' => '',
 		'id' => 'sns-location-footer',
 		'std' => '1',
 		'type' => 'toggle');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'Social Media Accounts and Email Address', 'tidy' ),
 		'desc' => '',
 		'id' => 'sns-addr',
 		'std' => '',
 		'type' => 'info');
 
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => __( 'E-mail', 'tidy' ),
 		'desc' => __( 'Your E-mail address.', 'tidy' ),
 		'id' => 'email',
 		'std' => 'info@example.com',
 		'type' => 'email');
 
-	$sns_array = tidy_sns_array();
-	if ( ! empty( $sns_array )) {
-		foreach( $sns_array as $key=>$val ) {
-			$options[] = array(
+	$tidy_sns_array = tidy_sns_array();
+	if ( ! empty( $tidy_sns_array )) {
+		foreach( $tidy_sns_array as $key=>$val ) {
+			$tidy_options[] = array(
 				'name' => $key,
 				'desc' => sprintf( __( '%s URL', 'tidy' ), $key ),
 				'id' => $val[0],
@@ -1824,20 +1812,20 @@ function optionsframework_options() {
 	}
 
 	// for restore
-	$options[] = array(
+	$tidy_options[] = array(
 		'name' => 'restore',
 		'id' => 'restore_hidden',
 		'std' => '0',
 		'class' => 'hidden',
 		'type' => 'text');
 
-	return $options;
+	return $tidy_options;
 }
 
 // overwride
 add_action( 'optionsframework_after_validate', 'optionsframework_after_validate_overwride' );
 function optionsframework_after_validate_overwride( $clean ) {
-	$customizer_key = tidy_customizer_array();
+	$tidy_customizer_key = tidy_customizer_array();
 	foreach( $clean as $k => $v ){
 		if ( $k == 'general-header-site-title' ) {
 			update_option( 'blogname', $v );
@@ -1845,7 +1833,7 @@ function optionsframework_after_validate_overwride( $clean ) {
 			update_option( 'blogdescription', $v );
 		} elseif ( $k == 'all_blog_num' ) {
 			update_option( 'posts_per_page', $v );
-		} elseif ( in_array( $k, $customizer_key ) ) {
+		} elseif ( in_array( $k, $tidy_customizer_key ) ) {
 			set_theme_mod( $k, $v );
 		}
 	}
@@ -1857,7 +1845,7 @@ function tidy_optionsframework_std( $option_name, $value, $val , $restore) {
 	if ( ! array_key_exists( 'id', $value ) )
 		return $val;
 
-	$customizer_key = tidy_customizer_array();
+	$tidy_customizer_key = tidy_customizer_array();
 
 	if ( $value['id'] == 'restore_hidden' ) {
 		$val = 0;
@@ -1867,7 +1855,7 @@ function tidy_optionsframework_std( $option_name, $value, $val , $restore) {
 		$val = get_bloginfo( 'description' );
 	} elseif ( $value['id'] == 'all_blog_num' ) {
 		$val = get_option( 'posts_per_page' );
-	} elseif ( in_array( $value['id'], $customizer_key ) ) {
+	} elseif ( in_array( $value['id'], $tidy_customizer_key ) ) {
 		$d = get_theme_mods();
 		if ( $restore === true ) {
 			$val = $value['std'];
@@ -1891,7 +1879,7 @@ function tidy_favicon() {
 }
 
 // restore
-add_filter( 'of_sanitize_text', 'tidy_of_sanitize_hidden_orverwride', 10, 2);
+add_filter( 'tidy_of_sanitize_text', 'tidy_of_sanitize_hidden_orverwride', 10, 2);
 function tidy_of_sanitize_hidden_orverwride( $std, $option ) {
 	if ( $option['id'] == 'restore_hidden' ) {
 		$std = 0;

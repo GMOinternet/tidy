@@ -43,7 +43,7 @@ class Tidy_Widget_About_Us extends WP_Widget {
 	public function widget( $args, $instance ) {
 		extract($args);
 		$title = apply_filters( 'tidy_about_widget_title', empty( $instance['title'] ) ? __( 'About Us', 'tidy' ) : $instance['title'], $instance, $this->id_base );
-		$t = of_get_option( 'about_text' );
+		$t = tidy_of_get_option( 'about_text' );
 		if ( $t === FALSE ) {
 			$t = __( 'Sample text.', 'tidy' );
 		}
@@ -65,13 +65,13 @@ class Tidy_Widget_About_Us extends WP_Widget {
  */
 
 function tidy_sns_lists(){
-	$sns_array = tidy_sns_array();
+	$tidy_sns_array = tidy_sns_array();
 	?>
 	<ul class="sns-icons">
 		<?php
-			foreach( $sns_array as $key => $val ) {
+			foreach( $tidy_sns_array as $key => $val ) {
 				$snskey = $val[0];
-				$sns = of_get_option( $snskey, array( 'account' => $val[1], 'toggle'  => '1' ) );
+				$sns = tidy_of_get_option( $snskey, array( 'account' => $val[1], 'toggle'  => '1' ) );
 				if ( ( ! empty( $sns ) ) && ( $sns['toggle'] != 0 ) && ( $sns['account'] ) ) {
 					echo '<li><a href="' . esc_url( $sns['account'] ) . '" target="_blank"><span class="icon-' . $snskey . '"></span></a></li>' . "\n";
 				}
@@ -109,7 +109,7 @@ class Tidy_Widget_Contact extends WP_Widget {
 	public function widget( $args, $instance ) {
 		extract($args);
 		$title = apply_filters( 'tidy_contact_widget_title', empty( $instance['title'] ) ? __( 'Contact', 'tidy' ) : $instance['title'], $instance, $this->id_base );
-		$email = apply_filters( 'tidy_contact_widget_email', empty( $instance['email'] ) ? of_get_option('email') : $instance['email'], $instance );
+		$email = apply_filters( 'tidy_contact_widget_email', empty( $instance['email'] ) ? tidy_of_get_option('email') : $instance['email'], $instance );
 
 		echo $before_widget;
 		if ( !empty( $title ) ) {

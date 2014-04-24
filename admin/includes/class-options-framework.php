@@ -1,13 +1,13 @@
 <?php
 /**
- * @package   Options_Framework
+ * @package   Tidy_Options_Framework
  * @author    Devin Price <devin@wptheming.com>
  * @license   GPL-2.0+
  * @link      http://wptheming.com
  * @copyright 2013 WP Theming
  */
 
-class Options_Framework {
+class Tidy_Options_Framework {
 
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
@@ -40,44 +40,44 @@ class Options_Framework {
 	function set_theme_option() {
 
 		// Load settings
-        $optionsframework_settings = get_option( 'optionsframework' );
+        $tidy_optionsframework_settings = get_option( 'tidy_optionsframework' );
 
         // Updates the unique option id in the database if it has changed
-        if ( function_exists( 'optionsframework_option_name' ) ) {
-			optionsframework_option_name();
+        if ( function_exists( 'tidy_optionsframework_option_name' ) ) {
+			tidy_optionsframework_option_name();
         }
-        elseif ( has_action( 'optionsframework_option_name' ) ) {
-			do_action( 'optionsframework_option_name' );
+        elseif ( has_action( 'tidy_optionsframework_option_name' ) ) {
+			do_action( 'tidy_optionsframework_option_name' );
         }
         // If the developer hasn't explicitly set an option id, we'll use a default
         else {
             $default_themename = get_option( 'stylesheet' );
             $default_themename = preg_replace( "/\W/", "_", strtolower($default_themename ) );
             $default_themename = 'optionsframework_' . $default_themename;
-            if ( isset( $optionsframework_settings['id'] ) ) {
-				if ( $optionsframework_settings['id'] == $default_themename ) {
+            if ( isset( $tidy_optionsframework_settings['id'] ) ) {
+				if ( $tidy_optionsframework_settings['id'] == $default_themename ) {
 					// All good, using default theme id
 				} else {
-					$optionsframework_settings['id'] = $default_themename;
-					update_option( 'optionsframework', $optionsframework_settings );
+					$tidy_optionsframework_settings['id'] = $default_themename;
+					update_option( 'tidy_optionsframework', $tidy_optionsframework_settings );
 				}
             }
             else {
-				$optionsframework_settings['id'] = $default_themename;
-				update_option( 'optionsframework', $optionsframework_settings );
+				$tidy_optionsframework_settings['id'] = $default_themename;
+				update_option( 'tidy_optionsframework', $tidy_optionsframework_settings );
             }
         }
 
 	}
 
 	/**
-	 * Wrapper for optionsframework_options()
+	 * Wrapper for tidy_optionsframework_options()
 	 *
-	 * Allows for manipulating or setting options via 'of_options' filter
+	 * Allows for manipulating or setting options via 'tidy_of_options' filter
 	 * For example:
 	 *
 	 * <code>
-	 * add_filter( 'of_options', function( $options ) {
+	 * add_filter( 'tidy_of_options', function( $options ) {
 	 *     $options[] = array(
 	 *         'name' => 'Input Text Mini',
 	 *         'desc' => 'A mini text input field.',
@@ -100,7 +100,7 @@ class Options_Framework {
 	 *
 	 * @return array (by reference)
 	 */
-	static function &_optionsframework_options() {
+	static function &_tidy_optionsframework_options() {
 		static $options = null;
 
 		if ( !$options ) {
@@ -110,13 +110,13 @@ class Options_Framework {
 				$maybe_options = require_once $optionsfile;
 				if ( is_array( $maybe_options ) ) {
 					$options = $maybe_options;
-				} else if ( function_exists( 'optionsframework_options' ) ) {
-					$options = optionsframework_options();
+				} else if ( function_exists( 'tidy_optionsframework_options' ) ) {
+					$options = tidy_optionsframework_options();
 				}
 			}
 
 			// Allow setting/manipulating options via filters
-			$options = apply_filters( 'of_options', $options );
+			$options = apply_filters( 'tidy_of_options', $options );
 		}
 
 		return $options;

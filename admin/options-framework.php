@@ -1,8 +1,8 @@
 <?php
 /**
- * Options Framework
+ * Tidy Options Framework
  *
- * @package   Options Framework
+ * @package   Tidy Options Framework
  * @author    Devin Price <devin@wptheming.com>
  * @license   GPL-2.0+
  * @link      http://wptheming.com
@@ -19,10 +19,10 @@ if ( ! defined( 'WPINC' ) ) {
 // Don't load if tidy_themeoptions_init is already defined
 if ( ! function_exists( 'tidy_themeoptions_init' ) ) :
 
-$get_theme_info = wp_get_theme();
+$tidy_get_theme_info = wp_get_theme();
 
-define( 'THEMENAME', $get_theme_info->get( 'Name' ) );
-define( 'VERSION',  $get_theme_info->get( 'Version' ) );
+define( 'THEMENAME', $tidy_get_theme_info->get( 'Name' ) );
+define( 'VERSION',  $tidy_get_theme_info->get( 'Version' ) );
 
 function tidy_themeoptions_init() {
 
@@ -30,7 +30,7 @@ function tidy_themeoptions_init() {
 	if ( ! current_user_can( 'edit_theme_options' ) )
 		return;
 
-	// Loads the required Options Framework classes.
+	// Loads the required Tidy Options Framework classes.
 	require TIDY_ADMIN_DIRECTORY_PATH . '/includes/class-options-framework.php';
 	require TIDY_ADMIN_DIRECTORY_PATH . '/includes/class-options-framework-admin.php';
 	require TIDY_ADMIN_DIRECTORY_PATH . '/includes/class-options-interface.php';
@@ -38,16 +38,16 @@ function tidy_themeoptions_init() {
 	require TIDY_ADMIN_DIRECTORY_PATH . '/includes/class-options-sanitization.php';
 
 	// Instantiate the main plugin class.
-	$options_framework = new Options_Framework;
-	$options_framework->init();
+	$tidy_options_framework = new Tidy_Options_Framework;
+	$tidy_options_framework->init();
 
 	// Instantiate the options page.
-	$options_framework_admin = new Options_Framework_Admin;
-	$options_framework_admin->init();
+	$tidy_options_framework_admin = new Tidy_Options_Framework_Admin;
+	$tidy_options_framework_admin->init();
 
 	// Instantiate the media uploader class
-	$options_framework_media_uploader = new Options_Framework_Media_Uploader;
-	$options_framework_media_uploader->init();
+	$tidy_options_framework_media_uploader = new Tidy_Options_Framework_Media_Uploader;
+	$tidy_options_framework_media_uploader->init();
 
 }
 
@@ -64,10 +64,10 @@ endif;
  * Not in a class to support backwards compatibility in themes.
  */
 
-if ( ! function_exists( 'of_get_option' ) ) :
+if ( ! function_exists( 'tidy_of_get_option' ) ) :
 
-function of_get_option( $name, $default = false ) {
-	$config = get_option( 'optionsframework' );
+function tidy_of_get_option( $name, $default = false ) {
+	$config = get_option( 'tidy_optionsframework' );
 
 	if ( ! isset( $config['id'] ) ) {
 		return $default;

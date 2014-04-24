@@ -42,8 +42,8 @@
 
 			</div><!-- .site-footer-widget-area-box -->
 
-			<?php $view_sns_footer = of_get_option('sns-location-footer', 1); ?>
-			<?php if ( $view_sns_footer > 0 ) : ?>
+			<?php $tidy_view_sns_footer = tidy_of_get_option('sns-location-footer', 1); ?>
+			<?php if ( $tidy_view_sns_footer > 0 ) : ?>
 			<div id="site-footer-social" class="site-footer-social-area">
 				<?php tidy_sns_lists(); ?>
 			</div>
@@ -54,8 +54,8 @@
 		<div class="site-info"><div class="inner">
 			<?php
 				$tidy_default = tidy_default_array();
-				$copyright = ( get_theme_mod( 'copyright' ) ) ? get_theme_mod( 'copyright' ) : $tidy_default['copyright'];
-				echo esc_html( $copyright );
+				$tidy_copyright = ( get_theme_mod( 'copyright' ) ) ? get_theme_mod( 'copyright' ) : $tidy_default['copyright'];
+				echo esc_html( $tidy_copyright );
 			?>
 		</div></div><!-- .site-info -->
 		<?php do_action( 'tidy_after_footer' ); ?>

@@ -1,13 +1,13 @@
 <?php
 /**
- * @package   Options_Framework
+ * @package   Tidy_Options_Framework
  * @author    Devin Price <devin@wptheming.com>
  * @license   GPL-2.0+
  * @link      http://wptheming.com
  * @copyright 2013 WP Theming
  */
 
-class Options_Framework_Media_Uploader {
+class Tidy_Options_Framework_Media_Uploader {
 
 	/**
 	 * Initialize the media uploader class
@@ -31,10 +31,10 @@ class Options_Framework_Media_Uploader {
 
 	static function optionsframework_uploader( $_id, $_value, $_desc = '', $_name = '' ) {
 
-		$optionsframework_settings = get_option( 'optionsframework' );
+		$tidy_optionsframework_settings = get_option( 'tidy_optionsframework' );
 
 		// Gets the unique option id
-		$option_name = $optionsframework_settings['id'];
+		$option_name = $tidy_optionsframework_settings['id'];
 
 		$output = '';
 		$id = '';
@@ -105,7 +105,7 @@ class Options_Framework_Media_Uploader {
 	 */
 	function optionsframework_media_scripts( $hook ) {
 
-		$menu = Options_Framework_Admin::menu_settings();
+		$menu = Tidy_Options_Framework_Admin::menu_settings();
 
 		if ( 'appearance_page_' . $menu['menu_slug'] != $hook )
 			return;

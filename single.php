@@ -6,45 +6,45 @@
  */
 
 $post_id = $wp_query->get_queried_object_id();
-$post_format = get_post_format( $post_id );
-$port_nav = "";
-if ( $post_format == "gallery" ) {
-	$type = 'portfolio';
-	$layout = of_get_option( 'port_c', 'cont_s2' );
-	$port_nav = of_get_option( 'port_nav', 'bottom' );
-	$galleryicon   = of_get_option( 'home_port_icon', 'notebook' );
-	$gallerytitle  = of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
+$tidy_post_format = get_post_format( $post_id );
+$tidy_port_nav = "";
+if ( $tidy_post_format == "gallery" ) {
+	$tidy_post_format_type = 'portfolio';
+	$tidy_layout = tidy_of_get_option( 'port_c', 'cont_s2' );
+	$tidy_port_nav = tidy_of_get_option( 'port_nav', 'bottom' );
+	$tidy_home_port_icon   = tidy_of_get_option( 'home_port_icon', 'notebook' );
+	$tidy_home_port_title  = tidy_of_get_option( 'home_port_title',  __( 'Portfolio', 'tidy' ) );
 } else {
-	$type = 'single';
-	$layout = of_get_option( 'single_c', 'cont_s2' );
+	$tidy_post_format_type = 'single';
+	$tidy_layout = tidy_of_get_option( 'single_c', 'cont_s2' );
 }
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( $layout ); ?>">
+	<div id="primary" class="content-area <?php echo esc_attr( $tidy_layout ); ?>">
 		<?php do_action( 'tidy_before_primary' ); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php if ( $post_format == "gallery") : ?>
+			<?php if ( $tidy_post_format == "gallery") : ?>
 			<div class="section-header">
-				<h1 class="section-title"><a href="<?php echo get_post_format_link( 'gallery' ); ?>"><span class="icon-<?php echo esc_attr( $galleryicon ); ?>"></span> <?php echo esc_html( $gallerytitle ); ?></a></h1>
+				<h1 class="section-title"><a href="<?php echo get_post_format_link( 'gallery' ); ?>"><span class="icon-<?php echo esc_attr( $tidy_home_port_icon ); ?>"></span> <?php echo esc_html( $tidy_home_port_title ); ?></a></h1>
 			</div>
 			<?php endif; ?>
 
 			<?php
-				if ( $post_format == "gallery" ) {
-					if ($port_nav == 'top') {
-						tidy_portfolio_posts_slider( get_the_ID(), $port_nav );
+				if ( $tidy_post_format == "gallery" ) {
+					if ($tidy_port_nav == 'top') {
+						tidy_portfolio_posts_slider( get_the_ID(), $tidy_port_nav );
 					}
 				}
 			?>
 
-			<?php get_template_part( 'content', $type ); ?>
+			<?php get_template_part( 'content', $tidy_post_format_type ); ?>
 
 			<?php
-				if ( $post_format == "gallery") {
-					if ($port_nav == 'bottom') {
-						tidy_portfolio_posts_slider( get_the_ID(), $port_nav );
+				if ( $tidy_post_format == "gallery") {
+					if ($tidy_port_nav == 'bottom') {
+						tidy_portfolio_posts_slider( get_the_ID(), $tidy_port_nav );
 					}
 				} else {
 					tidy_post_nav();
@@ -65,8 +65,8 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-	if ( $layout == 'cont_s1' or $layout == 'cont_s2' ) {
-		$side = ( $layout == 'cont_s1' ) ? 'left' : 'right';
+	if ( $tidy_layout == 'cont_s1' or $tidy_layout == 'cont_s2' ) {
+		$tidy_side = ( $tidy_layout == 'cont_s1' ) ? 'left' : 'right';
 		get_sidebar();
 	}
 ?>
