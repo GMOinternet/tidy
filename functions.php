@@ -148,13 +148,13 @@ function tidy_scripts() {
 
 	wp_enqueue_style(
 		'gmo-genericons',
-		get_template_directory_uri() . '/genericons/genericons.min.css',
+		get_template_directory_uri() . '/genericons/genericons.css',
 		array(),
 		'3.0.2'
 	);
 	wp_enqueue_style(
 		'gmo-iconmoon',
-		get_template_directory_uri() . '/iconmoon-tidy/style.min.css',
+		get_template_directory_uri() . '/iconmoon-tidy/style.css',
 		array(),
 		$tidy_version
 	);
@@ -162,7 +162,7 @@ function tidy_scripts() {
 	if ( is_singular() ) {
 		wp_enqueue_script(
 			'bxslider',
-			get_template_directory_uri() . '/jquery.bxslider/jquery.bxslider.min.js',
+			get_template_directory_uri() . '/jquery.bxslider/jquery.bxslider.js',
 			array('jquery'),
 			'v4.1.1',
 			true
