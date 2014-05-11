@@ -43,8 +43,8 @@ class Tidy_Options_Framework_Admin {
 			add_action( 'admin_init', array( $this, 'settings_init' ) );
 
 			// Adds options menu to the admin bar
-			add_action( 'admin_bar_menu', array( $this, 'optionsframework_admin_bar' ) );
-			add_action( 'wp_before_admin_bar_render', array( $this, 'tidy_remove_wplogo' ) );
+			// add_action( 'admin_bar_menu', array( $this, 'optionsframework_admin_bar' ) );
+			// add_action( 'wp_before_admin_bar_render', array( $this, 'tidy_remove_wplogo' ) );
 
 		}
 
@@ -379,6 +379,7 @@ class Tidy_Options_Framework_Admin {
 	 * Add options menu item to admin bar
 	 */
 
+/*
 	function optionsframework_admin_bar() {
 
 		$menu = $this->menu_settings();
@@ -394,7 +395,9 @@ class Tidy_Options_Framework_Admin {
 		) );
 
 	}
+*/
 
+/*
 	function tidy_remove_wplogo() {
 		$menu = $this->menu_settings();
 		global $wp_admin_bar;
@@ -412,5 +415,6 @@ class Tidy_Options_Framework_Admin {
 		) );
 
 	}
+*/
 
 }
