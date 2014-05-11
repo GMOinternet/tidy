@@ -139,13 +139,15 @@ function tidy_scripts() {
 	$tidy_info = wp_get_theme();
 	$tidy_version = $tidy_info->get( 'Version' );
 
+/*
 	wp_enqueue_style(
 		'gmo-google-fonts',
 		'http://fonts.googleapis.com/css?family=Open+Sans',
 		array(),
 		$tidy_version
 	);
-
+*/
+	wp_enqueue_style( 'open-sans' );
 	wp_enqueue_style(
 		'gmo-genericons',
 		get_template_directory_uri() . '/genericons/genericons.css',
