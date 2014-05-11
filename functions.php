@@ -141,13 +141,13 @@ function tidy_scripts() {
 
 	wp_enqueue_style( 'open-sans' );
 	wp_enqueue_style(
-		'gmo-genericons',
+		'tidy-genericons',
 		get_template_directory_uri() . '/genericons/genericons.css',
 		array(),
 		'3.0.2'
 	);
 	wp_enqueue_style(
-		'gmo-iconmoon',
+		'tidy-iconmoon',
 		get_template_directory_uri() . '/iconmoon-tidy/style.css',
 		array(),
 		$tidy_version
@@ -179,7 +179,7 @@ function tidy_scripts() {
 	wp_enqueue_style(
 		'tidy-style',
 		get_stylesheet_uri(),
-		array( 'open-sans', 'gmo-genericons', 'gmo-iconmoon' ),
+		array( 'open-sans', 'tidy-genericons', 'tidy-iconmoon' ),
 		$tidy_version
 	);
 
