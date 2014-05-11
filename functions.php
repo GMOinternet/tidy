@@ -140,7 +140,6 @@ function tidy_scripts() {
 	$tidy_version = $tidy_info->get( 'Version' );
 
 	wp_enqueue_style( 'open-sans' );
-
 	wp_enqueue_style(
 		'gmo-genericons',
 		get_template_directory_uri() . '/genericons/genericons.css',
@@ -180,7 +179,7 @@ function tidy_scripts() {
 	wp_enqueue_style(
 		'tidy-style',
 		get_stylesheet_uri(),
-		array( 'gmo-google-fonts', 'gmo-genericons', 'gmo-iconmoon' ),
+		array( 'open-sans', 'gmo-genericons', 'gmo-iconmoon' ),
 		$tidy_version
 	);
 
