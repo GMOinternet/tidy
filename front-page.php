@@ -31,6 +31,22 @@ get_header(); ?>
 		<?php do_action( 'tidy_before_primary' ); ?>
 		<main id="main" class="site-main" role="main">
 
+			<?php if ( get_option('show_on_front') == "page" && get_option('page_on_front') > 0 ) : ?>
+				<?php if ( have_posts() ) : ?>
+					<section id="front-page-area" class="front-section">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'content', 'page' ); ?>
+						<?php
+							// If comments are open or we have at least one comment, load up the comment template
+							if ( comments_open() || '0' != get_comments_number() ) :
+								comments_template();
+							endif;
+						?>
+					<?php endwhile; // end of the loop. ?>
+					</section>
+				<?php endif; ?>
+			<?php endif; // get_option ?>
+
 			<?php
 				$tidy_home_blog_num = (int)tidy_of_get_option( 'home_blog_num', 6 );
 				if ( $tidy_home_blog_num > 0 ) :
