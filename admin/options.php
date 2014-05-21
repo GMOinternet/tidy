@@ -1042,6 +1042,19 @@ function tidy_optionsframework_options() {
 	);
 	
 	$tidy_options[] = array(
+		'name' => __( 'Static Front Page Area', 'tidy' ),
+		'desc' => '',
+		'type' => 'info'
+	);
+
+	$tidy_options[] = array(
+		'name' => __( 'Show Static Front Page Area', 'tidy' ),
+		'desc' => '',
+		'id' => 'home_page_area',
+		'std' => '1',
+		'type' => 'toggle');
+
+	$tidy_options[] = array(
 		'name' => __( 'Blog Area', 'tidy' ),
 		'desc' => '',
 		'type' => 'info'

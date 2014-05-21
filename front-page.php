@@ -10,7 +10,8 @@
  *
  * @package Tidy
  */
-$tidy_layout = tidy_of_get_option( 'home_c', 'cont_s2' );
+$tidy_layout         = tidy_of_get_option( 'home_c', 'cont_s2' );
+$tidy_home_page_area = tidy_of_get_option( 'home_page_area', 1 );
 get_header(); ?>
 
 	<?php // merit-box-area
@@ -33,17 +34,19 @@ get_header(); ?>
 
 			<?php if ( get_option('show_on_front') == "page" && get_option('page_on_front') > 0 ) : ?>
 				<?php if ( have_posts() ) : ?>
-					<section id="front-page-area" class="front-section">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<?php get_template_part( 'content', 'page' ); ?>
-						<?php
-							// If comments are open or we have at least one comment, load up the comment template
-							if ( comments_open() || '0' != get_comments_number() ) :
-								comments_template();
-							endif;
-						?>
-					<?php endwhile; // end of the loop. ?>
-					</section>
+					<?php if ( $tidy_home_page_area > 0 ) : ?>
+						<section id="front-page-area" class="front-section">
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php get_template_part( 'content', 'page' ); ?>
+							<?php
+								// If comments are open or we have at least one comment, load up the comment template
+								if ( comments_open() || '0' != get_comments_number() ) :
+									comments_template();
+								endif;
+							?>
+						<?php endwhile; // end of the loop. ?>
+						</section>
+					<?php endif; ?>
 				<?php endif; ?>
 			<?php endif; // get_option ?>
 
