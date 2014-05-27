@@ -1421,11 +1421,6 @@ body.archive .gallery-4.normal .hentry:nth-child(4n+1) {
 
 .archive-link {
   text-align: right;
-  /*
-  	.read-more .genericon {
-  		top: 6px;
-  	}
-  */
 }
 
 /* home (not front page) */
@@ -1632,10 +1627,6 @@ body.archive .gallery-4.normal .hentry:nth-child(4n+1) {
   vertical-align: middle;
   line-height: 9px;
   text-decoration: none;
-  /*
-  	position: relative;
-  	top: 5px;
-  */
 }
 
 .page-links {
@@ -2143,11 +2134,6 @@ li.depth-1 {
   display: inline;
   float: left;
   width: 50%;
-  /*
-  		&:nth-child(2n+1) {
-  			clear: both;
-  		}
-  */
 }
 .widget_tidy_recent_posts li.tidy-thumb-tiny {
   margin-bottom: 10px;
