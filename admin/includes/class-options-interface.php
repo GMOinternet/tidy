@@ -494,36 +494,39 @@ class Tidy_Options_Framework_Interface {
 				}
 
 				$rss = fetch_feed( esc_url( $value['url'] ) );
-				
+				$items = ( $value['desc'] ) ? $value['desc'] : 5;
+				$maxitems  = '';
+				$rss_items = '';
+
 				if ( is_wp_error( $rss ) ) {
 					$output .= '<p>' . sprintf( __( '<strong>RSS Error</strong>: %s', 'tidy' ), $rss->get_error_message()) . '</p>';
+				} else {
+					$maxitems  = $rss->get_item_quantity( $items );
+					$rss_items = $rss->get_items( 0, $maxitems );
 				}
 
-				if ( !$rss->get_item_quantity() ) {
+				if ( $maxitems == 0 ) {
 					$output .= '<p>' . __( 'Apparently, there are no updates to show!', 'tidy' ) . '</p>';
-					$rss->__destruct();
-					unset($rss);
+				} else {
+					$output .= '<div class="rss-widget">'. "<ul>\n";
+	
+					foreach ( $rss_items as $item ) {
+						$publisher = '';
+						$site_link = '';
+						$link = '';
+						$content = '';
+						$date = $item->get_date();
+						$link = esc_url( strip_tags( $item->get_link() ) );
+						$title = esc_html( $item->get_title() );
+						$content = $item->get_content();
+						$content = wp_html_excerpt($content, 250) . ' ...';
+		
+						$output .= "<li><a class='rsswidget' href='$link'>$title</a>\n<span class='rss-date'>$date</span>\n";
+					}
+	
+					$output .= "</ul></div>\n";
 				}
 
-				$output .= '<div class="rss-widget">'. "<ul>\n";
-	
-				$items = ( $value['desc'] ) ? $value['desc'] : 5;
-				
-				foreach ( $rss->get_items(0, $items) as $item ) {
-					$publisher = '';
-					$site_link = '';
-					$link = '';
-					$content = '';
-					$date = $item->get_date();
-					$link = esc_url( strip_tags( $item->get_link() ) );
-					$title = esc_html( $item->get_title() );
-					$content = $item->get_content();
-					$content = wp_html_excerpt($content, 250) . ' ...';
-	
-					$output .= "<li><a class='rsswidget' href='$link'>$title</a>\n<span class='rss-date'>$date</span>\n";
-				}
-
-				$output .= "</ul></div>\n";
 				$rss->__destruct();
 				unset($rss);
 
