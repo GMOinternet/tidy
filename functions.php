@@ -148,7 +148,7 @@ function tidy_scripts() {
 	);
 	wp_enqueue_style(
 		'tidy-iconmoon',
-		get_template_directory_uri() . '/iconmoon-tidy/style.css',
+		get_template_directory_uri() . '/iconmoon-tidy/iconmoon-tidy.css',
 		array(),
 		$tidy_version
 	);
