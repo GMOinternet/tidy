@@ -570,7 +570,7 @@ function tidy_optionsframework_options() {
 	// About WP Shop
 	$tidy_options[] = array(
 		'name' => __( 'About WP Shop', 'tidy' ),
-		'desc' => sprintf( __( '<p class="about-photo"><img src="%1$s" alt="*"></p><p>A whole new social marketplace for trading high quality WordPress themes, while providing a platform to showcase and share beautiful designs that are originated in Asia</p><p class="shop_link"><a href="https://wpshop.com/signup" target="_blank" class="shop_btn"><span class="shop_name">Join WP Shop</span><span class="shop_dec">Starting from $0 / theme</span></a></p>', 'tidy' ), $tidy_imagepath . 'about-image.jpg' ),
+		'desc' => sprintf( __( '<p class="about-photo"><img src="%1$s" alt="*"></p><p>A whole new social marketplace for trading high quality WordPress themes, while providing a platform to showcase and share beautiful designs that are originated in Asia</p><p class="shop_link"><a href="https://wpshop.com/signup" target="_blank" class="shop_btn"><span class="shop_name">Join WP Shop</span><span class="shop_dec">Starting from $0 / theme</span></a></p>', 'tidy' ), $tidy_imagepath . 'about-image.jpg' ),
 		'id' => 'about-wp-shop',
 		'class' => 'about-wp-shop',
 		'type' => 'info');
