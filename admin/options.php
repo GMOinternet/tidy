@@ -562,7 +562,7 @@ function tidy_optionsframework_options() {
 	// About this Theme
 	$tidy_options[] = array(
 		'name' => __( 'About this Theme', 'tidy' ),
-		'desc' => __( '<p>This is a highly customizable, clean, modern, and responsive WordPress theme. Originally developed plugins are included enabling higher usability and easier production of stylish site and customization. This theme can be used for wide variation from private to business use.</p><p><strong>Features</strong></p><ul><li>Responsive</li><li>Easy web advertisement settings</li><li>Portfolio</li><li>Icon menu</li><li>Color customization</li><li>Web fonts &amp; icon fonts</li><li>Wide variety of theme layouts</li><li>Social settings</li><li>Stylish slider &quot;GMO Showtime&quot; Plugin</li></ul>', 'tidy' ),
+		'desc' => __( '<p>This is a highly customizable, clean, modern, and responsive WordPress theme. Originally developed plugins are included enabling higher usability and easier production of stylish site and customization. This theme can be used for wide variation from private to business use.</p><p><strong>Features</strong></p><ul><li>Responsive</li><li>Portfolio</li><li>Icon menu</li><li>Color customization</li><li>Wide variety of theme layouts</li><li>Stylish slider &quot;GMO Showtime&quot; Plugin</li><li>Easy web advertisement settings &quot;GMO Ads Master&quot; Plugin</li><li>Web fonts & icon fonts &quot;GMO Font Agent&quot; Plugin</li><li>Social settings &quot;GMO Share Connection&quot;</li></ul>', 'tidy' ),
 		'id' => 'about-this-theme',
 		'class' => 'about-this-theme',
 		'type' => 'info');
