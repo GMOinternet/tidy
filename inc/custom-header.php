@@ -27,9 +27,9 @@
 function tidy_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'tidy_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'default-text-color'     => '1C1C1C',
+		'width'                  => 1200,
+		'height'                 => 300,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'tidy_header_style',
 		'admin-head-callback'    => 'tidy_admin_header_style',
@@ -45,20 +45,29 @@ if ( ! function_exists( 'tidy_header_style' ) ) :
  * @see tidy_custom_header_setup().
  */
 function tidy_header_style() {
+	$header_image = get_header_image();
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
+	if ( empty( $header_image ) && $text_color == get_theme_support( 'custom-header', 'default-text-color' ) )
 		return;
-	}
 
 	// If we get this far, we have custom styles. Let's do this.
 	?>
 	<style type="text/css">
 	<?php
+		if ( ! empty( $header_image ) ) :
+	?>
+		.site-header {
+			background: url(<?php header_image(); ?>) no-repeat scroll top center;
+			background-size: cover;
+		}
+
+	<?php
+		endif;
+
 		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
+		if ( ! display_header_text() ) :
 	?>
 		.site-title,
 		.site-description {
@@ -97,6 +106,11 @@ function tidy_admin_header_style() {
 		#headimg h1 {
 		}
 		#headimg h1 a {
+			color: #0058AE;
+			text-decoration: none;
+		}
+		#headimg h1 a:hover {
+			text-decoration: underline;
 		}
 		#desc {
 		}
@@ -116,12 +130,9 @@ if ( ! function_exists( 'tidy_admin_header_image' ) ) :
 function tidy_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
-	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+	<div id="headimg" style="background: url(<?php header_image(); ?>) no-repeat scroll top center; background-size: cover;">
+		<h1 class="displaying-header-text"><a id="name" onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
-		<?php endif; ?>
 	</div>
 <?php
 }
