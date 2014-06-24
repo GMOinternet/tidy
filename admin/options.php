@@ -1055,6 +1055,19 @@ function tidy_optionsframework_options() {
 		'type' => 'toggle');
 
 	$tidy_options[] = array(
+		'name' => __( 'Your Latest Posts Area', 'tidy' ),
+		'desc' => '',
+		'type' => 'info'
+	);
+
+	$tidy_options[] = array(
+		'name' => __( 'Your Latest Posts Area', 'tidy' ),
+		'desc' => '',
+		'id' => 'latest_posts_area',
+		'std' => '1',
+		'type' => 'toggle');
+
+	$tidy_options[] = array(
 		'name' => __( 'Blog Area', 'tidy' ),
 		'desc' => '',
 		'type' => 'info'

@@ -10,8 +10,9 @@
  *
  * @package Tidy
  */
-$tidy_layout         = tidy_of_get_option( 'home_c', 'cont_s2' );
-$tidy_home_page_area = tidy_of_get_option( 'home_page_area', 1 );
+$tidy_layout            = tidy_of_get_option( 'home_c', 'cont_s2' );
+$tidy_home_page_area    = tidy_of_get_option( 'home_page_area', 1 );
+$tidy_latest_posts_area = tidy_of_get_option( 'latest_posts_area', 1 );
 get_header(); ?>
 
 	<?php // merit-box-area
@@ -46,6 +47,44 @@ get_header(); ?>
 							?>
 						<?php endwhile; // end of the loop. ?>
 						</section>
+					<?php endif; ?>
+				<?php endif; ?>
+
+			<?php else : ?>
+				<?php if ( $tidy_latest_posts_area > 0 ) : ?>
+					<?php
+						$tidy_home_layout = tidy_of_get_option( 'blog_c', 'cont_s2' );
+						$tidy_icon   = tidy_of_get_option( 'all_blog_icon', 'pencil' );
+						$tidy_all_blog_title  = tidy_of_get_option( 'all_blog_title',  __( 'Blog Archive', 'tidy' ) );
+						$tidy_cont_c = tidy_of_get_option( 'all_blog_cont_c', '1' );
+						
+						$tidy_home_blog_type = tidy_of_get_option( 'blog_type', 'typeA' );
+						if ( $tidy_home_layout != 'cont_c1') {
+							$tidy_home_blog_type = 'typeA';
+						} else {
+							if ( $tidy_cont_c == 3 ) {
+								$tidy_home_blog_type = 'typeA';
+							}
+						}
+					?>
+					<div class="archive-header"><h1 class="archive-title"><span class="icon-<?php echo esc_attr( $tidy_icon ); ?>"></span> <?php echo esc_html( $tidy_all_blog_title ); ?></h1></div>
+					<?php if ( have_posts() ) : ?>
+			
+						<div class="front-section-content all-blog blog-<?php echo esc_attr( $tidy_cont_c ); ?> <?php //echo esc_attr( $tidy_port_d ); ?>">
+						<?php /* Start the Loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+			
+							<?php get_template_part( 'content', 'home' ); ?>
+			
+						<?php endwhile; ?>
+						</div>
+			
+						<?php tidy_paging_nav(); ?>
+			
+					<?php else : ?>
+			
+						<?php get_template_part( 'content', 'none' ); ?>
+			
 					<?php endif; ?>
 				<?php endif; ?>
 			<?php endif; // get_option ?>
